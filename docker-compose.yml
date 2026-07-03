@@ -1,0 +1,89 @@
+# Carnicería B2B — production stack
+# Web:    http://<server-ip>:8090        (Nginx + PHP-FPM)
+# Admin:  http://<server-ip>:8090/admin   (Filament)
+# Reverb: ws://<server-ip>:8091           (realtime, optional)
+#
+# All Laravel configuration is read from the local ".env" file (env_file below),
+# which also feeds ${VAR} interpolation for the db service credentials.
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: carniceria_db
+    restart: unless-stopped
+    command: --mysql-native-password=ON
+    environment:
+      MYSQL_DATABASE: "${DB_DATABASE:-carniceria}"
+      MYSQL_USER: "${DB_USERNAME:-carniceria}"
+      MYSQL_PASSWORD: "${DB_PASSWORD}"
+      MYSQL_ROOT_PASSWORD: "${DB_ROOT_PASSWORD}"
+    volumes:
+      - dbdata:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-u", "root", "-p${DB_ROOT_PASSWORD}"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 30s
+    networks:
+      - carniceria
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: carniceria-app:latest
+    container_name: carniceria_app
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      # Only this container runs migrations/seed on boot
+      RUN_MIGRATIONS: "true"
+      RUN_SEED: "${RUN_SEED:-false}"
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "8090:80"
+    volumes:
+      - storage:/var/www/html/storage
+    networks:
+      - carniceria
+
+  queue:
+    image: carniceria-app:latest
+    container_name: carniceria_queue
+    restart: unless-stopped
+    env_file: .env
+    command: php artisan queue:work --sleep=3 --tries=3 --max-time=3600
+    depends_on:
+      db:
+        condition: service_healthy
+      app:
+        condition: service_started
+    volumes:
+      - storage:/var/www/html/storage
+    networks:
+      - carniceria
+
+  reverb:
+    image: carniceria-app:latest
+    container_name: carniceria_reverb
+    restart: unless-stopped
+    env_file: .env
+    command: php artisan reverb:start --host=0.0.0.0 --port=8080
+    depends_on:
+      app:
+        condition: service_started
+    ports:
+      - "8091:8080"
+    networks:
+      - carniceria
+
+volumes:
+  dbdata:
+  storage:
+
+networks:
+  carniceria:
+    driver: bridge

@@ -1,0 +1,37 @@
+# Version control
+.git
+.gitignore
+.gitattributes
+
+# Dependencies (rebuilt inside the image)
+node_modules
+vendor
+public/build
+public/hot
+public/storage
+
+# Local env / secrets (the real .env is provided on the server)
+.env
+.env.backup
+.env.production
+.env.docker
+
+# Runtime / generated
+storage/logs/*
+storage/framework/cache/*
+storage/framework/sessions/*
+storage/framework/views/*
+database/database.sqlite
+database/data
+
+# Dev tooling / IDE
+.idea
+.vscode
+.zed
+.fleet
+tests
+phpunit.xml
+.phpunit.result.cache
+.phpunit.cache
+README.md
+scripts/montage.mjs
