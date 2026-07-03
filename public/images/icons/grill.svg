@@ -1,37 +1,43 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
   <defs>
-    <!-- Flame gradient orange-yellow -->
+    <!-- Flame gradient orange-yellow (menos neon) -->
     <radialGradient id="g_grill_flame1" cx="50%" cy="80%" r="60%" fx="50%" fy="90%">
-      <stop offset="0%" stop-color="#FFE033"/>
-      <stop offset="40%" stop-color="#FF8C00"/>
-      <stop offset="100%" stop-color="#CC2200" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#F2C24A"/>
+      <stop offset="40%" stop-color="#E0730F"/>
+      <stop offset="100%" stop-color="#A83214" stop-opacity="0"/>
     </radialGradient>
     <radialGradient id="g_grill_flame2" cx="50%" cy="80%" r="60%" fx="50%" fy="90%">
-      <stop offset="0%" stop-color="#FFD700"/>
-      <stop offset="50%" stop-color="#FF5500"/>
-      <stop offset="100%" stop-color="#AA1100" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#EFB43A"/>
+      <stop offset="50%" stop-color="#D6561A"/>
+      <stop offset="100%" stop-color="#8F2010" stop-opacity="0"/>
     </radialGradient>
-    <!-- Meat base gradient red-brown -->
+    <!-- Meat base gradient natural cooked brown -->
     <linearGradient id="g_grill_meat" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#C0392B"/>
-      <stop offset="35%" stop-color="#A93226"/>
-      <stop offset="70%" stop-color="#922B21"/>
-      <stop offset="100%" stop-color="#7B241C"/>
+      <stop offset="0%" stop-color="#a05a3d"/>
+      <stop offset="35%" stop-color="#935035"/>
+      <stop offset="70%" stop-color="#7c402a"/>
+      <stop offset="100%" stop-color="#6d3420"/>
     </linearGradient>
-    <!-- Meat side/edge gradient darker -->
+    <!-- Meat side/edge gradient darker brown -->
     <linearGradient id="g_grill_meat_side" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#6E2018"/>
-      <stop offset="100%" stop-color="#A93226"/>
+      <stop offset="0%" stop-color="#552818"/>
+      <stop offset="100%" stop-color="#7c402a"/>
     </linearGradient>
-    <!-- Meat top highlight -->
-    <radialGradient id="g_grill_meat_hi" cx="40%" cy="35%" r="55%">
-      <stop offset="0%" stop-color="#E85D52" stop-opacity="0.7"/>
-      <stop offset="100%" stop-color="#7B241C" stop-opacity="0"/>
+    <!-- Meat sheen mate muy sutil (reemplaza brillo plastico) -->
+    <radialGradient id="g_grill_meat_hi" cx="40%" cy="32%" r="52%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.14"/>
+      <stop offset="70%" stop-color="#ffffff" stop-opacity="0.03"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
     </radialGradient>
-    <!-- Fat/marbling gradient white-cream -->
+    <!-- Vignette marron oscuro para volumen mate -->
+    <radialGradient id="g_grill_vignette" cx="50%" cy="42%" r="56%">
+      <stop offset="62%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#2c1408" stop-opacity="0.30"/>
+    </radialGradient>
+    <!-- Fat/marbling gradient crema calida natural -->
     <linearGradient id="g_grill_fat" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#F5E6D8"/>
-      <stop offset="100%" stop-color="#DEC9B2"/>
+      <stop offset="0%" stop-color="#ece1cd"/>
+      <stop offset="100%" stop-color="#e3cdba"/>
     </linearGradient>
     <!-- Char/grill marks gradient -->
     <linearGradient id="g_grill_char" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -46,21 +52,27 @@
     </linearGradient>
     <!-- Bone gradient cream -->
     <linearGradient id="g_grill_bone" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#F0E6D2"/>
-      <stop offset="100%" stop-color="#C8B89A"/>
+      <stop offset="0%" stop-color="#ece1cd"/>
+      <stop offset="100%" stop-color="#c6ab81"/>
     </linearGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="1.0"/>
+    </filter>
+    <clipPath id="clip_grill">
+      <path d="M30 30 Q34 14 55 16 Q80 14 95 22 Q112 28 115 45 Q118 58 110 68 Q102 76 85 76 Q68 76 52 76 Q36 76 28 66 Q20 56 22 44 Q24 34 30 30Z"/>
+    </clipPath>
   </defs>
 
-  <!-- FLAMES behind meat (bottom layer) -->
+  <!-- FLAMES behind meat (bottom layer) - fuego tenue -->
   <!-- Left flame -->
-  <ellipse cx="40" cy="95" rx="13" ry="22" fill="url(#g_grill_flame1)" opacity="0.92"/>
-  <path d="M33 108 Q36 88 40 82 Q38 92 45 100 Q44 110 33 108Z" fill="url(#g_grill_flame2)" opacity="0.85"/>
+  <ellipse cx="40" cy="95" rx="13" ry="22" fill="url(#g_grill_flame1)" opacity="0.55"/>
+  <path d="M33 108 Q36 88 40 82 Q38 92 45 100 Q44 110 33 108Z" fill="url(#g_grill_flame2)" opacity="0.5"/>
   <!-- Center flame -->
-  <ellipse cx="64" cy="91" rx="16" ry="26" fill="url(#g_grill_flame1)" opacity="0.95"/>
-  <path d="M55 112 Q60 86 64 78 Q62 90 70 98 Q69 112 55 112Z" fill="url(#g_grill_flame2)" opacity="0.9"/>
+  <ellipse cx="64" cy="91" rx="16" ry="26" fill="url(#g_grill_flame1)" opacity="0.6"/>
+  <path d="M55 112 Q60 86 64 78 Q62 90 70 98 Q69 112 55 112Z" fill="url(#g_grill_flame2)" opacity="0.55"/>
   <!-- Right flame -->
-  <ellipse cx="88" cy="95" rx="13" ry="22" fill="url(#g_grill_flame1)" opacity="0.92"/>
-  <path d="M81 108 Q84 88 88 82 Q86 92 95 100 Q94 110 81 108Z" fill="url(#g_grill_flame2)" opacity="0.85"/>
+  <ellipse cx="88" cy="95" rx="13" ry="22" fill="url(#g_grill_flame1)" opacity="0.55"/>
+  <path d="M81 108 Q84 88 88 82 Q86 92 95 100 Q94 110 81 108Z" fill="url(#g_grill_flame2)" opacity="0.5"/>
 
   <!-- GRILL BARS (behind meat, in front of flames) -->
   <!-- 5 horizontal bars -->
@@ -69,34 +81,35 @@
   <rect x="10" y="90" width="108" height="6" rx="3" fill="url(#g_grill_bar)" opacity="0.95"/>
   <rect x="10" y="100" width="108" height="6" rx="3" fill="url(#g_grill_bar)" opacity="0.95"/>
   <rect x="10" y="110" width="108" height="6" rx="3" fill="url(#g_grill_bar)" opacity="0.95"/>
-  <!-- Grill bar highlights -->
-  <rect x="10" y="70" width="108" height="2" rx="1" fill="#AAAAAA" opacity="0.5"/>
-  <rect x="10" y="80" width="108" height="2" rx="1" fill="#AAAAAA" opacity="0.5"/>
-  <rect x="10" y="90" width="108" height="2" rx="1" fill="#AAAAAA" opacity="0.5"/>
-  <rect x="10" y="100" width="108" height="2" rx="1" fill="#AAAAAA" opacity="0.5"/>
-  <rect x="10" y="110" width="108" height="2" rx="1" fill="#AAAAAA" opacity="0.5"/>
+  <!-- Grill bar highlights (metal, atenuado) -->
+  <rect x="10" y="70" width="108" height="2" rx="1" fill="#AAAAAA" opacity="0.35"/>
+  <rect x="10" y="80" width="108" height="2" rx="1" fill="#AAAAAA" opacity="0.35"/>
+  <rect x="10" y="90" width="108" height="2" rx="1" fill="#AAAAAA" opacity="0.35"/>
+  <rect x="10" y="100" width="108" height="2" rx="1" fill="#AAAAAA" opacity="0.35"/>
+  <rect x="10" y="110" width="108" height="2" rx="1" fill="#AAAAAA" opacity="0.35"/>
 
   <!-- BONE - T-bone style, left side -->
   <ellipse cx="22" cy="52" rx="10" ry="16" fill="url(#g_grill_bone)" stroke="#B8A88A" stroke-width="1"/>
   <ellipse cx="22" cy="38" rx="6" ry="8" fill="url(#g_grill_bone)" stroke="#B8A88A" stroke-width="1"/>
   <ellipse cx="22" cy="66" rx="6" ry="8" fill="url(#g_grill_bone)" stroke="#B8A88A" stroke-width="1"/>
   <rect x="19" y="37" width="6" height="30" fill="url(#g_grill_bone)" stroke="#B8A88A" stroke-width="0.5"/>
-  <!-- Bone highlight -->
-  <ellipse cx="20" cy="48" rx="3" ry="7" fill="white" opacity="0.35"/>
+  <!-- Bone highlight (crema, sutil) -->
+  <ellipse cx="20" cy="48" rx="3" ry="7" fill="#f3ead8" opacity="0.2"/>
 
   <!-- MEAT MAIN BODY - T-bone steak shape -->
-  <path d="M30 30 Q34 14 55 16 Q80 14 95 22 Q112 28 115 45 Q118 58 110 68 Q102 76 85 76 Q68 76 52 76 Q36 76 28 66 Q20 56 22 44 Q24 34 30 30Z" fill="url(#g_grill_meat)" stroke="#5C1A10" stroke-width="1.5"/>
+  <path d="M30 30 Q34 14 55 16 Q80 14 95 22 Q112 28 115 45 Q118 58 110 68 Q102 76 85 76 Q68 76 52 76 Q36 76 28 66 Q20 56 22 44 Q24 34 30 30Z" fill="url(#g_grill_meat)" stroke="#4a2114" stroke-width="1.5"/>
 
-  <!-- Marbling fat veins on meat surface -->
-  <path d="M45 30 Q52 26 60 32 Q55 36 45 30Z" fill="url(#g_grill_fat)" opacity="0.75"/>
-  <path d="M70 20 Q80 18 88 26 Q82 28 70 20Z" fill="url(#g_grill_fat)" opacity="0.7"/>
-  <path d="M58 50 Q68 46 78 52 Q70 56 58 50Z" fill="url(#g_grill_fat)" opacity="0.65"/>
-  <path d="M85 38 Q92 34 100 40 Q95 44 85 38Z" fill="url(#g_grill_fat)" opacity="0.7"/>
-  <path d="M38 55 Q46 52 54 58 Q48 62 38 55Z" fill="url(#g_grill_fat)" opacity="0.6"/>
-  <!-- Thin marbling lines -->
-  <path d="M42 40 Q55 36 65 42" stroke="#EDD5BE" stroke-width="1.5" fill="none" opacity="0.6"/>
-  <path d="M72 28 Q84 24 96 32" stroke="#EDD5BE" stroke-width="1.2" fill="none" opacity="0.55"/>
-  <path d="M48 62 Q60 58 72 64" stroke="#EDD5BE" stroke-width="1" fill="none" opacity="0.5"/>
+  <!-- Marmoleo/grasa: manchas suaves desenfocadas, recortadas a la carne -->
+  <g clip-path="url(#clip_grill)" filter="url(#soft)" opacity="0.5">
+    <path d="M45 30 Q52 26 60 32 Q55 36 45 30Z" fill="#ece1cd"/>
+    <path d="M70 20 Q80 18 88 26 Q82 28 70 20Z" fill="#e3cdba"/>
+    <path d="M58 50 Q68 46 78 52 Q70 56 58 50Z" fill="#ece1cd"/>
+    <path d="M85 38 Q92 34 100 40 Q95 44 85 38Z" fill="#e3cdba"/>
+    <path d="M38 55 Q46 52 54 58 Q48 62 38 55Z" fill="#e3cdba"/>
+    <path d="M42 40 Q55 36 65 42" stroke="#ece1cd" stroke-width="2" fill="none"/>
+    <path d="M72 28 Q84 24 96 32" stroke="#e3cdba" stroke-width="1.6" fill="none"/>
+    <path d="M48 62 Q60 58 72 64" stroke="#e3cdba" stroke-width="1.4" fill="none"/>
+  </g>
 
   <!-- GRILL CHAR MARKS on meat (diagonal sear lines) -->
   <!-- Mark 1 -->
@@ -112,14 +125,20 @@
   <path d="M58 18 Q66 28 62 74" stroke="#5C2A10" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.4"/>
   <path d="M78 16 Q86 26 82 70" stroke="#5C2A10" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.4"/>
 
-  <!-- Meat surface highlight (top-left glow) -->
-  <path d="M30 30 Q34 14 55 16 Q80 14 95 22 Q112 28 115 45 Q80 20 45 22 Q30 26 30 30Z" fill="url(#g_grill_meat_hi)" opacity="0.6"/>
+  <!-- Vignette interno (volumen mate sin plastico) -->
+  <path d="M30 30 Q34 14 55 16 Q80 14 95 22 Q112 28 115 45 Q118 58 110 68 Q102 76 85 76 Q68 76 52 76 Q36 76 28 66 Q20 56 22 44 Q24 34 30 30Z" fill="url(#g_grill_vignette)"/>
+
+  <!-- Meat sheen mate muy sutil (top-left) -->
+  <path d="M30 30 Q34 14 55 16 Q80 14 95 22 Q112 28 115 45 Q118 58 110 68 Q102 76 85 76 Q68 76 52 76 Q36 76 28 66 Q20 56 22 44 Q24 34 30 30Z" fill="url(#g_grill_meat_hi)"/>
+
+  <!-- Contorno oscuro fino para definicion -->
+  <path d="M30 30 Q34 14 55 16 Q80 14 95 22 Q112 28 115 45 Q118 58 110 68 Q102 76 85 76 Q68 76 52 76 Q36 76 28 66 Q20 56 22 44 Q24 34 30 30Z" fill="none" stroke="#3a1a0e" stroke-width="1.1" opacity="0.55"/>
 
   <!-- MEAT SIDE EDGE (bottom thickness) -->
-  <path d="M28 66 Q36 76 52 76 Q68 76 85 76 Q102 76 110 68 Q115 72 108 80 Q98 86 80 84 Q60 84 40 84 Q24 82 20 72 Q20 68 28 66Z" fill="url(#g_grill_meat_side)" stroke="#5C1A10" stroke-width="1"/>
+  <path d="M28 66 Q36 76 52 76 Q68 76 85 76 Q102 76 110 68 Q115 72 108 80 Q98 86 80 84 Q60 84 40 84 Q24 82 20 72 Q20 68 28 66Z" fill="url(#g_grill_meat_side)" stroke="#4a2114" stroke-width="1"/>
 
   <!-- Steam wisps above meat -->
-  <path d="M50 14 Q48 8 52 4 Q54 8 50 14Z" fill="#FFFFFF" opacity="0.25"/>
-  <path d="M64 10 Q62 4 66 0 Q68 4 64 10Z" fill="#FFFFFF" opacity="0.2"/>
-  <path d="M78 13 Q76 7 80 3 Q82 7 78 13Z" fill="#FFFFFF" opacity="0.22"/>
+  <path d="M50 14 Q48 8 52 4 Q54 8 50 14Z" fill="#FFFFFF" opacity="0.22"/>
+  <path d="M64 10 Q62 4 66 0 Q68 4 64 10Z" fill="#FFFFFF" opacity="0.18"/>
+  <path d="M78 13 Q76 7 80 3 Q82 7 78 13Z" fill="#FFFFFF" opacity="0.2"/>
 </svg>

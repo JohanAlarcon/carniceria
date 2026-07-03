@@ -1,30 +1,35 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
   <defs>
     <radialGradient id="g_octopus_body" cx="45%" cy="35%" r="55%">
-      <stop offset="0%" stop-color="#e87dbf"/>
-      <stop offset="40%" stop-color="#c94fa0"/>
-      <stop offset="100%" stop-color="#7a1f6e"/>
+      <stop offset="0%" stop-color="#c49cb4"/>
+      <stop offset="40%" stop-color="#a5738f"/>
+      <stop offset="100%" stop-color="#66375c"/>
     </radialGradient>
     <radialGradient id="g_octopus_head_shine" cx="38%" cy="28%" r="40%">
-      <stop offset="0%" stop-color="#f4a8d8" stop-opacity="0.85"/>
-      <stop offset="100%" stop-color="#e060b0" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.14"/>
+      <stop offset="70%" stop-color="#ffffff" stop-opacity="0.03"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="g_octopus_vignette" cx="50%" cy="42%" r="56%">
+      <stop offset="62%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#2a0f24" stop-opacity="0.28"/>
     </radialGradient>
     <linearGradient id="g_octopus_tent1" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#d45fa8"/>
-      <stop offset="100%" stop-color="#7a1f6e"/>
+      <stop offset="0%" stop-color="#b8879f"/>
+      <stop offset="100%" stop-color="#66375c"/>
     </linearGradient>
     <linearGradient id="g_octopus_tent2" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#c94fa0"/>
-      <stop offset="100%" stop-color="#6b1a60"/>
+      <stop offset="0%" stop-color="#a5738f"/>
+      <stop offset="100%" stop-color="#57324e"/>
     </linearGradient>
     <linearGradient id="g_octopus_tent3" x1="100%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#d45fa8"/>
-      <stop offset="100%" stop-color="#7a1f6e"/>
+      <stop offset="0%" stop-color="#b8879f"/>
+      <stop offset="100%" stop-color="#66375c"/>
     </linearGradient>
     <radialGradient id="g_octopus_sucker" cx="40%" cy="35%" r="55%">
-      <stop offset="0%" stop-color="#f9d4eb"/>
-      <stop offset="60%" stop-color="#e090c8"/>
-      <stop offset="100%" stop-color="#b03a8a"/>
+      <stop offset="0%" stop-color="#e6cdda"/>
+      <stop offset="60%" stop-color="#c79cb2"/>
+      <stop offset="100%" stop-color="#95577c"/>
     </radialGradient>
     <radialGradient id="g_octopus_eye" cx="35%" cy="30%" r="55%">
       <stop offset="0%" stop-color="#5a2d6e"/>
@@ -76,13 +81,16 @@
   <!-- Head dome top -->
   <ellipse cx="64" cy="32" rx="26" ry="22" fill="url(#g_octopus_body)" stroke="#5a1050" stroke-width="1.5"/>
 
-  <!-- Body shine highlight -->
+  <!-- Body sheen (mate muy sutil) -->
   <ellipse cx="52" cy="30" rx="14" ry="11" fill="url(#g_octopus_head_shine)"/>
 
+  <!-- Vignette interno para volumen mate -->
+  <ellipse cx="64" cy="44" rx="36" ry="42" fill="url(#g_octopus_vignette)"/>
+
   <!-- Mantle texture spots -->
-  <ellipse cx="74" cy="24" rx="4" ry="3" fill="#c050a0" opacity="0.5"/>
-  <ellipse cx="80" cy="34" rx="3" ry="2.5" fill="#c050a0" opacity="0.4"/>
-  <ellipse cx="50" cy="22" rx="3" ry="2.5" fill="#d070b8" opacity="0.4"/>
+  <ellipse cx="74" cy="24" rx="4" ry="3" fill="#9a6a88" opacity="0.45"/>
+  <ellipse cx="80" cy="34" rx="3" ry="2.5" fill="#9a6a88" opacity="0.38"/>
+  <ellipse cx="50" cy="22" rx="3" ry="2.5" fill="#b088a0" opacity="0.38"/>
 
   <!-- Eyes -->
   <!-- Left eye white -->
@@ -92,7 +100,7 @@
   <!-- Left pupil horizontal slit -->
   <ellipse cx="50" cy="57" rx="2" ry="3.8" fill="url(#g_octopus_pupil)"/>
   <!-- Left eye shine -->
-  <ellipse cx="47.5" cy="54.5" rx="2.2" ry="1.8" fill="white" opacity="0.85"/>
+  <ellipse cx="47.5" cy="54.5" rx="2.2" ry="1.8" fill="white" opacity="0.6"/>
 
   <!-- Right eye white -->
   <ellipse cx="78" cy="56" rx="9" ry="8.5" fill="#f0e0f8" stroke="#4a0d48" stroke-width="1.5"/>
@@ -101,13 +109,13 @@
   <!-- Right pupil horizontal slit -->
   <ellipse cx="78" cy="57" rx="2" ry="3.8" fill="url(#g_octopus_pupil)"/>
   <!-- Right eye shine -->
-  <ellipse cx="75.5" cy="54.5" rx="2.2" ry="1.8" fill="white" opacity="0.85"/>
+  <ellipse cx="75.5" cy="54.5" rx="2.2" ry="1.8" fill="white" opacity="0.6"/>
 
   <!-- Cute mouth -->
   <path d="M 58 68 Q 64 74 70 68" fill="none" stroke="#4a0d48" stroke-width="1.8" stroke-linecap="round"/>
 
   <!-- Cheek blush left -->
-  <ellipse cx="44" cy="66" rx="5" ry="3" fill="#f080c0" opacity="0.4"/>
+  <ellipse cx="44" cy="66" rx="5" ry="3" fill="#cf94b4" opacity="0.32"/>
   <!-- Cheek blush right -->
-  <ellipse cx="84" cy="66" rx="5" ry="3" fill="#f080c0" opacity="0.4"/>
+  <ellipse cx="84" cy="66" rx="5" ry="3" fill="#cf94b4" opacity="0.32"/>
 </svg>

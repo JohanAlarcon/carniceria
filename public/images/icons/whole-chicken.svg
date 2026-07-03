@@ -1,95 +1,120 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
   <defs>
     <radialGradient id="g_whole-chicken_body" cx="50%" cy="45%" r="52%" fx="40%" fy="35%">
-      <stop offset="0%" stop-color="#F5C97A"/>
-      <stop offset="35%" stop-color="#E8A94E"/>
-      <stop offset="70%" stop-color="#C97D2E"/>
-      <stop offset="100%" stop-color="#A05A1A"/>
+      <stop offset="0%" stop-color="#f3d5af"/>
+      <stop offset="35%" stop-color="#e7c292"/>
+      <stop offset="70%" stop-color="#d1a975"/>
+      <stop offset="100%" stop-color="#b38b56"/>
     </radialGradient>
     <radialGradient id="g_whole-chicken_breast" cx="50%" cy="40%" r="50%" fx="45%" fy="30%">
-      <stop offset="0%" stop-color="#F7D08A"/>
-      <stop offset="40%" stop-color="#EDB95C"/>
-      <stop offset="80%" stop-color="#D4932F"/>
-      <stop offset="100%" stop-color="#B8741E"/>
+      <stop offset="0%" stop-color="#f6dab3"/>
+      <stop offset="40%" stop-color="#ecc999"/>
+      <stop offset="80%" stop-color="#d6b27c"/>
+      <stop offset="100%" stop-color="#c1955f"/>
     </radialGradient>
     <radialGradient id="g_whole-chicken_skin_sheen" cx="40%" cy="30%" r="45%">
-      <stop offset="0%" stop-color="#FEF0C0" stop-opacity="0.7"/>
-      <stop offset="60%" stop-color="#F5C97A" stop-opacity="0.2"/>
-      <stop offset="100%" stop-color="#C97D2E" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.14"/>
+      <stop offset="60%" stop-color="#ffffff" stop-opacity="0.03"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
     </radialGradient>
     <radialGradient id="g_whole-chicken_leg_l" cx="40%" cy="30%" r="60%">
-      <stop offset="0%" stop-color="#F0B85A"/>
-      <stop offset="50%" stop-color="#D4892A"/>
-      <stop offset="100%" stop-color="#9E5C18"/>
+      <stop offset="0%" stop-color="#f0d1a7"/>
+      <stop offset="50%" stop-color="#d6b27c"/>
+      <stop offset="100%" stop-color="#ad8251"/>
     </radialGradient>
     <radialGradient id="g_whole-chicken_leg_r" cx="60%" cy="30%" r="60%">
-      <stop offset="0%" stop-color="#F0B85A"/>
-      <stop offset="50%" stop-color="#D4892A"/>
-      <stop offset="100%" stop-color="#9E5C18"/>
+      <stop offset="0%" stop-color="#f0d1a7"/>
+      <stop offset="50%" stop-color="#d6b27c"/>
+      <stop offset="100%" stop-color="#ad8251"/>
     </radialGradient>
     <radialGradient id="g_whole-chicken_wing_l" cx="35%" cy="35%" r="55%">
-      <stop offset="0%" stop-color="#EDB95C"/>
-      <stop offset="60%" stop-color="#C8841E"/>
-      <stop offset="100%" stop-color="#8E4E10"/>
+      <stop offset="0%" stop-color="#eac99b"/>
+      <stop offset="60%" stop-color="#cfa46e"/>
+      <stop offset="100%" stop-color="#a07646"/>
     </radialGradient>
     <radialGradient id="g_whole-chicken_wing_r" cx="65%" cy="35%" r="55%">
-      <stop offset="0%" stop-color="#EDB95C"/>
-      <stop offset="60%" stop-color="#C8841E"/>
-      <stop offset="100%" stop-color="#8E4E10"/>
+      <stop offset="0%" stop-color="#eac99b"/>
+      <stop offset="60%" stop-color="#cfa46e"/>
+      <stop offset="100%" stop-color="#a07646"/>
     </radialGradient>
     <radialGradient id="g_whole-chicken_neck" cx="50%" cy="30%" r="55%">
-      <stop offset="0%" stop-color="#E8B050"/>
-      <stop offset="100%" stop-color="#A06020"/>
+      <stop offset="0%" stop-color="#e4bd87"/>
+      <stop offset="100%" stop-color="#ad8251"/>
     </radialGradient>
     <linearGradient id="g_whole-chicken_shadow" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#7A3A08" stop-opacity="0"/>
-      <stop offset="100%" stop-color="#5A2800" stop-opacity="0.35"/>
+      <stop offset="0%" stop-color="#6e481f" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#4e2f0e" stop-opacity="0.28"/>
     </linearGradient>
+    <radialGradient id="g_whole-chicken_vignette" cx="50%" cy="45%" r="56%">
+      <stop offset="62%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#3e230e" stop-opacity="0.28"/>
+    </radialGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="1.0"/>
+    </filter>
+    <clipPath id="clip_chicken">
+      <ellipse cx="64" cy="68" rx="34" ry="30"/>
+    </clipPath>
   </defs>
 
   <!-- Shadow under chicken -->
-  <ellipse cx="64" cy="110" rx="38" ry="7" fill="#3A1A00" fill-opacity="0.18"/>
+  <ellipse cx="64" cy="110" rx="38" ry="7" fill="#3e1900" fill-opacity="0.18"/>
 
   <!-- Left drumstick bone end -->
-  <ellipse cx="38" cy="100" rx="5" ry="4" fill="#F0D080" stroke="#9E5C18" stroke-width="0.8"/>
+  <ellipse cx="38" cy="100" rx="5" ry="4" fill="#f1d9ab" stroke="#ad8251" stroke-width="0.8"/>
   <!-- Right drumstick bone end -->
-  <ellipse cx="90" cy="100" rx="5" ry="4" fill="#F0D080" stroke="#9E5C18" stroke-width="0.8"/>
+  <ellipse cx="90" cy="100" rx="5" ry="4" fill="#f1d9ab" stroke="#ad8251" stroke-width="0.8"/>
 
   <!-- Left leg / drumstick -->
   <path d="M34 72 Q26 80 30 92 Q33 100 38 101 Q44 102 46 96 Q50 86 46 74 Z"
-        fill="url(#g_whole-chicken_leg_l)" stroke="#7A3A0A" stroke-width="1"/>
+        fill="url(#g_whole-chicken_leg_l)" stroke="#6e421c" stroke-width="1"/>
   <!-- Right leg / drumstick -->
   <path d="M94 72 Q102 80 98 92 Q95 100 90 101 Q84 102 82 96 Q78 86 82 74 Z"
-        fill="url(#g_whole-chicken_leg_r)" stroke="#7A3A0A" stroke-width="1"/>
+        fill="url(#g_whole-chicken_leg_r)" stroke="#6e421c" stroke-width="1"/>
 
   <!-- Left wing -->
   <path d="M32 50 Q18 52 16 65 Q15 74 26 76 Q36 77 40 68 Q46 58 38 50 Z"
-        fill="url(#g_whole-chicken_wing_l)" stroke="#7A3A0A" stroke-width="1"/>
+        fill="url(#g_whole-chicken_wing_l)" stroke="#6e421c" stroke-width="1"/>
   <!-- Right wing -->
   <path d="M96 50 Q110 52 112 65 Q113 74 102 76 Q92 77 88 68 Q82 58 90 50 Z"
-        fill="url(#g_whole-chicken_wing_r)" stroke="#7A3A0A" stroke-width="1"/>
+        fill="url(#g_whole-chicken_wing_r)" stroke="#6e421c" stroke-width="1"/>
 
   <!-- Main body -->
-  <ellipse cx="64" cy="68" rx="34" ry="30" fill="url(#g_whole-chicken_body)" stroke="#7A3A0A" stroke-width="1.2"/>
+  <ellipse cx="64" cy="68" rx="34" ry="30" fill="url(#g_whole-chicken_body)" stroke="#6e421c" stroke-width="1.2"/>
 
   <!-- Breast highlight / center dome -->
-  <ellipse cx="62" cy="58" rx="18" ry="16" fill="url(#g_whole-chicken_breast)" stroke="#B8741E" stroke-width="0.7"/>
+  <ellipse cx="62" cy="58" rx="18" ry="16" fill="url(#g_whole-chicken_breast)" stroke="#c1955f" stroke-width="0.7"/>
 
-  <!-- Skin sheen gloss -->
+  <!-- Skin sheen (mate muy sutil) -->
   <ellipse cx="58" cy="52" rx="14" ry="11" fill="url(#g_whole-chicken_skin_sheen)"/>
 
   <!-- Neck / cavity opening -->
-  <ellipse cx="64" cy="42" rx="10" ry="6" fill="url(#g_whole-chicken_neck)" stroke="#7A3A0A" stroke-width="0.9"/>
-  <ellipse cx="64" cy="43" rx="7" ry="4" fill="#7A3A0A" fill-opacity="0.55"/>
+  <ellipse cx="64" cy="42" rx="10" ry="6" fill="url(#g_whole-chicken_neck)" stroke="#6e421c" stroke-width="0.9"/>
+  <ellipse cx="64" cy="43" rx="7" ry="4" fill="#6e421c" fill-opacity="0.5"/>
 
   <!-- Skin texture wrinkle lines on breast -->
-  <path d="M56 52 Q62 48 70 52" fill="none" stroke="#C07828" stroke-width="0.8" stroke-linecap="round" opacity="0.6"/>
-  <path d="M54 58 Q62 53 72 58" fill="none" stroke="#C07828" stroke-width="0.7" stroke-linecap="round" opacity="0.5"/>
-  <path d="M56 64 Q63 60 72 64" fill="none" stroke="#B06820" stroke-width="0.6" stroke-linecap="round" opacity="0.45"/>
+  <path d="M56 52 Q62 48 70 52" fill="none" stroke="#bc905b" stroke-width="0.8" stroke-linecap="round" opacity="0.55"/>
+  <path d="M54 58 Q62 53 72 58" fill="none" stroke="#bc905b" stroke-width="0.7" stroke-linecap="round" opacity="0.45"/>
+  <path d="M56 64 Q63 60 72 64" fill="none" stroke="#ac8051" stroke-width="0.6" stroke-linecap="round" opacity="0.4"/>
+
+  <!-- Marmoleo / grasa: manchas suaves desenfocadas recortadas al cuerpo -->
+  <g clip-path="url(#clip_chicken)" filter="url(#soft)" opacity="0.4">
+    <ellipse cx="60" cy="55" rx="8" ry="4" fill="#f0dab3"/>
+    <ellipse cx="72" cy="62" rx="6" ry="3.4" fill="#f3d9b8"/>
+    <ellipse cx="54" cy="67" rx="6" ry="3.2" fill="#e7c7a2"/>
+    <ellipse cx="66" cy="79" rx="7" ry="3.6" fill="#f0dab3"/>
+    <ellipse cx="78" cy="74" rx="5" ry="2.8" fill="#f3d9b8"/>
+  </g>
 
   <!-- Overall body shadow overlay -->
   <ellipse cx="64" cy="68" rx="34" ry="30" fill="url(#g_whole-chicken_shadow)"/>
 
-  <!-- Highlight gloss on top of body -->
-  <ellipse cx="55" cy="50" rx="9" ry="6" fill="#FFF8E0" fill-opacity="0.28"/>
+  <!-- Vignette (volumen mate) -->
+  <ellipse cx="64" cy="68" rx="34" ry="30" fill="url(#g_whole-chicken_vignette)"/>
+
+  <!-- Contorno para definicion -->
+  <ellipse cx="64" cy="68" rx="34" ry="30" fill="none" stroke="#4e2f0e" stroke-width="1.1" opacity="0.55"/>
+
+  <!-- Highlight gloss on top of body (mate muy sutil) -->
+  <ellipse cx="55" cy="50" rx="9" ry="6" fill="#ffffff" fill-opacity="0.10"/>
 </svg>

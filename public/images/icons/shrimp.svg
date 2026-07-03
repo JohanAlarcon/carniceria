@@ -1,39 +1,43 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
   <defs>
     <linearGradient id="g_shrimp_body1" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FF8C5A"/>
-      <stop offset="40%" stop-color="#E8552A"/>
-      <stop offset="100%" stop-color="#C03A10"/>
+      <stop offset="0%" stop-color="#d87a5a"/>
+      <stop offset="40%" stop-color="#c15c40"/>
+      <stop offset="100%" stop-color="#a0472e"/>
     </linearGradient>
     <linearGradient id="g_shrimp_body2" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FFAA7A"/>
-      <stop offset="50%" stop-color="#FF7040"/>
-      <stop offset="100%" stop-color="#D04820"/>
+      <stop offset="0%" stop-color="#dd8363"/>
+      <stop offset="50%" stop-color="#c5674a"/>
+      <stop offset="100%" stop-color="#ab4e34"/>
     </linearGradient>
-    <radialGradient id="g_shrimp_shine" cx="35%" cy="30%" r="50%">
-      <stop offset="0%" stop-color="#FFCCA0" stop-opacity="0.9"/>
-      <stop offset="60%" stop-color="#FF8850" stop-opacity="0.4"/>
-      <stop offset="100%" stop-color="#CC4010" stop-opacity="0"/>
+    <radialGradient id="g_shrimp_shine" cx="35%" cy="30%" r="55%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.15"/>
+      <stop offset="60%" stop-color="#ffffff" stop-opacity="0.03"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="g_shrimp_vignette" cx="45%" cy="40%" r="62%">
+      <stop offset="62%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#3a1a0e" stop-opacity="0.24"/>
     </radialGradient>
     <linearGradient id="g_shrimp_tail" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FF9966"/>
-      <stop offset="100%" stop-color="#C03A10"/>
+      <stop offset="0%" stop-color="#d3805f"/>
+      <stop offset="100%" stop-color="#a0472e"/>
     </linearGradient>
     <linearGradient id="g_shrimp_head" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FFAA80"/>
-      <stop offset="100%" stop-color="#B83010"/>
+      <stop offset="0%" stop-color="#d8825f"/>
+      <stop offset="100%" stop-color="#9c4530"/>
     </linearGradient>
     <radialGradient id="g_shrimp_eye" cx="40%" cy="35%" r="55%">
       <stop offset="0%" stop-color="#555"/>
       <stop offset="100%" stop-color="#111"/>
     </radialGradient>
     <linearGradient id="g_shrimp_seg1" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#FFBB88"/>
-      <stop offset="100%" stop-color="#CC4418"/>
+      <stop offset="0%" stop-color="#d9906f"/>
+      <stop offset="100%" stop-color="#a84c34"/>
     </linearGradient>
     <linearGradient id="g_shrimp_belly" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#FFD5AA"/>
-      <stop offset="100%" stop-color="#FFAA70"/>
+      <stop offset="0%" stop-color="#e0a888"/>
+      <stop offset="100%" stop-color="#cf8563"/>
     </linearGradient>
   </defs>
 
@@ -80,24 +84,32 @@
 
   <!-- Rostrum (spike on head) -->
   <path d="M12,104 Q8,110 10,114 Q14,112 16,108 Q14,106 12,104 Z"
-        fill="#CC4418" stroke="#8B2208" stroke-width="0.8"/>
+        fill="#a84c34" stroke="#8B2208" stroke-width="0.8"/>
 
   <!-- Antennae -->
-  <path d="M14,102 Q8,94 6,82 Q8,74 12,70" fill="none" stroke="#CC5520" stroke-width="1.2" stroke-linecap="round"/>
-  <path d="M14,102 Q4,92 2,78 Q2,66 8,58" fill="none" stroke="#CC5520" stroke-width="1" stroke-linecap="round"/>
+  <path d="M14,102 Q8,94 6,82 Q8,74 12,70" fill="none" stroke="#b5623f" stroke-width="1.2" stroke-linecap="round"/>
+  <path d="M14,102 Q4,92 2,78 Q2,66 8,58" fill="none" stroke="#b5623f" stroke-width="1" stroke-linecap="round"/>
 
   <!-- Small walking legs -->
-  <path d="M36,90 Q32,96 28,98" fill="none" stroke="#BB4015" stroke-width="0.9" stroke-linecap="round"/>
-  <path d="M44,82 Q40,90 36,94" fill="none" stroke="#BB4015" stroke-width="0.9" stroke-linecap="round"/>
-  <path d="M54,72 Q50,80 46,85" fill="none" stroke="#BB4015" stroke-width="0.9" stroke-linecap="round"/>
-  <path d="M64,62 Q60,70 56,76" fill="none" stroke="#BB4015" stroke-width="0.9" stroke-linecap="round"/>
-  <path d="M74,52 Q70,60 66,66" fill="none" stroke="#BB4015" stroke-width="0.9" stroke-linecap="round"/>
+  <path d="M36,90 Q32,96 28,98" fill="none" stroke="#a54c30" stroke-width="0.9" stroke-linecap="round"/>
+  <path d="M44,82 Q40,90 36,94" fill="none" stroke="#a54c30" stroke-width="0.9" stroke-linecap="round"/>
+  <path d="M54,72 Q50,80 46,85" fill="none" stroke="#a54c30" stroke-width="0.9" stroke-linecap="round"/>
+  <path d="M64,62 Q60,70 56,76" fill="none" stroke="#a54c30" stroke-width="0.9" stroke-linecap="round"/>
+  <path d="M74,52 Q70,60 66,66" fill="none" stroke="#a54c30" stroke-width="0.9" stroke-linecap="round"/>
 
   <!-- Eye -->
   <circle cx="16" cy="99" r="3.2" fill="url(#g_shrimp_eye)" stroke="#333" stroke-width="0.5"/>
   <circle cx="15.2" cy="98.2" r="1" fill="#888" opacity="0.7"/>
 
-  <!-- Shine/highlight overlay -->
+  <!-- Vignette (volumen mate) -->
+  <path d="M95,27 Q105,18 108,25 Q100,40 88,50 Q75,62 62,72 Q50,82 40,92 Q32,100 28,104 Q22,108 20,102 Q22,94 30,88 Q40,80 52,70 Q65,59 76,47 Q86,36 95,27 Z"
+        fill="url(#g_shrimp_vignette)"/>
+
+  <!-- Sheen mate muy sutil (reemplaza brillo plastico) -->
   <path d="M95,27 Q105,18 108,25 Q100,40 88,50 Q75,62 62,72 Q50,82 40,92 Q32,100 28,104 Q22,108 20,102 Q22,94 30,88 Q40,80 52,70 Q65,59 76,47 Q86,36 95,27 Z"
         fill="url(#g_shrimp_shine)"/>
+
+  <!-- Contorno para definicion -->
+  <path d="M95,27 Q105,18 108,25 Q100,40 88,50 Q75,62 62,72 Q50,82 40,92 Q32,100 28,104 Q22,108 20,102 Q22,94 30,88 Q40,80 52,70 Q65,59 76,47 Q86,36 95,27 Z"
+        fill="none" stroke="#7a1e08" stroke-width="1" opacity="0.55"/>
 </svg>

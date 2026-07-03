@@ -1,31 +1,38 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
   <defs>
     <radialGradient id="g_tripe_base" cx="50%" cy="45%" r="52%" fx="40%" fy="35%">
-      <stop offset="0%" stop-color="#f5e6c8"/>
-      <stop offset="40%" stop-color="#e8d0a0"/>
-      <stop offset="80%" stop-color="#d4b87a"/>
-      <stop offset="100%" stop-color="#b8965a"/>
+      <stop offset="0%" stop-color="#f0e6d3"/>
+      <stop offset="40%" stop-color="#ece0cc"/>
+      <stop offset="80%" stop-color="#d8c6a8"/>
+      <stop offset="100%" stop-color="#c0ac88"/>
     </radialGradient>
-    <radialGradient id="g_tripe_highlight" cx="35%" cy="30%" r="35%">
-      <stop offset="0%" stop-color="#fffae8" stop-opacity="0.85"/>
-      <stop offset="100%" stop-color="#fffae8" stop-opacity="0"/>
+    <radialGradient id="g_tripe_highlight" cx="38%" cy="30%" r="42%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.14"/>
+      <stop offset="70%" stop-color="#ffffff" stop-opacity="0.02"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
     </radialGradient>
     <linearGradient id="g_tripe_shadow" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" stop-color="#c9a96e" stop-opacity="0"/>
-      <stop offset="100%" stop-color="#7a5c30" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#6b5230" stop-opacity="0.42"/>
     </linearGradient>
     <radialGradient id="g_tripe_cell" cx="50%" cy="40%" r="50%">
-      <stop offset="0%" stop-color="#f0d9a8"/>
-      <stop offset="100%" stop-color="#c8a060"/>
+      <stop offset="0%" stop-color="#e8dabf"/>
+      <stop offset="100%" stop-color="#c9b48c"/>
     </radialGradient>
-    <radialGradient id="g_tripe_steam1" cx="50%" cy="100%" r="50%">
-      <stop offset="0%" stop-color="#d4b87a" stop-opacity="0.3"/>
-      <stop offset="100%" stop-color="#d4b87a" stop-opacity="0"/>
+    <radialGradient id="g_tripe_vignette" cx="50%" cy="45%" r="56%">
+      <stop offset="62%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#3a2c14" stop-opacity="0.30"/>
     </radialGradient>
     <linearGradient id="g_tripe_rim" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#e8d0a0"/>
-      <stop offset="100%" stop-color="#a07840"/>
+      <stop offset="0%" stop-color="#ddccae"/>
+      <stop offset="100%" stop-color="#a08858"/>
     </linearGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="1.0"/>
+    </filter>
+    <clipPath id="clip_tripe">
+      <ellipse cx="64" cy="68" rx="50" ry="38"/>
+    </clipPath>
   </defs>
 
   <!-- Main tripe body - folded/rolled piece -->
@@ -64,18 +71,31 @@
   <polygon points="64,75 68,72 72,75 72,81 68,84 64,81" fill="url(#g_tripe_cell)" stroke="#8a6030" stroke-width="0.8" opacity="0.85"/>
   <polygon points="72,75 76,72 80,75 80,81 76,84 72,81" fill="url(#g_tripe_cell)" stroke="#8a6030" stroke-width="0.8" opacity="0.85"/>
 
+  <!-- Marmoleo suave: manchas de grasa calida desenfocadas, recortadas a la carne -->
+  <g clip-path="url(#clip_tripe)" filter="url(#soft)" opacity="0.42">
+    <path d="M 30 52 Q 44 47 56 53 Q 66 58 78 52 Q 72 57 62 57 Q 50 57 40 60 Q 33 60 30 52 Z" fill="#ece1cd"/>
+    <path d="M 40 78 Q 54 74 66 79 Q 60 83 50 82 Q 42 81 40 78 Z" fill="#efe0d3"/>
+    <ellipse cx="82" cy="70" rx="6" ry="3" transform="rotate(10 82 70)" fill="#efe0d3"/>
+  </g>
+
   <!-- Overall shadow gradient overlay -->
   <ellipse cx="64" cy="68" rx="50" ry="38" fill="url(#g_tripe_shadow)" stroke="none"/>
 
-  <!-- Highlight/sheen -->
+  <!-- Vignette (volumen mate sin plastico) -->
+  <ellipse cx="64" cy="68" rx="50" ry="38" fill="url(#g_tripe_vignette)" stroke="none"/>
+
+  <!-- Sheen mate muy sutil -->
   <ellipse cx="64" cy="68" rx="50" ry="38" fill="url(#g_tripe_highlight)" stroke="none"/>
 
   <!-- Top folded rim of the tripe piece -->
   <path d="M24,55 Q35,38 55,34 Q75,30 90,40 Q100,47 95,58" fill="none" stroke="url(#g_tripe_rim)" stroke-width="3.5" stroke-linecap="round"/>
-  <path d="M24,55 Q35,38 55,34 Q75,30 90,40 Q100,47 95,58" fill="none" stroke="#f5e6c8" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+  <path d="M24,55 Q35,38 55,34 Q75,30 90,40 Q100,47 95,58" fill="none" stroke="#ece0cc" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>
 
   <!-- Subtle inner fold line -->
   <path d="M30,62 Q50,50 70,52 Q85,54 92,64" fill="none" stroke="#9a7040" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+
+  <!-- Contorno oscuro fino para definicion -->
+  <ellipse cx="64" cy="68" rx="50" ry="38" fill="none" stroke="#6b4e2a" stroke-width="1.1" opacity="0.55"/>
 
   <!-- Bottom shadow under the piece -->
   <ellipse cx="64" cy="104" rx="42" ry="6" fill="#7a5c30" opacity="0.18"/>

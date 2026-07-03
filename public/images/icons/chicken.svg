@@ -1,28 +1,28 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
   <defs>
     <radialGradient id="g_chicken_body" cx="45%" cy="45%" r="55%" fx="35%" fy="35%">
-      <stop offset="0%" stop-color="#FFF8E7"/>
-      <stop offset="40%" stop-color="#F5E6C8"/>
-      <stop offset="80%" stop-color="#E8D0A0"/>
-      <stop offset="100%" stop-color="#C9B07A"/>
+      <stop offset="0%" stop-color="#f0dcc8"/>
+      <stop offset="40%" stop-color="#e6cca6"/>
+      <stop offset="80%" stop-color="#d9bd92"/>
+      <stop offset="100%" stop-color="#cdae86"/>
     </radialGradient>
     <radialGradient id="g_chicken_wing" cx="40%" cy="35%" r="60%" fx="30%" fy="25%">
-      <stop offset="0%" stop-color="#F0E2C0"/>
-      <stop offset="50%" stop-color="#DEC99A"/>
-      <stop offset="100%" stop-color="#BFA070"/>
+      <stop offset="0%" stop-color="#ecdec2"/>
+      <stop offset="50%" stop-color="#d6c49c"/>
+      <stop offset="100%" stop-color="#b49e76"/>
     </radialGradient>
     <linearGradient id="g_chicken_crest" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#FF4444"/>
-      <stop offset="50%" stop-color="#E02020"/>
-      <stop offset="100%" stop-color="#AA1010"/>
+      <stop offset="0%" stop-color="#e5544a"/>
+      <stop offset="50%" stop-color="#c8322a"/>
+      <stop offset="100%" stop-color="#931a14"/>
     </linearGradient>
     <linearGradient id="g_chicken_wattle" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#FF5555"/>
-      <stop offset="100%" stop-color="#CC1515"/>
+      <stop offset="0%" stop-color="#db5a50"/>
+      <stop offset="100%" stop-color="#ab241c"/>
     </linearGradient>
     <linearGradient id="g_chicken_beak" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#FFAA33"/>
-      <stop offset="100%" stop-color="#CC7700"/>
+      <stop offset="0%" stop-color="#e6a248"/>
+      <stop offset="100%" stop-color="#b0730f"/>
     </linearGradient>
     <radialGradient id="g_chicken_eye" cx="35%" cy="35%" r="60%">
       <stop offset="0%" stop-color="#555555"/>
@@ -30,13 +30,13 @@
       <stop offset="100%" stop-color="#000000"/>
     </radialGradient>
     <radialGradient id="g_chicken_tail" cx="60%" cy="30%" r="60%">
-      <stop offset="0%" stop-color="#EDD8A8"/>
-      <stop offset="70%" stop-color="#C8AA70"/>
-      <stop offset="100%" stop-color="#A08050"/>
+      <stop offset="0%" stop-color="#e7d4ac"/>
+      <stop offset="70%" stop-color="#c0a878"/>
+      <stop offset="100%" stop-color="#98805a"/>
     </radialGradient>
     <linearGradient id="g_chicken_leg1" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FFBB44"/>
-      <stop offset="100%" stop-color="#CC8800"/>
+      <stop offset="0%" stop-color="#e6ae4e"/>
+      <stop offset="100%" stop-color="#b07d12"/>
     </linearGradient>
     <radialGradient id="g_chicken_shadow" cx="50%" cy="50%" r="50%">
       <stop offset="0%" stop-color="#C8A870" stop-opacity="0.0"/>
@@ -51,8 +51,8 @@
 
   <!-- Wing -->
   <ellipse cx="60" cy="70" rx="22" ry="14" fill="url(#g_chicken_wing)" transform="rotate(-10 60 70)" stroke="#AA8850" stroke-width="0.8"/>
-  <!-- Wing highlight -->
-  <ellipse cx="54" cy="65" rx="10" ry="6" fill="#FFF5DC" fill-opacity="0.5" transform="rotate(-10 54 65)"/>
+  <!-- Wing sheen (mate, muy sutil) -->
+  <ellipse cx="54" cy="65" rx="10" ry="6" fill="#f7edda" fill-opacity="0.15" transform="rotate(-10 54 65)"/>
   <!-- Wing feather lines -->
   <path d="M45 72 Q58 68 75 73" stroke="#BFA070" stroke-width="0.8" fill="none"/>
   <path d="M46 76 Q59 72 74 77" stroke="#BFA070" stroke-width="0.8" fill="none"/>
@@ -64,13 +64,13 @@
 
   <!-- Neck -->
   <ellipse cx="42" cy="57" rx="12" ry="16" fill="url(#g_chicken_body)" stroke="#B09060" stroke-width="0.8"/>
-  <!-- Neck highlight -->
-  <ellipse cx="39" cy="52" rx="5" ry="7" fill="#FFFCF0" fill-opacity="0.45"/>
+  <!-- Neck sheen (mate, muy sutil) -->
+  <ellipse cx="39" cy="52" rx="5" ry="7" fill="#f7edda" fill-opacity="0.13"/>
 
   <!-- Head -->
   <circle cx="36" cy="42" r="16" fill="url(#g_chicken_body)" stroke="#B09060" stroke-width="1.2"/>
-  <!-- Head highlight -->
-  <ellipse cx="30" cy="36" rx="6" ry="5" fill="#FFFDF5" fill-opacity="0.5"/>
+  <!-- Head sheen (mate, muy sutil) -->
+  <ellipse cx="30" cy="36" rx="6" ry="5" fill="#f7edda" fill-opacity="0.15"/>
 
   <!-- Crest / Cresta roja -->
   <path d="M28 28 Q25 20 30 18 Q32 24 35 20 Q36 14 40 16 Q39 22 43 20 Q44 26 40 28 Z" fill="url(#g_chicken_crest)" stroke="#880000" stroke-width="0.7"/>

@@ -1,36 +1,56 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
   <defs>
     <linearGradient id="g_tongue_base" x1="0.3" y1="0" x2="0.7" y2="1">
-      <stop offset="0%" stop-color="#d94f7a"/>
-      <stop offset="40%" stop-color="#b83060"/>
-      <stop offset="100%" stop-color="#7a1a3a"/>
+      <stop offset="0%" stop-color="#c98a86"/>
+      <stop offset="40%" stop-color="#a86a66"/>
+      <stop offset="100%" stop-color="#855049"/>
     </linearGradient>
     <radialGradient id="g_tongue_highlight" cx="0.38" cy="0.22" r="0.45">
-      <stop offset="0%" stop-color="#f07fa0" stop-opacity="0.9"/>
-      <stop offset="60%" stop-color="#c94070" stop-opacity="0.4"/>
-      <stop offset="100%" stop-color="#c94070" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.14"/>
+      <stop offset="60%" stop-color="#ffffff" stop-opacity="0.03"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
     </radialGradient>
     <radialGradient id="g_tongue_side_shadow" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0%" stop-color="#7a1a3a" stop-opacity="0"/>
-      <stop offset="100%" stop-color="#4a0a20" stop-opacity="0.55"/>
+      <stop offset="0%" stop-color="#855049" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#3a201c" stop-opacity="0.5"/>
     </radialGradient>
     <linearGradient id="g_tongue_tip" x1="0.5" y1="0" x2="0.5" y2="1">
-      <stop offset="0%" stop-color="#e06080"/>
-      <stop offset="100%" stop-color="#9a2548"/>
+      <stop offset="0%" stop-color="#b47b76"/>
+      <stop offset="100%" stop-color="#8a5750"/>
     </linearGradient>
     <linearGradient id="g_tongue_base_cut" x1="0" y1="0.5" x2="1" y2="0.5">
-      <stop offset="0%" stop-color="#6a1530"/>
-      <stop offset="50%" stop-color="#a02040"/>
-      <stop offset="100%" stop-color="#6a1530"/>
+      <stop offset="0%" stop-color="#734641"/>
+      <stop offset="50%" stop-color="#96605a"/>
+      <stop offset="100%" stop-color="#734641"/>
     </linearGradient>
-    <radialGradient id="g_tongue_gloss" cx="0.42" cy="0.18" r="0.28">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.55"/>
+    <radialGradient id="g_tongue_gloss" cx="0.42" cy="0.18" r="0.30">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.15"/>
+      <stop offset="70%" stop-color="#ffffff" stop-opacity="0.03"/>
       <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
     </radialGradient>
     <linearGradient id="g_tongue_vein1" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#8a1a3a" stop-opacity="0.7"/>
-      <stop offset="100%" stop-color="#6a102a" stop-opacity="0.3"/>
+      <stop offset="0%" stop-color="#7a4640" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#5f342f" stop-opacity="0.3"/>
     </linearGradient>
+    <radialGradient id="g_tongue_vignette" cx="0.5" cy="0.45" r="0.55">
+      <stop offset="62%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#2a1512" stop-opacity="0.30"/>
+    </radialGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="1.0"/>
+    </filter>
+    <clipPath id="clip_tongue">
+      <path d="
+        M 64 16
+        C 44 16, 26 28, 22 48
+        C 18 62, 20 76, 28 88
+        C 36 100, 50 112, 64 114
+        C 78 112, 92 100, 100 88
+        C 108 76, 110 62, 106 48
+        C 102 28, 84 16, 64 16
+        Z
+      "/>
+    </clipPath>
   </defs>
 
   <!-- Main tongue body shape -->
@@ -43,7 +63,7 @@
     C 108 76, 110 62, 106 48
     C 102 28, 84 16, 64 16
     Z
-  " fill="url(#g_tongue_base)" stroke="#5a0f28" stroke-width="1.5"/>
+  " fill="url(#g_tongue_base)" stroke="#4a2a25" stroke-width="1.5"/>
 
   <!-- Base cut (cross section at top) -->
   <path d="
@@ -53,7 +73,7 @@
     C 84 22, 74 24, 64 24
     C 54 24, 44 22, 38 18
     Z
-  " fill="url(#g_tongue_base_cut)" stroke="#4a0a20" stroke-width="1"/>
+  " fill="url(#g_tongue_base_cut)" stroke="#3a201c" stroke-width="1"/>
 
   <!-- Side volume shadow -->
   <path d="
@@ -72,28 +92,48 @@
     M 64 20
     C 63 38, 62 58, 62 76
     C 62 92, 63 104, 64 114
-  " fill="none" stroke="#9a2548" stroke-width="2" stroke-opacity="0.5" stroke-linecap="round"/>
+  " fill="none" stroke="#8a544c" stroke-width="2" stroke-opacity="0.45" stroke-linecap="round"/>
 
   <!-- Subtle texture bumps (papillae suggestion) - small ellipses scattered -->
-  <ellipse cx="52" cy="52" rx="3" ry="2" fill="#c03060" fill-opacity="0.4"/>
-  <ellipse cx="64" cy="48" rx="3" ry="2" fill="#c03060" fill-opacity="0.35"/>
-  <ellipse cx="76" cy="52" rx="3" ry="2" fill="#c03060" fill-opacity="0.4"/>
-  <ellipse cx="48" cy="66" rx="2.5" ry="1.8" fill="#a82848" fill-opacity="0.4"/>
-  <ellipse cx="60" cy="64" rx="2.5" ry="1.8" fill="#a82848" fill-opacity="0.35"/>
-  <ellipse cx="72" cy="66" rx="2.5" ry="1.8" fill="#a82848" fill-opacity="0.4"/>
-  <ellipse cx="80" cy="64" rx="2.5" ry="1.8" fill="#a82848" fill-opacity="0.35"/>
-  <ellipse cx="54" cy="80" rx="2.5" ry="1.8" fill="#a82848" fill-opacity="0.3"/>
-  <ellipse cx="66" cy="80" rx="2.5" ry="1.8" fill="#a82848" fill-opacity="0.3"/>
-  <ellipse cx="78" cy="80" rx="2.5" ry="1.8" fill="#a82848" fill-opacity="0.3"/>
-  <ellipse cx="58" cy="94" rx="2.5" ry="1.8" fill="#a82848" fill-opacity="0.28"/>
-  <ellipse cx="70" cy="94" rx="2.5" ry="1.8" fill="#a82848" fill-opacity="0.28"/>
+  <ellipse cx="52" cy="52" rx="3" ry="2" fill="#b07872" fill-opacity="0.38"/>
+  <ellipse cx="64" cy="48" rx="3" ry="2" fill="#b07872" fill-opacity="0.33"/>
+  <ellipse cx="76" cy="52" rx="3" ry="2" fill="#b07872" fill-opacity="0.38"/>
+  <ellipse cx="48" cy="66" rx="2.5" ry="1.8" fill="#9a5f58" fill-opacity="0.38"/>
+  <ellipse cx="60" cy="64" rx="2.5" ry="1.8" fill="#9a5f58" fill-opacity="0.33"/>
+  <ellipse cx="72" cy="66" rx="2.5" ry="1.8" fill="#9a5f58" fill-opacity="0.38"/>
+  <ellipse cx="80" cy="64" rx="2.5" ry="1.8" fill="#9a5f58" fill-opacity="0.33"/>
+  <ellipse cx="54" cy="80" rx="2.5" ry="1.8" fill="#9a5f58" fill-opacity="0.28"/>
+  <ellipse cx="66" cy="80" rx="2.5" ry="1.8" fill="#9a5f58" fill-opacity="0.28"/>
+  <ellipse cx="78" cy="80" rx="2.5" ry="1.8" fill="#9a5f58" fill-opacity="0.28"/>
+  <ellipse cx="58" cy="94" rx="2.5" ry="1.8" fill="#9a5f58" fill-opacity="0.26"/>
+  <ellipse cx="70" cy="94" rx="2.5" ry="1.8" fill="#9a5f58" fill-opacity="0.26"/>
 
   <!-- Vein detail left -->
-  <path d="M 42 35 C 40 50, 35 65, 34 80" fill="none" stroke="#8a1a3a" stroke-width="1.2" stroke-opacity="0.45" stroke-linecap="round"/>
+  <path d="M 42 35 C 40 50, 35 65, 34 80" fill="none" stroke="#7a4640" stroke-width="1.2" stroke-opacity="0.4" stroke-linecap="round"/>
   <!-- Vein detail right -->
-  <path d="M 86 35 C 88 50, 93 65, 94 80" fill="none" stroke="#8a1a3a" stroke-width="1.2" stroke-opacity="0.45" stroke-linecap="round"/>
+  <path d="M 86 35 C 88 50, 93 65, 94 80" fill="none" stroke="#7a4640" stroke-width="1.2" stroke-opacity="0.4" stroke-linecap="round"/>
 
-  <!-- Surface highlight (soft gloss on top surface) -->
+  <!-- Marmoleo suave desenfocado (grasa cálida), recortado a la lengua -->
+  <g clip-path="url(#clip_tongue)" filter="url(#soft)" opacity="0.45">
+    <path d="M 34 44 Q 46 40 56 45 Q 64 49 72 45 Q 82 41 90 46 Q 84 49 76 48 Q 66 47 58 51 Q 48 55 40 50 Q 35 48 34 44 Z" fill="#ece1cd"/>
+    <path d="M 38 72 Q 48 68 58 72 Q 66 76 74 71 Q 70 75 62 75 Q 52 75 44 76 Q 39 76 38 72 Z" fill="#e3cdba"/>
+    <ellipse cx="76" cy="88" rx="6" ry="3" transform="rotate(10 76 88)" fill="#efe0d3"/>
+    <ellipse cx="44" cy="90" rx="5" ry="2.6" fill="#efe0d3"/>
+  </g>
+
+  <!-- Vignette (volumen mate) -->
+  <path d="
+    M 64 16
+    C 44 16, 26 28, 22 48
+    C 18 62, 20 76, 28 88
+    C 36 100, 50 112, 64 114
+    C 78 112, 92 100, 100 88
+    C 108 76, 110 62, 106 48
+    C 102 28, 84 16, 64 16
+    Z
+  " fill="url(#g_tongue_vignette)"/>
+
+  <!-- Surface sheen mate muy sutil -->
   <path d="
     M 64 16
     C 44 16, 26 28, 22 48
@@ -105,13 +145,25 @@
     Z
   " fill="url(#g_tongue_highlight)"/>
 
-  <!-- Glossy shine spot -->
+  <!-- Soft sheen spot (de-glossed) -->
   <ellipse cx="50" cy="38" rx="14" ry="9" fill="url(#g_tongue_gloss)"/>
+
+  <!-- Contorno para definición -->
+  <path d="
+    M 64 16
+    C 44 16, 26 28, 22 48
+    C 18 62, 20 76, 28 88
+    C 36 100, 50 112, 64 114
+    C 78 112, 92 100, 100 88
+    C 108 76, 110 62, 106 48
+    C 102 28, 84 16, 64 16
+    Z
+  " fill="none" stroke="#4a2a25" stroke-width="1.1" opacity="0.55"/>
 
   <!-- Tip rounded detail -->
   <path d="
     M 52 108
     C 55 116, 73 116, 76 108
-  " fill="none" stroke="#9a2548" stroke-width="1.5" stroke-opacity="0.5" stroke-linecap="round"/>
+  " fill="none" stroke="#8a544c" stroke-width="1.5" stroke-opacity="0.45" stroke-linecap="round"/>
 
 </svg>

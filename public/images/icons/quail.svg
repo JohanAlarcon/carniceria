@@ -1,41 +1,41 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
   <defs>
-    <!-- Body base gradient - warm brown -->
+    <!-- Body base gradient - warm brown (desaturated ~12%) -->
     <radialGradient id="g_quail_body" cx="48%" cy="45%" r="52%" fx="40%" fy="35%">
-      <stop offset="0%" stop-color="#C4855A"/>
-      <stop offset="35%" stop-color="#A0622E"/>
-      <stop offset="70%" stop-color="#7A4420"/>
-      <stop offset="100%" stop-color="#5C2E0E"/>
+      <stop offset="0%" stop-color="#be8660"/>
+      <stop offset="35%" stop-color="#996335"/>
+      <stop offset="70%" stop-color="#754525"/>
+      <stop offset="100%" stop-color="#572f13"/>
     </radialGradient>
-    <!-- Belly gradient - lighter cream/buff -->
+    <!-- Belly gradient - lighter cream/buff (desaturated) -->
     <radialGradient id="g_quail_belly" cx="50%" cy="40%" r="55%" fx="50%" fy="30%">
-      <stop offset="0%" stop-color="#E8D0A0"/>
-      <stop offset="40%" stop-color="#D4B070"/>
-      <stop offset="80%" stop-color="#B8904A"/>
-      <stop offset="100%" stop-color="#9A7030"/>
+      <stop offset="0%" stop-color="#e4cfa4"/>
+      <stop offset="40%" stop-color="#ceae76"/>
+      <stop offset="80%" stop-color="#b18e51"/>
+      <stop offset="100%" stop-color="#946f36"/>
     </radialGradient>
     <!-- Head gradient -->
     <radialGradient id="g_quail_head" cx="45%" cy="38%" r="50%" fx="38%" fy="30%">
-      <stop offset="0%" stop-color="#B87840"/>
-      <stop offset="45%" stop-color="#8B5520"/>
-      <stop offset="100%" stop-color="#5C3010"/>
+      <stop offset="0%" stop-color="#b17847"/>
+      <stop offset="45%" stop-color="#855526"/>
+      <stop offset="100%" stop-color="#573115"/>
     </radialGradient>
     <!-- Wing gradient -->
     <radialGradient id="g_quail_wing" cx="40%" cy="35%" r="60%" fx="30%" fy="25%">
-      <stop offset="0%" stop-color="#C4905A"/>
-      <stop offset="40%" stop-color="#9A6830"/>
-      <stop offset="80%" stop-color="#7A4E1A"/>
-      <stop offset="100%" stop-color="#5E3510"/>
+      <stop offset="0%" stop-color="#be9060"/>
+      <stop offset="40%" stop-color="#946836"/>
+      <stop offset="80%" stop-color="#744e20"/>
+      <stop offset="100%" stop-color="#593515"/>
     </radialGradient>
     <!-- Tail gradient -->
     <linearGradient id="g_quail_tail" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#8B5A28"/>
-      <stop offset="100%" stop-color="#4A2A0A"/>
+      <stop offset="0%" stop-color="#855a2e"/>
+      <stop offset="100%" stop-color="#462a0e"/>
     </linearGradient>
     <!-- Beak gradient -->
     <linearGradient id="g_quail_beak" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#8B7050"/>
-      <stop offset="100%" stop-color="#5A4020"/>
+      <stop offset="0%" stop-color="#877054"/>
+      <stop offset="100%" stop-color="#574023"/>
     </linearGradient>
     <!-- Eye highlight -->
     <radialGradient id="g_quail_eye" cx="35%" cy="35%" r="60%">
@@ -45,18 +45,19 @@
     </radialGradient>
     <!-- Leg gradient -->
     <linearGradient id="g_quail_leg" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#B09060"/>
-      <stop offset="100%" stop-color="#7A6030"/>
+      <stop offset="0%" stop-color="#ab8f65"/>
+      <stop offset="100%" stop-color="#765f34"/>
     </linearGradient>
     <!-- Plume feather gradient -->
     <linearGradient id="g_quail_plume" x1="0%" y1="100%" x2="0%" y2="0%">
-      <stop offset="0%" stop-color="#6B3A18"/>
-      <stop offset="50%" stop-color="#3A1E08"/>
+      <stop offset="0%" stop-color="#663b1d"/>
+      <stop offset="50%" stop-color="#371e0b"/>
       <stop offset="100%" stop-color="#1A0A00"/>
     </linearGradient>
-    <!-- Highlight sheen on body -->
+    <!-- Highlight sheen on body (matte, very subtle) -->
     <radialGradient id="g_quail_sheen" cx="38%" cy="30%" r="35%">
-      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.25"/>
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.14"/>
+      <stop offset="70%" stop-color="#FFFFFF" stop-opacity="0.02"/>
       <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
     </radialGradient>
     <!-- Face mask dark area -->
@@ -98,18 +99,18 @@
   <path d="M51 87 Q53 85 55 87 Q53 89 51 87 Z" fill="#6A4820" fill-opacity="0.6"/>
   <path d="M59 86 Q61 84 63 86 Q61 88 59 86 Z" fill="#6A4820" fill-opacity="0.6"/>
 
-  <!-- Body mottled spots on back/wing -->
-  <circle cx="72" cy="66" r="2.5" fill="#C8A060" fill-opacity="0.5"/>
-  <circle cx="68" cy="62" r="2" fill="#C8A060" fill-opacity="0.4"/>
-  <circle cx="78" cy="70" r="2" fill="#CCAA68" fill-opacity="0.45"/>
-  <circle cx="74" cy="75" r="2.5" fill="#C4A058" fill-opacity="0.4"/>
-  <circle cx="82" cy="72" r="1.8" fill="#CCAA68" fill-opacity="0.4"/>
+  <!-- Body mottled spots on back/wing (desaturated) -->
+  <circle cx="72" cy="66" r="2.5" fill="#c29f66" fill-opacity="0.5"/>
+  <circle cx="68" cy="62" r="2" fill="#c29f66" fill-opacity="0.4"/>
+  <circle cx="78" cy="70" r="2" fill="#c6a86e" fill-opacity="0.45"/>
+  <circle cx="74" cy="75" r="2.5" fill="#be9e5e" fill-opacity="0.4"/>
+  <circle cx="82" cy="72" r="1.8" fill="#c6a86e" fill-opacity="0.4"/>
   <!-- Darker spots -->
   <circle cx="66" cy="70" r="1.8" fill="#4A2808" fill-opacity="0.5"/>
   <circle cx="73" cy="80" r="2" fill="#4A2808" fill-opacity="0.45"/>
   <circle cx="82" cy="66" r="1.5" fill="#3A1A08" fill-opacity="0.4"/>
 
-  <!-- Body sheen highlight -->
+  <!-- Body sheen highlight (matte) -->
   <ellipse cx="52" cy="66" rx="14" ry="9" fill="url(#g_quail_sheen)"/>
 
   <!-- NECK -->
@@ -122,7 +123,7 @@
   <path d="M44 50 Q52 58 60 50 Q58 46 52 46 Q46 46 44 50 Z" fill="url(#g_quail_mask)" fill-opacity="0.8"/>
 
   <!-- HEAD face - white/cream supercilium stripe -->
-  <path d="M36 42 Q42 38 50 39 Q56 39 60 41 Q58 38 52 36 Q44 35 38 39 Z" fill="#E8D0A0" fill-opacity="0.7" stroke="#C4A868" stroke-width="0.3"/>
+  <path d="M36 42 Q42 38 50 39 Q56 39 60 41 Q58 38 52 36 Q44 35 38 39 Z" fill="#e4cfa4" fill-opacity="0.7" stroke="#C4A868" stroke-width="0.3"/>
 
   <!-- Dark crown patch -->
   <path d="M44 32 Q52 28 60 32 Q58 36 52 37 Q46 37 44 32 Z" fill="#3A1808" fill-opacity="0.85"/>
@@ -141,8 +142,8 @@
   <path d="M52 28 Q50 18 48 10 Q50 8 52 10 Q54 18 54 28 Z" fill="url(#g_quail_plume)" stroke="#1A0A04" stroke-width="0.5"/>
   <!-- Plume teardrop tip -->
   <ellipse cx="50" cy="8" rx="5" ry="8" transform="rotate(-10 50 8)" fill="url(#g_quail_plume)" stroke="#1A0A04" stroke-width="0.8"/>
-  <!-- Plume sheen -->
-  <ellipse cx="48.5" cy="7" rx="2" ry="3.5" transform="rotate(-10 48.5 7)" fill="#FFFFFF" fill-opacity="0.2"/>
+  <!-- Plume sheen (matte) -->
+  <ellipse cx="48.5" cy="7" rx="2" ry="3.5" transform="rotate(-10 48.5 7)" fill="#FFFFFF" fill-opacity="0.12"/>
 
   <!-- BEAK -->
   <path d="M35 44 Q32 46 30 48 Q32 50 35 48 Q37 46 36 44 Z" fill="url(#g_quail_beak)" stroke="#3A2810" stroke-width="0.6"/>

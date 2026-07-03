@@ -1,89 +1,96 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
   <defs>
     <linearGradient id="g_chicken-feet_skin1" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#F5C842"/>
-      <stop offset="50%" stop-color="#E8A820"/>
-      <stop offset="100%" stop-color="#C8880A"/>
+      <stop offset="0%" stop-color="#f0dcc8"/>
+      <stop offset="50%" stop-color="#e3c8a8"/>
+      <stop offset="100%" stop-color="#cdae86"/>
     </linearGradient>
     <linearGradient id="g_chicken-feet_skin2" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#F7D055"/>
-      <stop offset="50%" stop-color="#E8A820"/>
-      <stop offset="100%" stop-color="#B87808"/>
+      <stop offset="0%" stop-color="#f2ddc9"/>
+      <stop offset="50%" stop-color="#e0c4a2"/>
+      <stop offset="100%" stop-color="#c6a67e"/>
     </linearGradient>
     <linearGradient id="g_chicken-feet_toe1" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#F0B830"/>
-      <stop offset="100%" stop-color="#C07010"/>
+      <stop offset="0%" stop-color="#ecd6bf"/>
+      <stop offset="100%" stop-color="#c8ac83"/>
     </linearGradient>
     <linearGradient id="g_chicken-feet_toe2" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#EDB228"/>
-      <stop offset="100%" stop-color="#B86808"/>
+      <stop offset="0%" stop-color="#e8d0b8"/>
+      <stop offset="100%" stop-color="#c2a67c"/>
     </linearGradient>
     <linearGradient id="g_chicken-feet_claw1" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#D4A020"/>
-      <stop offset="100%" stop-color="#8B5E00"/>
+      <stop offset="0%" stop-color="#c9ad80"/>
+      <stop offset="100%" stop-color="#6e5836"/>
     </linearGradient>
-    <radialGradient id="g_chicken-feet_highlight1" cx="35%" cy="30%" r="50%">
-      <stop offset="0%" stop-color="#FDE88A" stop-opacity="0.7"/>
-      <stop offset="100%" stop-color="#E8A820" stop-opacity="0"/>
+    <radialGradient id="g_chicken-feet_highlight1" cx="35%" cy="30%" r="55%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.14"/>
+      <stop offset="70%" stop-color="#ffffff" stop-opacity="0.03"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="g_chicken-feet_vignette" cx="50%" cy="42%" r="58%">
+      <stop offset="62%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#3a2a12" stop-opacity="0.28"/>
     </radialGradient>
     <radialGradient id="g_chicken-feet_scale" cx="50%" cy="40%" r="50%">
-      <stop offset="0%" stop-color="#F5C842"/>
-      <stop offset="100%" stop-color="#C88010"/>
+      <stop offset="0%" stop-color="#efdbc7"/>
+      <stop offset="100%" stop-color="#cdae86"/>
     </radialGradient>
     <linearGradient id="g_chicken-feet_ankle1" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#F0C040"/>
-      <stop offset="40%" stop-color="#D49820"/>
-      <stop offset="100%" stop-color="#A07010"/>
+      <stop offset="0%" stop-color="#eed9c3"/>
+      <stop offset="40%" stop-color="#ddc09c"/>
+      <stop offset="100%" stop-color="#c2a578"/>
     </linearGradient>
     <linearGradient id="g_chicken-feet_ankle2" x1="100%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#F2C035"/>
-      <stop offset="50%" stop-color="#D09818"/>
-      <stop offset="100%" stop-color="#986800"/>
+      <stop offset="0%" stop-color="#efdbc5"/>
+      <stop offset="50%" stop-color="#dabd98"/>
+      <stop offset="100%" stop-color="#b89f72"/>
     </linearGradient>
   </defs>
 
   <!-- LEFT FOOT -->
   <g>
     <!-- Ankle/leg left -->
-    <ellipse cx="42" cy="42" rx="9" ry="13" fill="url(#g_chicken-feet_ankle1)" stroke="#8B5E00" stroke-width="0.8"/>
+    <ellipse cx="42" cy="42" rx="9" ry="13" fill="url(#g_chicken-feet_ankle1)" stroke="#856640" stroke-width="0.8"/>
+    <ellipse cx="42" cy="42" rx="9" ry="13" fill="url(#g_chicken-feet_vignette)"/>
     <ellipse cx="42" cy="42" rx="9" ry="13" fill="url(#g_chicken-feet_highlight1)"/>
     <!-- Scale rings on ankle left -->
-    <ellipse cx="42" cy="36" rx="8.5" ry="2" fill="none" stroke="#C08010" stroke-width="0.7" opacity="0.6"/>
-    <ellipse cx="42" cy="40" rx="8.5" ry="2" fill="none" stroke="#C08010" stroke-width="0.7" opacity="0.6"/>
-    <ellipse cx="42" cy="44" rx="8.5" ry="2" fill="none" stroke="#C08010" stroke-width="0.7" opacity="0.6"/>
-    <ellipse cx="42" cy="48" rx="8.5" ry="2" fill="none" stroke="#C08010" stroke-width="0.7" opacity="0.6"/>
+    <ellipse cx="42" cy="36" rx="8.5" ry="2" fill="none" stroke="#b09468" stroke-width="0.7" opacity="0.6"/>
+    <ellipse cx="42" cy="40" rx="8.5" ry="2" fill="none" stroke="#b09468" stroke-width="0.7" opacity="0.6"/>
+    <ellipse cx="42" cy="44" rx="8.5" ry="2" fill="none" stroke="#b09468" stroke-width="0.7" opacity="0.6"/>
+    <ellipse cx="42" cy="48" rx="8.5" ry="2" fill="none" stroke="#b09468" stroke-width="0.7" opacity="0.6"/>
 
     <!-- Palm of left foot -->
-    <ellipse cx="42" cy="60" rx="11" ry="9" fill="url(#g_chicken-feet_skin1)" stroke="#8B5E00" stroke-width="0.9"/>
+    <ellipse cx="42" cy="60" rx="11" ry="9" fill="url(#g_chicken-feet_skin1)" stroke="#856640" stroke-width="0.9"/>
+    <ellipse cx="42" cy="60" rx="11" ry="9" fill="url(#g_chicken-feet_vignette)"/>
     <ellipse cx="42" cy="60" rx="11" ry="9" fill="url(#g_chicken-feet_highlight1)"/>
 
     <!-- Toe 1 left - front center -->
     <path d="M42,67 C41,70 40,74 38,80 C37,83 36,86 35,89" stroke="url(#g_chicken-feet_toe1)" stroke-width="5.5" stroke-linecap="round" fill="none"/>
-    <path d="M42,67 C41,70 40,74 38,80 C37,83 36,86 35,89" stroke="#C07010" stroke-width="6.5" stroke-linecap="round" fill="none" opacity="0.3"/>
+    <path d="M42,67 C41,70 40,74 38,80 C37,83 36,86 35,89" stroke="#a88c62" stroke-width="6.5" stroke-linecap="round" fill="none" opacity="0.22"/>
     <!-- Scale marks toe 1 left -->
-    <ellipse cx="39.5" cy="74" rx="2.5" ry="1" fill="#C07810" opacity="0.5" transform="rotate(-20,39.5,74)"/>
-    <ellipse cx="37.5" cy="81" rx="2.5" ry="1" fill="#C07810" opacity="0.5" transform="rotate(-20,37.5,81)"/>
+    <ellipse cx="39.5" cy="74" rx="2.5" ry="1" fill="#ab9068" opacity="0.5" transform="rotate(-20,39.5,74)"/>
+    <ellipse cx="37.5" cy="81" rx="2.5" ry="1" fill="#ab9068" opacity="0.5" transform="rotate(-20,37.5,81)"/>
     <!-- Claw toe 1 left -->
     <path d="M35,89 C33,92 30,95 28,97" stroke="url(#g_chicken-feet_claw1)" stroke-width="3" stroke-linecap="round" fill="none"/>
-    <path d="M28,97 C27,98 27.5,99 29,98.5" stroke="#6B4500" stroke-width="1.5" fill="none"/>
+    <path d="M28,97 C27,98 27.5,99 29,98.5" stroke="#5e4a2e" stroke-width="1.5" fill="none"/>
 
     <!-- Toe 2 left - front right -->
     <path d="M48,64 C51,67 54,71 57,76 C59,79 60,82 61,85" stroke="url(#g_chicken-feet_toe1)" stroke-width="5" stroke-linecap="round" fill="none"/>
-    <path d="M48,64 C51,67 54,71 57,76 C59,79 60,82 61,85" stroke="#C07010" stroke-width="6" stroke-linecap="round" fill="none" opacity="0.3"/>
-    <ellipse cx="52" cy="70" rx="2" ry="1" fill="#C07810" opacity="0.5" transform="rotate(40,52,70)"/>
-    <ellipse cx="58" cy="79" rx="2" ry="1" fill="#C07810" opacity="0.5" transform="rotate(40,58,79)"/>
+    <path d="M48,64 C51,67 54,71 57,76 C59,79 60,82 61,85" stroke="#a88c62" stroke-width="6" stroke-linecap="round" fill="none" opacity="0.22"/>
+    <ellipse cx="52" cy="70" rx="2" ry="1" fill="#ab9068" opacity="0.5" transform="rotate(40,52,70)"/>
+    <ellipse cx="58" cy="79" rx="2" ry="1" fill="#ab9068" opacity="0.5" transform="rotate(40,58,79)"/>
     <!-- Claw toe 2 left -->
     <path d="M61,85 C63,88 65,91 65,93" stroke="url(#g_chicken-feet_claw1)" stroke-width="2.8" stroke-linecap="round" fill="none"/>
-    <path d="M65,93 C65.5,94.5 64.5,95.5 63,95" stroke="#6B4500" stroke-width="1.5" fill="none"/>
+    <path d="M65,93 C65.5,94.5 64.5,95.5 63,95" stroke="#5e4a2e" stroke-width="1.5" fill="none"/>
 
     <!-- Toe 3 left - front left -->
     <path d="M36,64 C33,67 30,71 27,76 C25,79 23,82 22,85" stroke="url(#g_chicken-feet_toe1)" stroke-width="5" stroke-linecap="round" fill="none"/>
-    <path d="M36,64 C33,67 30,71 27,76 C25,79 23,82 22,85" stroke="#C07010" stroke-width="6" stroke-linecap="round" fill="none" opacity="0.3"/>
-    <ellipse cx="31" cy="70" rx="2" ry="1" fill="#C07810" opacity="0.5" transform="rotate(-40,31,70)"/>
-    <ellipse cx="24.5" cy="79" rx="2" ry="1" fill="#C07810" opacity="0.5" transform="rotate(-40,24.5,79)"/>
+    <path d="M36,64 C33,67 30,71 27,76 C25,79 23,82 22,85" stroke="#a88c62" stroke-width="6" stroke-linecap="round" fill="none" opacity="0.22"/>
+    <ellipse cx="31" cy="70" rx="2" ry="1" fill="#ab9068" opacity="0.5" transform="rotate(-40,31,70)"/>
+    <ellipse cx="24.5" cy="79" rx="2" ry="1" fill="#ab9068" opacity="0.5" transform="rotate(-40,24.5,79)"/>
     <!-- Claw toe 3 left -->
     <path d="M22,85 C20,88 18,91 18,93" stroke="url(#g_chicken-feet_claw1)" stroke-width="2.8" stroke-linecap="round" fill="none"/>
-    <path d="M18,93 C17.5,94.5 18.5,95.5 20,95" stroke="#6B4500" stroke-width="1.5" fill="none"/>
+    <path d="M18,93 C17.5,94.5 18.5,95.5 20,95" stroke="#5e4a2e" stroke-width="1.5" fill="none"/>
 
     <!-- Back spur left -->
     <path d="M42,53 C42,50 43,47 44,44" stroke="url(#g_chicken-feet_toe2)" stroke-width="4" stroke-linecap="round" fill="none"/>
@@ -93,44 +100,46 @@
   <!-- RIGHT FOOT -->
   <g>
     <!-- Ankle/leg right -->
-    <ellipse cx="86" cy="42" rx="9" ry="13" fill="url(#g_chicken-feet_ankle2)" stroke="#8B5E00" stroke-width="0.8"/>
+    <ellipse cx="86" cy="42" rx="9" ry="13" fill="url(#g_chicken-feet_ankle2)" stroke="#856640" stroke-width="0.8"/>
+    <ellipse cx="86" cy="42" rx="9" ry="13" fill="url(#g_chicken-feet_vignette)"/>
     <ellipse cx="86" cy="42" rx="9" ry="13" fill="url(#g_chicken-feet_highlight1)"/>
     <!-- Scale rings on ankle right -->
-    <ellipse cx="86" cy="36" rx="8.5" ry="2" fill="none" stroke="#C08010" stroke-width="0.7" opacity="0.6"/>
-    <ellipse cx="86" cy="40" rx="8.5" ry="2" fill="none" stroke="#C08010" stroke-width="0.7" opacity="0.6"/>
-    <ellipse cx="86" cy="44" rx="8.5" ry="2" fill="none" stroke="#C08010" stroke-width="0.7" opacity="0.6"/>
-    <ellipse cx="86" cy="48" rx="8.5" ry="2" fill="none" stroke="#C08010" stroke-width="0.7" opacity="0.6"/>
+    <ellipse cx="86" cy="36" rx="8.5" ry="2" fill="none" stroke="#b09468" stroke-width="0.7" opacity="0.6"/>
+    <ellipse cx="86" cy="40" rx="8.5" ry="2" fill="none" stroke="#b09468" stroke-width="0.7" opacity="0.6"/>
+    <ellipse cx="86" cy="44" rx="8.5" ry="2" fill="none" stroke="#b09468" stroke-width="0.7" opacity="0.6"/>
+    <ellipse cx="86" cy="48" rx="8.5" ry="2" fill="none" stroke="#b09468" stroke-width="0.7" opacity="0.6"/>
 
     <!-- Palm of right foot -->
-    <ellipse cx="86" cy="60" rx="11" ry="9" fill="url(#g_chicken-feet_skin2)" stroke="#8B5E00" stroke-width="0.9"/>
+    <ellipse cx="86" cy="60" rx="11" ry="9" fill="url(#g_chicken-feet_skin2)" stroke="#856640" stroke-width="0.9"/>
+    <ellipse cx="86" cy="60" rx="11" ry="9" fill="url(#g_chicken-feet_vignette)"/>
     <ellipse cx="86" cy="60" rx="11" ry="9" fill="url(#g_chicken-feet_highlight1)"/>
 
     <!-- Toe 1 right - front center -->
     <path d="M86,67 C87,70 88,74 90,80 C91,83 92,86 93,89" stroke="url(#g_chicken-feet_toe2)" stroke-width="5.5" stroke-linecap="round" fill="none"/>
-    <path d="M86,67 C87,70 88,74 90,80 C91,83 92,86 93,89" stroke="#C07010" stroke-width="6.5" stroke-linecap="round" fill="none" opacity="0.3"/>
-    <ellipse cx="88.5" cy="74" rx="2.5" ry="1" fill="#C07810" opacity="0.5" transform="rotate(20,88.5,74)"/>
-    <ellipse cx="90.5" cy="81" rx="2.5" ry="1" fill="#C07810" opacity="0.5" transform="rotate(20,90.5,81)"/>
+    <path d="M86,67 C87,70 88,74 90,80 C91,83 92,86 93,89" stroke="#a88c62" stroke-width="6.5" stroke-linecap="round" fill="none" opacity="0.22"/>
+    <ellipse cx="88.5" cy="74" rx="2.5" ry="1" fill="#ab9068" opacity="0.5" transform="rotate(20,88.5,74)"/>
+    <ellipse cx="90.5" cy="81" rx="2.5" ry="1" fill="#ab9068" opacity="0.5" transform="rotate(20,90.5,81)"/>
     <!-- Claw toe 1 right -->
     <path d="M93,89 C95,92 98,95 100,97" stroke="url(#g_chicken-feet_claw1)" stroke-width="3" stroke-linecap="round" fill="none"/>
-    <path d="M100,97 C101,98 100.5,99 99,98.5" stroke="#6B4500" stroke-width="1.5" fill="none"/>
+    <path d="M100,97 C101,98 100.5,99 99,98.5" stroke="#5e4a2e" stroke-width="1.5" fill="none"/>
 
     <!-- Toe 2 right - front left -->
     <path d="M80,64 C77,67 74,71 71,76 C69,79 68,82 67,85" stroke="url(#g_chicken-feet_toe2)" stroke-width="5" stroke-linecap="round" fill="none"/>
-    <path d="M80,64 C77,67 74,71 71,76 C69,79 68,82 67,85" stroke="#C07010" stroke-width="6" stroke-linecap="round" fill="none" opacity="0.3"/>
-    <ellipse cx="76" cy="70" rx="2" ry="1" fill="#C07810" opacity="0.5" transform="rotate(-40,76,70)"/>
-    <ellipse cx="70" cy="79" rx="2" ry="1" fill="#C07810" opacity="0.5" transform="rotate(-40,70,79)"/>
+    <path d="M80,64 C77,67 74,71 71,76 C69,79 68,82 67,85" stroke="#a88c62" stroke-width="6" stroke-linecap="round" fill="none" opacity="0.22"/>
+    <ellipse cx="76" cy="70" rx="2" ry="1" fill="#ab9068" opacity="0.5" transform="rotate(-40,76,70)"/>
+    <ellipse cx="70" cy="79" rx="2" ry="1" fill="#ab9068" opacity="0.5" transform="rotate(-40,70,79)"/>
     <!-- Claw toe 2 right -->
     <path d="M67,85 C65,88 63,91 63,93" stroke="url(#g_chicken-feet_claw1)" stroke-width="2.8" stroke-linecap="round" fill="none"/>
-    <path d="M63,93 C62.5,94.5 63.5,95.5 65,95" stroke="#6B4500" stroke-width="1.5" fill="none"/>
+    <path d="M63,93 C62.5,94.5 63.5,95.5 65,95" stroke="#5e4a2e" stroke-width="1.5" fill="none"/>
 
     <!-- Toe 3 right - front right -->
     <path d="M92,64 C95,67 98,71 101,76 C103,79 105,82 106,85" stroke="url(#g_chicken-feet_toe2)" stroke-width="5" stroke-linecap="round" fill="none"/>
-    <path d="M92,64 C95,67 98,71 101,76 C103,79 105,82 106,85" stroke="#C07010" stroke-width="6" stroke-linecap="round" fill="none" opacity="0.3"/>
-    <ellipse cx="97" cy="70" rx="2" ry="1" fill="#C07810" opacity="0.5" transform="rotate(40,97,70)"/>
-    <ellipse cx="103.5" cy="79" rx="2" ry="1" fill="#C07810" opacity="0.5" transform="rotate(40,103.5,79)"/>
+    <path d="M92,64 C95,67 98,71 101,76 C103,79 105,82 106,85" stroke="#a88c62" stroke-width="6" stroke-linecap="round" fill="none" opacity="0.22"/>
+    <ellipse cx="97" cy="70" rx="2" ry="1" fill="#ab9068" opacity="0.5" transform="rotate(40,97,70)"/>
+    <ellipse cx="103.5" cy="79" rx="2" ry="1" fill="#ab9068" opacity="0.5" transform="rotate(40,103.5,79)"/>
     <!-- Claw toe 3 right -->
     <path d="M106,85 C108,88 110,91 110,93" stroke="url(#g_chicken-feet_claw1)" stroke-width="2.8" stroke-linecap="round" fill="none"/>
-    <path d="M110,93 C110.5,94.5 109.5,95.5 108,95" stroke="#6B4500" stroke-width="1.5" fill="none"/>
+    <path d="M110,93 C110.5,94.5 109.5,95.5 108,95" stroke="#5e4a2e" stroke-width="1.5" fill="none"/>
 
     <!-- Back spur right -->
     <path d="M86,53 C86,50 85,47 84,44" stroke="url(#g_chicken-feet_toe2)" stroke-width="4" stroke-linecap="round" fill="none"/>

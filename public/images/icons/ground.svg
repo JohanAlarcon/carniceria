@@ -1,48 +1,59 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
   <defs>
     <radialGradient id="g_ground_base" cx="50%" cy="60%" r="55%" fx="45%" fy="50%">
-      <stop offset="0%" stop-color="#e8504a"/>
-      <stop offset="40%" stop-color="#c93535"/>
-      <stop offset="80%" stop-color="#a02020"/>
-      <stop offset="100%" stop-color="#7a1515"/>
+      <stop offset="0%" stop-color="#c15f50"/>
+      <stop offset="40%" stop-color="#a23f34"/>
+      <stop offset="80%" stop-color="#822a20"/>
+      <stop offset="100%" stop-color="#5e1a13"/>
     </radialGradient>
     <radialGradient id="g_ground_top" cx="50%" cy="30%" r="50%" fx="50%" fy="25%">
-      <stop offset="0%" stop-color="#f07070"/>
-      <stop offset="50%" stop-color="#d94040"/>
-      <stop offset="100%" stop-color="#b02828"/>
+      <stop offset="0%" stop-color="#c76a5a"/>
+      <stop offset="50%" stop-color="#a23f34"/>
+      <stop offset="100%" stop-color="#822a20"/>
     </radialGradient>
-    <radialGradient id="g_ground_shine" cx="40%" cy="25%" r="35%">
-      <stop offset="0%" stop-color="#ff9999" stop-opacity="0.6"/>
-      <stop offset="100%" stop-color="#ff9999" stop-opacity="0"/>
+    <radialGradient id="g_ground_shine" cx="40%" cy="25%" r="40%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.14"/>
+      <stop offset="70%" stop-color="#ffffff" stop-opacity="0.02"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
     </radialGradient>
     <radialGradient id="g_ground_fat1" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#f5ede0"/>
-      <stop offset="100%" stop-color="#ddc9b0"/>
+      <stop offset="0%" stop-color="#ece1cd"/>
+      <stop offset="100%" stop-color="#dbc7ab"/>
     </radialGradient>
     <radialGradient id="g_ground_fat2" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#f0e8d8"/>
+      <stop offset="0%" stop-color="#efe0d3"/>
       <stop offset="100%" stop-color="#d4bfa0"/>
     </radialGradient>
     <linearGradient id="g_ground_shadow" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#8b1a1a" stop-opacity="0"/>
-      <stop offset="100%" stop-color="#5a0f0f" stop-opacity="0.5"/>
+      <stop offset="0%" stop-color="#5a150f" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#3d0d09" stop-opacity="0.5"/>
     </linearGradient>
     <radialGradient id="g_ground_chunk1" cx="50%" cy="40%" r="55%">
-      <stop offset="0%" stop-color="#dd4444"/>
-      <stop offset="100%" stop-color="#991f1f"/>
+      <stop offset="0%" stop-color="#b85446"/>
+      <stop offset="100%" stop-color="#7a2419"/>
     </radialGradient>
     <radialGradient id="g_ground_chunk2" cx="50%" cy="35%" r="50%">
-      <stop offset="0%" stop-color="#e05555"/>
-      <stop offset="100%" stop-color="#aa2222"/>
+      <stop offset="0%" stop-color="#bd5a4b"/>
+      <stop offset="100%" stop-color="#8a2c22"/>
     </radialGradient>
     <radialGradient id="g_ground_chunk3" cx="50%" cy="40%" r="50%">
-      <stop offset="0%" stop-color="#cc3333"/>
-      <stop offset="100%" stop-color="#881818"/>
+      <stop offset="0%" stop-color="#ad4a3d"/>
+      <stop offset="100%" stop-color="#6e2018"/>
     </radialGradient>
+    <radialGradient id="g_ground_vignette" cx="50%" cy="45%" r="55%">
+      <stop offset="62%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#3a120b" stop-opacity="0.30"/>
+    </radialGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="1.0"/>
+    </filter>
+    <clipPath id="clip_ground">
+      <path d="M18 90 Q22 68 30 62 Q36 54 42 58 Q47 50 52 54 Q56 44 62 46 Q68 42 73 47 Q78 50 82 55 Q88 52 93 60 Q100 66 104 75 Q108 85 106 95 Q100 102 90 104 Q78 107 64 107 Q50 107 36 104 Q24 101 18 90 Z"/>
+    </clipPath>
   </defs>
 
   <!-- Sombra base del monticulo -->
-  <ellipse cx="64" cy="104" rx="46" ry="8" fill="#5a0f0f" fill-opacity="0.25"/>
+  <ellipse cx="64" cy="104" rx="46" ry="8" fill="#3d0d09" fill-opacity="0.25"/>
 
   <!-- Cuerpo principal del monticulo de carne molida -->
   <ellipse cx="64" cy="88" rx="48" ry="22" fill="url(#g_ground_base)"/>
@@ -83,38 +94,28 @@
   <!-- Trozo 8 inferior derecha -->
   <ellipse cx="96" cy="86" rx="9" ry="5" fill="url(#g_ground_chunk3)" transform="rotate(15 96 86)"/>
 
-  <!-- Vetas de grasa blanca - marmoleo -->
-  <!-- Grasa 1 -->
-  <path d="M46 66 Q50 63 55 66 Q52 69 47 67 Z" fill="url(#g_ground_fat1)" fill-opacity="0.85"/>
+  <!-- Marmoleo/grasa: manchas suaves desenfocadas, recortadas a la forma -->
+  <g clip-path="url(#clip_ground)" filter="url(#soft)" opacity="0.5">
+    <ellipse cx="50" cy="66" rx="6" ry="3" transform="rotate(-12 50 66)" fill="#ece1cd"/>
+    <ellipse cx="72" cy="61" rx="5.5" ry="2.8" transform="rotate(10 72 61)" fill="#efe0d3"/>
+    <ellipse cx="61" cy="76" rx="6" ry="3" transform="rotate(-6 61 76)" fill="#ece1cd"/>
+    <ellipse cx="43" cy="83" rx="4.5" ry="2.4" fill="#e7dbc4"/>
+    <ellipse cx="82" cy="79" rx="5" ry="2.6" transform="rotate(8 82 79)" fill="#efe0d3"/>
+    <ellipse cx="63" cy="56" rx="4" ry="2.2" fill="#ece1cd"/>
+    <ellipse cx="75" cy="89" rx="4.5" ry="2.4" fill="#e7dbc4"/>
+    <ellipse cx="37" cy="90" rx="4.5" ry="2.4" fill="#e7dbc4"/>
+  </g>
 
-  <!-- Grasa 2 -->
-  <path d="M68 61 Q73 58 77 62 Q73 65 68 62 Z" fill="url(#g_ground_fat2)" fill-opacity="0.8"/>
+  <!-- Vignette (volumen mate sin plastico) -->
+  <path d="M18 90 Q22 68 30 62 Q36 54 42 58 Q47 50 52 54 Q56 44 62 46 Q68 42 73 47 Q78 50 82 55 Q88 52 93 60 Q100 66 104 75 Q108 85 106 95 Q100 102 90 104 Q78 107 64 107 Q50 107 36 104 Q24 101 18 90 Z" fill="url(#g_ground_vignette)"/>
 
-  <!-- Grasa 3 -->
-  <path d="M56 76 Q61 73 66 76 Q62 80 57 77 Z" fill="url(#g_ground_fat1)" fill-opacity="0.75"/>
-
-  <!-- Grasa 4 pequena -->
-  <path d="M40 83 Q44 81 47 83 Q44 86 41 84 Z" fill="url(#g_ground_fat2)" fill-opacity="0.7"/>
-
-  <!-- Grasa 5 -->
-  <path d="M78 79 Q83 77 86 80 Q83 83 79 81 Z" fill="url(#g_ground_fat1)" fill-opacity="0.75"/>
-
-  <!-- Grasa 6 pequena en cumbre -->
-  <path d="M60 56 Q63 54 66 56 Q63 59 60 57 Z" fill="url(#g_ground_fat2)" fill-opacity="0.8"/>
-
-  <!-- Grasa 7 -->
-  <path d="M72 89 Q76 87 79 89 Q76 92 72 90 Z" fill="url(#g_ground_fat1)" fill-opacity="0.65"/>
-
-  <!-- Grasa 8 -->
-  <path d="M34 90 Q38 88 41 90 Q38 93 34 91 Z" fill="url(#g_ground_fat2)" fill-opacity="0.65"/>
-
-  <!-- Brillo en la superficie -->
+  <!-- Sheen mate muy sutil (reemplaza brillo plastico) -->
   <ellipse cx="56" cy="58" rx="22" ry="14" fill="url(#g_ground_shine)"/>
 
   <!-- Contornos sutiles para definir trozos -->
-  <path d="M28 82 Q34 60 44 55 Q52 48 60 50 Q68 46 76 52 Q84 56 90 65 Q98 75 98 86" fill="none" stroke="#7a1515" stroke-width="0.8" stroke-opacity="0.4"/>
-  <path d="M40 76 Q46 58 56 52 Q62 47 68 51 Q76 54 82 63" fill="none" stroke="#8b1a1a" stroke-width="0.6" stroke-opacity="0.35"/>
+  <path d="M28 82 Q34 60 44 55 Q52 48 60 50 Q68 46 76 52 Q84 56 90 65 Q98 75 98 86" fill="none" stroke="#5e1a13" stroke-width="0.8" stroke-opacity="0.4"/>
+  <path d="M40 76 Q46 58 56 52 Q62 47 68 51 Q76 54 82 63" fill="none" stroke="#5e1a13" stroke-width="0.6" stroke-opacity="0.35"/>
 
   <!-- Contorno exterior del monticulo -->
-  <path d="M18 90 Q22 68 30 62 Q36 54 42 58 Q47 50 52 54 Q56 44 62 46 Q68 42 73 47 Q78 50 82 55 Q88 52 93 60 Q100 66 104 75 Q108 85 106 95 Q100 102 90 104 Q78 107 64 107 Q50 107 36 104 Q24 101 18 90 Z" fill="none" stroke="#6b1010" stroke-width="1.2" stroke-opacity="0.5"/>
+  <path d="M18 90 Q22 68 30 62 Q36 54 42 58 Q47 50 52 54 Q56 44 62 46 Q68 42 73 47 Q78 50 82 55 Q88 52 93 60 Q100 66 104 75 Q108 85 106 95 Q100 102 90 104 Q78 107 64 107 Q50 107 36 104 Q24 101 18 90 Z" fill="none" stroke="#4a120c" stroke-width="1.2" stroke-opacity="0.55"/>
 </svg>

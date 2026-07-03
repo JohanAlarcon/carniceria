@@ -1,46 +1,56 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
   <defs>
     <radialGradient id="g_offal_bg" cx="50%" cy="40%" r="55%">
-      <stop offset="0%" stop-color="#c0274a"/>
-      <stop offset="60%" stop-color="#8b1a2e"/>
-      <stop offset="100%" stop-color="#5a0d1c"/>
+      <stop offset="0%" stop-color="#7e3b3f"/>
+      <stop offset="60%" stop-color="#5e2529"/>
+      <stop offset="100%" stop-color="#3f1518"/>
     </radialGradient>
     <radialGradient id="g_offal_highlight" cx="38%" cy="28%" r="35%">
-      <stop offset="0%" stop-color="#e84070" stop-opacity="0.9"/>
-      <stop offset="100%" stop-color="#c0274a" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#8a4448" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#8a4448" stop-opacity="0"/>
     </radialGradient>
     <radialGradient id="g_offal_shadow" cx="60%" cy="75%" r="45%">
-      <stop offset="0%" stop-color="#3a0810" stop-opacity="0.7"/>
-      <stop offset="100%" stop-color="#3a0810" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#2a0c0e" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#2a0c0e" stop-opacity="0"/>
     </radialGradient>
     <linearGradient id="g_offal_left_lobe" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#d63058"/>
-      <stop offset="50%" stop-color="#a0213d"/>
-      <stop offset="100%" stop-color="#6e1228"/>
+      <stop offset="0%" stop-color="#7e3b3f"/>
+      <stop offset="50%" stop-color="#5c2428"/>
+      <stop offset="100%" stop-color="#3f1518"/>
     </linearGradient>
     <linearGradient id="g_offal_right_lobe" x1="100%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#cc2a50"/>
-      <stop offset="50%" stop-color="#951e38"/>
-      <stop offset="100%" stop-color="#621025"/>
+      <stop offset="0%" stop-color="#763639"/>
+      <stop offset="50%" stop-color="#552126"/>
+      <stop offset="100%" stop-color="#3a1316"/>
     </linearGradient>
     <radialGradient id="g_offal_vein1" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#7a1525"/>
-      <stop offset="100%" stop-color="#4a0c18"/>
+      <stop offset="0%" stop-color="#5e2529"/>
+      <stop offset="100%" stop-color="#3f1518"/>
     </radialGradient>
     <linearGradient id="g_offal_aorta" x1="0%" y1="100%" x2="0%" y2="0%">
-      <stop offset="0%" stop-color="#8b1a2e"/>
-      <stop offset="50%" stop-color="#b82040"/>
-      <stop offset="100%" stop-color="#7a1525"/>
+      <stop offset="0%" stop-color="#4f1f22"/>
+      <stop offset="50%" stop-color="#8a4448"/>
+      <stop offset="100%" stop-color="#4f1f22"/>
     </linearGradient>
     <radialGradient id="g_offal_sheen" cx="35%" cy="25%" r="40%">
-      <stop offset="0%" stop-color="#ff8aaa" stop-opacity="0.5"/>
-      <stop offset="60%" stop-color="#e84070" stop-opacity="0.1"/>
-      <stop offset="100%" stop-color="#e84070" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.15"/>
+      <stop offset="60%" stop-color="#ffffff" stop-opacity="0.03"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
     </radialGradient>
+    <radialGradient id="g_offal_vignette" cx="50%" cy="44%" r="56%">
+      <stop offset="62%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#280a0c" stop-opacity="0.30"/>
+    </radialGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="1.0"/>
+    </filter>
+    <clipPath id="clip_offal">
+      <path d="M64 108 C64 108 18 78 18 50 C18 34 30 22 45 22 C53 22 60 27 64 33 C68 27 75 22 83 22 C98 22 110 34 110 50 C110 78 64 108 64 108 Z"/>
+    </clipPath>
   </defs>
 
   <!-- Main heart body - left lobe -->
-  <path d="M64 108 C64 108 18 78 18 50 C18 34 30 22 45 22 C53 22 60 27 64 33 C68 27 75 22 83 22 C98 22 110 34 110 50 C110 78 64 108 64 108 Z" fill="url(#g_offal_bg)" stroke="#3a0810" stroke-width="1.5"/>
+  <path d="M64 108 C64 108 18 78 18 50 C18 34 30 22 45 22 C53 22 60 27 64 33 C68 27 75 22 83 22 C98 22 110 34 110 50 C110 78 64 108 64 108 Z" fill="url(#g_offal_bg)" stroke="#2a0c0e" stroke-width="1.5"/>
 
   <!-- Left lobe shading -->
   <path d="M64 33 C60 27 53 22 45 22 C30 22 18 34 18 50 C18 65 30 78 44 88 C50 92 57 97 64 102 L64 33 Z" fill="url(#g_offal_left_lobe)" opacity="0.6"/>
@@ -54,27 +64,41 @@
   <path d="M84 24 C86 17 88 12 86 8 C85 5 82 4 80 6 L78 12" fill="none" stroke="url(#g_offal_aorta)" stroke-width="3.5" stroke-linecap="round"/>
 
   <!-- Aorta highlights -->
-  <path d="M52 22 C52 18 54 12 57 10" fill="none" stroke="#d63058" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
-  <path d="M76 22 C76 16 74 11 71 9" fill="none" stroke="#d63058" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
+  <path d="M52 22 C52 18 54 12 57 10" fill="none" stroke="#8a4448" stroke-width="1.5" stroke-linecap="round" opacity="0.35"/>
+  <path d="M76 22 C76 16 74 11 71 9" fill="none" stroke="#8a4448" stroke-width="1" stroke-linecap="round" opacity="0.35"/>
 
   <!-- Veins / surface texture lines -->
-  <path d="M38 48 C42 44 48 46 52 52 C55 57 54 64 50 68" fill="none" stroke="#7a1525" stroke-width="1.8" stroke-linecap="round" opacity="0.7"/>
-  <path d="M85 46 C81 43 76 45 73 51 C70 57 72 64 76 68" fill="none" stroke="#6e1220" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
-  <path d="M64 55 C64 62 62 70 60 78 C58 85 58 92 62 98" fill="none" stroke="#7a1525" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/>
-  <path d="M55 72 C58 76 61 80 63 86" fill="none" stroke="#7a1525" stroke-width="1" stroke-linecap="round" opacity="0.45"/>
+  <path d="M38 48 C42 44 48 46 52 52 C55 57 54 64 50 68" fill="none" stroke="#4a1c20" stroke-width="1.8" stroke-linecap="round" opacity="0.65"/>
+  <path d="M85 46 C81 43 76 45 73 51 C70 57 72 64 76 68" fill="none" stroke="#421619" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
+  <path d="M64 55 C64 62 62 70 60 78 C58 85 58 92 62 98" fill="none" stroke="#4a1c20" stroke-width="1.2" stroke-linecap="round" opacity="0.45"/>
+  <path d="M55 72 C58 76 61 80 63 86" fill="none" stroke="#4a1c20" stroke-width="1" stroke-linecap="round" opacity="0.4"/>
 
-  <!-- Highlight sheen (specular) -->
+  <!-- Marmoleo/grasa suave desenfocada, recortada al organo -->
+  <g clip-path="url(#clip_offal)" filter="url(#soft)" opacity="0.4">
+    <path d="M40 40 C48 36 56 39 60 44 C54 43 48 43 42 46 C39 45 39 42 40 40 Z" fill="#ece1cd" opacity="0.45"/>
+    <ellipse cx="80" cy="44" rx="6" ry="3" transform="rotate(18,80,44)" fill="#e3cdba" opacity="0.4"/>
+    <ellipse cx="52" cy="64" rx="7" ry="3" transform="rotate(-10,52,64)" fill="#6a2c30" opacity="0.55"/>
+    <ellipse cx="74" cy="66" rx="6" ry="2.6" transform="rotate(12,74,66)" fill="#6a2c30" opacity="0.5"/>
+  </g>
+
+  <!-- Vignette (volumen mate sin plastico) -->
+  <path d="M64 108 C64 108 18 78 18 50 C18 34 30 22 45 22 C53 22 60 27 64 33 C68 27 75 22 83 22 C98 22 110 34 110 50 C110 78 64 108 64 108 Z" fill="url(#g_offal_vignette)"/>
+
+  <!-- Sheen mate muy sutil -->
   <path d="M64 108 C64 108 18 78 18 50 C18 34 30 22 45 22 C53 22 60 27 64 33 C68 27 75 22 83 22 C98 22 110 34 110 50 C110 78 64 108 64 108 Z" fill="url(#g_offal_sheen)"/>
 
-  <!-- Top bright highlight left lobe -->
-  <ellipse cx="42" cy="38" rx="10" ry="7" fill="#ff6688" opacity="0.35" transform="rotate(-20,42,38)"/>
-  <!-- Top bright highlight right lobe -->
-  <ellipse cx="85" cy="38" rx="8" ry="6" fill="#ff6688" opacity="0.28" transform="rotate(20,85,38)"/>
+  <!-- Top subtle highlight left lobe -->
+  <ellipse cx="42" cy="38" rx="10" ry="7" fill="#ffffff" opacity="0.06" transform="rotate(-20,42,38)"/>
+  <!-- Top subtle highlight right lobe -->
+  <ellipse cx="85" cy="38" rx="8" ry="6" fill="#ffffff" opacity="0.05" transform="rotate(20,85,38)"/>
 
   <!-- Deep shadow at bottom -->
   <path d="M64 108 C64 108 18 78 18 50 C18 34 30 22 45 22 C53 22 60 27 64 33 C68 27 75 22 83 22 C98 22 110 34 110 50 C110 78 64 108 64 108 Z" fill="url(#g_offal_shadow)"/>
 
-  <!-- Small highlight dot for wet look -->
-  <circle cx="40" cy="35" r="3.5" fill="white" opacity="0.22"/>
-  <circle cx="82" cy="36" r="2.5" fill="white" opacity="0.18"/>
+  <!-- Contorno de definicion -->
+  <path d="M64 108 C64 108 18 78 18 50 C18 34 30 22 45 22 C53 22 60 27 64 33 C68 27 75 22 83 22 C98 22 110 34 110 50 C110 78 64 108 64 108 Z" fill="none" stroke="#2a0c0e" stroke-width="1.1" opacity="0.55"/>
+
+  <!-- Small wet-look highlight dots (muy sutil) -->
+  <circle cx="40" cy="35" r="3.5" fill="#ffffff" opacity="0.09"/>
+  <circle cx="82" cy="36" r="2.5" fill="#ffffff" opacity="0.07"/>
 </svg>

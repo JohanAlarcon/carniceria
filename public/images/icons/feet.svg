@@ -1,80 +1,102 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
   <defs>
     <radialGradient id="g_feet_palm" cx="50%" cy="55%" r="50%" fx="45%" fy="45%">
-      <stop offset="0%" stop-color="#F4A0A8"/>
-      <stop offset="40%" stop-color="#E8808C"/>
-      <stop offset="80%" stop-color="#D45F70"/>
-      <stop offset="100%" stop-color="#B84055"/>
+      <stop offset="0%" stop-color="#f1e2d2"/>
+      <stop offset="40%" stop-color="#e5d0bc"/>
+      <stop offset="80%" stop-color="#d6bda6"/>
+      <stop offset="100%" stop-color="#c3a68b"/>
     </radialGradient>
     <radialGradient id="g_feet_pad_center" cx="50%" cy="40%" r="55%" fx="40%" fy="30%">
-      <stop offset="0%" stop-color="#C2556A"/>
-      <stop offset="60%" stop-color="#A83D55"/>
-      <stop offset="100%" stop-color="#8C2B40"/>
+      <stop offset="0%" stop-color="#c9a591"/>
+      <stop offset="60%" stop-color="#b48d78"/>
+      <stop offset="100%" stop-color="#997460"/>
     </radialGradient>
     <radialGradient id="g_feet_toe1" cx="45%" cy="35%" r="55%" fx="35%" fy="25%">
-      <stop offset="0%" stop-color="#F7B8C0"/>
-      <stop offset="50%" stop-color="#E8909A"/>
-      <stop offset="100%" stop-color="#C96070"/>
+      <stop offset="0%" stop-color="#f2e4d5"/>
+      <stop offset="50%" stop-color="#e3cfba"/>
+      <stop offset="100%" stop-color="#cbae93"/>
     </radialGradient>
     <radialGradient id="g_feet_toe2" cx="45%" cy="35%" r="55%" fx="35%" fy="25%">
-      <stop offset="0%" stop-color="#F7B8C0"/>
-      <stop offset="50%" stop-color="#E8909A"/>
-      <stop offset="100%" stop-color="#C96070"/>
+      <stop offset="0%" stop-color="#f2e4d5"/>
+      <stop offset="50%" stop-color="#e3cfba"/>
+      <stop offset="100%" stop-color="#cbae93"/>
     </radialGradient>
     <radialGradient id="g_feet_toe3" cx="45%" cy="35%" r="55%" fx="35%" fy="25%">
-      <stop offset="0%" stop-color="#F7B8C0"/>
-      <stop offset="50%" stop-color="#E8909A"/>
-      <stop offset="100%" stop-color="#C96070"/>
+      <stop offset="0%" stop-color="#f2e4d5"/>
+      <stop offset="50%" stop-color="#e3cfba"/>
+      <stop offset="100%" stop-color="#cbae93"/>
     </radialGradient>
     <radialGradient id="g_feet_toe4" cx="45%" cy="35%" r="55%" fx="35%" fy="25%">
-      <stop offset="0%" stop-color="#F7B8C0"/>
-      <stop offset="50%" stop-color="#E8909A"/>
-      <stop offset="100%" stop-color="#C96070"/>
+      <stop offset="0%" stop-color="#f2e4d5"/>
+      <stop offset="50%" stop-color="#e3cfba"/>
+      <stop offset="100%" stop-color="#cbae93"/>
     </radialGradient>
     <radialGradient id="g_feet_highlight" cx="38%" cy="30%" r="40%">
-      <stop offset="0%" stop-color="#FFDDE2" stop-opacity="0.85"/>
-      <stop offset="100%" stop-color="#FFDDE2" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.14"/>
+      <stop offset="70%" stop-color="#ffffff" stop-opacity="0.02"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
     </radialGradient>
     <radialGradient id="g_feet_pad_hl" cx="35%" cy="30%" r="50%">
-      <stop offset="0%" stop-color="#D9708A" stop-opacity="0.7"/>
-      <stop offset="100%" stop-color="#D9708A" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#fbf1e6" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#fbf1e6" stop-opacity="0"/>
     </radialGradient>
+    <radialGradient id="g_feet_vignette" cx="50%" cy="45%" r="56%">
+      <stop offset="62%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#3a2418" stop-opacity="0.28"/>
+    </radialGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="1.0"/>
+    </filter>
+    <clipPath id="clip_feet">
+      <ellipse cx="64" cy="82" rx="28" ry="26"/>
+    </clipPath>
   </defs>
 
   <!-- Palm / main pad -->
-  <ellipse cx="64" cy="82" rx="28" ry="26" fill="url(#g_feet_palm)" stroke="#8C2B40" stroke-width="1.5"/>
+  <ellipse cx="64" cy="82" rx="28" ry="26" fill="url(#g_feet_palm)" stroke="#8a6754" stroke-width="1.5"/>
+
+  <!-- Marmoleo natural: manchas suaves desenfocadas (grasa), recortadas al pad -->
+  <g clip-path="url(#clip_feet)" filter="url(#soft)" opacity="0.42">
+    <ellipse cx="54" cy="74" rx="8" ry="4" fill="#efe0d3"/>
+    <ellipse cx="74" cy="88" rx="7" ry="3.6" fill="#ece1cd"/>
+    <ellipse cx="58" cy="96" rx="6" ry="3.2" fill="#efe0d3"/>
+    <ellipse cx="78" cy="72" rx="5" ry="2.8" fill="#ece1cd"/>
+  </g>
+
+  <!-- Vignette (volumen mate) sobre el pad -->
+  <ellipse cx="64" cy="82" rx="28" ry="26" fill="url(#g_feet_vignette)"/>
 
   <!-- Central paw pad -->
-  <ellipse cx="64" cy="84" rx="14" ry="11" fill="url(#g_feet_pad_center)" stroke="#6A1E30" stroke-width="1"/>
-  <!-- Pad highlight -->
+  <ellipse cx="64" cy="84" rx="14" ry="11" fill="url(#g_feet_pad_center)" stroke="#6e4d3a" stroke-width="1"/>
+  <!-- Pad sheen sutil -->
   <ellipse cx="60" cy="80" rx="6" ry="4" fill="url(#g_feet_pad_hl)"/>
 
   <!-- Toe 1 (left outer) -->
-  <ellipse cx="36" cy="62" rx="10" ry="12" fill="url(#g_feet_toe1)" stroke="#8C2B40" stroke-width="1.2"/>
+  <ellipse cx="36" cy="62" rx="10" ry="12" fill="url(#g_feet_toe1)" stroke="#8a6754" stroke-width="1.2"/>
   <!-- Toe 1 small pad -->
-  <ellipse cx="36" cy="64" rx="5" ry="5.5" fill="url(#g_feet_pad_center)" stroke="#6A1E30" stroke-width="0.8"/>
+  <ellipse cx="36" cy="64" rx="5" ry="5.5" fill="url(#g_feet_pad_center)" stroke="#6e4d3a" stroke-width="0.8"/>
 
   <!-- Toe 2 -->
-  <ellipse cx="51" cy="54" rx="10" ry="12" fill="url(#g_feet_toe2)" stroke="#8C2B40" stroke-width="1.2"/>
+  <ellipse cx="51" cy="54" rx="10" ry="12" fill="url(#g_feet_toe2)" stroke="#8a6754" stroke-width="1.2"/>
   <!-- Toe 2 small pad -->
-  <ellipse cx="51" cy="56" rx="5" ry="5.5" fill="url(#g_feet_pad_center)" stroke="#6A1E30" stroke-width="0.8"/>
+  <ellipse cx="51" cy="56" rx="5" ry="5.5" fill="url(#g_feet_pad_center)" stroke="#6e4d3a" stroke-width="0.8"/>
 
   <!-- Toe 3 -->
-  <ellipse cx="67" cy="52" rx="10" ry="12" fill="url(#g_feet_toe3)" stroke="#8C2B40" stroke-width="1.2"/>
+  <ellipse cx="67" cy="52" rx="10" ry="12" fill="url(#g_feet_toe3)" stroke="#8a6754" stroke-width="1.2"/>
   <!-- Toe 3 small pad -->
-  <ellipse cx="67" cy="54" rx="5" ry="5.5" fill="url(#g_feet_pad_center)" stroke="#6A1E30" stroke-width="0.8"/>
+  <ellipse cx="67" cy="54" rx="5" ry="5.5" fill="url(#g_feet_pad_center)" stroke="#6e4d3a" stroke-width="0.8"/>
 
   <!-- Toe 4 (right outer) -->
-  <ellipse cx="82" cy="56" rx="10" ry="12" fill="url(#g_feet_toe4)" stroke="#8C2B40" stroke-width="1.2"/>
+  <ellipse cx="82" cy="56" rx="10" ry="12" fill="url(#g_feet_toe4)" stroke="#8a6754" stroke-width="1.2"/>
   <!-- Toe 4 small pad -->
-  <ellipse cx="82" cy="58" rx="5" ry="5.5" fill="url(#g_feet_pad_center)" stroke="#6A1E30" stroke-width="0.8"/>
+  <ellipse cx="82" cy="58" rx="5" ry="5.5" fill="url(#g_feet_pad_center)" stroke="#6e4d3a" stroke-width="0.8"/>
 
-  <!-- Palm highlight overlay -->
+  <!-- Palm sheen mate muy sutil -->
   <ellipse cx="56" cy="74" rx="16" ry="12" fill="url(#g_feet_highlight)"/>
 
   <!-- Subtle claw hints on toes -->
-  <ellipse cx="36" cy="52" rx="3.5" ry="2.5" fill="#7A2438" opacity="0.6"/>
-  <ellipse cx="51" cy="44" rx="3.5" ry="2.5" fill="#7A2438" opacity="0.6"/>
-  <ellipse cx="67" cy="42" rx="3.5" ry="2.5" fill="#7A2438" opacity="0.6"/>
-  <ellipse cx="82" cy="46" rx="3.5" ry="2.5" fill="#7A2438" opacity="0.6"/>
+  <ellipse cx="36" cy="52" rx="3.5" ry="2.5" fill="#6e4d3a" opacity="0.55"/>
+  <ellipse cx="51" cy="44" rx="3.5" ry="2.5" fill="#6e4d3a" opacity="0.55"/>
+  <ellipse cx="67" cy="42" rx="3.5" ry="2.5" fill="#6e4d3a" opacity="0.55"/>
+  <ellipse cx="82" cy="46" rx="3.5" ry="2.5" fill="#6e4d3a" opacity="0.55"/>
 </svg>

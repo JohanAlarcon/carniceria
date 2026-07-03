@@ -1,39 +1,39 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
   <defs>
-    <!-- Body main gradient: silver with blue-green tint -->
+    <!-- Body main gradient: desaturated steel blue-gray -->
     <linearGradient id="g_fish_body" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#d8eef5"/>
-      <stop offset="30%" stop-color="#a8cfe0"/>
-      <stop offset="60%" stop-color="#7ab3cc"/>
-      <stop offset="100%" stop-color="#4a8aab"/>
+      <stop offset="0%" stop-color="#bcccd2"/>
+      <stop offset="30%" stop-color="#a3bcc7"/>
+      <stop offset="60%" stop-color="#729aab"/>
+      <stop offset="100%" stop-color="#4f7486"/>
     </linearGradient>
-    <!-- Belly lighter gradient -->
+    <!-- Belly lighter gradient: cream to pale steel -->
     <linearGradient id="g_fish_belly" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e8f5fb"/>
-      <stop offset="100%" stop-color="#c2dcea"/>
+      <stop offset="0%" stop-color="#ece7db"/>
+      <stop offset="100%" stop-color="#c6d0cf"/>
     </linearGradient>
-    <!-- Side sheen / iridescent highlight -->
+    <!-- Side sheen: very subtle matte white -->
     <linearGradient id="g_fish_sheen" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#b8e0f0" stop-opacity="0"/>
-      <stop offset="40%" stop-color="#e0f7ff" stop-opacity="0.85"/>
-      <stop offset="100%" stop-color="#b8e0f0" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="40%" stop-color="#ffffff" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
     </linearGradient>
-    <!-- Tail gradient -->
+    <!-- Tail gradient (desaturated) -->
     <linearGradient id="g_fish_tail" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#5a9ab8"/>
-      <stop offset="100%" stop-color="#2d6a8a"/>
+      <stop offset="0%" stop-color="#5f8798"/>
+      <stop offset="100%" stop-color="#3d6072"/>
     </linearGradient>
-    <!-- Dorsal fin gradient -->
+    <!-- Dorsal fin gradient (desaturated) -->
     <linearGradient id="g_fish_dfin" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#6ab0cc"/>
-      <stop offset="100%" stop-color="#3a7a9c" stop-opacity="0.6"/>
+      <stop offset="0%" stop-color="#6d97a8"/>
+      <stop offset="100%" stop-color="#4f7486" stop-opacity="0.6"/>
     </linearGradient>
-    <!-- Pectoral fin gradient -->
+    <!-- Pectoral fin gradient (desaturated) -->
     <linearGradient id="g_fish_pfin" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9acce0" stop-opacity="0.9"/>
-      <stop offset="100%" stop-color="#5a9ab8" stop-opacity="0.4"/>
+      <stop offset="0%" stop-color="#9db4bf" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#6a8fa0" stop-opacity="0.4"/>
     </linearGradient>
-    <!-- Eye radial gradient -->
+    <!-- Eye radial gradient (feature, preserved) -->
     <radialGradient id="g_fish_eye" cx="40%" cy="35%" r="55%">
       <stop offset="0%" stop-color="#6ecbf0"/>
       <stop offset="40%" stop-color="#1a5a8a"/>
@@ -45,10 +45,15 @@
       <stop offset="0%" stop-color="#ffffff" stop-opacity="0.3"/>
       <stop offset="100%" stop-color="#5a9ab8" stop-opacity="0"/>
     </radialGradient>
-    <!-- Overall body radial for depth -->
+    <!-- Overall body radial for depth (softer, matte) -->
     <radialGradient id="g_fish_depth" cx="42%" cy="38%" r="55%">
-      <stop offset="0%" stop-color="#e8f5fb" stop-opacity="0.6"/>
-      <stop offset="100%" stop-color="#2d6a8a" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#dfe6e4" stop-opacity="0.42"/>
+      <stop offset="100%" stop-color="#4f7486" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Vignette for matte volume -->
+    <radialGradient id="g_fish_vignette" cx="50%" cy="45%" r="58%">
+      <stop offset="62%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#233c46" stop-opacity="0.26"/>
     </radialGradient>
   </defs>
 
@@ -56,18 +61,18 @@
   <path d="M100,64 L118,44 L113,64 L118,84 Z"
         fill="url(#g_fish_tail)" stroke="#2a5a7a" stroke-width="1.2" stroke-linejoin="round"/>
   <!-- Tail fin ray lines -->
-  <line x1="100" y1="64" x2="118" y2="44" stroke="#3a7a9c" stroke-width="0.6" stroke-opacity="0.7"/>
-  <line x1="100" y1="64" x2="118" y2="54" stroke="#3a7a9c" stroke-width="0.6" stroke-opacity="0.7"/>
-  <line x1="100" y1="64" x2="118" y2="74" stroke="#3a7a9c" stroke-width="0.6" stroke-opacity="0.7"/>
-  <line x1="100" y1="64" x2="118" y2="84" stroke="#3a7a9c" stroke-width="0.6" stroke-opacity="0.7"/>
+  <line x1="100" y1="64" x2="118" y2="44" stroke="#446e80" stroke-width="0.6" stroke-opacity="0.7"/>
+  <line x1="100" y1="64" x2="118" y2="54" stroke="#446e80" stroke-width="0.6" stroke-opacity="0.7"/>
+  <line x1="100" y1="64" x2="118" y2="74" stroke="#446e80" stroke-width="0.6" stroke-opacity="0.7"/>
+  <line x1="100" y1="64" x2="118" y2="84" stroke="#446e80" stroke-width="0.6" stroke-opacity="0.7"/>
 
   <!-- === ANAL / VENTRAL FIN === -->
   <path d="M68,72 Q75,85 60,90 Q65,80 63,74 Z"
-        fill="url(#g_fish_pfin)" stroke="#3a7a9c" stroke-width="0.9" stroke-opacity="0.7"/>
+        fill="url(#g_fish_pfin)" stroke="#446e80" stroke-width="0.9" stroke-opacity="0.7"/>
 
   <!-- === PELVIC FIN === -->
   <path d="M52,68 Q46,80 38,83 Q43,74 48,70 Z"
-        fill="url(#g_fish_pfin)" stroke="#3a7a9c" stroke-width="0.9" stroke-opacity="0.7"/>
+        fill="url(#g_fish_pfin)" stroke="#446e80" stroke-width="0.9" stroke-opacity="0.7"/>
 
   <!-- === BODY — belly (lighter, lower half) === -->
   <ellipse cx="62" cy="68" rx="48" ry="18"
@@ -83,44 +88,48 @@
 
   <!-- === LATERAL LINE === -->
   <path d="M38,60 Q60,55 90,62"
-        fill="none" stroke="#3a7a9c" stroke-width="1.1" stroke-opacity="0.55" stroke-dasharray="2,2"/>
+        fill="none" stroke="#4f7486" stroke-width="1.1" stroke-opacity="0.55" stroke-dasharray="2,2"/>
 
   <!-- === SCALE CIRCLES (subtle texture) === -->
   <!-- Row 1 -->
-  <circle cx="55" cy="55" r="7" fill="none" stroke="#7ab8d0" stroke-width="0.7" stroke-opacity="0.45"/>
-  <circle cx="68" cy="52" r="7" fill="none" stroke="#7ab8d0" stroke-width="0.7" stroke-opacity="0.45"/>
-  <circle cx="81" cy="54" r="6.5" fill="none" stroke="#7ab8d0" stroke-width="0.7" stroke-opacity="0.45"/>
+  <circle cx="55" cy="55" r="7" fill="none" stroke="#8aa6b1" stroke-width="0.7" stroke-opacity="0.45"/>
+  <circle cx="68" cy="52" r="7" fill="none" stroke="#8aa6b1" stroke-width="0.7" stroke-opacity="0.45"/>
+  <circle cx="81" cy="54" r="6.5" fill="none" stroke="#8aa6b1" stroke-width="0.7" stroke-opacity="0.45"/>
   <!-- Row 2 -->
-  <circle cx="49" cy="62" r="7" fill="none" stroke="#7ab8d0" stroke-width="0.7" stroke-opacity="0.4"/>
-  <circle cx="62" cy="60" r="7" fill="none" stroke="#7ab8d0" stroke-width="0.7" stroke-opacity="0.4"/>
-  <circle cx="75" cy="61" r="7" fill="none" stroke="#7ab8d0" stroke-width="0.7" stroke-opacity="0.4"/>
-  <circle cx="88" cy="62" r="6" fill="none" stroke="#7ab8d0" stroke-width="0.7" stroke-opacity="0.35"/>
+  <circle cx="49" cy="62" r="7" fill="none" stroke="#8aa6b1" stroke-width="0.7" stroke-opacity="0.4"/>
+  <circle cx="62" cy="60" r="7" fill="none" stroke="#8aa6b1" stroke-width="0.7" stroke-opacity="0.4"/>
+  <circle cx="75" cy="61" r="7" fill="none" stroke="#8aa6b1" stroke-width="0.7" stroke-opacity="0.4"/>
+  <circle cx="88" cy="62" r="6" fill="none" stroke="#8aa6b1" stroke-width="0.7" stroke-opacity="0.35"/>
   <!-- Row 3 -->
-  <circle cx="55" cy="70" r="6.5" fill="none" stroke="#7ab8d0" stroke-width="0.7" stroke-opacity="0.35"/>
-  <circle cx="68" cy="70" r="6.5" fill="none" stroke="#7ab8d0" stroke-width="0.7" stroke-opacity="0.35"/>
-  <circle cx="80" cy="70" r="6" fill="none" stroke="#7ab8d0" stroke-width="0.7" stroke-opacity="0.3"/>
+  <circle cx="55" cy="70" r="6.5" fill="none" stroke="#8aa6b1" stroke-width="0.7" stroke-opacity="0.35"/>
+  <circle cx="68" cy="70" r="6.5" fill="none" stroke="#8aa6b1" stroke-width="0.7" stroke-opacity="0.35"/>
+  <circle cx="80" cy="70" r="6" fill="none" stroke="#8aa6b1" stroke-width="0.7" stroke-opacity="0.3"/>
 
-  <!-- === IRIDESCENT SHEEN overlay === -->
+  <!-- === IRIDESCENT SHEEN overlay (matte, subtle) === -->
   <path d="M18,64 Q20,42 42,38 Q62,34 82,40 Q102,46 103,64 Q102,82 82,88 Q62,94 42,90 Q20,86 18,64 Z"
-        fill="url(#g_fish_sheen)" opacity="0.7"/>
+        fill="url(#g_fish_sheen)" opacity="0.55"/>
+
+  <!-- === VIGNETTE (matte volume) === -->
+  <path d="M18,64 Q20,42 42,38 Q62,34 82,40 Q102,46 103,64 Q102,82 82,88 Q62,94 42,90 Q20,86 18,64 Z"
+        fill="url(#g_fish_vignette)"/>
 
   <!-- === DORSAL FIN === -->
   <path d="M40,39 Q45,24 52,22 Q60,20 68,23 Q76,26 80,34 Q78,39 75,40 Q60,35 42,38 Z"
         fill="url(#g_fish_dfin)" stroke="#2a6a8a" stroke-width="1.1" stroke-linejoin="round"/>
   <!-- Dorsal fin rays -->
-  <line x1="48" y1="38" x2="52" y2="22" stroke="#3a7a9c" stroke-width="0.7" stroke-opacity="0.6"/>
-  <line x1="55" y1="36" x2="58" y2="21" stroke="#3a7a9c" stroke-width="0.7" stroke-opacity="0.6"/>
-  <line x1="63" y1="35" x2="65" y2="21" stroke="#3a7a9c" stroke-width="0.7" stroke-opacity="0.6"/>
-  <line x1="70" y1="36" x2="72" y2="25" stroke="#3a7a9c" stroke-width="0.7" stroke-opacity="0.6"/>
-  <line x1="77" y1="38" x2="78" y2="31" stroke="#3a7a9c" stroke-width="0.7" stroke-opacity="0.6"/>
+  <line x1="48" y1="38" x2="52" y2="22" stroke="#446e80" stroke-width="0.7" stroke-opacity="0.6"/>
+  <line x1="55" y1="36" x2="58" y2="21" stroke="#446e80" stroke-width="0.7" stroke-opacity="0.6"/>
+  <line x1="63" y1="35" x2="65" y2="21" stroke="#446e80" stroke-width="0.7" stroke-opacity="0.6"/>
+  <line x1="70" y1="36" x2="72" y2="25" stroke="#446e80" stroke-width="0.7" stroke-opacity="0.6"/>
+  <line x1="77" y1="38" x2="78" y2="31" stroke="#446e80" stroke-width="0.7" stroke-opacity="0.6"/>
 
   <!-- === PECTORAL FIN === -->
   <path d="M40,56 Q30,52 26,62 Q28,70 40,68 Z"
-        fill="url(#g_fish_pfin)" stroke="#3a7a9c" stroke-width="0.9" stroke-opacity="0.8"/>
+        fill="url(#g_fish_pfin)" stroke="#446e80" stroke-width="0.9" stroke-opacity="0.8"/>
 
   <!-- === HEAD area (slightly darker snout) === -->
   <path d="M18,64 Q19,52 26,46 Q32,40 40,39 Q36,48 35,64 Q35,78 38,88 Q30,86 24,80 Q18,74 18,64 Z"
-        fill="#6aacc4" opacity="0.35"/>
+        fill="#6f95a4" opacity="0.35"/>
 
   <!-- === MOUTH === -->
   <path d="M18,64 Q17,67 19,68" fill="none" stroke="#1a4a6a" stroke-width="1.5" stroke-linecap="round"/>
@@ -128,15 +137,19 @@
   <!-- === EYE === -->
   <circle cx="30" cy="58" r="6.5" fill="#1a3a5a" stroke="#0a2030" stroke-width="1"/>
   <circle cx="30" cy="58" r="5.5" fill="url(#g_fish_eye)"/>
-  <!-- Eye shine -->
-  <circle cx="27.5" cy="55.5" r="1.8" fill="white" opacity="0.85"/>
-  <circle cx="31.5" cy="59.5" r="0.9" fill="white" opacity="0.4"/>
+  <!-- Eye shine (catchlight, preserved) -->
+  <circle cx="27.5" cy="55.5" r="1.8" fill="white" opacity="0.8"/>
+  <circle cx="31.5" cy="59.5" r="0.9" fill="white" opacity="0.38"/>
 
   <!-- === GILL LINE === -->
   <path d="M35,42 Q32,54 32,64 Q32,74 35,85"
         fill="none" stroke="#2a5a7a" stroke-width="1.3" stroke-opacity="0.6" stroke-linecap="round"/>
 
-  <!-- === TOP HIGHLIGHT (specular) === -->
+  <!-- === TOP SHEEN (subtle, matte) === -->
   <path d="M45,42 Q62,36 78,40 Q62,38 45,43 Z"
-        fill="white" opacity="0.4"/>
+        fill="white" opacity="0.14"/>
+
+  <!-- === CONTORNO for definition === -->
+  <path d="M18,64 Q20,42 42,38 Q62,34 82,40 Q102,46 103,64 Q102,82 82,88 Q62,94 42,90 Q20,86 18,64 Z"
+        fill="none" stroke="#233c46" stroke-width="1.1" opacity="0.55"/>
 </svg>

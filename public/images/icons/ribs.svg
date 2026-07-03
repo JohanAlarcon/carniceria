@@ -1,89 +1,99 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
   <defs>
-    <!-- Main meat body gradient - red caramel glaze -->
+    <!-- Main meat body gradient - natural red matte -->
     <linearGradient id="g_ribs_meat1" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#C0392B"/>
-      <stop offset="35%" stop-color="#A93226"/>
-      <stop offset="70%" stop-color="#922B21"/>
-      <stop offset="100%" stop-color="#7B241C"/>
+      <stop offset="0%" stop-color="#c15f50"/>
+      <stop offset="35%" stop-color="#a23f34"/>
+      <stop offset="70%" stop-color="#822a20"/>
+      <stop offset="100%" stop-color="#5e1a13"/>
     </linearGradient>
-    <!-- Glaze highlight gradient -->
-    <linearGradient id="g_ribs_glaze" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#E74C3C" stop-opacity="0.9"/>
-      <stop offset="40%" stop-color="#C0392B" stop-opacity="0.7"/>
-      <stop offset="100%" stop-color="#922B21" stop-opacity="0.3"/>
-    </linearGradient>
-    <!-- Caramel glaze shine -->
+    <!-- Vignette overlay (repurposed glaze) - dark, subtle volume -->
+    <radialGradient id="g_ribs_glaze" cx="50%" cy="42%" r="62%">
+      <stop offset="62%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#2e0a07" stop-opacity="0.30"/>
+    </radialGradient>
+    <!-- Subtle matte white sheen (repurposed shine) -->
     <radialGradient id="g_ribs_shine" cx="40%" cy="30%" r="50%">
-      <stop offset="0%" stop-color="#F1948A" stop-opacity="0.8"/>
-      <stop offset="60%" stop-color="#E74C3C" stop-opacity="0.3"/>
-      <stop offset="100%" stop-color="#C0392B" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.14"/>
+      <stop offset="70%" stop-color="#ffffff" stop-opacity="0.02"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
     </radialGradient>
     <!-- Bone gradient -->
     <linearGradient id="g_ribs_bone1" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#F5F0E8"/>
-      <stop offset="40%" stop-color="#EDE4D0"/>
-      <stop offset="100%" stop-color="#D4C9B0"/>
+      <stop offset="0%" stop-color="#f2ead9"/>
+      <stop offset="40%" stop-color="#e6dbc4"/>
+      <stop offset="100%" stop-color="#cec0a4"/>
     </linearGradient>
     <!-- Bone shadow -->
     <radialGradient id="g_ribs_bone_shadow" cx="60%" cy="40%" r="60%">
-      <stop offset="0%" stop-color="#FDFAF5"/>
-      <stop offset="70%" stop-color="#EDE4D0"/>
-      <stop offset="100%" stop-color="#C9BA9B"/>
+      <stop offset="0%" stop-color="#f7f0e2"/>
+      <stop offset="70%" stop-color="#e6dbc4"/>
+      <stop offset="100%" stop-color="#c6ab81"/>
     </radialGradient>
-    <!-- Dark caramel crust -->
+    <!-- Dark crust -->
     <linearGradient id="g_ribs_crust" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#8B1A1A"/>
-      <stop offset="100%" stop-color="#5C1010"/>
+      <stop offset="0%" stop-color="#6e1912"/>
+      <stop offset="100%" stop-color="#48100b"/>
     </linearGradient>
-    <!-- Fat marbling gradient -->
+    <!-- Fat strip gradient - warm cream, matte -->
     <linearGradient id="g_ribs_fat" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#F4D7C4" stop-opacity="0.9"/>
-      <stop offset="50%" stop-color="#EBC9B0" stop-opacity="0.7"/>
-      <stop offset="100%" stop-color="#F4D7C4" stop-opacity="0.5"/>
+      <stop offset="0%" stop-color="#ece1cd" stop-opacity="0.85"/>
+      <stop offset="50%" stop-color="#e3cdba" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#ece1cd" stop-opacity="0.5"/>
     </linearGradient>
     <!-- Second bone gradient -->
     <linearGradient id="g_ribs_bone2" x1="10%" y1="0%" x2="90%" y2="100%">
-      <stop offset="0%" stop-color="#F8F4EC"/>
-      <stop offset="50%" stop-color="#E8DDCA"/>
-      <stop offset="100%" stop-color="#CEC0A4"/>
+      <stop offset="0%" stop-color="#f4ecdb"/>
+      <stop offset="50%" stop-color="#e2d6bf"/>
+      <stop offset="100%" stop-color="#c6ab81"/>
     </linearGradient>
     <!-- Meat side shadow -->
     <linearGradient id="g_ribs_shadow" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#7B241C" stop-opacity="0.6"/>
-      <stop offset="30%" stop-color="#7B241C" stop-opacity="0"/>
-      <stop offset="70%" stop-color="#7B241C" stop-opacity="0"/>
-      <stop offset="100%" stop-color="#5C1010" stop-opacity="0.5"/>
+      <stop offset="0%" stop-color="#5e1a13" stop-opacity="0.55"/>
+      <stop offset="30%" stop-color="#5e1a13" stop-opacity="0"/>
+      <stop offset="70%" stop-color="#5e1a13" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#48100b" stop-opacity="0.5"/>
     </linearGradient>
+    <!-- Soft blur for marbling -->
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="1.0"/>
+    </filter>
+    <clipPath id="clip_ribs">
+      <rect x="18" y="44" width="92" height="34" rx="5" ry="5"/>
+    </clipPath>
   </defs>
 
   <!-- === RACK OF RIBS === -->
-  <!-- Overall meat slab - the rack body, angled slightly -->
-  <!-- Main meat block -->
   <g transform="rotate(-12, 64, 64)">
 
-    <!-- Meat slab base - dark bottom/crust layer -->
+    <!-- Meat slab base - dark crust layer -->
     <rect x="18" y="58" width="92" height="32" rx="6" ry="6" fill="url(#g_ribs_crust)" opacity="0.9"/>
 
     <!-- Main meat body -->
     <rect x="18" y="44" width="92" height="34" rx="5" ry="5" fill="url(#g_ribs_meat1)"/>
 
+    <!-- Marbling / fat: soft blurred warm spots clipped to meat -->
+    <g clip-path="url(#clip_ribs)" filter="url(#soft)" opacity="0.5">
+      <path d="M28 53 Q45 50 60 54 Q75 58 92 53 Q88 56 78 56 Q64 56 52 57 Q40 58 30 56 Q28 55 28 53 Z" fill="#ece1cd"/>
+      <path d="M26 62 Q42 59 58 63 Q74 67 96 61 Q90 65 80 65 Q66 65 54 66 Q40 67 30 65 Q26 64 26 62 Z" fill="#efe0d3"/>
+      <ellipse cx="45" cy="70" rx="9" ry="2.4" fill="#e7dbc4"/>
+      <ellipse cx="82" cy="71" rx="8" ry="2.2" fill="#e7dbc4"/>
+    </g>
+
     <!-- Fat strip along top of meat -->
     <rect x="20" y="44" width="88" height="8" rx="4" ry="4" fill="url(#g_ribs_fat)" opacity="0.85"/>
 
-    <!-- Glaze overlay on meat -->
-    <rect x="18" y="44" width="92" height="34" rx="5" ry="5" fill="url(#g_ribs_glaze)"/>
-
-    <!-- Shine highlight on glaze -->
-    <ellipse cx="55" cy="52" rx="38" ry="10" fill="url(#g_ribs_shine)"/>
-
-    <!-- Marbling veins on meat -->
-    <path d="M30 50 Q45 47 60 52 Q75 57 90 50" stroke="#F4D7C4" stroke-width="1.8" fill="none" opacity="0.5"/>
-    <path d="M25 58 Q40 55 55 60 Q70 65 85 58 Q95 54 105 57" stroke="#F4D7C4" stroke-width="1.4" fill="none" opacity="0.4"/>
-    <path d="M35 65 Q50 62 65 67 Q80 72 95 65" stroke="#EABFA8" stroke-width="1.2" fill="none" opacity="0.35"/>
-
     <!-- Side shadow on meat -->
     <rect x="18" y="44" width="92" height="34" rx="5" ry="5" fill="url(#g_ribs_shadow)"/>
+
+    <!-- Vignette overlay (matte volume) -->
+    <rect x="18" y="44" width="92" height="34" rx="5" ry="5" fill="url(#g_ribs_glaze)"/>
+
+    <!-- Subtle matte sheen -->
+    <ellipse cx="55" cy="52" rx="38" ry="10" fill="url(#g_ribs_shine)"/>
+
+    <!-- Contour outline for definition -->
+    <rect x="18" y="44" width="92" height="34" rx="5" ry="5" fill="none" stroke="#390d09" stroke-width="1" opacity="0.55"/>
 
     <!-- BONES - protruding from top of meat slab -->
     <!-- Bone 1 -->
@@ -95,7 +105,7 @@
       <!-- Bone knuckle bottom (at meat line) -->
       <ellipse cx="30" cy="54" rx="8" ry="6" fill="#D4C9B0" opacity="0.7"/>
       <!-- Bone highlight -->
-      <ellipse cx="27" cy="22" rx="3" ry="5" fill="white" opacity="0.5"/>
+      <ellipse cx="27" cy="22" rx="3" ry="5" fill="#fbf5e9" opacity="0.32"/>
     </g>
 
     <!-- Bone 2 -->
@@ -104,7 +114,7 @@
       <rect x="37" y="15" width="14" height="40" rx="7" ry="7" fill="url(#g_ribs_bone2)" stroke="#C9BA9B" stroke-width="0.8"/>
       <ellipse cx="44" cy="17" rx="8" ry="7" fill="url(#g_ribs_bone_shadow)" stroke="#C9BA9B" stroke-width="0.7"/>
       <ellipse cx="44" cy="54" rx="8" ry="6" fill="#D4C9B0" opacity="0.7"/>
-      <ellipse cx="41" cy="20" rx="3" ry="5" fill="white" opacity="0.5"/>
+      <ellipse cx="41" cy="20" rx="3" ry="5" fill="#fbf5e9" opacity="0.32"/>
     </g>
 
     <!-- Bone 3 -->
@@ -113,7 +123,7 @@
       <rect x="51" y="13" width="14" height="42" rx="7" ry="7" fill="url(#g_ribs_bone1)" stroke="#C9BA9B" stroke-width="0.8"/>
       <ellipse cx="58" cy="15" rx="8" ry="7" fill="url(#g_ribs_bone_shadow)" stroke="#C9BA9B" stroke-width="0.7"/>
       <ellipse cx="58" cy="54" rx="8" ry="6" fill="#D4C9B0" opacity="0.7"/>
-      <ellipse cx="55" cy="18" rx="3" ry="5" fill="white" opacity="0.5"/>
+      <ellipse cx="55" cy="18" rx="3" ry="5" fill="#fbf5e9" opacity="0.32"/>
     </g>
 
     <!-- Bone 4 -->
@@ -122,7 +132,7 @@
       <rect x="65" y="14" width="14" height="41" rx="7" ry="7" fill="url(#g_ribs_bone2)" stroke="#C9BA9B" stroke-width="0.8"/>
       <ellipse cx="72" cy="16" rx="8" ry="7" fill="url(#g_ribs_bone_shadow)" stroke="#C9BA9B" stroke-width="0.7"/>
       <ellipse cx="72" cy="54" rx="8" ry="6" fill="#D4C9B0" opacity="0.7"/>
-      <ellipse cx="69" cy="19" rx="3" ry="5" fill="white" opacity="0.5"/>
+      <ellipse cx="69" cy="19" rx="3" ry="5" fill="#fbf5e9" opacity="0.32"/>
     </g>
 
     <!-- Bone 5 -->
@@ -131,17 +141,17 @@
       <rect x="79" y="16" width="14" height="39" rx="7" ry="7" fill="url(#g_ribs_bone1)" stroke="#C9BA9B" stroke-width="0.8"/>
       <ellipse cx="86" cy="18" rx="8" ry="7" fill="url(#g_ribs_bone_shadow)" stroke="#C9BA9B" stroke-width="0.7"/>
       <ellipse cx="86" cy="54" rx="8" ry="6" fill="#D4C9B0" opacity="0.7"/>
-      <ellipse cx="83" cy="21" rx="3" ry="5" fill="white" opacity="0.5"/>
+      <ellipse cx="83" cy="21" rx="3" ry="5" fill="#fbf5e9" opacity="0.32"/>
     </g>
 
-    <!-- Caramel glaze drips -->
-    <path d="M30 78 Q31 84 30 88 Q31 90 32 88 Q33 84 32 78Z" fill="#8B1A1A" opacity="0.7"/>
-    <path d="M52 78 Q53 86 52 91 Q53 93 54 91 Q55 86 54 78Z" fill="#8B1A1A" opacity="0.6"/>
-    <path d="M74 78 Q75 83 74 87 Q75 89 76 87 Q77 83 76 78Z" fill="#8B1A1A" opacity="0.65"/>
-    <path d="M95 76 Q96 81 95 85 Q96 87 97 85 Q98 81 97 76Z" fill="#8B1A1A" opacity="0.55"/>
+    <!-- Dark crust drips -->
+    <path d="M30 78 Q31 84 30 88 Q31 90 32 88 Q33 84 32 78Z" fill="#5e1a13" opacity="0.7"/>
+    <path d="M52 78 Q53 86 52 91 Q53 93 54 91 Q55 86 54 78Z" fill="#5e1a13" opacity="0.6"/>
+    <path d="M74 78 Q75 83 74 87 Q75 89 76 87 Q77 83 76 78Z" fill="#5e1a13" opacity="0.65"/>
+    <path d="M95 76 Q96 81 95 85 Q96 87 97 85 Q98 81 97 76Z" fill="#5e1a13" opacity="0.55"/>
 
     <!-- Bottom dark crust detail -->
-    <rect x="20" y="72" width="88" height="4" rx="2" ry="2" fill="#5C1010" opacity="0.5"/>
+    <rect x="20" y="72" width="88" height="4" rx="2" ry="2" fill="#48100b" opacity="0.5"/>
 
   </g>
 </svg>

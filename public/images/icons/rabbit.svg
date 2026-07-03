@@ -1,25 +1,25 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
   <defs>
     <linearGradient id="g_rabbit_body" x1="0.2" y1="0" x2="0.8" y2="1">
-      <stop offset="0%" stop-color="#d0d0d0"/>
-      <stop offset="40%" stop-color="#b0b0b0"/>
-      <stop offset="100%" stop-color="#7a7a7a"/>
+      <stop offset="0%" stop-color="#cbc3ba"/>
+      <stop offset="40%" stop-color="#b3aa9f"/>
+      <stop offset="100%" stop-color="#847b71"/>
     </linearGradient>
     <radialGradient id="g_rabbit_belly" cx="0.45" cy="0.4" r="0.55">
-      <stop offset="0%" stop-color="#e8e8e8"/>
-      <stop offset="100%" stop-color="#c2c2c2"/>
+      <stop offset="0%" stop-color="#ece7e0"/>
+      <stop offset="100%" stop-color="#c7bfb5"/>
     </radialGradient>
     <linearGradient id="g_rabbit_ear1" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#cccccc"/>
-      <stop offset="100%" stop-color="#8a8a8a"/>
+      <stop offset="0%" stop-color="#c7bfb5"/>
+      <stop offset="100%" stop-color="#948b81"/>
     </linearGradient>
     <linearGradient id="g_rabbit_ear2" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#cccccc"/>
-      <stop offset="100%" stop-color="#8a8a8a"/>
+      <stop offset="0%" stop-color="#c7bfb5"/>
+      <stop offset="100%" stop-color="#948b81"/>
     </linearGradient>
     <linearGradient id="g_rabbit_innerear" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#f4b8c0"/>
-      <stop offset="100%" stop-color="#d47a88"/>
+      <stop offset="0%" stop-color="#e6b5bb"/>
+      <stop offset="100%" stop-color="#cc7f8a"/>
     </linearGradient>
     <radialGradient id="g_rabbit_eye" cx="0.35" cy="0.3" r="0.6">
       <stop offset="0%" stop-color="#8b3a3a"/>
@@ -27,21 +27,21 @@
       <stop offset="100%" stop-color="#1a0a0a"/>
     </radialGradient>
     <linearGradient id="g_rabbit_head" x1="0.1" y1="0" x2="0.9" y2="1">
-      <stop offset="0%" stop-color="#d4d4d4"/>
-      <stop offset="50%" stop-color="#b8b8b8"/>
-      <stop offset="100%" stop-color="#888888"/>
+      <stop offset="0%" stop-color="#cbc3ba"/>
+      <stop offset="50%" stop-color="#b6ada3"/>
+      <stop offset="100%" stop-color="#8f8779"/>
     </linearGradient>
     <linearGradient id="g_rabbit_leg" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#b0b0b0"/>
-      <stop offset="100%" stop-color="#787878"/>
+      <stop offset="0%" stop-color="#b0a89e"/>
+      <stop offset="100%" stop-color="#807870"/>
     </linearGradient>
     <radialGradient id="g_rabbit_nose" cx="0.4" cy="0.35" r="0.55">
-      <stop offset="0%" stop-color="#f08090"/>
-      <stop offset="100%" stop-color="#c04060"/>
+      <stop offset="0%" stop-color="#dd8892"/>
+      <stop offset="100%" stop-color="#b25563"/>
     </radialGradient>
     <radialGradient id="g_rabbit_highlight" cx="0.3" cy="0.25" r="0.5">
-      <stop offset="0%" stop-color="rgba(255,255,255,0.55)"/>
-      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
     </radialGradient>
   </defs>
 
@@ -59,8 +59,8 @@
   <ellipse cx="53" cy="88" rx="16" ry="18" fill="url(#g_rabbit_belly)" opacity="0.7"/>
 
   <!-- Tail -->
-  <circle cx="90" cy="98" r="9" fill="#e0e0e0" stroke="#999" stroke-width="0.8"/>
-  <circle cx="88" cy="96" r="4" fill="rgba(255,255,255,0.6)"/>
+  <circle cx="90" cy="98" r="9" fill="#ddd8d0" stroke="#999" stroke-width="0.8"/>
+  <circle cx="88" cy="96" r="4" fill="#ffffff" fill-opacity="0.24"/>
 
   <!-- Hind leg -->
   <ellipse cx="72" cy="113" rx="18" ry="8" fill="url(#g_rabbit_leg)" stroke="#555" stroke-width="0.8"/>
@@ -75,11 +75,11 @@
   <ellipse cx="47" cy="52" rx="10" ry="8" fill="url(#g_rabbit_highlight)"/>
 
   <!-- Cheek puff -->
-  <ellipse cx="43" cy="66" rx="10" ry="7" fill="#c8c8c8" opacity="0.6"/>
+  <ellipse cx="43" cy="66" rx="10" ry="7" fill="#c4bcb2" opacity="0.6"/>
 
   <!-- Eye -->
   <circle cx="44" cy="57" r="5.5" fill="url(#g_rabbit_eye)" stroke="#2a0a0a" stroke-width="0.6"/>
-  <circle cx="42.5" cy="55.5" r="1.5" fill="rgba(255,255,255,0.7)"/>
+  <circle cx="42.5" cy="55.5" r="1.5" fill="#ffffff" fill-opacity="0.6"/>
 
   <!-- Nose -->
   <ellipse cx="36" cy="67" rx="4" ry="3" fill="url(#g_rabbit_nose)" stroke="#9a2040" stroke-width="0.5"/>
@@ -89,10 +89,10 @@
   <path d="M36 70 Q38 73 40 72" fill="none" stroke="#9a5060" stroke-width="0.9" stroke-linecap="round"/>
 
   <!-- Whiskers -->
-  <line x1="34" y1="66" x2="14" y2="62" stroke="#888" stroke-width="0.7" opacity="0.8"/>
-  <line x1="34" y1="67" x2="14" y2="67" stroke="#888" stroke-width="0.7" opacity="0.8"/>
-  <line x1="34" y1="68" x2="14" y2="72" stroke="#888" stroke-width="0.7" opacity="0.8"/>
+  <line x1="34" y1="66" x2="14" y2="62" stroke="#8a8178" stroke-width="0.7" opacity="0.8"/>
+  <line x1="34" y1="67" x2="14" y2="67" stroke="#8a8178" stroke-width="0.7" opacity="0.8"/>
+  <line x1="34" y1="68" x2="14" y2="72" stroke="#8a8178" stroke-width="0.7" opacity="0.8"/>
 
   <!-- Body highlight -->
-  <ellipse cx="45" cy="77" rx="10" ry="8" fill="rgba(255,255,255,0.2)"/>
+  <ellipse cx="45" cy="77" rx="10" ry="8" fill="#ffffff" fill-opacity="0.09"/>
 </svg>

@@ -1,28 +1,28 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
   <defs>
     <radialGradient id="g_crab_body" cx="50%" cy="40%" r="55%" fx="40%" fy="30%">
-      <stop offset="0%" stop-color="#FF8C42"/>
-      <stop offset="40%" stop-color="#E84C0E"/>
-      <stop offset="100%" stop-color="#A02800"/>
+      <stop offset="0%" stop-color="#d9825f"/>
+      <stop offset="40%" stop-color="#bf5a3d"/>
+      <stop offset="100%" stop-color="#883320"/>
     </radialGradient>
     <radialGradient id="g_crab_shell" cx="45%" cy="35%" r="60%" fx="35%" fy="25%">
-      <stop offset="0%" stop-color="#FF9A55"/>
-      <stop offset="35%" stop-color="#E04010"/>
-      <stop offset="100%" stop-color="#8B1E00"/>
+      <stop offset="0%" stop-color="#d9825f"/>
+      <stop offset="35%" stop-color="#c05a3c"/>
+      <stop offset="100%" stop-color="#833020"/>
     </radialGradient>
     <linearGradient id="g_crab_claw_l" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FF9055"/>
-      <stop offset="50%" stop-color="#D93A08"/>
-      <stop offset="100%" stop-color="#901800"/>
+      <stop offset="0%" stop-color="#d67c5a"/>
+      <stop offset="50%" stop-color="#bb5236"/>
+      <stop offset="100%" stop-color="#872f1e"/>
     </linearGradient>
     <linearGradient id="g_crab_claw_r" x1="100%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#FF9055"/>
-      <stop offset="50%" stop-color="#D93A08"/>
-      <stop offset="100%" stop-color="#901800"/>
+      <stop offset="0%" stop-color="#d67c5a"/>
+      <stop offset="50%" stop-color="#bb5236"/>
+      <stop offset="100%" stop-color="#872f1e"/>
     </linearGradient>
     <linearGradient id="g_crab_leg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#E86020"/>
-      <stop offset="100%" stop-color="#9A2200"/>
+      <stop offset="0%" stop-color="#c66848"/>
+      <stop offset="100%" stop-color="#8c3620"/>
     </linearGradient>
     <radialGradient id="g_crab_eye" cx="40%" cy="35%" r="55%">
       <stop offset="0%" stop-color="#222222"/>
@@ -30,18 +30,23 @@
       <stop offset="100%" stop-color="#000000"/>
     </radialGradient>
     <radialGradient id="g_crab_eye_shine" cx="35%" cy="30%" r="50%">
-      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.85"/>
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.55"/>
       <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
     </radialGradient>
     <radialGradient id="g_crab_belly" cx="50%" cy="45%" r="55%">
-      <stop offset="0%" stop-color="#FFB07A"/>
-      <stop offset="60%" stop-color="#E07040"/>
-      <stop offset="100%" stop-color="#B04020"/>
+      <stop offset="0%" stop-color="#e2926e"/>
+      <stop offset="60%" stop-color="#c4694a"/>
+      <stop offset="100%" stop-color="#9c4832"/>
     </radialGradient>
-    <linearGradient id="g_crab_highlight" x1="20%" y1="0%" x2="80%" y2="100%">
-      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.35"/>
+    <radialGradient id="g_crab_highlight" cx="38%" cy="30%" r="46%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.15"/>
+      <stop offset="70%" stop-color="#FFFFFF" stop-opacity="0.03"/>
       <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
-    </linearGradient>
+    </radialGradient>
+    <radialGradient id="g_crab_vignette" cx="50%" cy="45%" r="58%">
+      <stop offset="62%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#3a120b" stop-opacity="0.28"/>
+    </radialGradient>
   </defs>
 
   <!-- Back legs left -->
@@ -89,18 +94,21 @@
   <ellipse cx="64" cy="60" rx="36" ry="26" fill="url(#g_crab_shell)" stroke="#7A1800" stroke-width="1.5"/>
 
   <!-- Shell texture lines -->
-  <path d="M40,52 Q64,46 88,52" fill="none" stroke="#C03000" stroke-width="1" opacity="0.5"/>
-  <path d="M36,60 Q64,54 92,60" fill="none" stroke="#C03000" stroke-width="1" opacity="0.4"/>
-  <path d="M38,68 Q64,62 90,68" fill="none" stroke="#C03000" stroke-width="1" opacity="0.35"/>
+  <path d="M40,52 Q64,46 88,52" fill="none" stroke="#a84a30" stroke-width="1" opacity="0.5"/>
+  <path d="M36,60 Q64,54 92,60" fill="none" stroke="#a84a30" stroke-width="1" opacity="0.4"/>
+  <path d="M38,68 Q64,62 90,68" fill="none" stroke="#a84a30" stroke-width="1" opacity="0.35"/>
   <!-- Vertical center line -->
-  <path d="M64,34 Q64,60 64,84" fill="none" stroke="#B02800" stroke-width="1" opacity="0.4"/>
+  <path d="M64,34 Q64,60 64,84" fill="none" stroke="#9c4830" stroke-width="1" opacity="0.4"/>
 
-  <!-- Shell highlight -->
+  <!-- Shell vignette (volumen mate) -->
+  <ellipse cx="64" cy="60" rx="36" ry="26" fill="url(#g_crab_vignette)"/>
+
+  <!-- Shell sheen mate muy sutil -->
   <ellipse cx="56" cy="50" rx="18" ry="10" fill="url(#g_crab_highlight)" opacity="0.7"/>
 
   <!-- Eye stalks -->
-  <rect x="53" y="35" width="4" height="10" rx="2" fill="#C03010" stroke="#7A1800" stroke-width="0.8"/>
-  <rect x="71" y="35" width="4" height="10" rx="2" fill="#C03010" stroke="#7A1800" stroke-width="0.8"/>
+  <rect x="53" y="35" width="4" height="10" rx="2" fill="#b0492c" stroke="#7A1800" stroke-width="0.8"/>
+  <rect x="71" y="35" width="4" height="10" rx="2" fill="#b0492c" stroke="#7A1800" stroke-width="0.8"/>
 
   <!-- Eyes -->
   <circle cx="55" cy="33" r="6" fill="url(#g_crab_eye)" stroke="#330000" stroke-width="0.8"/>
@@ -114,8 +122,8 @@
   <path d="M58,42 Q64,46 70,42" fill="none" stroke="#8B1800" stroke-width="1.5" stroke-linecap="round"/>
 
   <!-- Front small antennae -->
-  <line x1="55" y1="28" x2="46" y2="20" stroke="#C03010" stroke-width="1.2" stroke-linecap="round"/>
-  <line x1="73" y1="28" x2="82" y2="20" stroke="#C03010" stroke-width="1.2" stroke-linecap="round"/>
-  <line x1="55" y1="28" x2="48" y2="17" stroke="#C03010" stroke-width="0.8" stroke-linecap="round"/>
-  <line x1="73" y1="28" x2="80" y2="17" stroke="#C03010" stroke-width="0.8" stroke-linecap="round"/>
+  <line x1="55" y1="28" x2="46" y2="20" stroke="#b0492c" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="73" y1="28" x2="82" y2="20" stroke="#b0492c" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="55" y1="28" x2="48" y2="17" stroke="#b0492c" stroke-width="0.8" stroke-linecap="round"/>
+  <line x1="73" y1="28" x2="80" y2="17" stroke="#b0492c" stroke-width="0.8" stroke-linecap="round"/>
 </svg>

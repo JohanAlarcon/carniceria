@@ -1,58 +1,63 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
   <defs>
-    <!-- Main head gradient - brown goat -->
+    <!-- Main head gradient - natural brown goat -->
     <radialGradient id="g_goat_head" cx="45%" cy="40%" r="55%">
-      <stop offset="0%" stop-color="#C8885A"/>
-      <stop offset="40%" stop-color="#A96B3A"/>
-      <stop offset="100%" stop-color="#7A4820"/>
+      <stop offset="0%" stop-color="#ba9066"/>
+      <stop offset="40%" stop-color="#a07a52"/>
+      <stop offset="100%" stop-color="#7c5c38"/>
     </radialGradient>
     <!-- Muzzle lighter area -->
     <radialGradient id="g_goat_muzzle" cx="50%" cy="40%" r="55%">
-      <stop offset="0%" stop-color="#E8C49A"/>
-      <stop offset="60%" stop-color="#D4A870"/>
-      <stop offset="100%" stop-color="#B8845A"/>
+      <stop offset="0%" stop-color="#ddc19c"/>
+      <stop offset="60%" stop-color="#c8a778"/>
+      <stop offset="100%" stop-color="#aa8760"/>
     </radialGradient>
     <!-- Horn gradient -->
     <linearGradient id="g_goat_horn_l" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#C8A040"/>
-      <stop offset="40%" stop-color="#9A7828"/>
-      <stop offset="100%" stop-color="#6B5010"/>
+      <stop offset="0%" stop-color="#bd9c58"/>
+      <stop offset="40%" stop-color="#90743a"/>
+      <stop offset="100%" stop-color="#64511f"/>
     </linearGradient>
     <linearGradient id="g_goat_horn_r" x1="100%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#C8A040"/>
-      <stop offset="40%" stop-color="#9A7828"/>
-      <stop offset="100%" stop-color="#6B5010"/>
+      <stop offset="0%" stop-color="#bd9c58"/>
+      <stop offset="40%" stop-color="#90743a"/>
+      <stop offset="100%" stop-color="#64511f"/>
     </linearGradient>
     <!-- Ear gradient -->
     <radialGradient id="g_goat_ear" cx="50%" cy="30%" r="60%">
-      <stop offset="0%" stop-color="#C8885A"/>
-      <stop offset="100%" stop-color="#7A4820"/>
+      <stop offset="0%" stop-color="#b0885e"/>
+      <stop offset="100%" stop-color="#7c5c38"/>
     </radialGradient>
     <!-- Inner ear -->
     <radialGradient id="g_goat_inner_ear" cx="50%" cy="40%" r="60%">
-      <stop offset="0%" stop-color="#F0B090"/>
-      <stop offset="100%" stop-color="#D07050"/>
+      <stop offset="0%" stop-color="#e8b096"/>
+      <stop offset="100%" stop-color="#c77258"/>
     </radialGradient>
     <!-- Beard gradient -->
     <linearGradient id="g_goat_beard" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#C8885A"/>
-      <stop offset="50%" stop-color="#A06838"/>
-      <stop offset="100%" stop-color="#7A4820"/>
+      <stop offset="0%" stop-color="#b8895e"/>
+      <stop offset="50%" stop-color="#977037"/>
+      <stop offset="100%" stop-color="#7c5c38"/>
     </linearGradient>
     <!-- Eye shine -->
     <radialGradient id="g_goat_eye" cx="35%" cy="35%" r="60%">
       <stop offset="0%" stop-color="#5A3010"/>
       <stop offset="100%" stop-color="#2A1008"/>
     </radialGradient>
-    <!-- Forehead highlight -->
+    <!-- Forehead sheen (subtle matte, was plastic highlight) -->
     <radialGradient id="g_goat_highlight" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#E0AA70" stop-opacity="0.7"/>
-      <stop offset="100%" stop-color="#E0AA70" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#f5ecdd" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#f5ecdd" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Vignette for matte volume -->
+    <radialGradient id="g_goat_vignette" cx="50%" cy="45%" r="55%">
+      <stop offset="60%" stop-color="#2e1a0c" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#2e1a0c" stop-opacity="0.26"/>
     </radialGradient>
     <!-- Nose -->
     <radialGradient id="g_goat_nose" cx="50%" cy="40%" r="55%">
-      <stop offset="0%" stop-color="#D09070"/>
-      <stop offset="100%" stop-color="#904830"/>
+      <stop offset="0%" stop-color="#c68e6f"/>
+      <stop offset="100%" stop-color="#8a4a34"/>
     </radialGradient>
   </defs>
 
@@ -84,9 +89,13 @@
   <ellipse cx="64" cy="60" rx="34" ry="36"
            fill="url(#g_goat_head)" stroke="#5A3010" stroke-width="1.5"/>
 
-  <!-- FOREHEAD highlight -->
+  <!-- FOREHEAD sheen (subtle) -->
   <ellipse cx="60" cy="46" rx="16" ry="12"
            fill="url(#g_goat_highlight)"/>
+
+  <!-- Vignette overlay (matte volume) -->
+  <ellipse cx="64" cy="60" rx="34" ry="36"
+           fill="url(#g_goat_vignette)"/>
 
   <!-- MUZZLE area -->
   <ellipse cx="64" cy="80" rx="20" ry="15"
@@ -98,9 +107,9 @@
   <!-- Nostrils -->
   <ellipse cx="59" cy="77" rx="3.5" ry="2.5" fill="#4A1A08"/>
   <ellipse cx="69" cy="77" rx="3.5" ry="2.5" fill="#4A1A08"/>
-  <!-- Nose highlight -->
-  <ellipse cx="57" cy="75.5" rx="1.2" ry="0.8" fill="#D09870" fill-opacity="0.6"/>
-  <ellipse cx="67" cy="75.5" rx="1.2" ry="0.8" fill="#D09870" fill-opacity="0.6"/>
+  <!-- Nose highlight (subtle) -->
+  <ellipse cx="57" cy="75.5" rx="1.2" ry="0.8" fill="#c99270" fill-opacity="0.4"/>
+  <ellipse cx="67" cy="75.5" rx="1.2" ry="0.8" fill="#c99270" fill-opacity="0.4"/>
 
   <!-- Mouth line -->
   <path d="M 58 86 Q 64 90 70 86" fill="none" stroke="#6A3020" stroke-width="1.2" stroke-linecap="round"/>
@@ -109,17 +118,17 @@
   <ellipse cx="48" cy="60" rx="7" ry="5.5" fill="url(#g_goat_eye)" stroke="#2A1008" stroke-width="1"/>
   <!-- Goat horizontal pupil -->
   <rect x="43" y="59" width="10" height="2.5" rx="1.2" fill="#1A0806"/>
-  <!-- Eye shine -->
-  <ellipse cx="46" cy="57.5" rx="2" ry="1.5" fill="white" fill-opacity="0.7"/>
-  <circle cx="45.2" cy="57.2" r="0.8" fill="white" fill-opacity="0.9"/>
+  <!-- Eye catchlight -->
+  <ellipse cx="46" cy="57.5" rx="2" ry="1.5" fill="white" fill-opacity="0.6"/>
+  <circle cx="45.2" cy="57.2" r="0.8" fill="white" fill-opacity="0.85"/>
 
   <!-- RIGHT EYE -->
   <ellipse cx="80" cy="60" rx="7" ry="5.5" fill="url(#g_goat_eye)" stroke="#2A1008" stroke-width="1"/>
   <!-- Goat horizontal pupil -->
   <rect x="75" y="59" width="10" height="2.5" rx="1.2" fill="#1A0806"/>
-  <!-- Eye shine -->
-  <ellipse cx="78" cy="57.5" rx="2" ry="1.5" fill="white" fill-opacity="0.7"/>
-  <circle cx="77.2" cy="57.2" r="0.8" fill="white" fill-opacity="0.9"/>
+  <!-- Eye catchlight -->
+  <ellipse cx="78" cy="57.5" rx="2" ry="1.5" fill="white" fill-opacity="0.6"/>
+  <circle cx="77.2" cy="57.2" r="0.8" fill="white" fill-opacity="0.85"/>
 
   <!-- Eyebrows (expressive) -->
   <path d="M 43 54 Q 48 51 53 53" fill="none" stroke="#5A3010" stroke-width="1.5" stroke-linecap="round"/>
@@ -129,8 +138,8 @@
   <path d="M 56 93 Q 52 100 54 108 Q 58 116 64 118 Q 70 116 74 108 Q 76 100 72 93 Q 68 96 64 96 Q 60 96 56 93 Z"
         fill="url(#g_goat_beard)" stroke="#5A3010" stroke-width="1"/>
   <!-- Beard tuft highlight -->
-  <path d="M 60 97 Q 64 100 64 108" fill="none" stroke="#C8885A" stroke-width="1.2" stroke-linecap="round" stroke-opacity="0.6"/>
-  <path d="M 64 97 Q 66 103 65 112" fill="none" stroke="#C8885A" stroke-width="1" stroke-linecap="round" stroke-opacity="0.5"/>
+  <path d="M 60 97 Q 64 100 64 108" fill="none" stroke="#b8895e" stroke-width="1.2" stroke-linecap="round" stroke-opacity="0.55"/>
+  <path d="M 64 97 Q 66 103 65 112" fill="none" stroke="#b8895e" stroke-width="1" stroke-linecap="round" stroke-opacity="0.45"/>
 
   <!-- Fur texture lines on head -->
   <path d="M 50 42 Q 55 38 60 42" fill="none" stroke="#8A5828" stroke-width="0.7" stroke-opacity="0.5" stroke-linecap="round"/>

@@ -1,50 +1,68 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
   <defs>
-    <!-- Gradiente principal de la carne roja -->
-    <linearGradient id="g_oxtail_meat1" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#c0392b"/>
-      <stop offset="40%" stop-color="#922b21"/>
-      <stop offset="100%" stop-color="#641e16"/>
-    </linearGradient>
-    <!-- Gradiente carne segmento brillante -->
-    <radialGradient id="g_oxtail_meat2" cx="35%" cy="30%" r="60%">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="50%" stop-color="#c0392b"/>
-      <stop offset="100%" stop-color="#7b241c"/>
+    <!-- Gradiente principal de la carne roja natural mate -->
+    <radialGradient id="g_oxtail_meat1" cx="42%" cy="34%" r="62%" fx="38%" fy="30%">
+      <stop offset="0%" stop-color="#c15f50"/>
+      <stop offset="40%" stop-color="#a23f34"/>
+      <stop offset="74%" stop-color="#822a20"/>
+      <stop offset="100%" stop-color="#5e1a13"/>
     </radialGradient>
-    <!-- Gradiente hueso -->
-    <radialGradient id="g_oxtail_bone1" cx="40%" cy="30%" r="60%">
-      <stop offset="0%" stop-color="#fdfefe"/>
-      <stop offset="50%" stop-color="#d5d8dc"/>
-      <stop offset="100%" stop-color="#aab7b8"/>
+    <!-- Gradiente segmento superior (punta) -->
+    <radialGradient id="g_oxtail_meat2" cx="42%" cy="34%" r="60%" fx="38%" fy="30%">
+      <stop offset="0%" stop-color="#c46052"/>
+      <stop offset="42%" stop-color="#a44035"/>
+      <stop offset="76%" stop-color="#842b21"/>
+      <stop offset="100%" stop-color="#5e1a13"/>
+    </radialGradient>
+    <!-- Gradiente segmento 2 -->
+    <radialGradient id="g_oxtail_seg2" cx="40%" cy="35%" r="60%" fx="36%" fy="30%">
+      <stop offset="0%" stop-color="#ba5a4b"/>
+      <stop offset="42%" stop-color="#9c3b31"/>
+      <stop offset="76%" stop-color="#7e281e"/>
+      <stop offset="100%" stop-color="#5a1812"/>
+    </radialGradient>
+    <!-- Gradiente segmento 3 -->
+    <radialGradient id="g_oxtail_seg3" cx="40%" cy="35%" r="60%" fx="36%" fy="30%">
+      <stop offset="0%" stop-color="#b8574a"/>
+      <stop offset="42%" stop-color="#98392f"/>
+      <stop offset="76%" stop-color="#7b271d"/>
+      <stop offset="100%" stop-color="#571711"/>
+    </radialGradient>
+    <!-- Gradiente hueso: crema calida natural -->
+    <radialGradient id="g_oxtail_bone1" cx="42%" cy="34%" r="60%">
+      <stop offset="0%" stop-color="#f1e6d0"/>
+      <stop offset="50%" stop-color="#e3cdba"/>
+      <stop offset="100%" stop-color="#c6ab81"/>
     </radialGradient>
     <!-- Gradiente hueso secundario -->
     <linearGradient id="g_oxtail_bone2" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#ecf0f1"/>
-      <stop offset="100%" stop-color="#bdc3c7"/>
+      <stop offset="0%" stop-color="#ece1cd"/>
+      <stop offset="100%" stop-color="#d2be98"/>
     </linearGradient>
-    <!-- Gradiente grasa marmoleada -->
-    <linearGradient id="g_oxtail_fat1" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#fdfefe" stop-opacity="0.9"/>
-      <stop offset="100%" stop-color="#e8daef" stop-opacity="0.7"/>
-    </linearGradient>
-    <!-- Gradiente segmento 2 -->
-    <radialGradient id="g_oxtail_seg2" cx="40%" cy="35%" r="55%">
-      <stop offset="0%" stop-color="#d44235"/>
-      <stop offset="60%" stop-color="#a93226"/>
-      <stop offset="100%" stop-color="#6e1f19"/>
+    <!-- Sheen mate muy sutil (reutilizable por segmento) -->
+    <radialGradient id="g_oxtail_sheen" cx="40%" cy="28%" r="46%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.14"/>
+      <stop offset="70%" stop-color="#ffffff" stop-opacity="0.02"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
     </radialGradient>
-    <!-- Gradiente segmento 3 -->
-    <radialGradient id="g_oxtail_seg3" cx="38%" cy="32%" r="58%">
-      <stop offset="0%" stop-color="#cb3a2e"/>
-      <stop offset="55%" stop-color="#9b2a22"/>
-      <stop offset="100%" stop-color="#6b1e17"/>
+    <!-- Vignette interno para volumen mate -->
+    <radialGradient id="g_oxtail_vignette" cx="50%" cy="45%" r="58%">
+      <stop offset="60%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#2e0a07" stop-opacity="0.30"/>
     </radialGradient>
-    <!-- Gradiente sombra suave -->
+    <!-- Sombra de suelo -->
     <radialGradient id="g_oxtail_shadow" cx="50%" cy="90%" r="45%">
       <stop offset="0%" stop-color="#1a0a08" stop-opacity="0.3"/>
       <stop offset="100%" stop-color="#1a0a08" stop-opacity="0"/>
     </radialGradient>
+    <!-- Desenfoque suave para marmoleo -->
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="1.0"/>
+    </filter>
+    <clipPath id="clip_seg1"><ellipse cx="64" cy="100" rx="22" ry="14"/></clipPath>
+    <clipPath id="clip_seg2"><ellipse cx="64" cy="76" rx="19" ry="12"/></clipPath>
+    <clipPath id="clip_seg3"><ellipse cx="64" cy="53" rx="16" ry="10.5"/></clipPath>
+    <clipPath id="clip_seg4"><ellipse cx="64" cy="32" rx="12" ry="8"/></clipPath>
   </defs>
 
   <!-- Sombra suave debajo -->
@@ -56,75 +74,97 @@
   <g>
     <!-- Cuerpo carne segmento 1 -->
     <ellipse cx="64" cy="100" rx="22" ry="14" fill="url(#g_oxtail_meat1)" stroke="#4a1510" stroke-width="1.2"/>
-    <!-- Brillo superior -->
-    <ellipse cx="58" cy="94" rx="10" ry="5" fill="#e74c3c" opacity="0.5"/>
-    <!-- Veta de grasa 1 -->
-    <path d="M50 97 Q60 94 74 98" stroke="url(#g_oxtail_fat1)" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-    <path d="M52 101 Q63 99 72 103" stroke="url(#g_oxtail_fat1)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <!-- Marmoleo suave desenfocado -->
+    <g clip-path="url(#clip_seg1)" filter="url(#soft)" opacity="0.5">
+      <path d="M48 92 Q56 89 64 92 Q58 94 52 94 Z" fill="#ece1cd"/>
+      <path d="M50 106 Q60 103 72 106 Q62 108 54 108 Z" fill="#e3cdba"/>
+      <ellipse cx="78" cy="100" rx="4" ry="2" fill="#e3cdba"/>
+      <ellipse cx="50" cy="100" rx="3.5" ry="2" fill="#e3cdba"/>
+    </g>
+    <!-- Vignette -->
+    <ellipse cx="64" cy="100" rx="22" ry="14" fill="url(#g_oxtail_vignette)"/>
     <!-- Hueso central segmento 1 -->
-    <ellipse cx="64" cy="100" rx="8" ry="5.5" fill="url(#g_oxtail_bone1)" stroke="#95a5a6" stroke-width="0.8"/>
-    <ellipse cx="62" cy="98.5" rx="3.5" ry="2" fill="white" opacity="0.7"/>
+    <ellipse cx="64" cy="100" rx="8" ry="5.5" fill="url(#g_oxtail_bone1)" stroke="#bfa274" stroke-width="0.8"/>
+    <ellipse cx="62" cy="98.5" rx="3.5" ry="2" fill="#fbf5e9" fill-opacity="0.45"/>
+    <!-- Sheen mate -->
+    <ellipse cx="64" cy="100" rx="22" ry="14" fill="url(#g_oxtail_sheen)"/>
     <!-- Contorno segmento -->
-    <ellipse cx="64" cy="100" rx="22" ry="14" fill="none" stroke="#3d0e0a" stroke-width="1.3"/>
+    <ellipse cx="64" cy="100" rx="22" ry="14" fill="none" stroke="#3d0e0a" stroke-width="1.3" opacity="0.55"/>
   </g>
 
   <!-- Conector entre segmentos 1 y 2 -->
-  <path d="M50 90 Q52 83 55 80 L73 80 Q76 83 78 90 Z" fill="#8e1b13" stroke="#3d0e0a" stroke-width="0.8"/>
+  <path d="M50 90 Q52 83 55 80 L73 80 Q76 83 78 90 Z" fill="#6e1f16" stroke="#3d0e0a" stroke-width="0.8"/>
 
   <!-- SEGMENTO 2 - parte media -->
   <g>
     <!-- Cuerpo carne segmento 2 -->
     <ellipse cx="64" cy="76" rx="19" ry="12" fill="url(#g_oxtail_seg2)" stroke="#4a1510" stroke-width="1.2"/>
-    <!-- Brillo -->
-    <ellipse cx="58" cy="71" rx="8" ry="4" fill="#e06050" opacity="0.45"/>
-    <!-- Vetas de grasa -->
-    <path d="M49 74 Q60 71 77 75" stroke="white" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.6"/>
-    <path d="M51 78 Q62 76 73 80" stroke="white" stroke-width="1.2" fill="none" stroke-linecap="round" opacity="0.5"/>
+    <!-- Marmoleo suave desenfocado -->
+    <g clip-path="url(#clip_seg2)" filter="url(#soft)" opacity="0.5">
+      <path d="M50 69 Q60 66 74 70 Q62 71 54 71 Z" fill="#ece1cd"/>
+      <ellipse cx="76" cy="78" rx="3.5" ry="1.8" fill="#e3cdba"/>
+      <ellipse cx="52" cy="80" rx="3" ry="1.6" fill="#e3cdba"/>
+    </g>
+    <!-- Vignette -->
+    <ellipse cx="64" cy="76" rx="19" ry="12" fill="url(#g_oxtail_vignette)"/>
     <!-- Hueso segmento 2 -->
-    <ellipse cx="64" cy="76" rx="7" ry="4.5" fill="url(#g_oxtail_bone2)" stroke="#95a5a6" stroke-width="0.8"/>
-    <ellipse cx="62" cy="74.5" rx="3" ry="1.8" fill="white" opacity="0.65"/>
+    <ellipse cx="64" cy="76" rx="7" ry="4.5" fill="url(#g_oxtail_bone2)" stroke="#bfa274" stroke-width="0.8"/>
+    <ellipse cx="62" cy="74.5" rx="3" ry="1.8" fill="#fbf5e9" fill-opacity="0.42"/>
+    <!-- Sheen mate -->
+    <ellipse cx="64" cy="76" rx="19" ry="12" fill="url(#g_oxtail_sheen)"/>
     <!-- Contorno -->
-    <ellipse cx="64" cy="76" rx="19" ry="12" fill="none" stroke="#3d0e0a" stroke-width="1.2"/>
+    <ellipse cx="64" cy="76" rx="19" ry="12" fill="none" stroke="#3d0e0a" stroke-width="1.2" opacity="0.55"/>
   </g>
 
   <!-- Conector entre segmentos 2 y 3 -->
-  <path d="M51 66 Q55 59 58 57 L70 57 Q73 59 77 66 Z" fill="#7a1711" stroke="#3d0e0a" stroke-width="0.8"/>
+  <path d="M51 66 Q55 59 58 57 L70 57 Q73 59 77 66 Z" fill="#641a12" stroke="#3d0e0a" stroke-width="0.8"/>
 
   <!-- SEGMENTO 3 - parte superior media -->
   <g>
     <!-- Cuerpo carne segmento 3 -->
     <ellipse cx="64" cy="53" rx="16" ry="10.5" fill="url(#g_oxtail_seg3)" stroke="#4a1510" stroke-width="1.2"/>
-    <!-- Brillo -->
-    <ellipse cx="59" cy="48" rx="6.5" ry="3.5" fill="#d95f50" opacity="0.4"/>
-    <!-- Veta grasa -->
-    <path d="M52 51 Q62 48 74 53" stroke="white" stroke-width="1.6" fill="none" stroke-linecap="round" opacity="0.55"/>
+    <!-- Marmoleo suave desenfocado -->
+    <g clip-path="url(#clip_seg3)" filter="url(#soft)" opacity="0.5">
+      <path d="M52 47 Q62 44 74 48 Q64 49 56 49 Z" fill="#ece1cd"/>
+      <ellipse cx="74" cy="56" rx="3" ry="1.6" fill="#e3cdba"/>
+      <ellipse cx="54" cy="57" rx="2.6" ry="1.4" fill="#e3cdba"/>
+    </g>
+    <!-- Vignette -->
+    <ellipse cx="64" cy="53" rx="16" ry="10.5" fill="url(#g_oxtail_vignette)"/>
     <!-- Hueso segmento 3 -->
-    <ellipse cx="64" cy="53" rx="6" ry="3.8" fill="url(#g_oxtail_bone1)" stroke="#95a5a6" stroke-width="0.7"/>
-    <ellipse cx="62.5" cy="51.8" rx="2.5" ry="1.5" fill="white" opacity="0.65"/>
+    <ellipse cx="64" cy="53" rx="6" ry="3.8" fill="url(#g_oxtail_bone1)" stroke="#bfa274" stroke-width="0.7"/>
+    <ellipse cx="62.5" cy="51.8" rx="2.5" ry="1.5" fill="#fbf5e9" fill-opacity="0.42"/>
+    <!-- Sheen mate -->
+    <ellipse cx="64" cy="53" rx="16" ry="10.5" fill="url(#g_oxtail_sheen)"/>
     <!-- Contorno -->
-    <ellipse cx="64" cy="53" rx="16" ry="10.5" fill="none" stroke="#3d0e0a" stroke-width="1.2"/>
+    <ellipse cx="64" cy="53" rx="16" ry="10.5" fill="none" stroke="#3d0e0a" stroke-width="1.2" opacity="0.55"/>
   </g>
 
   <!-- Conector entre segmentos 3 y 4 -->
-  <path d="M54 44 Q57 38 60 36 L68 36 Q71 38 74 44 Z" fill="#6e1510" stroke="#3d0e0a" stroke-width="0.7"/>
+  <path d="M54 44 Q57 38 60 36 L68 36 Q71 38 74 44 Z" fill="#5e1a13" stroke="#3d0e0a" stroke-width="0.7"/>
 
   <!-- SEGMENTO 4 - parte superior (mas pequeno) -->
   <g>
     <!-- Cuerpo carne segmento 4 -->
     <ellipse cx="64" cy="32" rx="12" ry="8" fill="url(#g_oxtail_meat2)" stroke="#4a1510" stroke-width="1.1"/>
-    <!-- Brillo -->
-    <ellipse cx="60" cy="28" rx="5" ry="2.8" fill="#e05545" opacity="0.4"/>
-    <!-- Veta grasa -->
-    <path d="M55 31 Q63 28 72 33" stroke="white" stroke-width="1.4" fill="none" stroke-linecap="round" opacity="0.5"/>
+    <!-- Marmoleo suave desenfocado -->
+    <g clip-path="url(#clip_seg4)" filter="url(#soft)" opacity="0.5">
+      <path d="M56 28 Q64 26 72 29 Q64 30 58 30 Z" fill="#ece1cd"/>
+      <ellipse cx="70" cy="35" rx="2.4" ry="1.3" fill="#e3cdba"/>
+    </g>
+    <!-- Vignette -->
+    <ellipse cx="64" cy="32" rx="12" ry="8" fill="url(#g_oxtail_vignette)"/>
     <!-- Hueso segmento 4 -->
-    <ellipse cx="64" cy="32" rx="4.5" ry="3" fill="url(#g_oxtail_bone2)" stroke="#95a5a6" stroke-width="0.7"/>
-    <ellipse cx="63" cy="31" rx="2" ry="1.2" fill="white" opacity="0.6"/>
+    <ellipse cx="64" cy="32" rx="4.5" ry="3" fill="url(#g_oxtail_bone2)" stroke="#bfa274" stroke-width="0.7"/>
+    <ellipse cx="63" cy="31" rx="2" ry="1.2" fill="#fbf5e9" fill-opacity="0.4"/>
+    <!-- Sheen mate -->
+    <ellipse cx="64" cy="32" rx="12" ry="8" fill="url(#g_oxtail_sheen)"/>
     <!-- Contorno -->
-    <ellipse cx="64" cy="32" rx="12" ry="8" fill="none" stroke="#3d0e0a" stroke-width="1.1"/>
+    <ellipse cx="64" cy="32" rx="12" ry="8" fill="none" stroke="#3d0e0a" stroke-width="1.1" opacity="0.55"/>
   </g>
 
   <!-- Extremo de la cola (punta) -->
-  <path d="M59 25 Q64 14 69 25" fill="#8b2018" stroke="#3d0e0a" stroke-width="1"/>
-  <path d="M62 25 Q64 18 66 25" fill="#c0392b" opacity="0.6"/>
+  <path d="M59 25 Q64 14 69 25" fill="#7a2318" stroke="#3d0e0a" stroke-width="1"/>
+  <path d="M62 25 Q64 18 66 25" fill="#a23f34" opacity="0.45"/>
 
 </svg>

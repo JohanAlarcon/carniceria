@@ -1,102 +1,62 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
   <defs>
-    <!-- Main steak body gradient - deep red to medium red -->
-    <radialGradient id="g_beef_main" cx="45%" cy="40%" r="60%" fx="35%" fy="30%">
-      <stop offset="0%" stop-color="#d94040"/>
-      <stop offset="40%" stop-color="#b82020"/>
-      <stop offset="75%" stop-color="#8b1515"/>
-      <stop offset="100%" stop-color="#6b0e0e"/>
+    <radialGradient id="g_beef_main" cx="45%" cy="38%" r="64%" fx="40%" fy="32%">
+      <stop offset="0%" stop-color="#c15f50"/>
+      <stop offset="40%" stop-color="#a23f34"/>
+      <stop offset="74%" stop-color="#822a20"/>
+      <stop offset="100%" stop-color="#5e1a13"/>
     </radialGradient>
-    <!-- Highlight on top surface -->
-    <radialGradient id="g_beef_shine" cx="38%" cy="28%" r="40%">
-      <stop offset="0%" stop-color="#e86060" stop-opacity="0.7"/>
-      <stop offset="100%" stop-color="#c03030" stop-opacity="0"/>
-    </radialGradient>
-    <!-- Side/edge darker shadow gradient -->
     <linearGradient id="g_beef_edge" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#7a1010"/>
-      <stop offset="100%" stop-color="#4a0808"/>
+      <stop offset="0%" stop-color="#5c1811"/>
+      <stop offset="100%" stop-color="#390d09"/>
     </linearGradient>
-    <!-- Fat marbling gradient -->
-    <linearGradient id="g_beef_fat1" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#f5ebe0"/>
-      <stop offset="50%" stop-color="#eedfc8"/>
-      <stop offset="100%" stop-color="#e8d4b0"/>
+    <linearGradient id="g_beef_fatcap" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ecdfc7"/>
+      <stop offset="50%" stop-color="#ddcaa6"/>
+      <stop offset="100%" stop-color="#c6ab81"/>
     </linearGradient>
-    <linearGradient id="g_beef_fat2" x1="100%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#f0e8d8"/>
-      <stop offset="100%" stop-color="#e5d0b5"/>
-    </linearGradient>
-    <!-- Sear/crust gradient for the top cooked surface -->
-    <radialGradient id="g_beef_sear" cx="50%" cy="50%" r="55%">
-      <stop offset="0%" stop-color="#c0391a" stop-opacity="0.4"/>
-      <stop offset="60%" stop-color="#8b2010" stop-opacity="0.3"/>
-      <stop offset="100%" stop-color="#5a0e08" stop-opacity="0.5"/>
+    <radialGradient id="g_beef_sheen" cx="40%" cy="28%" r="46%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.14"/>
+      <stop offset="70%" stop-color="#ffffff" stop-opacity="0.02"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
     </radialGradient>
-    <!-- Bottom shadow -->
+    <radialGradient id="g_beef_vignette" cx="50%" cy="45%" r="58%">
+      <stop offset="60%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#2e0a07" stop-opacity="0.32"/>
+    </radialGradient>
     <radialGradient id="g_beef_shadow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#1a0a0a" stop-opacity="0.35"/>
+      <stop offset="0%" stop-color="#1a0a0a" stop-opacity="0.28"/>
       <stop offset="100%" stop-color="#1a0a0a" stop-opacity="0"/>
     </radialGradient>
-    <!-- Fat cap on edge gradient -->
-    <linearGradient id="g_beef_fatcap" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#f2e4cc"/>
-      <stop offset="50%" stop-color="#e8d4b0"/>
-      <stop offset="100%" stop-color="#d4bc90"/>
-    </linearGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="1.1"/>
+    </filter>
+    <clipPath id="clip_beef">
+      <path d="M 18 72 Q 14 58 20 46 Q 26 34 40 26 Q 52 20 64 20 Q 78 20 90 26 Q 104 34 108 48 Q 114 62 110 74 Q 104 85 88 89 Q 76 92 64 91 Q 50 91 38 88 Q 24 84 18 72 Z"/>
+    </clipPath>
   </defs>
 
-  <!-- Drop shadow ellipse -->
   <ellipse cx="64" cy="112" rx="46" ry="7" fill="url(#g_beef_shadow)"/>
 
-  <!-- === STEAK BODY === -->
-  <!-- Thick steak shape - slightly irregular organic form -->
-  <!-- Side thickness (bottom layer giving 3D depth) -->
   <path d="M 18 78 Q 16 88 22 95 Q 35 105 64 106 Q 93 105 106 95 Q 112 88 110 78 Q 95 88 64 89 Q 33 88 18 78 Z" fill="url(#g_beef_edge)"/>
 
-  <!-- Main top surface of steak -->
   <path d="M 18 72 Q 14 58 20 46 Q 26 34 40 26 Q 52 20 64 20 Q 78 20 90 26 Q 104 34 108 48 Q 114 62 110 74 Q 104 85 88 89 Q 76 92 64 91 Q 50 91 38 88 Q 24 84 18 72 Z" fill="url(#g_beef_main)"/>
 
-  <!-- Sear marks / cooked surface overlay -->
-  <path d="M 18 72 Q 14 58 20 46 Q 26 34 40 26 Q 52 20 64 20 Q 78 20 90 26 Q 104 34 108 48 Q 114 62 110 74 Q 104 85 88 89 Q 76 92 64 91 Q 50 91 38 88 Q 24 84 18 72 Z" fill="url(#g_beef_sear)"/>
+  <!-- Marmoleo natural: manchas suaves desenfocadas (grasa), recortadas a la carne -->
+  <g clip-path="url(#clip_beef)" filter="url(#soft)" opacity="0.5">
+    <path d="M 30 50 Q 42 45 52 51 Q 60 56 68 51 Q 76 47 84 52 Q 80 55 72 54 Q 62 53 54 57 Q 44 61 36 56 Q 31 54 30 50 Z" fill="#ece1cd"/>
+    <path d="M 34 62 Q 44 58 54 62 Q 62 66 70 61 Q 66 65 58 65 Q 48 65 40 66 Q 35 66 34 62 Z" fill="#e7dbc4"/>
+    <path d="M 46 34 Q 56 31 66 35 Q 62 38 54 37 Q 48 37 46 34 Z" fill="#e7dbc4"/>
+    <ellipse cx="76" cy="70" rx="6" ry="3" transform="rotate(12 76 70)" fill="#e7dbc4"/>
+    <ellipse cx="40" cy="70" rx="5" ry="2.6" fill="#e7dbc4"/>
+  </g>
+  <!-- Cofia de grasa -->
+  <path d="M 90 26 Q 104 34 108 48 Q 114 62 110 74 Q 106 80 100 83 Q 108 70 106 52 Q 103 38 92 30 Z" fill="url(#g_beef_fatcap)" stroke="#bfa274" stroke-width="0.5"/>
 
-  <!-- Fat cap on right side (thick white fat strip) -->
-  <path d="M 90 26 Q 104 34 108 48 Q 114 62 110 74 Q 106 80 100 83 Q 108 70 106 52 Q 103 38 92 30 Z" fill="url(#g_beef_fatcap)" stroke="#c8aa80" stroke-width="0.5"/>
+  <!-- Vignette (volumen sin plástico) -->
+  <path d="M 18 72 Q 14 58 20 46 Q 26 34 40 26 Q 52 20 64 20 Q 78 20 90 26 Q 104 34 108 48 Q 114 62 110 74 Q 104 85 88 89 Q 76 92 64 91 Q 50 91 38 88 Q 24 84 18 72 Z" fill="url(#g_beef_vignette)"/>
+  <!-- Sheen mate muy sutil -->
+  <path d="M 18 72 Q 14 58 20 46 Q 26 34 40 26 Q 52 20 64 20 Q 78 20 90 26 Q 104 34 108 48 Q 114 62 110 74 Q 104 85 88 89 Q 76 92 64 91 Q 50 91 38 88 Q 24 84 18 72 Z" fill="url(#g_beef_sheen)"/>
 
-  <!-- === FAT MARBLING VEINS === -->
-  <!-- Large marbling vein 1 - diagonal across middle -->
-  <path d="M 30 52 Q 42 48 52 55 Q 58 59 66 54 Q 74 49 82 53 Q 88 56 86 62 Q 80 58 72 62 Q 64 66 56 62 Q 46 57 36 62 Q 30 65 28 60 Z" fill="url(#g_beef_fat1)" stroke="#ddc898" stroke-width="0.4"/>
-
-  <!-- Marbling vein 2 - upper area -->
-  <path d="M 44 34 Q 52 30 62 34 Q 68 37 72 33 Q 76 30 80 34 Q 76 38 70 36 Q 64 34 58 38 Q 52 42 46 38 Z" fill="url(#g_beef_fat2)" stroke="#ddc898" stroke-width="0.3"/>
-
-  <!-- Marbling vein 3 - lower left area -->
-  <path d="M 28 66 Q 36 63 44 68 Q 50 72 46 76 Q 40 72 32 73 Q 26 72 26 68 Z" fill="url(#g_beef_fat1)" stroke="#ddc898" stroke-width="0.3"/>
-
-  <!-- Marbling vein 4 - right side thin streak -->
-  <path d="M 76 66 Q 82 62 90 65 Q 94 68 92 72 Q 86 68 80 70 Q 74 72 74 68 Z" fill="url(#g_beef_fat2)" stroke="#ddc898" stroke-width="0.3"/>
-
-  <!-- Small fat dots/specks for realism -->
-  <ellipse cx="55" cy="44" rx="4" ry="2.5" transform="rotate(-15 55 44)" fill="#f0e4cc" stroke="#ddc898" stroke-width="0.3"/>
-  <ellipse cx="75" cy="74" rx="3" ry="2" transform="rotate(10 75 74)" fill="#eee0c8" stroke="#ddc898" stroke-width="0.3"/>
-  <ellipse cx="38" cy="45" rx="2.5" ry="1.5" transform="rotate(-20 38 45)" fill="#f0e4cc" stroke="#ddc898" stroke-width="0.3"/>
-  <ellipse cx="88" cy="56" rx="3" ry="1.8" transform="rotate(5 88 56)" fill="#eedcc5" stroke="#ddc898" stroke-width="0.3"/>
-
-  <!-- === GRILL MARKS === -->
-  <!-- Grill mark 1 -->
-  <path d="M 35 38 Q 55 32 75 38" stroke="#6b0a0a" stroke-width="3.5" stroke-linecap="round" fill="none" opacity="0.55"/>
-  <!-- Grill mark 2 -->
-  <path d="M 32 52 Q 52 46 72 52" stroke="#6b0a0a" stroke-width="3.5" stroke-linecap="round" fill="none" opacity="0.50"/>
-  <!-- Grill mark 3 - partial right side -->
-  <path d="M 70 42 Q 85 38 96 44" stroke="#6b0a0a" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.45"/>
-
-  <!-- === SURFACE SHINE / HIGHLIGHT === -->
-  <path d="M 18 72 Q 14 58 20 46 Q 26 34 40 26 Q 52 20 64 20 Q 78 20 90 26 Q 104 34 108 48 Q 114 62 110 74 Q 104 85 88 89 Q 76 92 64 91 Q 50 91 38 88 Q 24 84 18 72 Z" fill="url(#g_beef_shine)"/>
-
-  <!-- Specular highlight spot (juicy sheen) -->
-  <ellipse cx="46" cy="40" rx="12" ry="7" transform="rotate(-20 46 40)" fill="#ff9090" opacity="0.18"/>
-  <ellipse cx="42" cy="37" rx="6" ry="3.5" transform="rotate(-20 42 37)" fill="#ffb0b0" opacity="0.22"/>
-
-  <!-- Outline for definition -->
-  <path d="M 18 72 Q 14 58 20 46 Q 26 34 40 26 Q 52 20 64 20 Q 78 20 90 26 Q 104 34 108 48 Q 114 62 110 74 Q 104 85 88 89 Q 76 92 64 91 Q 50 91 38 88 Q 24 84 18 72 Z" fill="none" stroke="#4a0808" stroke-width="1.2" opacity="0.7"/>
+  <path d="M 18 72 Q 14 58 20 46 Q 26 34 40 26 Q 52 20 64 20 Q 78 20 90 26 Q 104 34 108 48 Q 114 62 110 74 Q 104 85 88 89 Q 76 92 64 91 Q 50 91 38 88 Q 24 84 18 72 Z" fill="none" stroke="#390d09" stroke-width="1.1" opacity="0.55"/>
 </svg>
