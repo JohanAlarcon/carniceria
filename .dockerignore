@@ -22,7 +22,6 @@ storage/framework/cache/*
 storage/framework/sessions/*
 storage/framework/views/*
 database/database.sqlite
-database/data
 
 # Dev tooling / IDE
 .idea
