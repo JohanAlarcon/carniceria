@@ -1,1 +1,120 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><path fill="#334155" fill-rule="evenodd" d="M32 8 C22 8 14 14 11 22 C9 27 9 30 10 33 C8 34 7 36 7 38 C7 41 9 43 12 44 L12 47 C12 49 14 51 16 51 L48 51 C50 51 52 49 52 47 L52 44 C55 43 57 41 57 38 C57 36 56 34 54 33 C55 30 55 27 53 22 C50 14 42 8 32 8 Z M16 44 L48 44 L48 47 C48 47.6 47.6 48 47 48 L17 48 C16.4 48 16 47.6 16 47 Z"/><path fill="#334155" d="M20 22 C20 20 22 18 24 19 C25 16 28 15 30 17 C31 14 35 14 36 17 C38 15 41 16 41 19 C43 18 45 20 44 22 C46 23 46 26 44 27 C43 30 40 31 37 30 C35 32 29 32 27 30 C24 31 21 30 20 27 C18 26 18 23 20 22 Z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <radialGradient id="g_ground_base" cx="50%" cy="60%" r="55%" fx="45%" fy="50%">
+      <stop offset="0%" stop-color="#e8504a"/>
+      <stop offset="40%" stop-color="#c93535"/>
+      <stop offset="80%" stop-color="#a02020"/>
+      <stop offset="100%" stop-color="#7a1515"/>
+    </radialGradient>
+    <radialGradient id="g_ground_top" cx="50%" cy="30%" r="50%" fx="50%" fy="25%">
+      <stop offset="0%" stop-color="#f07070"/>
+      <stop offset="50%" stop-color="#d94040"/>
+      <stop offset="100%" stop-color="#b02828"/>
+    </radialGradient>
+    <radialGradient id="g_ground_shine" cx="40%" cy="25%" r="35%">
+      <stop offset="0%" stop-color="#ff9999" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#ff9999" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="g_ground_fat1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f5ede0"/>
+      <stop offset="100%" stop-color="#ddc9b0"/>
+    </radialGradient>
+    <radialGradient id="g_ground_fat2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f0e8d8"/>
+      <stop offset="100%" stop-color="#d4bfa0"/>
+    </radialGradient>
+    <linearGradient id="g_ground_shadow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#8b1a1a" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#5a0f0f" stop-opacity="0.5"/>
+    </linearGradient>
+    <radialGradient id="g_ground_chunk1" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#dd4444"/>
+      <stop offset="100%" stop-color="#991f1f"/>
+    </radialGradient>
+    <radialGradient id="g_ground_chunk2" cx="50%" cy="35%" r="50%">
+      <stop offset="0%" stop-color="#e05555"/>
+      <stop offset="100%" stop-color="#aa2222"/>
+    </radialGradient>
+    <radialGradient id="g_ground_chunk3" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#cc3333"/>
+      <stop offset="100%" stop-color="#881818"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Sombra base del monticulo -->
+  <ellipse cx="64" cy="104" rx="46" ry="8" fill="#5a0f0f" fill-opacity="0.25"/>
+
+  <!-- Cuerpo principal del monticulo de carne molida -->
+  <ellipse cx="64" cy="88" rx="48" ry="22" fill="url(#g_ground_base)"/>
+
+  <!-- Forma del monticulo con textura irregular -->
+  <path d="M18 90 Q22 68 30 62 Q36 54 42 58 Q47 50 52 54 Q56 44 62 46 Q68 42 73 47 Q78 50 82 55 Q88 52 93 60 Q100 66 104 75 Q108 85 106 95 Q100 102 90 104 Q78 107 64 107 Q50 107 36 104 Q24 101 18 90 Z" fill="url(#g_ground_base)"/>
+
+  <!-- Capas superiores del monticulo para dar altura -->
+  <path d="M28 82 Q34 60 44 55 Q52 48 60 50 Q68 46 76 52 Q84 56 90 65 Q98 75 98 86 Q92 95 80 98 Q68 102 56 101 Q40 99 30 92 Z" fill="url(#g_ground_top)"/>
+
+  <!-- Cumbre del monticulo -->
+  <path d="M40 76 Q46 58 56 52 Q62 47 68 51 Q76 54 82 63 Q88 72 84 80 Q78 88 68 90 Q56 92 46 86 Z" fill="url(#g_ground_chunk1)"/>
+
+  <!-- Trozos individuales de carne molida - textura superior -->
+  <!-- Trozo 1 -->
+  <ellipse cx="52" cy="62" rx="10" ry="6" fill="url(#g_ground_chunk2)" transform="rotate(-15 52 62)"/>
+  <ellipse cx="52" cy="62" rx="10" ry="6" fill="url(#g_ground_shadow)" transform="rotate(-15 52 62)"/>
+
+  <!-- Trozo 2 -->
+  <ellipse cx="70" cy="58" rx="9" ry="5" fill="url(#g_ground_chunk3)" transform="rotate(10 70 58)"/>
+  <ellipse cx="70" cy="58" rx="9" ry="5" fill="url(#g_ground_shadow)" transform="rotate(10 70 58)"/>
+
+  <!-- Trozo 3 izquierda -->
+  <ellipse cx="38" cy="74" rx="8" ry="5" fill="url(#g_ground_chunk2)" transform="rotate(-8 38 74)"/>
+
+  <!-- Trozo 4 derecha -->
+  <ellipse cx="88" cy="72" rx="8" ry="5" fill="url(#g_ground_chunk1)" transform="rotate(12 88 72)"/>
+
+  <!-- Trozo 5 centro-izq -->
+  <ellipse cx="48" cy="78" rx="9" ry="5" fill="url(#g_ground_chunk3)" transform="rotate(-5 48 78)"/>
+
+  <!-- Trozo 6 centro-der -->
+  <ellipse cx="76" cy="74" rx="8" ry="5" fill="url(#g_ground_chunk2)" transform="rotate(8 76 74)"/>
+
+  <!-- Trozo 7 inferior izquierda -->
+  <ellipse cx="30" cy="88" rx="9" ry="5" fill="url(#g_ground_chunk1)" transform="rotate(-10 30 88)"/>
+
+  <!-- Trozo 8 inferior derecha -->
+  <ellipse cx="96" cy="86" rx="9" ry="5" fill="url(#g_ground_chunk3)" transform="rotate(15 96 86)"/>
+
+  <!-- Vetas de grasa blanca - marmoleo -->
+  <!-- Grasa 1 -->
+  <path d="M46 66 Q50 63 55 66 Q52 69 47 67 Z" fill="url(#g_ground_fat1)" fill-opacity="0.85"/>
+
+  <!-- Grasa 2 -->
+  <path d="M68 61 Q73 58 77 62 Q73 65 68 62 Z" fill="url(#g_ground_fat2)" fill-opacity="0.8"/>
+
+  <!-- Grasa 3 -->
+  <path d="M56 76 Q61 73 66 76 Q62 80 57 77 Z" fill="url(#g_ground_fat1)" fill-opacity="0.75"/>
+
+  <!-- Grasa 4 pequena -->
+  <path d="M40 83 Q44 81 47 83 Q44 86 41 84 Z" fill="url(#g_ground_fat2)" fill-opacity="0.7"/>
+
+  <!-- Grasa 5 -->
+  <path d="M78 79 Q83 77 86 80 Q83 83 79 81 Z" fill="url(#g_ground_fat1)" fill-opacity="0.75"/>
+
+  <!-- Grasa 6 pequena en cumbre -->
+  <path d="M60 56 Q63 54 66 56 Q63 59 60 57 Z" fill="url(#g_ground_fat2)" fill-opacity="0.8"/>
+
+  <!-- Grasa 7 -->
+  <path d="M72 89 Q76 87 79 89 Q76 92 72 90 Z" fill="url(#g_ground_fat1)" fill-opacity="0.65"/>
+
+  <!-- Grasa 8 -->
+  <path d="M34 90 Q38 88 41 90 Q38 93 34 91 Z" fill="url(#g_ground_fat2)" fill-opacity="0.65"/>
+
+  <!-- Brillo en la superficie -->
+  <ellipse cx="56" cy="58" rx="22" ry="14" fill="url(#g_ground_shine)"/>
+
+  <!-- Contornos sutiles para definir trozos -->
+  <path d="M28 82 Q34 60 44 55 Q52 48 60 50 Q68 46 76 52 Q84 56 90 65 Q98 75 98 86" fill="none" stroke="#7a1515" stroke-width="0.8" stroke-opacity="0.4"/>
+  <path d="M40 76 Q46 58 56 52 Q62 47 68 51 Q76 54 82 63" fill="none" stroke="#8b1a1a" stroke-width="0.6" stroke-opacity="0.35"/>
+
+  <!-- Contorno exterior del monticulo -->
+  <path d="M18 90 Q22 68 30 62 Q36 54 42 58 Q47 50 52 54 Q56 44 62 46 Q68 42 73 47 Q78 50 82 55 Q88 52 93 60 Q100 66 104 75 Q108 85 106 95 Q100 102 90 104 Q78 107 64 107 Q50 107 36 104 Q24 101 18 90 Z" fill="none" stroke="#6b1010" stroke-width="1.2" stroke-opacity="0.5"/>
+</svg>

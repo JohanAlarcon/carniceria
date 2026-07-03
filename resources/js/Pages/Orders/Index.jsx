@@ -28,10 +28,10 @@ export default function OrdersIndex({ orders }) {
                     </Link>
                 </div>
             ) : (
-                <div className="space-y-3">
+                <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
                     {orders.map((o) => (
                         <Link key={o.id} href={`/mis-pedidos/${o.id}`}
-                            className="block rounded-2xl border border-gray-200 bg-white p-4">
+                            className="block rounded-2xl border border-gray-200 bg-white p-4 shadow-sm transition hover:shadow-md">
                             <div className="flex items-center justify-between">
                                 <span className="font-bold text-gray-900">{o.order_number}</span>
                                 <span className={`rounded-full px-2.5 py-1 text-xs font-semibold ${BADGE[o.status_color] || BADGE.gray}`}>

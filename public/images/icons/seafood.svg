@@ -1,1 +1,159 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><g fill="#334155"><path d="M28 8 C16 8 8 16 8 26 C8 32 11 37 16 40 L14 42 L12 44 L16 44 L18 42 L20 44 L24 44 L22 42 L24 40 C26 41 28 42 30 42 C38 42 46 35 46 26 C46 16 38 8 28 8 Z M28 11 C36 11 43 18 43 26 C43 34 37 39 30 39 C28 39 26 38 24 37 L26 35 C27 36 29 37 30 37 C36 37 41 32 41 26 C41 20 36 15 28 15 C22 15 17 19 17 25 C17 27 18 29 19 31 L17 33 C15 31 14 28 14 26 C14 18 20 11 28 11 Z" fill-rule="evenodd"/><path d="M28 18 C23 18 20 21 20 25 C20 27 21 29 23 31 L21 33 C19 31 17 28 17 25 C17 19 22 15 28 15 C34 15 39 20 39 26 C39 31 35 35 30 36 L29 33 C33 32 36 29 36 26 C36 22 32 18 28 18 Z" fill-rule="evenodd"/><ellipse cx="28" cy="26" rx="5" ry="5"/><path d="M38 34 C40 30 48 28 54 32 C58 34 58 40 54 44 C52 46 50 47 48 47 L46 56 L43 55 L45 46 C42 45 40 43 39 41 C37 39 36 36 38 34 Z M40 35 C39 37 40 39 41 41 C42 43 44 44 47 45 L45 54 L46 54 L48 44 C50 44 52 43 54 42 C57 39 57 35 54 33 C49 30 42 32 40 35 Z" fill-rule="evenodd"/><ellipse cx="47" cy="38" rx="4" ry="5" transform="rotate(-20 47 38)"/><circle cx="44" cy="36" r="1.5"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <!-- Shell gradients -->
+    <radialGradient id="g_seafood_shell_body" cx="45%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#F5DEB3"/>
+      <stop offset="40%" stop-color="#D4A855"/>
+      <stop offset="100%" stop-color="#8B6914"/>
+    </radialGradient>
+    <linearGradient id="g_seafood_shell_stripe1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C8952A"/>
+      <stop offset="100%" stop-color="#7A5010"/>
+    </linearGradient>
+    <radialGradient id="g_seafood_shell_inner" cx="50%" cy="60%" r="55%">
+      <stop offset="0%" stop-color="#FFE8C8"/>
+      <stop offset="60%" stop-color="#F0C87A"/>
+      <stop offset="100%" stop-color="#B8860B"/>
+    </radialGradient>
+    <!-- Shrimp gradients -->
+    <linearGradient id="g_seafood_shrimp_body" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF9966"/>
+      <stop offset="40%" stop-color="#FF6633"/>
+      <stop offset="100%" stop-color="#CC3300"/>
+    </linearGradient>
+    <radialGradient id="g_seafood_shrimp_highlight" cx="30%" cy="25%" r="50%">
+      <stop offset="0%" stop-color="#FFB899" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#FF6633" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="g_seafood_shrimp_belly" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFBB88"/>
+      <stop offset="100%" stop-color="#FF8855"/>
+    </linearGradient>
+    <!-- Fish gradients -->
+    <linearGradient id="g_seafood_fish_body" x1="0%" y1="30%" x2="100%" y2="70%">
+      <stop offset="0%" stop-color="#7FB3D3"/>
+      <stop offset="35%" stop-color="#4A90C4"/>
+      <stop offset="70%" stop-color="#2A6FA8"/>
+      <stop offset="100%" stop-color="#1A4F78"/>
+    </linearGradient>
+    <radialGradient id="g_seafood_fish_belly" cx="50%" cy="80%" r="60%">
+      <stop offset="0%" stop-color="#E8F4FF"/>
+      <stop offset="50%" stop-color="#B8D8F0"/>
+      <stop offset="100%" stop-color="#7FB3D3" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="g_seafood_fish_shine" cx="35%" cy="30%" r="40%">
+      <stop offset="0%" stop-color="#CCEEFF" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#7FB3D3" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="g_seafood_fish_eye" cx="40%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="40%" stop-color="#88BBDD"/>
+      <stop offset="70%" stop-color="#1A1A2E"/>
+      <stop offset="100%" stop-color="#000011"/>
+    </radialGradient>
+    <!-- Fish tail gradient -->
+    <linearGradient id="g_seafood_fish_tail" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2A6FA8"/>
+      <stop offset="100%" stop-color="#4A90C4"/>
+    </linearGradient>
+    <!-- Fish scale shimmer -->
+    <linearGradient id="g_seafood_scale_shine" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#AADDFF" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#4A90C4" stop-opacity="0"/>
+    </linearGradient>
+    <!-- Shrimp tail -->
+    <linearGradient id="g_seafood_shrimp_tail" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF8855"/>
+      <stop offset="100%" stop-color="#CC3300"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ===== FISH (background, bottom-right area) ===== -->
+  <!-- Fish body -->
+  <ellipse cx="76" cy="90" rx="30" ry="14" fill="url(#g_seafood_fish_body)" transform="rotate(-18, 76, 90)"/>
+  <!-- Fish belly lighter -->
+  <ellipse cx="76" cy="93" rx="22" ry="9" fill="url(#g_seafood_fish_belly)" transform="rotate(-18, 76, 93)"/>
+  <!-- Fish shine -->
+  <ellipse cx="68" cy="84" rx="14" ry="7" fill="url(#g_seafood_fish_shine)" transform="rotate(-18, 68, 84)"/>
+  <!-- Fish tail -->
+  <polygon points="100,85 115,75 115,95" fill="url(#g_seafood_fish_tail)" stroke="#1A4F78" stroke-width="0.8" stroke-linejoin="round"/>
+  <polygon points="100,90 115,80 115,100" fill="url(#g_seafood_fish_tail)" stroke="#1A4F78" stroke-width="0.8" stroke-linejoin="round" opacity="0.7"/>
+  <!-- Fish tail fin detail -->
+  <line x1="100" y1="87" x2="113" y2="78" stroke="#4A90C4" stroke-width="0.6" opacity="0.6"/>
+  <line x1="100" y1="89" x2="113" y2="82" stroke="#4A90C4" stroke-width="0.6" opacity="0.6"/>
+  <line x1="100" y1="91" x2="113" y2="86" stroke="#4A90C4" stroke-width="0.6" opacity="0.6"/>
+  <!-- Fish scale details -->
+  <ellipse cx="72" cy="88" rx="5" ry="3.5" fill="none" stroke="url(#g_seafood_scale_shine)" stroke-width="0.8" transform="rotate(-18,72,88)"/>
+  <ellipse cx="80" cy="86" rx="5" ry="3.5" fill="none" stroke="url(#g_seafood_scale_shine)" stroke-width="0.8" transform="rotate(-18,80,86)"/>
+  <ellipse cx="63" cy="91" rx="5" ry="3.5" fill="none" stroke="url(#g_seafood_scale_shine)" stroke-width="0.8" transform="rotate(-18,63,91)"/>
+  <!-- Fish dorsal fin -->
+  <path d="M 62,82 Q 70,72 82,78" fill="none" stroke="#2A6FA8" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M 62,82 Q 70,73 82,78" fill="#4A90C4" stroke="none" opacity="0.4"/>
+  <!-- Fish eye -->
+  <circle cx="57" cy="89" r="3.5" fill="url(#g_seafood_fish_eye)" stroke="#1A3A5C" stroke-width="0.7"/>
+  <circle cx="56.2" cy="88.2" r="0.9" fill="white" opacity="0.9"/>
+  <!-- Fish mouth -->
+  <path d="M 48,91 Q 50,93 52,91" fill="none" stroke="#1A4F78" stroke-width="1" stroke-linecap="round"/>
+  <!-- Fish outline -->
+  <ellipse cx="76" cy="90" rx="30" ry="14" fill="none" stroke="#1A4F78" stroke-width="1" transform="rotate(-18, 76, 90)"/>
+
+  <!-- ===== SHRIMP (middle, curved) ===== -->
+  <!-- Shrimp body segments -->
+  <path d="M 55,28 C 48,35 42,45 44,55 C 46,65 54,70 60,75 C 66,80 70,82 68,88" 
+        fill="none" stroke="url(#g_seafood_shrimp_body)" stroke-width="10" stroke-linecap="round"/>
+  <path d="M 55,28 C 48,35 42,45 44,55 C 46,65 54,70 60,75 C 66,80 70,82 68,88" 
+        fill="none" stroke="url(#g_seafood_shrimp_belly)" stroke-width="5" stroke-linecap="round" opacity="0.6"/>
+  <!-- Shrimp highlight -->
+  <path d="M 55,28 C 48,35 42,45 44,55 C 46,65 54,70 60,75 C 66,80 70,82 68,88" 
+        fill="none" stroke="url(#g_seafood_shrimp_highlight)" stroke-width="7" stroke-linecap="round"/>
+  <!-- Shrimp segment lines -->
+  <path d="M 51,37 Q 46,41 47,46" fill="none" stroke="#CC3300" stroke-width="1.2" opacity="0.7"/>
+  <path d="M 44,47 Q 42,52 44,57" fill="none" stroke="#CC3300" stroke-width="1.2" opacity="0.7"/>
+  <path d="M 46,58 Q 50,64 55,68" fill="none" stroke="#CC3300" stroke-width="1.2" opacity="0.7"/>
+  <path d="M 58,72 Q 63,77 65,82" fill="none" stroke="#CC3300" stroke-width="1.2" opacity="0.7"/>
+  <!-- Shrimp tail fan -->
+  <path d="M 68,88 L 62,96 L 70,92 L 68,88 Z" fill="url(#g_seafood_shrimp_tail)" stroke="#AA2200" stroke-width="0.7"/>
+  <path d="M 68,88 L 70,97 L 76,90 L 68,88 Z" fill="url(#g_seafood_shrimp_tail)" stroke="#AA2200" stroke-width="0.7"/>
+  <path d="M 68,88 L 75,95 L 79,87 L 68,88 Z" fill="url(#g_seafood_shrimp_tail)" stroke="#AA2200" stroke-width="0.7" opacity="0.8"/>
+  <!-- Shrimp head -->
+  <ellipse cx="56" cy="26" rx="8" ry="6" fill="url(#g_seafood_shrimp_body)" stroke="#AA2200" stroke-width="0.8"/>
+  <!-- Shrimp eye -->
+  <circle cx="60" cy="23" r="2" fill="#1A0A00" stroke="#CC3300" stroke-width="0.5"/>
+  <circle cx="59.4" cy="22.4" r="0.6" fill="white" opacity="0.9"/>
+  <!-- Shrimp antennae -->
+  <line x1="60" y1="21" x2="75" y2="12" stroke="#FF8855" stroke-width="0.9" stroke-linecap="round"/>
+  <line x1="62" y1="22" x2="78" y2="16" stroke="#FF8855" stroke-width="0.9" stroke-linecap="round"/>
+  <!-- Shrimp legs -->
+  <line x1="50" y1="40" x2="40" y2="44" stroke="#FF9966" stroke-width="0.8" opacity="0.7"/>
+  <line x1="46" y1="50" x2="36" y2="52" stroke="#FF9966" stroke-width="0.8" opacity="0.7"/>
+  <line x1="47" y1="59" x2="38" y2="63" stroke="#FF9966" stroke-width="0.8" opacity="0.7"/>
+
+  <!-- ===== SCALLOP SHELL (top-left) ===== -->
+  <!-- Shell outer fan shape -->
+  <path d="M 28,58 
+           C 10,55 10,22 28,18 
+           C 32,17 36,17 40,18
+           C 58,22 58,55 40,58 Z" 
+        fill="url(#g_seafood_shell_body)" stroke="#7A5010" stroke-width="1"/>
+  <!-- Shell ribs -->
+  <path d="M 34,58 Q 28,42 34,18" fill="none" stroke="url(#g_seafood_shell_stripe1)" stroke-width="1.2" opacity="0.7"/>
+  <path d="M 30,56 Q 18,40 24,20" fill="none" stroke="url(#g_seafood_shell_stripe1)" stroke-width="1.2" opacity="0.7"/>
+  <path d="M 38,57 Q 38,40 36,19" fill="none" stroke="url(#g_seafood_shell_stripe1)" stroke-width="1.2" opacity="0.7"/>
+  <path d="M 42,55 Q 48,40 44,21" fill="none" stroke="url(#g_seafood_shell_stripe1)" stroke-width="1.2" opacity="0.7"/>
+  <path d="M 45,52 Q 56,38 50,24" fill="none" stroke="url(#g_seafood_shell_stripe1)" stroke-width="1.2" opacity="0.6"/>
+  <path d="M 26,52 Q 14,38 18,26" fill="none" stroke="url(#g_seafood_shell_stripe1)" stroke-width="1.2" opacity="0.6"/>
+  <!-- Shell inner highlight -->
+  <path d="M 28,55 C 14,52 14,25 28,22 C 32,21 36,21 40,22 C 54,25 54,52 40,55 Z" 
+        fill="url(#g_seafood_shell_inner)" opacity="0.45"/>
+  <!-- Shell top scalloped edge bumps -->
+  <circle cx="20" cy="18" r="3.5" fill="url(#g_seafood_shell_body)" stroke="#7A5010" stroke-width="0.8"/>
+  <circle cx="27" cy="15" r="3.5" fill="url(#g_seafood_shell_body)" stroke="#7A5010" stroke-width="0.8"/>
+  <circle cx="34" cy="14" r="3.5" fill="url(#g_seafood_shell_body)" stroke="#7A5010" stroke-width="0.8"/>
+  <circle cx="41" cy="15" r="3.5" fill="url(#g_seafood_shell_body)" stroke="#7A5010" stroke-width="0.8"/>
+  <circle cx="48" cy="18" r="3.5" fill="url(#g_seafood_shell_body)" stroke="#7A5010" stroke-width="0.8"/>
+  <!-- Shell hinge at bottom -->
+  <ellipse cx="34" cy="58" rx="6" ry="3" fill="#B8860B" stroke="#7A5010" stroke-width="0.7"/>
+  <!-- Shell surface shine -->
+  <path d="M 20,30 Q 24,22 32,20" fill="none" stroke="#FFE8A0" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+
+</svg>

@@ -1,1 +1,130 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><g fill="#334155"><path d="M12 52 C10 50 9 47 10 44 C11 41 14 39 17 39 L20 39 C21 37 21 35 20 33 L18 31 C16 28 16 25 18 22 C20 19 23 18 26 18 L30 18 C32 16 33 13 32 10 C31 8 32 6 34 6 C36 6 37 8 36 10 C37 13 36 17 34 20 L30 22 C28 23 27 25 28 27 L30 29 C32 32 32 36 30 39 L27 41 C26 43 27 46 29 47 L32 48 C35 49 37 52 37 55 C37 58 35 60 32 59 C30 59 29 57 30 55 C29 53 27 52 25 52 L22 52 C20 54 17 55 15 54 C13 53 12 52 12 52Z" fill-rule="evenodd"/><ellipse cx="34" cy="7" rx="3" ry="2.5"/><ellipse cx="29" cy="20" rx="3.5" ry="2.5"/><ellipse cx="29" cy="30" rx="3.5" ry="2.5"/><ellipse cx="28" cy="41" rx="3.5" ry="2.5"/><ellipse cx="31" cy="52" rx="3.5" ry="2.5"/><path d="M12 52 C10 50 9 47 10 44 C11 41 14 39 17 39 L20 39 C21 37 21 35 20 33 L18 31 C16 28 16 25 18 22 C20 19 23 18 26 18 L30 18 C32 16 33 13 32 10 C31 8 32 6 34 6 C36 6 37 8 36 10 C37 13 36 17 34 20 L30 22 C28 23 27 25 28 27 L30 29 C32 32 32 36 30 39 L27 41 C26 43 27 46 29 47 L32 48 C35 49 37 52 37 55 C37 58 35 60 32 59 C30 59 29 57 30 55 C29 53 27 52 25 52 L22 52 C20 54 17 55 15 54 C13 53 12 52 12 52Z" fill="none"/></g><g fill="#334155"><path d="M34 5 C32 5 30 6.5 30.5 9 C31 11.5 33 12.5 35 11.5 C37 10.5 37.5 8 36 6.5 C35.5 5.8 34.8 5 34 5Z"/><path d="M26 16 C23 16 20 17.5 18.5 20.5 C17 23.5 17.5 27 19.5 29.5 L22 32 C23.5 34.5 23.5 37.5 22 40 L18 40 C15 40 12 42 11 45 C10 48 11.5 51.5 14 53.5 C16 55 18.5 55 21 54 L24 54 C26.5 55 28 57 27.5 59 C27 61 29 62 31 61.5 C33 61 34.5 59 34.5 57 C34.5 54.5 33 52 31 50.5 L28 49 C26 48 25 45.5 26 43.5 L29.5 40.5 C32 38 33 34 31.5 31 L29.5 28.5 C28 26 28.5 23 30.5 21.5 L34.5 19.5 C36.5 18 38 15.5 37.5 12.5 L37 10.5 C36.5 8 35 7 33.5 7 C32 7 31 8 31 9.5 C31 10.5 31.5 11.5 32.5 12 C33.5 14.5 32.5 17 30.5 18 L26 18 C26 18 26 16 26 16Z"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <!-- Gradiente principal de la carne roja -->
+    <linearGradient id="g_oxtail_meat1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c0392b"/>
+      <stop offset="40%" stop-color="#922b21"/>
+      <stop offset="100%" stop-color="#641e16"/>
+    </linearGradient>
+    <!-- Gradiente carne segmento brillante -->
+    <radialGradient id="g_oxtail_meat2" cx="35%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#e74c3c"/>
+      <stop offset="50%" stop-color="#c0392b"/>
+      <stop offset="100%" stop-color="#7b241c"/>
+    </radialGradient>
+    <!-- Gradiente hueso -->
+    <radialGradient id="g_oxtail_bone1" cx="40%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#fdfefe"/>
+      <stop offset="50%" stop-color="#d5d8dc"/>
+      <stop offset="100%" stop-color="#aab7b8"/>
+    </radialGradient>
+    <!-- Gradiente hueso secundario -->
+    <linearGradient id="g_oxtail_bone2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ecf0f1"/>
+      <stop offset="100%" stop-color="#bdc3c7"/>
+    </linearGradient>
+    <!-- Gradiente grasa marmoleada -->
+    <linearGradient id="g_oxtail_fat1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fdfefe" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#e8daef" stop-opacity="0.7"/>
+    </linearGradient>
+    <!-- Gradiente segmento 2 -->
+    <radialGradient id="g_oxtail_seg2" cx="40%" cy="35%" r="55%">
+      <stop offset="0%" stop-color="#d44235"/>
+      <stop offset="60%" stop-color="#a93226"/>
+      <stop offset="100%" stop-color="#6e1f19"/>
+    </radialGradient>
+    <!-- Gradiente segmento 3 -->
+    <radialGradient id="g_oxtail_seg3" cx="38%" cy="32%" r="58%">
+      <stop offset="0%" stop-color="#cb3a2e"/>
+      <stop offset="55%" stop-color="#9b2a22"/>
+      <stop offset="100%" stop-color="#6b1e17"/>
+    </radialGradient>
+    <!-- Gradiente sombra suave -->
+    <radialGradient id="g_oxtail_shadow" cx="50%" cy="90%" r="45%">
+      <stop offset="0%" stop-color="#1a0a08" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#1a0a08" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Sombra suave debajo -->
+  <ellipse cx="64" cy="116" rx="38" ry="7" fill="url(#g_oxtail_shadow)"/>
+
+  <!-- ===== COLA DE RES CURVADA Y SEGMENTADA ===== -->
+
+  <!-- SEGMENTO 1 - parte inferior/base (mas grande) -->
+  <g>
+    <!-- Cuerpo carne segmento 1 -->
+    <ellipse cx="64" cy="100" rx="22" ry="14" fill="url(#g_oxtail_meat1)" stroke="#4a1510" stroke-width="1.2"/>
+    <!-- Brillo superior -->
+    <ellipse cx="58" cy="94" rx="10" ry="5" fill="#e74c3c" opacity="0.5"/>
+    <!-- Veta de grasa 1 -->
+    <path d="M50 97 Q60 94 74 98" stroke="url(#g_oxtail_fat1)" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+    <path d="M52 101 Q63 99 72 103" stroke="url(#g_oxtail_fat1)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <!-- Hueso central segmento 1 -->
+    <ellipse cx="64" cy="100" rx="8" ry="5.5" fill="url(#g_oxtail_bone1)" stroke="#95a5a6" stroke-width="0.8"/>
+    <ellipse cx="62" cy="98.5" rx="3.5" ry="2" fill="white" opacity="0.7"/>
+    <!-- Contorno segmento -->
+    <ellipse cx="64" cy="100" rx="22" ry="14" fill="none" stroke="#3d0e0a" stroke-width="1.3"/>
+  </g>
+
+  <!-- Conector entre segmentos 1 y 2 -->
+  <path d="M50 90 Q52 83 55 80 L73 80 Q76 83 78 90 Z" fill="#8e1b13" stroke="#3d0e0a" stroke-width="0.8"/>
+
+  <!-- SEGMENTO 2 - parte media -->
+  <g>
+    <!-- Cuerpo carne segmento 2 -->
+    <ellipse cx="64" cy="76" rx="19" ry="12" fill="url(#g_oxtail_seg2)" stroke="#4a1510" stroke-width="1.2"/>
+    <!-- Brillo -->
+    <ellipse cx="58" cy="71" rx="8" ry="4" fill="#e06050" opacity="0.45"/>
+    <!-- Vetas de grasa -->
+    <path d="M49 74 Q60 71 77 75" stroke="white" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.6"/>
+    <path d="M51 78 Q62 76 73 80" stroke="white" stroke-width="1.2" fill="none" stroke-linecap="round" opacity="0.5"/>
+    <!-- Hueso segmento 2 -->
+    <ellipse cx="64" cy="76" rx="7" ry="4.5" fill="url(#g_oxtail_bone2)" stroke="#95a5a6" stroke-width="0.8"/>
+    <ellipse cx="62" cy="74.5" rx="3" ry="1.8" fill="white" opacity="0.65"/>
+    <!-- Contorno -->
+    <ellipse cx="64" cy="76" rx="19" ry="12" fill="none" stroke="#3d0e0a" stroke-width="1.2"/>
+  </g>
+
+  <!-- Conector entre segmentos 2 y 3 -->
+  <path d="M51 66 Q55 59 58 57 L70 57 Q73 59 77 66 Z" fill="#7a1711" stroke="#3d0e0a" stroke-width="0.8"/>
+
+  <!-- SEGMENTO 3 - parte superior media -->
+  <g>
+    <!-- Cuerpo carne segmento 3 -->
+    <ellipse cx="64" cy="53" rx="16" ry="10.5" fill="url(#g_oxtail_seg3)" stroke="#4a1510" stroke-width="1.2"/>
+    <!-- Brillo -->
+    <ellipse cx="59" cy="48" rx="6.5" ry="3.5" fill="#d95f50" opacity="0.4"/>
+    <!-- Veta grasa -->
+    <path d="M52 51 Q62 48 74 53" stroke="white" stroke-width="1.6" fill="none" stroke-linecap="round" opacity="0.55"/>
+    <!-- Hueso segmento 3 -->
+    <ellipse cx="64" cy="53" rx="6" ry="3.8" fill="url(#g_oxtail_bone1)" stroke="#95a5a6" stroke-width="0.7"/>
+    <ellipse cx="62.5" cy="51.8" rx="2.5" ry="1.5" fill="white" opacity="0.65"/>
+    <!-- Contorno -->
+    <ellipse cx="64" cy="53" rx="16" ry="10.5" fill="none" stroke="#3d0e0a" stroke-width="1.2"/>
+  </g>
+
+  <!-- Conector entre segmentos 3 y 4 -->
+  <path d="M54 44 Q57 38 60 36 L68 36 Q71 38 74 44 Z" fill="#6e1510" stroke="#3d0e0a" stroke-width="0.7"/>
+
+  <!-- SEGMENTO 4 - parte superior (mas pequeno) -->
+  <g>
+    <!-- Cuerpo carne segmento 4 -->
+    <ellipse cx="64" cy="32" rx="12" ry="8" fill="url(#g_oxtail_meat2)" stroke="#4a1510" stroke-width="1.1"/>
+    <!-- Brillo -->
+    <ellipse cx="60" cy="28" rx="5" ry="2.8" fill="#e05545" opacity="0.4"/>
+    <!-- Veta grasa -->
+    <path d="M55 31 Q63 28 72 33" stroke="white" stroke-width="1.4" fill="none" stroke-linecap="round" opacity="0.5"/>
+    <!-- Hueso segmento 4 -->
+    <ellipse cx="64" cy="32" rx="4.5" ry="3" fill="url(#g_oxtail_bone2)" stroke="#95a5a6" stroke-width="0.7"/>
+    <ellipse cx="63" cy="31" rx="2" ry="1.2" fill="white" opacity="0.6"/>
+    <!-- Contorno -->
+    <ellipse cx="64" cy="32" rx="12" ry="8" fill="none" stroke="#3d0e0a" stroke-width="1.1"/>
+  </g>
+
+  <!-- Extremo de la cola (punta) -->
+  <path d="M59 25 Q64 14 69 25" fill="#8b2018" stroke="#3d0e0a" stroke-width="1"/>
+  <path d="M62 25 Q64 18 66 25" fill="#c0392b" opacity="0.6"/>
+
+</svg>

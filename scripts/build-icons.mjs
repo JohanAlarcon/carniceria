@@ -46,9 +46,9 @@ for (const it of icons) {
   if (!svg.startsWith('<svg')) { failed.push(key); fail++; continue; }
   try {
     writeFileSync(join(outDir, key + '.svg'), svg, 'utf8');
-    await sharp(Buffer.from(svg), { density: 384 })
-      .resize(256, 256, { fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 } })
-      .webp({ quality: 90 })
+    await sharp(Buffer.from(svg), { density: 600 })
+      .resize(384, 384, { fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 } })
+      .webp({ quality: 92 })
       .toFile(join(outDir, key + '.webp'));
     ok++;
   } catch (e) {

@@ -1,1 +1,103 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><path fill="#334155" fill-rule="evenodd" d="M38 7c-6.075 0-11 4.925-11 11 0 2.08.577 4.024 1.58 5.68L8.5 44.5C7 46 7 49 8.5 50.5L13.5 55.5C15 57 18 57 19.5 55.5L40.32 35.42C41.976 36.423 43.92 37 46 37c8.284 0 13-5.716 13-13 0-6.075-4.925-11-11-11a10.98 10.98 0 0 0-5.14 1.28A11.003 11.003 0 0 0 38 7zm0 4c1.37 0 2.676.262 3.876.737C41.32 13.498 41 15.213 41 17c0 1.787.32 3.502.876 5.263A7 7 0 1 1 38 11zm8 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <radialGradient id="g_ham_main" cx="45%" cy="40%" r="55%" fx="35%" fy="30%">
+      <stop offset="0%" stop-color="#f5a0b0"/>
+      <stop offset="40%" stop-color="#e8607a"/>
+      <stop offset="75%" stop-color="#c94060"/>
+      <stop offset="100%" stop-color="#a02040"/>
+    </radialGradient>
+    <radialGradient id="g_ham_highlight" cx="35%" cy="28%" r="35%">
+      <stop offset="0%" stop-color="#fdd0d8" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#fdd0d8" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="g_ham_shadow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8a1a30" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#6a0a20" stop-opacity="0.55"/>
+    </linearGradient>
+    <radialGradient id="g_ham_fat1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff5f0"/>
+      <stop offset="100%" stop-color="#e8d0c0"/>
+    </radialGradient>
+    <radialGradient id="g_ham_fat2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffeee8"/>
+      <stop offset="100%" stop-color="#ddc0b0"/>
+    </radialGradient>
+    <linearGradient id="g_ham_bone" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8f0e0"/>
+      <stop offset="40%" stop-color="#e8d8c0"/>
+      <stop offset="100%" stop-color="#c8b090"/>
+    </linearGradient>
+    <radialGradient id="g_ham_bone_end" cx="40%" cy="35%" r="50%">
+      <stop offset="0%" stop-color="#faf4e8"/>
+      <stop offset="60%" stop-color="#dcc8a8"/>
+      <stop offset="100%" stop-color="#b89870"/>
+    </radialGradient>
+    <linearGradient id="g_ham_skin" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#c86858"/>
+      <stop offset="50%" stop-color="#a84840"/>
+      <stop offset="100%" stop-color="#883030"/>
+    </linearGradient>
+    <radialGradient id="g_ham_gloss" cx="30%" cy="20%" r="40%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Shadow under ham -->
+  <ellipse cx="62" cy="112" rx="38" ry="7" fill="#000000" fill-opacity="0.12"/>
+
+  <!-- Bone shaft -->
+  <rect x="74" y="58" width="14" height="42" rx="7" ry="7" fill="url(#g_ham_bone)" stroke="#b89870" stroke-width="0.8"/>
+
+  <!-- Bone knuckle end (bottom) -->
+  <ellipse cx="81" cy="100" rx="12" ry="11" fill="url(#g_ham_bone_end)" stroke="#b89870" stroke-width="0.8"/>
+  <!-- Bone knuckle highlight -->
+  <ellipse cx="77" cy="96" rx="5" ry="4" fill="#faf8f0" fill-opacity="0.6"/>
+
+  <!-- Main ham body -->
+  <path d="M 22 68
+           C 18 52, 24 28, 44 18
+           C 60 10, 80 14, 88 28
+           C 96 42, 92 60, 86 70
+           C 80 80, 70 88, 58 90
+           C 44 92, 28 84, 22 68 Z"
+        fill="url(#g_ham_main)" stroke="#8a1a30" stroke-width="1.2"/>
+
+  <!-- Fat marbling streaks -->
+  <path d="M 38 35 C 48 32, 58 36, 65 30" fill="none" stroke="url(#g_ham_fat1)" stroke-width="4" stroke-linecap="round" opacity="0.7"/>
+  <path d="M 32 52 C 44 48, 56 53, 68 48" fill="none" stroke="url(#g_ham_fat2)" stroke-width="3" stroke-linecap="round" opacity="0.65"/>
+  <path d="M 36 68 C 46 64, 55 68, 62 63" fill="none" stroke="url(#g_ham_fat1)" stroke-width="3.5" stroke-linecap="round" opacity="0.6"/>
+  <path d="M 52 28 C 58 24, 68 28, 72 24" fill="none" stroke="url(#g_ham_fat2)" stroke-width="2.5" stroke-linecap="round" opacity="0.55"/>
+
+  <!-- Fat cap on skin side (top-right) -->
+  <path d="M 60 14 C 72 10, 84 18, 88 28 C 92 38, 88 28, 82 22 C 76 16, 68 13, 60 14 Z"
+        fill="#f0d8c8" stroke="#d4b090" stroke-width="0.7" opacity="0.8"/>
+
+  <!-- Shadow overlay -->
+  <path d="M 22 68
+           C 18 52, 24 28, 44 18
+           C 60 10, 80 14, 88 28
+           C 96 42, 92 60, 86 70
+           C 80 80, 70 88, 58 90
+           C 44 92, 28 84, 22 68 Z"
+        fill="url(#g_ham_shadow)"/>
+
+  <!-- Highlight gloss -->
+  <path d="M 22 68
+           C 18 52, 24 28, 44 18
+           C 60 10, 80 14, 88 28
+           C 96 42, 92 60, 86 70
+           C 80 80, 70 88, 58 90
+           C 44 92, 28 84, 22 68 Z"
+        fill="url(#g_ham_highlight)"/>
+
+  <!-- Specular gloss spot -->
+  <ellipse cx="42" cy="30" rx="14" ry="9" fill="url(#g_ham_gloss)"/>
+
+  <!-- Bone knuckle top -->
+  <ellipse cx="81" cy="61" rx="9" ry="8" fill="url(#g_ham_bone_end)" stroke="#b89870" stroke-width="0.8"/>
+  <ellipse cx="78" cy="58" rx="4" ry="3" fill="#faf8f0" fill-opacity="0.7"/>
+
+  <!-- Subtle rim light on left edge -->
+  <path d="M 22 68 C 18 52, 24 28, 44 18" fill="none" stroke="#f0809a" stroke-width="2.5" stroke-linecap="round" opacity="0.4"/>
+</svg>

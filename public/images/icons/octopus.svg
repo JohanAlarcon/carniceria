@@ -1,1 +1,113 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><g fill="#334155"><ellipse cx="32" cy="22" rx="16" ry="13"/><circle cx="26" cy="19" r="2.5" fill="white"/><circle cx="38" cy="19" r="2.5" fill="white"/><circle cx="26" cy="19" r="1.2" fill="#334155"/><circle cx="38" cy="19" r="1.2" fill="#334155"/><path d="M16 30 Q10 36 8 44 Q7 50 10 52 Q12 53 13 50 Q14 48 13 44 Q15 46 16 50 Q17 54 20 54 Q22 53 21 49 Q20 46 18 42 Q21 45 23 49 Q25 53 28 52 Q30 51 28 47 Q26 43 24 39 Q27 43 28 47 Q29 51 32 51 Q35 51 36 47 Q37 43 35 39 Q37 43 39 47 Q40 51 42 52 Q45 53 46 49 Q47 45 45 42 Q43 46 42 49 Q41 53 44 54 Q47 54 48 50 Q49 46 47 44 Q46 48 47 50 Q48 53 50 52 Q53 50 52 44 Q50 36 44 30"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <radialGradient id="g_octopus_body" cx="45%" cy="35%" r="55%">
+      <stop offset="0%" stop-color="#e87dbf"/>
+      <stop offset="40%" stop-color="#c94fa0"/>
+      <stop offset="100%" stop-color="#7a1f6e"/>
+    </radialGradient>
+    <radialGradient id="g_octopus_head_shine" cx="38%" cy="28%" r="40%">
+      <stop offset="0%" stop-color="#f4a8d8" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#e060b0" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="g_octopus_tent1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d45fa8"/>
+      <stop offset="100%" stop-color="#7a1f6e"/>
+    </linearGradient>
+    <linearGradient id="g_octopus_tent2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c94fa0"/>
+      <stop offset="100%" stop-color="#6b1a60"/>
+    </linearGradient>
+    <linearGradient id="g_octopus_tent3" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#d45fa8"/>
+      <stop offset="100%" stop-color="#7a1f6e"/>
+    </linearGradient>
+    <radialGradient id="g_octopus_sucker" cx="40%" cy="35%" r="55%">
+      <stop offset="0%" stop-color="#f9d4eb"/>
+      <stop offset="60%" stop-color="#e090c8"/>
+      <stop offset="100%" stop-color="#b03a8a"/>
+    </radialGradient>
+    <radialGradient id="g_octopus_eye" cx="35%" cy="30%" r="55%">
+      <stop offset="0%" stop-color="#5a2d6e"/>
+      <stop offset="60%" stop-color="#2a0d3a"/>
+      <stop offset="100%" stop-color="#0d0018"/>
+    </radialGradient>
+    <radialGradient id="g_octopus_pupil" cx="35%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#8840a0"/>
+      <stop offset="100%" stop-color="#1a0028"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Tentacles back layer -->
+  <!-- Back tentacle left far -->
+  <path d="M 44 72 Q 18 80 12 100 Q 10 112 20 115 Q 26 117 30 108 Q 34 98 40 92 Q 50 84 52 78" fill="url(#g_octopus_tent2)" stroke="#5a1050" stroke-width="1.2" stroke-linejoin="round"/>
+  <!-- Back tentacle right far -->
+  <path d="M 84 72 Q 110 80 116 100 Q 118 112 108 115 Q 102 117 98 108 Q 94 98 88 92 Q 78 84 76 78" fill="url(#g_octopus_tent3)" stroke="#5a1050" stroke-width="1.2" stroke-linejoin="round"/>
+  <!-- Back tentacle left mid -->
+  <path d="M 50 76 Q 30 90 24 112 Q 22 120 32 120 Q 38 120 40 112 Q 44 100 50 90 Q 56 82 58 78" fill="url(#g_octopus_tent2)" stroke="#5a1050" stroke-width="1.2" stroke-linejoin="round"/>
+  <!-- Back tentacle right mid -->
+  <path d="M 78 76 Q 98 90 104 112 Q 106 120 96 120 Q 90 120 88 112 Q 84 100 78 90 Q 72 82 70 78" fill="url(#g_octopus_tent3)" stroke="#5a1050" stroke-width="1.2" stroke-linejoin="round"/>
+
+  <!-- Front tentacles -->
+  <!-- Front left tentacle -->
+  <path d="M 48 80 Q 26 94 22 116 Q 20 124 30 124 Q 37 124 38 116 Q 40 106 46 96 Q 54 86 57 82" fill="url(#g_octopus_tent1)" stroke="#4a0d48" stroke-width="1.4" stroke-linejoin="round"/>
+  <!-- Front right tentacle -->
+  <path d="M 80 80 Q 102 94 106 116 Q 108 124 98 124 Q 91 124 90 116 Q 88 106 82 96 Q 74 86 71 82" fill="url(#g_octopus_tent1)" stroke="#4a0d48" stroke-width="1.4" stroke-linejoin="round"/>
+  <!-- Front center-left tentacle -->
+  <path d="M 57 84 Q 48 102 46 118 Q 45 126 54 126 Q 61 126 62 118 Q 63 106 64 96 Q 63 88 61 84" fill="url(#g_octopus_tent1)" stroke="#4a0d48" stroke-width="1.4" stroke-linejoin="round"/>
+  <!-- Front center-right tentacle -->
+  <path d="M 71 84 Q 80 102 82 118 Q 83 126 74 126 Q 67 126 66 118 Q 65 106 64 96 Q 65 88 67 84" fill="url(#g_octopus_tent1)" stroke="#4a0d48" stroke-width="1.4" stroke-linejoin="round"/>
+
+  <!-- Suckers on front left tentacle -->
+  <ellipse cx="33" cy="107" rx="3.5" ry="2.8" fill="url(#g_octopus_sucker)" stroke="#9a3080" stroke-width="0.8"/>
+  <ellipse cx="28" cy="116" rx="3" ry="2.4" fill="url(#g_octopus_sucker)" stroke="#9a3080" stroke-width="0.8"/>
+  <ellipse cx="38" cy="97" rx="3" ry="2.4" fill="url(#g_octopus_sucker)" stroke="#9a3080" stroke-width="0.8"/>
+  <!-- Suckers on front right tentacle -->
+  <ellipse cx="95" cy="107" rx="3.5" ry="2.8" fill="url(#g_octopus_sucker)" stroke="#9a3080" stroke-width="0.8"/>
+  <ellipse cx="100" cy="116" rx="3" ry="2.4" fill="url(#g_octopus_sucker)" stroke="#9a3080" stroke-width="0.8"/>
+  <ellipse cx="90" cy="97" rx="3" ry="2.4" fill="url(#g_octopus_sucker)" stroke="#9a3080" stroke-width="0.8"/>
+  <!-- Suckers on center tentacles -->
+  <ellipse cx="56" cy="108" rx="2.8" ry="2.2" fill="url(#g_octopus_sucker)" stroke="#9a3080" stroke-width="0.7"/>
+  <ellipse cx="54" cy="118" rx="2.5" ry="2" fill="url(#g_octopus_sucker)" stroke="#9a3080" stroke-width="0.7"/>
+  <ellipse cx="72" cy="108" rx="2.8" ry="2.2" fill="url(#g_octopus_sucker)" stroke="#9a3080" stroke-width="0.7"/>
+  <ellipse cx="74" cy="118" rx="2.5" ry="2" fill="url(#g_octopus_sucker)" stroke="#9a3080" stroke-width="0.7"/>
+
+  <!-- Main body / mantle -->
+  <ellipse cx="64" cy="50" rx="36" ry="38" fill="url(#g_octopus_body)" stroke="#5a1050" stroke-width="2"/>
+  <!-- Head dome top -->
+  <ellipse cx="64" cy="32" rx="26" ry="22" fill="url(#g_octopus_body)" stroke="#5a1050" stroke-width="1.5"/>
+
+  <!-- Body shine highlight -->
+  <ellipse cx="52" cy="30" rx="14" ry="11" fill="url(#g_octopus_head_shine)"/>
+
+  <!-- Mantle texture spots -->
+  <ellipse cx="74" cy="24" rx="4" ry="3" fill="#c050a0" opacity="0.5"/>
+  <ellipse cx="80" cy="34" rx="3" ry="2.5" fill="#c050a0" opacity="0.4"/>
+  <ellipse cx="50" cy="22" rx="3" ry="2.5" fill="#d070b8" opacity="0.4"/>
+
+  <!-- Eyes -->
+  <!-- Left eye white -->
+  <ellipse cx="50" cy="56" rx="9" ry="8.5" fill="#f0e0f8" stroke="#4a0d48" stroke-width="1.5"/>
+  <!-- Left eye iris -->
+  <ellipse cx="50" cy="57" rx="6.5" ry="6" fill="url(#g_octopus_eye)"/>
+  <!-- Left pupil horizontal slit -->
+  <ellipse cx="50" cy="57" rx="2" ry="3.8" fill="url(#g_octopus_pupil)"/>
+  <!-- Left eye shine -->
+  <ellipse cx="47.5" cy="54.5" rx="2.2" ry="1.8" fill="white" opacity="0.85"/>
+
+  <!-- Right eye white -->
+  <ellipse cx="78" cy="56" rx="9" ry="8.5" fill="#f0e0f8" stroke="#4a0d48" stroke-width="1.5"/>
+  <!-- Right eye iris -->
+  <ellipse cx="78" cy="57" rx="6.5" ry="6" fill="url(#g_octopus_eye)"/>
+  <!-- Right pupil horizontal slit -->
+  <ellipse cx="78" cy="57" rx="2" ry="3.8" fill="url(#g_octopus_pupil)"/>
+  <!-- Right eye shine -->
+  <ellipse cx="75.5" cy="54.5" rx="2.2" ry="1.8" fill="white" opacity="0.85"/>
+
+  <!-- Cute mouth -->
+  <path d="M 58 68 Q 64 74 70 68" fill="none" stroke="#4a0d48" stroke-width="1.8" stroke-linecap="round"/>
+
+  <!-- Cheek blush left -->
+  <ellipse cx="44" cy="66" rx="5" ry="3" fill="#f080c0" opacity="0.4"/>
+  <!-- Cheek blush right -->
+  <ellipse cx="84" cy="66" rx="5" ry="3" fill="#f080c0" opacity="0.4"/>
+</svg>

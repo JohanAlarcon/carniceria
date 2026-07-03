@@ -1,1 +1,137 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><path fill="#334155" fill-rule="evenodd" d="M48 14c-2 0-4 1-5.5 2.5C40 14 37 13 34 13c-10 0-18 8-18 18 0 5 2 9.5 5 12.5V50a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2v-3.5c1.5-1.5 2.8-3.3 3.6-5.5H48c3.3 0 6-2.7 6-6v-6c0-3.3-2.7-6-6-6zm0 14h-1.2c.1-.7.2-1.3.2-2 0-1-.1-2-.3-3H48c1.1 0 2 .9 2 2v1c0 1.1-.9 2-2 2zM30 28a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <radialGradient id="g_head_face" cx="50%" cy="45%" r="50%" fx="45%" fy="38%">
+      <stop offset="0%" stop-color="#C68642"/>
+      <stop offset="40%" stop-color="#A0612A"/>
+      <stop offset="100%" stop-color="#6B3A1F"/>
+    </radialGradient>
+    <radialGradient id="g_head_snout" cx="50%" cy="40%" r="55%" fx="50%" fy="30%">
+      <stop offset="0%" stop-color="#E8C49A"/>
+      <stop offset="60%" stop-color="#D4A06A"/>
+      <stop offset="100%" stop-color="#B07840"/>
+    </radialGradient>
+    <radialGradient id="g_head_nostril" cx="40%" cy="35%" r="55%">
+      <stop offset="0%" stop-color="#5C2A10"/>
+      <stop offset="100%" stop-color="#2E1005"/>
+    </radialGradient>
+    <radialGradient id="g_head_eye_l" cx="35%" cy="30%" r="55%">
+      <stop offset="0%" stop-color="#8B5E3C"/>
+      <stop offset="45%" stop-color="#3B1F0A"/>
+      <stop offset="100%" stop-color="#1A0A00"/>
+    </radialGradient>
+    <radialGradient id="g_head_eye_r" cx="35%" cy="30%" r="55%">
+      <stop offset="0%" stop-color="#8B5E3C"/>
+      <stop offset="45%" stop-color="#3B1F0A"/>
+      <stop offset="100%" stop-color="#1A0A00"/>
+    </radialGradient>
+    <linearGradient id="g_head_ear_l" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B87333"/>
+      <stop offset="100%" stop-color="#7A4520"/>
+    </linearGradient>
+    <linearGradient id="g_head_ear_r" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#B87333"/>
+      <stop offset="100%" stop-color="#7A4520"/>
+    </linearGradient>
+    <radialGradient id="g_head_ear_inner_l" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#F0C8A0"/>
+      <stop offset="100%" stop-color="#D4906A"/>
+    </radialGradient>
+    <radialGradient id="g_head_ear_inner_r" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#F0C8A0"/>
+      <stop offset="100%" stop-color="#D4906A"/>
+    </radialGradient>
+    <linearGradient id="g_head_horn_l" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D4A020"/>
+      <stop offset="50%" stop-color="#F0C840"/>
+      <stop offset="100%" stop-color="#B87820"/>
+    </linearGradient>
+    <linearGradient id="g_head_horn_r" x1="100%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#D4A020"/>
+      <stop offset="50%" stop-color="#F0C840"/>
+      <stop offset="100%" stop-color="#B87820"/>
+    </linearGradient>
+    <radialGradient id="g_head_forehead" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#C8903A" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#6B3A1F" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="g_head_highlight" cx="40%" cy="30%" r="40%">
+      <stop offset="0%" stop-color="#E8C080" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#C68642" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Left ear -->
+  <ellipse cx="26" cy="54" rx="13" ry="9" transform="rotate(-20 26 54)" fill="url(#g_head_ear_l)" stroke="#5C2E0A" stroke-width="1.2"/>
+  <ellipse cx="26" cy="54" rx="8" ry="5.5" transform="rotate(-20 26 54)" fill="url(#g_head_ear_inner_l)"/>
+
+  <!-- Right ear -->
+  <ellipse cx="102" cy="54" rx="13" ry="9" transform="rotate(20 102 54)" fill="url(#g_head_ear_r)" stroke="#5C2E0A" stroke-width="1.2"/>
+  <ellipse cx="102" cy="54" rx="8" ry="5.5" transform="rotate(20 102 54)" fill="url(#g_head_ear_inner_r)"/>
+
+  <!-- Left horn -->
+  <path d="M38 30 Q28 14 22 10 Q30 12 40 24 Z" fill="url(#g_head_horn_l)" stroke="#8B6010" stroke-width="1"/>
+  <!-- Right horn -->
+  <path d="M90 30 Q100 14 106 10 Q98 12 88 24 Z" fill="url(#g_head_horn_r)" stroke="#8B6010" stroke-width="1"/>
+
+  <!-- Main head shape -->
+  <ellipse cx="64" cy="63" rx="44" ry="48" fill="url(#g_head_face)" stroke="#5C2E0A" stroke-width="1.5"/>
+
+  <!-- Forehead sheen -->
+  <ellipse cx="64" cy="48" rx="28" ry="18" fill="url(#g_head_forehead)"/>
+
+  <!-- Highlight on forehead -->
+  <ellipse cx="56" cy="44" rx="16" ry="10" fill="url(#g_head_highlight)"/>
+
+  <!-- Snout area -->
+  <ellipse cx="64" cy="83" rx="26" ry="20" fill="url(#g_head_snout)" stroke="#8B5A28" stroke-width="1"/>
+
+  <!-- Snout highlight -->
+  <ellipse cx="58" cy="78" rx="10" ry="6" fill="#F0D8B8" opacity="0.4"/>
+
+  <!-- Left nostril -->
+  <ellipse cx="55" cy="86" rx="6" ry="5" fill="url(#g_head_nostril)" stroke="#3A1808" stroke-width="0.8"/>
+  <ellipse cx="53.5" cy="84.5" rx="2" ry="1.5" fill="#7A3A18" opacity="0.5"/>
+
+  <!-- Right nostril -->
+  <ellipse cx="73" cy="86" rx="6" ry="5" fill="url(#g_head_nostril)" stroke="#3A1808" stroke-width="0.8"/>
+  <ellipse cx="71.5" cy="84.5" rx="2" ry="1.5" fill="#7A3A18" opacity="0.5"/>
+
+  <!-- Mouth line -->
+  <path d="M58 93 Q64 97 70 93" stroke="#8B4A20" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+
+  <!-- Left eye socket shadow -->
+  <ellipse cx="46" cy="57" rx="12" ry="10" fill="#5C2E0A" opacity="0.3"/>
+  <!-- Right eye socket shadow -->
+  <ellipse cx="82" cy="57" rx="12" ry="10" fill="#5C2E0A" opacity="0.3"/>
+
+  <!-- Left eye white -->
+  <ellipse cx="46" cy="56" rx="10" ry="9" fill="#F5ECD8" stroke="#3A1808" stroke-width="1.2"/>
+  <!-- Left iris -->
+  <ellipse cx="46" cy="57" rx="7" ry="7.5" fill="url(#g_head_eye_l)"/>
+  <!-- Left pupil -->
+  <ellipse cx="46.5" cy="57.5" rx="3.5" ry="4" fill="#0D0500"/>
+  <!-- Left eye highlight -->
+  <ellipse cx="44" cy="55" rx="2" ry="1.5" fill="white" opacity="0.8"/>
+  <ellipse cx="48" cy="60" rx="1" ry="0.8" fill="white" opacity="0.4"/>
+
+  <!-- Right eye white -->
+  <ellipse cx="82" cy="56" rx="10" ry="9" fill="#F5ECD8" stroke="#3A1808" stroke-width="1.2"/>
+  <!-- Right iris -->
+  <ellipse cx="82" cy="57" rx="7" ry="7.5" fill="url(#g_head_eye_r)"/>
+  <!-- Right pupil -->
+  <ellipse cx="82.5" cy="57.5" rx="3.5" ry="4" fill="#0D0500"/>
+  <!-- Right eye highlight -->
+  <ellipse cx="80" cy="55" rx="2" ry="1.5" fill="white" opacity="0.8"/>
+  <ellipse cx="84" cy="60" rx="1" ry="0.8" fill="white" opacity="0.4"/>
+
+  <!-- Eyebrow left -->
+  <path d="M37 47 Q46 43 55 46" stroke="#5C2E0A" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- Eyebrow right -->
+  <path d="M73 46 Q82 43 91 47" stroke="#5C2E0A" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+  <!-- Forehead tuft of hair / curly patch -->
+  <path d="M60 22 Q62 15 64 22 Q66 14 68 21 Q70 13 72 20" stroke="#8B4A18" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+  <!-- Chin shadow -->
+  <ellipse cx="64" cy="103" rx="22" ry="6" fill="#5C2E0A" opacity="0.25"/>
+</svg>

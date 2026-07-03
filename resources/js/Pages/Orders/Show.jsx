@@ -22,6 +22,7 @@ export default function OrderShow({ order }) {
         <ShopLayout>
             <Head title={order.order_number} />
 
+            <div className="mx-auto max-w-3xl">
             <Link href="/mis-pedidos" className="mb-3 inline-flex items-center text-sm text-gray-500">← {t('back')}</Link>
 
             <div className="rounded-2xl border border-gray-200 bg-white p-4">
@@ -69,6 +70,7 @@ export default function OrderShow({ order }) {
                     <span>{t('total')}</span>
                     <span>{money(order.total)}</span>
                 </div>
+            </div>
             </div>
         </ShopLayout>
     );

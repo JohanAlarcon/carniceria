@@ -44,21 +44,23 @@ export default function ShopLayout({ children }) {
 
     return (
         <div className="min-h-screen bg-gray-50 text-gray-900">
-            <header className="sticky top-0 z-30 bg-white border-b border-gray-200">
-                <div className="mx-auto flex max-w-2xl items-center justify-between px-4 py-3">
-                    <Link href="/tienda" className="flex items-center gap-2">
-                        <span className="grid h-9 w-9 place-items-center rounded-lg bg-red-700 text-white font-black">🥩</span>
-                        <span className="text-lg font-bold text-gray-900 truncate max-w-[9rem]">{business}</span>
+            <header className="sticky top-0 z-30 border-b border-gray-200 bg-white/90 backdrop-blur pt-[env(safe-area-inset-top)]">
+                <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-2.5">
+                    <Link href="/tienda" className="flex items-center gap-2.5">
+                        <img src="/icons/pwa-192.png" alt="" className="h-9 w-9 rounded-xl shadow-sm" />
+                        <span className="max-w-[10rem] truncate text-lg font-extrabold tracking-tight text-gray-900 sm:max-w-none">
+                            {business}
+                        </span>
                     </Link>
                     <div className="flex items-center gap-2">
                         <button onClick={toggle}
-                            className="rounded-full border border-gray-300 px-3 py-1.5 text-xs font-semibold text-gray-700 hover:bg-gray-100">
+                            className="rounded-full border border-gray-300 px-3 py-1.5 text-xs font-bold text-gray-600 transition hover:bg-gray-100">
                             {lang === 'es' ? 'EN' : 'ES'}
                         </button>
-                        <Link href="/carrito" className="relative rounded-full p-2 text-gray-700 hover:bg-gray-100">
+                        <Link href="/carrito" className="relative rounded-full p-2 text-gray-700 transition hover:bg-gray-100">
                             <Icon path={ICONS.cart} />
                             {count > 0 && (
-                                <span className="absolute -right-0.5 -top-0.5 grid h-5 w-5 place-items-center rounded-full bg-red-700 text-[11px] font-bold text-white">
+                                <span className="absolute -right-0.5 -top-0.5 grid h-5 min-w-[1.25rem] place-items-center rounded-full bg-red-700 px-1 text-[11px] font-bold text-white ring-2 ring-white">
                                     {count}
                                 </span>
                             )}
@@ -68,26 +70,31 @@ export default function ShopLayout({ children }) {
             </header>
 
             {toast && (
-                <div className="fixed inset-x-0 top-16 z-40 mx-auto max-w-2xl px-4">
-                    <div className="rounded-xl bg-green-600 px-4 py-3 text-sm font-semibold text-white shadow-lg">
-                        {toast}
+                <div className="fixed inset-x-0 top-16 z-40 mx-auto max-w-5xl px-4">
+                    <div className="animate-[fadeIn_.2s_ease] rounded-2xl bg-green-600 px-4 py-3 text-sm font-semibold text-white shadow-lg">
+                        ✓ {toast}
                     </div>
                 </div>
             )}
 
-            <main className="mx-auto max-w-2xl px-4 pb-28 pt-4">{children}</main>
+            <main className="mx-auto max-w-5xl px-4 pb-32 pt-4">{children}</main>
 
-            <nav className="fixed inset-x-0 bottom-0 z-30 border-t border-gray-200 bg-white">
-                <div className="mx-auto flex max-w-2xl">
-                    {nav.map((item) => (
-                        <Link key={item.href} href={item.href}
-                            className={`flex flex-1 flex-col items-center gap-0.5 py-2.5 text-xs font-medium ${
-                                isActive(item.href) ? 'text-red-700' : 'text-gray-500'
-                            }`}>
-                            <Icon path={item.icon} className="w-6 h-6" />
-                            {t(item.key)}
-                        </Link>
-                    ))}
+            <nav className="fixed inset-x-0 bottom-0 z-30 border-t border-gray-200 bg-white/95 backdrop-blur pb-[env(safe-area-inset-bottom)]">
+                <div className="mx-auto flex max-w-5xl">
+                    {nav.map((item) => {
+                        const active = isActive(item.href);
+                        return (
+                            <Link key={item.href} href={item.href}
+                                className={`flex flex-1 flex-col items-center gap-0.5 py-2.5 text-xs font-semibold transition ${
+                                    active ? 'text-red-700' : 'text-gray-400 hover:text-gray-600'
+                                }`}>
+                                <span className={`grid place-items-center rounded-full px-4 py-0.5 transition ${active ? 'bg-red-50' : ''}`}>
+                                    <Icon path={item.icon} className="h-6 w-6" />
+                                </span>
+                                {t(item.key)}
+                            </Link>
+                        );
+                    })}
                 </div>
             </nav>
         </div>

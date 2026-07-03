@@ -42,9 +42,10 @@ export default function Checkout() {
         return (
             <ShopLayout>
                 <Head title={t('checkout')} />
-                <div className="rounded-2xl border border-gray-200 bg-white p-8 text-center">
+                <div className="rounded-2xl border border-gray-200 bg-white p-10 text-center">
+                    <div className="mb-3 text-5xl">🛒</div>
                     <p className="text-gray-500">{t('empty_cart')}</p>
-                    <Link href="/tienda" className="mt-4 inline-block rounded-xl bg-red-700 px-5 py-2.5 font-semibold text-white">
+                    <Link href="/tienda" className="mt-4 inline-block rounded-xl bg-red-700 px-5 py-2.5 font-semibold text-white shadow-sm hover:bg-red-800">
                         {t('go_shop')}
                     </Link>
                 </div>
@@ -64,53 +65,56 @@ export default function Checkout() {
     return (
         <ShopLayout>
             <Head title={t('checkout')} />
-            <h1 className="mb-4 text-xl font-bold">{t('checkout')}</h1>
+            <h1 className="mb-4 text-2xl font-extrabold tracking-tight">{t('checkout')}</h1>
 
-            <form onSubmit={submit} className="space-y-4">
-                <div className="rounded-2xl border border-gray-200 bg-white p-4">
-                    <h2 className="mb-3 font-bold">{t('delivery_address')}</h2>
-                    <div className="space-y-3">
-                        {field('delivery_address_line1', t('address'), { required: true })}
-                        {field('delivery_address_line2', t('address2'))}
-                        <div className="grid grid-cols-2 gap-3">
-                            {field('delivery_city', t('city'), { required: true })}
-                            {field('delivery_state', t('state'))}
-                        </div>
-                        <div className="grid grid-cols-2 gap-3">
-                            {field('delivery_zip', t('zip'))}
-                            {field('delivery_phone', t('phone'))}
-                        </div>
-                        {field('requested_date', t('requested_date'), { type: 'date' })}
-                        <div>
-                            <label className="text-sm font-medium text-gray-700">{t('notes')}</label>
-                            <textarea value={form.delivery_notes} onChange={set('delivery_notes')} rows={2}
-                                className="mt-1 w-full rounded-xl border-gray-300 shadow-sm focus:border-red-500 focus:ring-red-500" />
-                        </div>
-                    </div>
-                </div>
-
-                <div className="rounded-2xl border border-gray-200 bg-white p-4">
-                    <h2 className="mb-3 font-bold">{t('order_summary')}</h2>
-                    <div className="space-y-2">
-                        {items.map((it) => (
-                            <div key={it.variant_id} className="flex justify-between text-sm">
-                                <span className="pr-2 text-gray-700">
-                                    {name(it)} · <span className="text-gray-400">{it.quantity} {name(it, 'unit_label')}</span>
-                                </span>
-                                <span className="font-medium">{money(it.quantity * it.unit_price)}</span>
+            <form onSubmit={submit} className="lg:grid lg:grid-cols-3 lg:items-start lg:gap-6">
+                <div className="space-y-4 lg:col-span-2">
+                    <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+                        <h2 className="mb-3 font-bold">{t('delivery_address')}</h2>
+                        <div className="space-y-3">
+                            {field('delivery_address_line1', t('address'), { required: true })}
+                            {field('delivery_address_line2', t('address2'))}
+                            <div className="grid grid-cols-2 gap-3">
+                                {field('delivery_city', t('city'), { required: true })}
+                                {field('delivery_state', t('state'))}
                             </div>
-                        ))}
-                    </div>
-                    <div className="mt-3 flex justify-between border-t border-gray-100 pt-3 text-lg font-bold">
-                        <span>{t('total')}</span>
-                        <span>{money(subtotal)}</span>
+                            <div className="grid grid-cols-2 gap-3">
+                                {field('delivery_zip', t('zip'))}
+                                {field('delivery_phone', t('phone'))}
+                            </div>
+                            {field('requested_date', t('requested_date'), { type: 'date' })}
+                            <div>
+                                <label className="text-sm font-medium text-gray-700">{t('notes')}</label>
+                                <textarea value={form.delivery_notes} onChange={set('delivery_notes')} rows={2}
+                                    className="mt-1 w-full rounded-xl border-gray-300 shadow-sm focus:border-red-500 focus:ring-red-500" />
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <button type="submit" disabled={processing}
-                    className="w-full rounded-xl bg-red-700 py-3.5 font-bold text-white disabled:opacity-50">
-                    {t('place_order')}
-                </button>
+                <div className="mt-4 lg:sticky lg:top-24 lg:mt-0">
+                    <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+                        <h2 className="mb-3 font-bold">{t('order_summary')}</h2>
+                        <div className="max-h-64 space-y-2 overflow-y-auto pr-1">
+                            {items.map((it) => (
+                                <div key={it.variant_id} className="flex justify-between text-sm">
+                                    <span className="pr-2 text-gray-700">
+                                        {name(it)} <span className="text-gray-400">· {it.quantity} {name(it, 'unit_label')}</span>
+                                    </span>
+                                    <span className="font-medium">{money(it.quantity * it.unit_price)}</span>
+                                </div>
+                            ))}
+                        </div>
+                        <div className="mt-3 flex justify-between border-t border-gray-100 pt-3 text-lg font-bold">
+                            <span>{t('total')}</span>
+                            <span>{money(subtotal)}</span>
+                        </div>
+                        <button type="submit" disabled={processing}
+                            className="mt-4 w-full rounded-xl bg-red-700 py-3.5 font-bold text-white shadow-sm transition hover:bg-red-800 disabled:opacity-50">
+                            {t('place_order')}
+                        </button>
+                    </div>
+                </div>
             </form>
         </ShopLayout>
     );

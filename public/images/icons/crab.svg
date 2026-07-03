@@ -1,1 +1,121 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><g fill="#334155" fill-rule="evenodd"><ellipse cx="32" cy="36" rx="14" ry="11"/><ellipse cx="32" cy="33" rx="10" ry="8"/><circle cx="25" cy="28" r="3"/><circle cx="39" cy="28" r="3"/><circle cx="25" cy="28" r="1.2" fill="#fff" fill-rule="nonzero"/><circle cx="39" cy="28" r="1.2" fill="#fff" fill-rule="nonzero"/><path d="M18 38 Q10 34 8 28 Q7 22 12 20 Q14 19 15 21 Q13 23 14 27 Q15 31 20 34 Z"/><path d="M46 38 Q54 34 56 28 Q57 22 52 20 Q50 19 49 21 Q51 23 50 27 Q49 31 44 34 Z"/><path d="M12 20 Q9 14 13 10 Q16 7 19 10 Q17 12 16 16 Q15 19 15 21 Z"/><path d="M52 20 Q55 14 51 10 Q48 7 45 10 Q47 12 48 16 Q49 19 49 21 Z"/><path d="M20 40 Q16 46 15 52 Q18 53 20 48 Q21 44 23 42 Z"/><path d="M26 42 Q24 48 25 54 Q28 54 29 48 Q29 44 28 42 Z"/><path d="M44 40 Q48 46 49 52 Q46 53 44 48 Q43 44 41 42 Z"/><path d="M38 42 Q40 48 39 54 Q36 54 35 48 Q35 44 36 42 Z"/><path d="M29 33 Q32 35 35 33 Q34 37 32 37 Q30 37 29 33 Z"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <radialGradient id="g_crab_body" cx="50%" cy="40%" r="55%" fx="40%" fy="30%">
+      <stop offset="0%" stop-color="#FF8C42"/>
+      <stop offset="40%" stop-color="#E84C0E"/>
+      <stop offset="100%" stop-color="#A02800"/>
+    </radialGradient>
+    <radialGradient id="g_crab_shell" cx="45%" cy="35%" r="60%" fx="35%" fy="25%">
+      <stop offset="0%" stop-color="#FF9A55"/>
+      <stop offset="35%" stop-color="#E04010"/>
+      <stop offset="100%" stop-color="#8B1E00"/>
+    </radialGradient>
+    <linearGradient id="g_crab_claw_l" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF9055"/>
+      <stop offset="50%" stop-color="#D93A08"/>
+      <stop offset="100%" stop-color="#901800"/>
+    </linearGradient>
+    <linearGradient id="g_crab_claw_r" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FF9055"/>
+      <stop offset="50%" stop-color="#D93A08"/>
+      <stop offset="100%" stop-color="#901800"/>
+    </linearGradient>
+    <linearGradient id="g_crab_leg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E86020"/>
+      <stop offset="100%" stop-color="#9A2200"/>
+    </linearGradient>
+    <radialGradient id="g_crab_eye" cx="40%" cy="35%" r="55%">
+      <stop offset="0%" stop-color="#222222"/>
+      <stop offset="60%" stop-color="#111111"/>
+      <stop offset="100%" stop-color="#000000"/>
+    </radialGradient>
+    <radialGradient id="g_crab_eye_shine" cx="35%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="g_crab_belly" cx="50%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#FFB07A"/>
+      <stop offset="60%" stop-color="#E07040"/>
+      <stop offset="100%" stop-color="#B04020"/>
+    </radialGradient>
+    <linearGradient id="g_crab_highlight" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Back legs left -->
+  <g stroke="#7A1800" stroke-width="1.2" stroke-linecap="round">
+    <line x1="38" y1="68" x2="18" y2="58" stroke="url(#g_crab_leg)" stroke-width="4"/>
+    <line x1="18" y1="58" x2="12" y2="48" stroke="url(#g_crab_leg)" stroke-width="3"/>
+    <line x1="36" y1="73" x2="15" y2="68" stroke="url(#g_crab_leg)" stroke-width="4"/>
+    <line x1="15" y1="68" x2="10" y2="58" stroke="url(#g_crab_leg)" stroke-width="3"/>
+    <line x1="37" y1="79" x2="16" y2="79" stroke="url(#g_crab_leg)" stroke-width="4"/>
+    <line x1="16" y1="79" x2="11" y2="70" stroke="url(#g_crab_leg)" stroke-width="3"/>
+  </g>
+
+  <!-- Back legs right -->
+  <g stroke="#7A1800" stroke-width="1.2" stroke-linecap="round">
+    <line x1="90" y1="68" x2="110" y2="58" stroke="url(#g_crab_leg)" stroke-width="4"/>
+    <line x1="110" y1="58" x2="116" y2="48" stroke="url(#g_crab_leg)" stroke-width="3"/>
+    <line x1="92" y1="73" x2="113" y2="68" stroke="url(#g_crab_leg)" stroke-width="4"/>
+    <line x1="113" y1="68" x2="118" y2="58" stroke="url(#g_crab_leg)" stroke-width="3"/>
+    <line x1="91" y1="79" x2="112" y2="79" stroke="url(#g_crab_leg)" stroke-width="4"/>
+    <line x1="112" y1="79" x2="117" y2="70" stroke="url(#g_crab_leg)" stroke-width="3"/>
+  </g>
+
+  <!-- Left claw arm -->
+  <path d="M38,62 Q20,50 16,38" fill="none" stroke="url(#g_crab_claw_l)" stroke-width="7" stroke-linecap="round"/>
+  <!-- Left claw upper -->
+  <ellipse cx="13" cy="30" rx="10" ry="6" transform="rotate(-25,13,30)" fill="url(#g_crab_claw_l)" stroke="#7A1800" stroke-width="1"/>
+  <!-- Left claw lower -->
+  <ellipse cx="13" cy="38" rx="9" ry="5" transform="rotate(15,13,38)" fill="url(#g_crab_claw_l)" stroke="#7A1800" stroke-width="1"/>
+  <!-- Left claw gap -->
+  <path d="M7,33 Q13,36 19,33" fill="none" stroke="#7A1800" stroke-width="1.2"/>
+
+  <!-- Right claw arm -->
+  <path d="M90,62 Q108,50 112,38" fill="none" stroke="url(#g_crab_claw_r)" stroke-width="7" stroke-linecap="round"/>
+  <!-- Right claw upper -->
+  <ellipse cx="115" cy="30" rx="10" ry="6" transform="rotate(25,115,30)" fill="url(#g_crab_claw_r)" stroke="#7A1800" stroke-width="1"/>
+  <!-- Right claw lower -->
+  <ellipse cx="115" cy="38" rx="9" ry="5" transform="rotate(-15,115,38)" fill="url(#g_crab_claw_r)" stroke="#7A1800" stroke-width="1"/>
+  <!-- Right claw gap -->
+  <path d="M121,33 Q115,36 109,33" fill="none" stroke="#7A1800" stroke-width="1.2"/>
+
+  <!-- Body / carapace -->
+  <ellipse cx="64" cy="72" rx="34" ry="20" fill="url(#g_crab_belly)" stroke="#7A1800" stroke-width="1.2"/>
+
+  <!-- Main shell -->
+  <ellipse cx="64" cy="60" rx="36" ry="26" fill="url(#g_crab_shell)" stroke="#7A1800" stroke-width="1.5"/>
+
+  <!-- Shell texture lines -->
+  <path d="M40,52 Q64,46 88,52" fill="none" stroke="#C03000" stroke-width="1" opacity="0.5"/>
+  <path d="M36,60 Q64,54 92,60" fill="none" stroke="#C03000" stroke-width="1" opacity="0.4"/>
+  <path d="M38,68 Q64,62 90,68" fill="none" stroke="#C03000" stroke-width="1" opacity="0.35"/>
+  <!-- Vertical center line -->
+  <path d="M64,34 Q64,60 64,84" fill="none" stroke="#B02800" stroke-width="1" opacity="0.4"/>
+
+  <!-- Shell highlight -->
+  <ellipse cx="56" cy="50" rx="18" ry="10" fill="url(#g_crab_highlight)" opacity="0.7"/>
+
+  <!-- Eye stalks -->
+  <rect x="53" y="35" width="4" height="10" rx="2" fill="#C03010" stroke="#7A1800" stroke-width="0.8"/>
+  <rect x="71" y="35" width="4" height="10" rx="2" fill="#C03010" stroke="#7A1800" stroke-width="0.8"/>
+
+  <!-- Eyes -->
+  <circle cx="55" cy="33" r="6" fill="url(#g_crab_eye)" stroke="#330000" stroke-width="0.8"/>
+  <circle cx="73" cy="33" r="6" fill="url(#g_crab_eye)" stroke="#330000" stroke-width="0.8"/>
+
+  <!-- Eye shine -->
+  <circle cx="52.5" cy="30.5" r="2.2" fill="url(#g_crab_eye_shine)"/>
+  <circle cx="70.5" cy="30.5" r="2.2" fill="url(#g_crab_eye_shine)"/>
+
+  <!-- Mouth / rostrum -->
+  <path d="M58,42 Q64,46 70,42" fill="none" stroke="#8B1800" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Front small antennae -->
+  <line x1="55" y1="28" x2="46" y2="20" stroke="#C03010" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="73" y1="28" x2="82" y2="20" stroke="#C03010" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="55" y1="28" x2="48" y2="17" stroke="#C03010" stroke-width="0.8" stroke-linecap="round"/>
+  <line x1="73" y1="28" x2="80" y2="17" stroke="#C03010" stroke-width="0.8" stroke-linecap="round"/>
+</svg>

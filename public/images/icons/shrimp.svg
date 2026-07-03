@@ -1,1 +1,103 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><g fill="#334155"><path d="M38 7c-1.5 0-3 .6-4.1 1.7C31.7 10.8 31 13 31 15c0 1.2.3 2.4.8 3.4L18 32.5C14.8 35.7 13 40 13 44.5c0 4.6 1.8 8.9 5 12.1l1.4-1.4C16.6 52.4 15 48.6 15 44.5c0-4 1.6-7.8 4.4-10.6L33.2 20c.5.3 1.1.5 1.8.5 2.2 0 4-1.8 4-4 0-.5-.1-1-.3-1.5l2.8-2.8c.6.2 1.1.3 1.7.3 2.8 0 5-2.2 5-5s-2.2-5-5-5z"/><path d="M38 7c-1.5 0-3 .6-4.1 1.7C31.7 10.8 31 13 31 15c0 1.2.3 2.4.8 3.4L18 32.5C14.8 35.7 13 40 13 44.5c0 4.6 1.8 8.9 5 12.1l1.4-1.4C16.6 52.4 15 48.6 15 44.5c0-4 1.6-7.8 4.4-10.6L33.2 20c.5.3 1.1.5 1.8.5 2.2 0 4-1.8 4-4 0-.5-.1-1-.3-1.5l2.8-2.8c.6.2 1.1.3 1.7.3 2.8 0 5-2.2 5-5s-2.2-5-5-5z" fill="none"/><path d="M43 6c-3.3 0-6 2.7-6 6 0 .8.2 1.6.5 2.3l-3.2 3.2c-.5-.1-1-.2-1.3-.2-1.1 0-2 .9-2 2s.9 2 2 2c.4 0 .8-.1 1.1-.3L20.8 33.3C17.6 36.5 16 40.4 16 44.5s1.6 8 4.4 10.8c.8.8 1.7 1.5 2.6 2.1l1-1.7c-.8-.5-1.5-1.1-2.2-1.8C19.4 51.5 18 48.1 18 44.5c0-3.6 1.4-7 4-9.5L35.5 21.4c.5.4 1.1.6 1.8.6 1.7 0 3-1.3 3-3 0-.4-.1-.8-.2-1.2l3.4-3.4c.5.1.9.2 1.5.2 2.2 0 4-1.8 4-4s-1.8-4-4-4z"/><path d="M43 8c-2.2 0-4 1.8-4 4 0 .6.1 1.2.4 1.7l-3.6 3.6c-.3-.1-.5-.1-.8-.1-.6 0-1 .4-1 1s.4 1 1 1c.2 0 .4-.1.6-.2L23.4 31.2C19.9 34.6 18 39.4 18 44.5c0 4.2 1.4 8.1 3.9 11.3l1.5-1.2C21.2 51.7 20 48.2 20 44.5c0-4.5 1.7-8.8 4.8-11.9L37 20.4c.4.4.9.6 1.5.6 1.1 0 2-.9 2-2 0-.3-.1-.6-.2-.9l3.8-3.8c.3.1.6.1.9.1 1.1 0 2-.9 2-2s-.9-2-2-2z"/><path fill-rule="evenodd" d="M44 6a5 5 0 1 0 0 10A5 5 0 0 0 44 6zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"/><path d="M44 9a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/><path d="M20 51c-.8-1.7-1.3-3.6-1.3-5.5 0-2.2.6-4.3 1.6-6.1l1.7 1c-.9 1.5-1.3 3.3-1.3 5.1 0 1.6.4 3.2 1.1 4.6L20 51z"/><path d="M25 55.5c-1.2-.7-2.3-1.6-3.2-2.7l1.5-1.2c.8.9 1.7 1.7 2.7 2.2L25 55.5z"/><path d="M33 8c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2z"/><path d="M28 6c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2z"/><path d="M38.5 8.5 36 11l1.4 1.4 2.5-2.5z"/><path d="M24 37l-1.5 1.5 1.4 1.4L25.4 38.4z"/><path d="M27 34l-1.5 1.5 1.4 1.4 1.5-1.5z"/><path d="M30 31l-1.5 1.5 1.4 1.4 1.5-1.5z"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="g_shrimp_body1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF8C5A"/>
+      <stop offset="40%" stop-color="#E8552A"/>
+      <stop offset="100%" stop-color="#C03A10"/>
+    </linearGradient>
+    <linearGradient id="g_shrimp_body2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFAA7A"/>
+      <stop offset="50%" stop-color="#FF7040"/>
+      <stop offset="100%" stop-color="#D04820"/>
+    </linearGradient>
+    <radialGradient id="g_shrimp_shine" cx="35%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#FFCCA0" stop-opacity="0.9"/>
+      <stop offset="60%" stop-color="#FF8850" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#CC4010" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="g_shrimp_tail" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF9966"/>
+      <stop offset="100%" stop-color="#C03A10"/>
+    </linearGradient>
+    <linearGradient id="g_shrimp_head" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFAA80"/>
+      <stop offset="100%" stop-color="#B83010"/>
+    </linearGradient>
+    <radialGradient id="g_shrimp_eye" cx="40%" cy="35%" r="55%">
+      <stop offset="0%" stop-color="#555"/>
+      <stop offset="100%" stop-color="#111"/>
+    </radialGradient>
+    <linearGradient id="g_shrimp_seg1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFBB88"/>
+      <stop offset="100%" stop-color="#CC4418"/>
+    </linearGradient>
+    <linearGradient id="g_shrimp_belly" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFD5AA"/>
+      <stop offset="100%" stop-color="#FFAA70"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Tail fan -->
+  <ellipse cx="98" cy="26" rx="10" ry="4" transform="rotate(-40 98 26)" fill="url(#g_shrimp_tail)" stroke="#9A2C08" stroke-width="0.6"/>
+  <ellipse cx="104" cy="22" rx="9" ry="3.5" transform="rotate(-55 104 22)" fill="url(#g_shrimp_tail)" stroke="#9A2C08" stroke-width="0.6"/>
+  <ellipse cx="106" cy="30" rx="9" ry="3.5" transform="rotate(-25 106 30)" fill="url(#g_shrimp_tail)" stroke="#9A2C08" stroke-width="0.6"/>
+
+  <!-- Main body - curved shrimp shape -->
+  <!-- Body segments from tail to head, curving -->
+  <!-- Segment 1 (near tail) -->
+  <path d="M88,30 Q92,22 98,25 Q96,33 90,36 Z" fill="url(#g_shrimp_seg1)" stroke="#9A2C08" stroke-width="0.7"/>
+  <!-- Segment 2 -->
+  <path d="M80,38 Q85,28 92,30 Q90,40 83,44 Z" fill="url(#g_shrimp_body1)" stroke="#9A2C08" stroke-width="0.7"/>
+  <!-- Segment 3 -->
+  <path d="M70,48 Q76,36 84,38 Q82,50 74,54 Z" fill="url(#g_shrimp_body2)" stroke="#9A2C08" stroke-width="0.7"/>
+  <!-- Segment 4 -->
+  <path d="M60,58 Q66,46 74,48 Q72,60 64,65 Z" fill="url(#g_shrimp_body1)" stroke="#9A2C08" stroke-width="0.7"/>
+  <!-- Segment 5 -->
+  <path d="M50,68 Q56,57 64,59 Q62,70 54,76 Z" fill="url(#g_shrimp_body2)" stroke="#9A2C08" stroke-width="0.7"/>
+  <!-- Segment 6 -->
+  <path d="M41,78 Q47,67 55,69 Q52,80 45,86 Z" fill="url(#g_shrimp_body1)" stroke="#9A2C08" stroke-width="0.7"/>
+  <!-- Segment 7 -->
+  <path d="M34,88 Q39,77 47,79 Q43,90 37,96 Z" fill="url(#g_shrimp_body2)" stroke="#9A2C08" stroke-width="0.7"/>
+
+  <!-- Main outer body shell -->
+  <path d="M95,27 Q105,18 108,25 Q100,40 88,50 Q75,62 62,72 Q50,82 40,92 Q32,100 28,104 Q22,108 20,102 Q22,94 30,88 Q40,80 52,70 Q65,59 76,47 Q86,36 95,27 Z"
+        fill="url(#g_shrimp_body1)" stroke="#8B2208" stroke-width="1.2"/>
+
+  <!-- Belly/underside lighter strip -->
+  <path d="M93,30 Q98,22 103,27 Q95,42 83,53 Q70,65 57,75 Q44,85 34,94 Q27,100 25,98 Q28,92 36,86 Q46,78 59,68 Q72,57 82,46 Q90,38 93,30 Z"
+        fill="url(#g_shrimp_belly)" stroke="none"/>
+
+  <!-- Segment lines on body -->
+  <path d="M88,32 Q82,42 73,50" fill="none" stroke="#9A2C08" stroke-width="1" stroke-linecap="round"/>
+  <path d="M80,40 Q73,50 63,58" fill="none" stroke="#9A2C08" stroke-width="1" stroke-linecap="round"/>
+  <path d="M70,50 Q63,60 53,68" fill="none" stroke="#9A2C08" stroke-width="1" stroke-linecap="round"/>
+  <path d="M60,60 Q53,70 43,78" fill="none" stroke="#9A2C08" stroke-width="1" stroke-linecap="round"/>
+  <path d="M50,70 Q43,80 34,88" fill="none" stroke="#9A2C08" stroke-width="1" stroke-linecap="round"/>
+
+  <!-- Head/cephalothorax -->
+  <path d="M20,102 Q14,108 12,104 Q12,96 18,90 Q24,84 30,88 Q26,94 20,102 Z"
+        fill="url(#g_shrimp_head)" stroke="#8B2208" stroke-width="1.1"/>
+
+  <!-- Rostrum (spike on head) -->
+  <path d="M12,104 Q8,110 10,114 Q14,112 16,108 Q14,106 12,104 Z"
+        fill="#CC4418" stroke="#8B2208" stroke-width="0.8"/>
+
+  <!-- Antennae -->
+  <path d="M14,102 Q8,94 6,82 Q8,74 12,70" fill="none" stroke="#CC5520" stroke-width="1.2" stroke-linecap="round"/>
+  <path d="M14,102 Q4,92 2,78 Q2,66 8,58" fill="none" stroke="#CC5520" stroke-width="1" stroke-linecap="round"/>
+
+  <!-- Small walking legs -->
+  <path d="M36,90 Q32,96 28,98" fill="none" stroke="#BB4015" stroke-width="0.9" stroke-linecap="round"/>
+  <path d="M44,82 Q40,90 36,94" fill="none" stroke="#BB4015" stroke-width="0.9" stroke-linecap="round"/>
+  <path d="M54,72 Q50,80 46,85" fill="none" stroke="#BB4015" stroke-width="0.9" stroke-linecap="round"/>
+  <path d="M64,62 Q60,70 56,76" fill="none" stroke="#BB4015" stroke-width="0.9" stroke-linecap="round"/>
+  <path d="M74,52 Q70,60 66,66" fill="none" stroke="#BB4015" stroke-width="0.9" stroke-linecap="round"/>
+
+  <!-- Eye -->
+  <circle cx="16" cy="99" r="3.2" fill="url(#g_shrimp_eye)" stroke="#333" stroke-width="0.5"/>
+  <circle cx="15.2" cy="98.2" r="1" fill="#888" opacity="0.7"/>
+
+  <!-- Shine/highlight overlay -->
+  <path d="M95,27 Q105,18 108,25 Q100,40 88,50 Q75,62 62,72 Q50,82 40,92 Q32,100 28,104 Q22,108 20,102 Q22,94 30,88 Q40,80 52,70 Q65,59 76,47 Q86,36 95,27 Z"
+        fill="url(#g_shrimp_shine)"/>
+</svg>

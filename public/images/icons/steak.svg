@@ -1,1 +1,104 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><path fill="#334155" fill-rule="evenodd" d="M10 24c0-6.627 4.925-12 11-12h22c6.075 0 11 5.373 11 12 0 3.1-.48 5.9-1.3 8.2C50.8 37.6 47.2 44 32 44S13.2 37.6 11.3 32.2C10.48 29.9 10 27.1 10 24zm22-8c-4 0-7 1.8-7 4s3 4 7 4 7-1.8 7-4-3-4-7-4z"/><path fill="#334155" d="M16 42c0-1.1.9-2 2-2h28c1.1 0 2 .9 2 2v2c0 3.314-2.686 6-6 6H22c-3.314 0-6-2.686-6-6v-2z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <radialGradient id="g_steak_base" cx="50%" cy="45%" r="55%" fx="40%" fy="35%">
+      <stop offset="0%" stop-color="#c0392b"/>
+      <stop offset="35%" stop-color="#a93226"/>
+      <stop offset="70%" stop-color="#922b21"/>
+      <stop offset="100%" stop-color="#6e1f18"/>
+    </radialGradient>
+    <radialGradient id="g_steak_shine" cx="38%" cy="30%" r="40%">
+      <stop offset="0%" stop-color="#e74c3c" stop-opacity="0.85"/>
+      <stop offset="60%" stop-color="#c0392b" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#922b21" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="g_steak_fat1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f5ede0"/>
+      <stop offset="50%" stop-color="#e8d5b7"/>
+      <stop offset="100%" stop-color="#d4b896"/>
+    </linearGradient>
+    <linearGradient id="g_steak_fat2" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f0e0c8"/>
+      <stop offset="100%" stop-color="#ddc9a8"/>
+    </linearGradient>
+    <linearGradient id="g_steak_fat3" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#f7f0e6"/>
+      <stop offset="100%" stop-color="#e2cdb0"/>
+    </linearGradient>
+    <radialGradient id="g_steak_sear_top" cx="50%" cy="20%" r="60%">
+      <stop offset="0%" stop-color="#7b2a1a"/>
+      <stop offset="40%" stop-color="#5c1f12"/>
+      <stop offset="100%" stop-color="#3d1409"/>
+    </radialGradient>
+    <linearGradient id="g_steak_edge_left" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4a1409"/>
+      <stop offset="100%" stop-color="#7b2a1a"/>
+    </linearGradient>
+    <linearGradient id="g_steak_edge_right" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7b2a1a"/>
+      <stop offset="100%" stop-color="#4a1409"/>
+    </linearGradient>
+    <linearGradient id="g_steak_shadow" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#1a0a05" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#1a0a05" stop-opacity="0.05"/>
+    </linearGradient>
+    <radialGradient id="g_steak_drop_shadow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Drop shadow -->
+  <ellipse cx="64" cy="108" rx="44" ry="8" fill="url(#g_steak_drop_shadow)"/>
+
+  <!-- Main steak body - outer dark contour -->
+  <path d="M18 58 C16 44 24 30 38 24 C48 19 60 18 72 20 C84 22 95 26 102 35 C110 45 112 57 108 68 C104 79 94 87 80 91 C68 95 54 95 42 90 C28 84 19 72 18 58 Z" fill="#2d0f08" opacity="0.6"/>
+
+  <!-- Main steak body - base color -->
+  <path d="M20 58 C18 45 26 32 40 26 C50 21 62 20 74 22 C86 24 96 28 103 37 C110 47 111 59 107 69 C103 80 93 88 79 92 C67 96 53 96 41 91 C27 85 21 71 20 58 Z" fill="url(#g_steak_base)"/>
+
+  <!-- Seared top crust layer -->
+  <path d="M20 58 C18 45 26 32 40 26 C50 21 62 20 74 22 C86 24 96 28 103 37 C110 47 111 59 107 69 C103 80 93 88 79 92 C67 96 53 96 41 91 C27 85 21 71 20 58 Z" fill="url(#g_steak_shadow)" opacity="0.5"/>
+
+  <!-- Fat marbling vein 1 - diagonal across mid-left -->
+  <path d="M32 72 C38 65 48 60 58 62 C66 64 70 68 76 66 C82 64 86 60 90 63" stroke="url(#g_steak_fat1)" stroke-width="4.5" fill="none" stroke-linecap="round" opacity="0.88"/>
+
+  <!-- Fat marbling vein 2 - upper arc -->
+  <path d="M44 38 C52 35 62 34 72 37 C80 40 86 46 88 52" stroke="url(#g_steak_fat2)" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.82"/>
+
+  <!-- Fat marbling vein 3 - short lower -->
+  <path d="M40 78 C50 76 58 78 65 76 C72 74 76 72 82 74" stroke="url(#g_steak_fat3)" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.78"/>
+
+  <!-- Fat marbling vein 4 - small right side -->
+  <path d="M88 55 C92 58 96 62 95 68 C94 73 90 76 87 79" stroke="url(#g_steak_fat2)" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.7"/>
+
+  <!-- Fat marbling blob - upper left patch -->
+  <ellipse cx="46" cy="44" rx="10" ry="5" fill="url(#g_steak_fat1)" opacity="0.55" transform="rotate(-15 46 44)"/>
+
+  <!-- Fat marbling blob - center right patch -->
+  <ellipse cx="86" cy="70" rx="8" ry="4" fill="url(#g_steak_fat3)" opacity="0.5" transform="rotate(10 86 70)"/>
+
+  <!-- Fat marbling blob - lower center small -->
+  <ellipse cx="60" cy="84" rx="6" ry="3" fill="url(#g_steak_fat2)" opacity="0.45" transform="rotate(-5 60 84)"/>
+
+  <!-- Surface shine / highlight -->
+  <path d="M20 58 C18 45 26 32 40 26 C50 21 62 20 74 22 C86 24 96 28 103 37 C110 47 111 59 107 69 C103 80 93 88 79 92 C67 96 53 96 41 91 C27 85 21 71 20 58 Z" fill="url(#g_steak_shine)"/>
+
+  <!-- Sear grill marks - main diagonal -->
+  <path d="M36 36 C44 44 52 54 56 66" stroke="#2d0a05" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.55"/>
+  <path d="M52 30 C60 38 68 48 72 60" stroke="#2d0a05" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.5"/>
+  <path d="M68 27 C76 35 84 46 86 58" stroke="#2d0a05" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.45"/>
+
+  <!-- Sear grill mark highlight (lighter side) -->
+  <path d="M36 36 C44 44 52 54 56 66" stroke="#5a1a10" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.4"/>
+  <path d="M52 30 C60 38 68 48 72 60" stroke="#5a1a10" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.35"/>
+
+  <!-- Top edge / crust highlight -->
+  <path d="M40 26 C50 21 62 20 74 22 C86 24 96 28 103 37" stroke="#e87060" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.45"/>
+
+  <!-- Bright specular highlight spot -->
+  <ellipse cx="52" cy="42" rx="16" ry="9" fill="#f1948a" opacity="0.28" transform="rotate(-20 52 42)"/>
+  <ellipse cx="48" cy="40" rx="7" ry="4" fill="#ffffff" opacity="0.18" transform="rotate(-20 48 40)"/>
+
+  <!-- Outer edge contour refinement -->
+  <path d="M20 58 C18 45 26 32 40 26 C50 21 62 20 74 22 C86 24 96 28 103 37 C110 47 111 59 107 69 C103 80 93 88 79 92 C67 96 53 96 41 91 C27 85 21 71 20 58 Z" fill="none" stroke="#2d0a05" stroke-width="1.5" opacity="0.55"/>
+</svg>
