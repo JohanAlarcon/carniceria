@@ -1,0 +1,10 @@
+[
+    { "slug": "res",             "name_es": "Res",                "name_en": "Beef",            "color": "#B91C1C", "sort_order": 1 },
+    { "slug": "cerdo",           "name_es": "Cerdo",              "name_en": "Pork",            "color": "#EC4899", "sort_order": 2 },
+    { "slug": "pollo",           "name_es": "Pollo",              "name_en": "Chicken",         "color": "#F59E0B", "sort_order": 3 },
+    { "slug": "cabra",           "name_es": "Chivo",              "name_en": "Goat",            "color": "#78716C", "sort_order": 4 },
+    { "slug": "cordero",         "name_es": "Borrego",            "name_en": "Lamb",            "color": "#7C3AED", "sort_order": 5 },
+    { "slug": "pescado-mariscos","name_es": "Pescado y Mariscos", "name_en": "Fish & Seafood",  "color": "#0891B2", "sort_order": 6 },
+    { "slug": "otros",           "name_es": "Otros",              "name_en": "Other",           "color": "#4B5563", "sort_order": 7 },
+    { "slug": "preparados",      "name_es": "Preparados",         "name_en": "Prepared",        "color": "#EA580C", "sort_order": 8 }
+]

@@ -1,0 +1,102 @@
+<?php
+
+namespace App\Filament\Pages;
+
+use App\Models\BusinessSetting;
+use Filament\Forms;
+use Filament\Forms\Concerns\InteractsWithForms;
+use Filament\Forms\Contracts\HasForms;
+use Filament\Forms\Form;
+use Filament\Notifications\Notification;
+use Filament\Pages\Page;
+
+class ManageBusiness extends Page implements HasForms
+{
+    use InteractsWithForms;
+
+    protected static ?string $navigationIcon = 'heroicon-o-cog-6-tooth';
+
+    protected static ?string $navigationGroup = 'Configuración';
+
+    protected static ?string $navigationLabel = 'Configuración';
+
+    protected static ?string $title = 'Configuración del negocio';
+
+    protected static string $view = 'filament.pages.manage-business';
+
+    public ?array $data = [];
+
+    public function mount(): void
+    {
+        $this->form->fill(BusinessSetting::current()->attributesToArray());
+    }
+
+    public function form(Form $form): Form
+    {
+        return $form
+            ->statePath('data')
+            ->schema([
+                Forms\Components\Tabs::make()->tabs([
+                    Forms\Components\Tabs\Tab::make('Negocio')
+                        ->schema([
+                            Forms\Components\FileUpload::make('logo_path')
+                                ->label('Logo')
+                                ->image()
+                                ->imageEditor()
+                                ->directory('branding')
+                                ->visibility('public'),
+                            Forms\Components\Grid::make(2)->schema([
+                                Forms\Components\TextInput::make('business_name')->label('Nombre del negocio')->required(),
+                                Forms\Components\TextInput::make('legal_name')->label('Razón social'),
+                                Forms\Components\TextInput::make('phone')->label('Teléfono')->tel(),
+                                Forms\Components\TextInput::make('email')->label('Email')->email(),
+                                Forms\Components\TextInput::make('website')->label('Sitio web / redes'),
+                                Forms\Components\TextInput::make('tax_id')->label('Tax ID / EIN'),
+                            ]),
+                        ]),
+                    Forms\Components\Tabs\Tab::make('Dirección')
+                        ->schema([
+                            Forms\Components\Grid::make(2)->schema([
+                                Forms\Components\TextInput::make('address_line1')->label('Dirección'),
+                                Forms\Components\TextInput::make('address_line2')->label('Dirección 2'),
+                                Forms\Components\TextInput::make('city')->label('Ciudad'),
+                                Forms\Components\TextInput::make('state')->label('Estado'),
+                                Forms\Components\TextInput::make('zip')->label('ZIP'),
+                                Forms\Components\TextInput::make('country')->label('País'),
+                            ]),
+                        ]),
+                    Forms\Components\Tabs\Tab::make('Facturación')
+                        ->schema([
+                            Forms\Components\Grid::make(3)->schema([
+                                Forms\Components\TextInput::make('invoice_prefix')->label('Prefijo factura')->default('INV-'),
+                                Forms\Components\TextInput::make('invoice_next_number')->label('Próximo # factura')->numeric()->minValue(1),
+                                Forms\Components\TextInput::make('currency')->label('Moneda')->default('USD')->maxLength(3),
+                            ]),
+                            Forms\Components\Textarea::make('invoice_notes_es')->label('Notas (ES)')->rows(2),
+                            Forms\Components\Textarea::make('invoice_notes_en')->label('Notas (EN)')->rows(2),
+                            Forms\Components\Textarea::make('invoice_terms_es')->label('Términos (ES)')->rows(4),
+                            Forms\Components\Textarea::make('invoice_terms_en')->label('Términos (EN)')->rows(4),
+                        ]),
+                    Forms\Components\Tabs\Tab::make('Pedidos y entrega')
+                        ->schema([
+                            Forms\Components\Grid::make(3)->schema([
+                                Forms\Components\Toggle::make('free_delivery')->label('Entrega gratis')->default(true),
+                                Forms\Components\TextInput::make('default_shipping_fee')->label('Flete por defecto')->prefix('$')->numeric()->default(0),
+                                Forms\Components\TextInput::make('min_order_amount')->label('Pedido mínimo')->prefix('$')->numeric(),
+                                Forms\Components\TextInput::make('order_next_number')->label('Próximo # pedido')->numeric()->minValue(1),
+                            ]),
+                        ]),
+                ])->columnSpanFull(),
+            ]);
+    }
+
+    public function save(): void
+    {
+        BusinessSetting::current()->update($this->form->getState());
+
+        Notification::make()
+            ->title('Configuración guardada')
+            ->success()
+            ->send();
+    }
+}

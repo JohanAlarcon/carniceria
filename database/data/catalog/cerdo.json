@@ -1,0 +1,204 @@
+[
+  {
+    "name_es": "Costilla de Puerco", "name_en": "Pork Ribs", "english_cut": "pork ribs", "icon": "ribs",
+    "variants": [
+      { "label": "IBP", "brand": "IBP", "price": 2.32 },
+      { "label": "Swift", "brand": "Swift", "price": 2.32 },
+      { "label": "Swift", "brand": "Swift", "frozen": true, "price": 2.24 },
+      { "label": "IBP", "brand": "IBP", "frozen": true, "price": null },
+      { "label": "St. Louis", "brand": "St. Louis", "price": 2.89 }
+    ]
+  },
+  {
+    "name_es": "Chuleta Ahumada", "name_en": "Smoked Pork Loin (Center Cut)", "english_cut": "pork loin smoked", "icon": "steak",
+    "variants": [
+      { "label": "Villari", "brand": "Villari", "price": null },
+      { "label": "DI Lee", "brand": "DI Lee", "price": 2.79 }
+    ]
+  },
+  {
+    "name_es": "Chuleta Regular", "name_en": "Pork Loin (Bone In)", "english_cut": "pork loins bone in", "icon": "steak",
+    "variants": [
+      { "label": "Villary", "brand": "Villary", "price": 1.35 },
+      { "label": "Swift", "brand": "Swift", "price": 1.35 }
+    ]
+  },
+  {
+    "name_es": "Lomo de Puerco", "name_en": "Pork Loin (Boneless)", "english_cut": "pork loins boneless", "icon": "steak",
+    "variants": [
+      { "label": "IBP", "brand": "IBP", "frozen": true, "price": 1.69 },
+      { "label": "IBP", "brand": "IBP", "price": 1.71 },
+      { "label": "Swift", "brand": "Swift", "price": 1.69 }
+    ]
+  },
+  {
+    "name_es": "Boston Butt con Hueso", "name_en": "Pork Boston Butt (Bone In)", "english_cut": "pork boston butts bone in", "icon": "pork",
+    "variants": [
+      { "label": "Swift", "brand": "Swift", "price": 1.66 },
+      { "label": "IBP", "brand": "IBP", "price": 1.77 },
+      { "label": "Swift", "brand": "Swift", "frozen": true, "price": 1.89 }
+    ]
+  },
+  {
+    "name_es": "Boston Butt sin Hueso", "name_en": "Pork Boston Butt (Boneless)", "english_cut": "pork boston butts boneless", "icon": "pork",
+    "variants": [
+      { "label": "IBP", "brand": "IBP", "price": 1.88 },
+      { "label": "Swift", "brand": "Swift", "price": 1.79 },
+      { "label": "Swift", "brand": "Swift", "frozen": true, "price": 2.06 },
+      { "label": "IBP Center Cut", "brand": "IBP", "frozen": true, "price": 3.49 }
+    ]
+  },
+  {
+    "name_es": "Trozo de Puerco", "name_en": "Pork Cushion", "english_cut": "pork cushion", "icon": "pork",
+    "variants": [
+      { "label": "Seaboard", "brand": "Seaboard", "frozen": true, "price": null },
+      { "label": "IBP", "brand": "IBP", "price": 1.79 },
+      { "label": "Swift", "brand": "Swift", "price": 1.70 }
+    ]
+  },
+  {
+    "name_es": "Lonja de Puerco", "name_en": "Pork Belly", "english_cut": "pork bellies", "icon": "pork",
+    "variants": [
+      { "label": "Keken 10/12", "brand": "Keken", "price": 3.39 },
+      { "label": "Villary 14/16", "brand": "Villary", "price": 2.49 },
+      { "label": "Animex 8/12", "brand": "Animex", "price": 2.39 },
+      { "label": "Altosano", "brand": "Altosano", "price": 2.99 },
+      { "label": "Pork Company 16/18", "brand": "Pork Company", "price": null }
+    ]
+  },
+  {
+    "name_es": "Espinazo de Puerco", "name_en": "Pork Backbone", "english_cut": "pork espinazo", "icon": "bone",
+    "variants": [
+      { "label": "Town & Country", "brand": "Town & Country", "price": 1.59 }
+    ]
+  },
+  {
+    "name_es": "Pata de Puerco", "name_en": "Pork Feet", "english_cut": "pork feet", "icon": "feet",
+    "variants": [
+      { "label": "Delanteras / Daisyland", "brand": "Daisyland", "price": 0.54 },
+      { "label": "Delanteras / IBP", "brand": "IBP", "price": 1.04 },
+      { "label": "Traseras / IBP", "brand": "IBP", "price": null },
+      { "label": "Traseras / Pork King", "brand": "Pork King", "price": 0.84 },
+      { "label": "Traseras / Daisyland", "brand": "Daisyland", "price": null }
+    ]
+  },
+  {
+    "name_es": "Manteca", "name_en": "Pork Lard", "english_cut": "pork lard", "icon": "pork",
+    "unit": "caja", "unit_label_es": "caja 25 lb", "unit_label_en": "25 lb box",
+    "variants": [
+      { "label": "John Morrel", "brand": "John Morrel", "package_weight_lb": 25, "price": 44.16 },
+      { "label": "Lee", "brand": "Lee", "package_weight_lb": 25, "price": null }
+    ]
+  },
+  {
+    "name_es": "Tripa para Chorizo", "name_en": "Pork Casing", "english_cut": "pork casing", "icon": "sausage",
+    "unit": "hank", "unit_label_es": "hank", "unit_label_en": "hank",
+    "variants": [
+      { "label": "1 Hank", "price": 19.50 }
+    ]
+  },
+  {
+    "name_es": "Cuero de Puerco", "name_en": "Pork Skins", "english_cut": "pork skins", "icon": "pork",
+    "variants": [
+      { "label": "Swift", "brand": "Swift", "price": 1.29 },
+      { "label": "Villary (40 lb)", "brand": "Villary", "price": 1.09 },
+      { "label": "Villary (80 lb)", "brand": "Villary", "price": 0.69 }
+    ]
+  },
+  {
+    "name_es": "Cabeza de Puerco", "name_en": "Pork Head", "english_cut": "pork heads", "icon": "head",
+    "variants": [
+      { "label": "Villary (4 pza)", "brand": "Villary", "price": null }
+    ]
+  },
+  {
+    "name_es": "Orejas de Puerco", "name_en": "Pork Ears", "english_cut": "pork ears", "icon": "pork",
+    "variants": [
+      { "label": "IBP", "brand": "IBP", "price": null }
+    ]
+  },
+  {
+    "name_es": "Corazón de Puerco", "name_en": "Pork Heart", "english_cut": "pork heart", "icon": "offal",
+    "variants": [
+      { "label": "Estándar", "price": 1.19 }
+    ]
+  },
+  {
+    "name_es": "Hígado de Puerco", "name_en": "Pork Liver", "english_cut": "pork liver", "icon": "liver",
+    "variants": [
+      { "label": "Estándar", "price": 1.27 }
+    ]
+  },
+  {
+    "name_es": "Chamorro de Puerco", "name_en": "Pork Hock (Picnic)", "english_cut": "pork hocks picnic", "icon": "bone",
+    "variants": [
+      { "label": "IBP", "brand": "IBP", "price": 0.99 },
+      { "label": "Swift", "brand": "Swift", "price": null }
+    ]
+  },
+  {
+    "name_es": "Pescuezo de Puerco", "name_en": "Pork Neckbones", "english_cut": "pork neckbones", "icon": "bone",
+    "variants": [
+      { "label": "Fresco", "price": 0.94 },
+      { "label": "Congelado", "frozen": true, "price": 0.94 }
+    ]
+  },
+  {
+    "name_es": "Trompa de Puerco", "name_en": "Pork Snouts", "english_cut": "pork snouts", "icon": "pork",
+    "variants": [
+      { "label": "IBP", "brand": "IBP", "price": 0.89 }
+    ]
+  },
+  {
+    "name_es": "Sangre de Puerco", "name_en": "Pork Blood", "english_cut": "pork blood", "icon": "offal",
+    "unit": "pieza", "unit_label_es": "cubeta", "unit_label_en": "bucket",
+    "variants": [
+      { "label": "Cubeta", "price": 19.98 }
+    ]
+  },
+  {
+    "name_es": "Pernil", "name_en": "Pork Picnic", "english_cut": "pork picnic", "icon": "pork",
+    "variants": [
+      { "label": "Estándar", "price": 1.52 }
+    ]
+  },
+  {
+    "name_es": "Pierna de Puerco", "name_en": "Pork Ham", "english_cut": "pork ham", "icon": "ham",
+    "variants": [
+      { "label": "Congelada", "frozen": true, "price": 1.54 },
+      { "label": "Fresca", "price": 1.45 }
+    ]
+  },
+  {
+    "name_es": "Grasa de Puerco", "name_en": "Pork Fat", "english_cut": "pork fat", "icon": "pork",
+    "variants": [
+      { "label": "Villari (10 lb)", "brand": "Villari", "price": 2.01 }
+    ]
+  },
+  {
+    "name_es": "Buche", "name_en": "Pork Stomach", "english_cut": "pork stomach", "icon": "offal",
+    "variants": [
+      { "label": "Villary", "brand": "Villary", "price": 1.79 },
+      { "label": "Swift", "brand": "Swift", "price": null },
+      { "label": "IBP", "brand": "IBP", "price": 2.09 }
+    ]
+  },
+  {
+    "name_es": "Lengua de Puerco", "name_en": "Pork Tongue", "english_cut": "pork tongue", "icon": "tongue",
+    "variants": [
+      { "label": "IBP", "brand": "IBP", "price": 1.19 }
+    ]
+  },
+  {
+    "name_es": "Nana de Puerco", "name_en": "Pork Uteri", "english_cut": "pork uteri", "icon": "offal",
+    "variants": [
+      { "label": "30 lb", "price": 1.19 }
+    ]
+  },
+  {
+    "name_es": "Ano de Puerco", "name_en": "Pork Bung", "english_cut": "pork bung", "icon": "offal",
+    "variants": [
+      { "label": "Swift", "brand": "Swift", "price": 3.44 }
+    ]
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "name_es": "Borrego en Malla", "name_en": "Lamb (Whole, Netted)", "english_cut": "lamb whole netted", "icon": "lamb",
+    "variants": [
+      { "label": "En malla", "price": 4.84 }
+    ]
+  },
+  {
+    "name_es": "Borrego 6-Cortado", "name_en": "Mutton (Cut 6-way)", "english_cut": "mutton cut 6-way", "icon": "lamb",
+    "variants": [
+      { "label": "Cortado 6-way", "price": 3.99 }
+    ]
+  },
+  {
+    "name_es": "Pierna de Borrego", "name_en": "Lamb Leg (Boneless)", "english_cut": "lamb leg boneless", "icon": "lamb",
+    "variants": [
+      { "label": "Sin hueso", "price": 6.49 }
+    ]
+  },
+  {
+    "name_es": "Espaldilla de Borrego", "name_en": "Lamb Shoulder", "english_cut": "lamb shoulders", "icon": "lamb",
+    "variants": [
+      { "label": "Cuadrado", "price": 4.55 },
+      { "label": "Mutton", "price": 4.09 }
+    ]
+  }
+]

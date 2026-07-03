@@ -1,0 +1,38 @@
+[
+  {
+    "name_es": "Al Pastor", "name_en": "Al Pastor (Marinated Pork)", "english_cut": "marinated pork", "icon": "grill",
+    "variants": [
+      { "label": "Marinado", "price": 2.69 }
+    ]
+  },
+  {
+    "name_es": "Carne Asada", "name_en": "Carne Asada (Marinated Beef)", "english_cut": "marinated beef", "icon": "grill",
+    "variants": [
+      { "label": "Marinada", "price": 5.59 }
+    ]
+  },
+  {
+    "name_es": "Suadero Preparado", "name_en": "Prepared Suadero", "english_cut": "prepared suadero", "icon": "grill",
+    "variants": [
+      { "label": "Preparado", "price": 4.79 }
+    ]
+  },
+  {
+    "name_es": "Chorizo", "name_en": "Chorizo", "english_cut": "chorizo", "icon": "sausage",
+    "variants": [
+      { "label": "Casero", "price": 3.39 }
+    ]
+  },
+  {
+    "name_es": "Pollo Picado", "name_en": "Ground Chicken", "english_cut": "ground chicken", "icon": "ground",
+    "variants": [
+      { "label": "Molido", "price": 2.29 }
+    ]
+  },
+  {
+    "name_es": "Tripa Preparada", "name_en": "Prepared Tripe", "english_cut": "prepared tripe", "icon": "tripe",
+    "variants": [
+      { "label": "Limpia", "price": 7.00 }
+    ]
+  }
+]

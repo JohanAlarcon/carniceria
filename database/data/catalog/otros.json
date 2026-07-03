@@ -1,0 +1,21 @@
+[
+  {
+    "name_es": "Huilotas", "name_en": "Quail (Jumbo)", "english_cut": "quail jumbo", "icon": "quail",
+    "unit": "pieza", "unit_label_es": "paquete 6 pza", "unit_label_en": "pack of 6",
+    "variants": [
+      { "label": "6 piezas jumbo", "price": 50.76 }
+    ]
+  },
+  {
+    "name_es": "Conejo", "name_en": "Baby Rabbit", "english_cut": "baby rabbit", "icon": "rabbit",
+    "variants": [
+      { "label": "Bebé (44.10 lb)", "price": 4.09 }
+    ]
+  },
+  {
+    "name_es": "Jamón para Rebanar", "name_en": "Boiled Ham", "english_cut": "pork boiled ham", "icon": "ham",
+    "variants": [
+      { "label": "Hormel", "brand": "Hormel", "price": 3.28 }
+    ]
+  }
+]

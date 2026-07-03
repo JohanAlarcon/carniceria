@@ -1,0 +1,27 @@
+[
+  {
+    "name_es": "Chivo Cortado", "name_en": "Goat (Whole, 6-way)", "english_cut": "goat whole 6-way", "icon": "goat",
+    "variants": [
+      { "label": "Cortado 6-way", "price": 3.99 }
+    ]
+  },
+  {
+    "name_es": "Cabeza de Chivo Quemada", "name_en": "Goat Head (Burnt)", "english_cut": "goat heads burnt", "icon": "head",
+    "unit": "pieza", "unit_label_es": "cabeza", "unit_label_en": "head",
+    "variants": [
+      { "label": "Quemada", "price": 66.00 }
+    ]
+  },
+  {
+    "name_es": "Pata de Chivo Quemada", "name_en": "Goat Feet (Burnt)", "english_cut": "goat burnt feet", "icon": "feet",
+    "variants": [
+      { "label": "Quemada", "price": 4.39 }
+    ]
+  },
+  {
+    "name_es": "Menudo de Chivo", "name_en": "Goat Scalded Tripe", "english_cut": "goat scalded tripe", "icon": "tripe",
+    "variants": [
+      { "label": "Estándar", "price": 2.49 }
+    ]
+  }
+]

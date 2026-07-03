@@ -1,0 +1,376 @@
+[
+  {
+    "name_es": "Diezmillo", "name_en": "Chuck Roll", "english_cut": "chuck roll", "icon": "steak",
+    "variants": [
+      { "label": "Excel Choice Angus 86E", "brand": "Excel", "grade": "Choice Angus", "price": 5.59 },
+      { "label": "Excel Choice Angus 86M", "brand": "Excel", "grade": "Choice Angus", "price": null },
+      { "label": "Select / National", "brand": "National", "grade": "Select", "price": 5.49 },
+      { "label": "Select Angus / Excel", "brand": "Excel", "grade": "Select Angus", "price": 5.29 },
+      { "label": "AAA / Excel Canadian", "brand": "Excel", "grade": "AAA", "price": 5.39 },
+      { "label": "AA / Excel Canadian", "brand": "Excel", "grade": "AA", "price": 5.29 },
+      { "label": "JBS AA / Canadian Diamond", "brand": "JBS", "grade": "AA", "frozen": true, "price": 4.99 },
+      { "label": "Choice / National", "brand": "National", "grade": "Choice", "price": 5.29 },
+      { "label": "Choice Angus / National", "brand": "National", "grade": "Choice Angus", "frozen": true, "price": 5.49 },
+      { "label": "JBS AA / Canadian Diamonds", "brand": "JBS", "grade": "AA", "price": null },
+      { "label": "Sukarne", "brand": "Sukarne", "price": 4.99 },
+      { "label": "IBP Choice Angus", "brand": "IBP", "grade": "Choice Angus", "frozen": true, "price": 5.29 },
+      { "label": "IBP Choice Angus", "brand": "IBP", "grade": "Choice Angus", "price": null },
+      { "label": "AA / Excel Canadian", "brand": "Excel", "grade": "AA", "frozen": true, "price": 5.29 },
+      { "label": "AAA / Excel Canadian", "brand": "Excel", "grade": "AAA", "frozen": true, "price": 5.54 },
+      { "label": "Excel Select Angus", "brand": "Excel", "grade": "Select Angus", "frozen": true, "price": 5.09 },
+      { "label": "Swift Choice Angus", "brand": "Swift", "grade": "Choice Angus", "price": 5.39 }
+    ]
+  },
+  {
+    "name_es": "Fajita de Res", "name_en": "Flap Meat", "english_cut": "flap meat", "icon": "steak",
+    "variants": [
+      { "label": "Choice 86E / Excel", "brand": "Excel", "grade": "Choice", "price": 9.59 },
+      { "label": "Choice 86M / Excel", "brand": "Excel", "grade": "Choice", "price": null },
+      { "label": "Select 86E / Excel", "brand": "Excel", "grade": "Select", "price": 9.17 },
+      { "label": "Select 86K / Excel", "brand": "Excel", "grade": "Select", "price": null },
+      { "label": "Select 86M / Excel", "brand": "Excel", "grade": "Select", "price": null },
+      { "label": "Excel Select 86K", "brand": "Excel", "grade": "Select", "frozen": true, "price": 8.09 },
+      { "label": "Revuelta", "frozen": true, "price": null },
+      { "label": "Black Ribbon", "brand": "Black Ribbon", "frozen": true, "price": 6.09 },
+      { "label": "Clear River NR", "brand": "Clear River", "price": 6.79 },
+      { "label": "Excel NR", "brand": "Excel", "frozen": true, "price": 7.49 },
+      { "label": "Sukarne", "brand": "Sukarne", "frozen": true, "price": 7.89 },
+      { "label": "Premium Ranch", "brand": "Premium Ranch", "frozen": true, "price": null }
+    ]
+  },
+  {
+    "name_es": "Milanesa (Bola)", "name_en": "Knuckle (Peeled)", "english_cut": "knuckle peeled", "icon": "steak",
+    "variants": [
+      { "label": "Choice / Excel", "brand": "Excel", "grade": "Choice", "price": 5.19 },
+      { "label": "JBS AA", "brand": "JBS", "grade": "AA", "price": 5.39 },
+      { "label": "JBS", "brand": "JBS", "price": 5.09 },
+      { "label": "JBS AAA", "brand": "JBS", "grade": "AAA", "frozen": true, "price": 5.09 },
+      { "label": "JBS AA", "brand": "JBS", "grade": "AA", "frozen": true, "price": 5.04 },
+      { "label": "Excel AA", "brand": "Excel", "grade": "AA", "frozen": true, "price": 5.09 },
+      { "label": "Choice / 5 Star", "brand": "5 Star", "grade": "Choice", "price": null },
+      { "label": "Choice / 5 Star", "brand": "5 Star", "grade": "Choice", "frozen": true, "price": null },
+      { "label": "Excel NR", "brand": "Excel", "price": null },
+      { "label": "Excel Choice", "brand": "Excel", "grade": "Choice", "frozen": true, "price": 4.99 },
+      { "label": "Choice / National", "brand": "National", "grade": "Choice", "price": 5.29 },
+      { "label": "Sukarne", "brand": "Sukarne", "frozen": true, "price": 4.89 }
+    ]
+  },
+  {
+    "name_es": "Espaldilla de Res", "name_en": "Beef Shoulder", "english_cut": "beef shoulder", "icon": "steak",
+    "variants": [
+      { "label": "FIO Swift Choice Angus (limpia)", "brand": "Swift", "grade": "Choice Angus", "price": null },
+      { "label": "FIO National Choice (limpia)", "brand": "National", "grade": "Choice", "price": null },
+      { "label": "Choice / Excel", "brand": "Excel", "grade": "Choice", "price": 4.84 },
+      { "label": "National Select", "brand": "National", "grade": "Select", "price": null },
+      { "label": "Choice / National", "brand": "National", "grade": "Choice", "price": 4.74 },
+      { "label": "Excel Select", "brand": "Excel", "grade": "Select", "price": null }
+    ]
+  },
+  {
+    "name_es": "Pulpa de Res", "name_en": "Beef Inside Round", "english_cut": "beef inside round", "icon": "steak",
+    "variants": [
+      { "label": "Choice (limpia) / National (denuded)", "brand": "National", "grade": "Choice", "price": 5.49 },
+      { "label": "Choice Angus / National", "brand": "National", "grade": "Choice Angus", "price": 4.69 },
+      { "label": "Choice / National", "brand": "National", "grade": "Choice", "price": 4.69 }
+    ]
+  },
+  {
+    "name_es": "Carne Picada", "name_en": "Beef Diced Meat", "english_cut": "beef diced meat", "icon": "ground",
+    "variants": [
+      { "label": "Sukarne", "brand": "Sukarne", "price": 4.39 }
+    ]
+  },
+  {
+    "name_es": "Pecho de Res (Brisket)", "name_en": "Brisket", "english_cut": "brisket", "icon": "steak",
+    "variants": [
+      { "label": "IBP Choice", "brand": "IBP", "grade": "Choice", "frozen": true, "price": null },
+      { "label": "IBP Choice", "brand": "IBP", "grade": "Choice", "price": null },
+      { "label": "Choice / National", "brand": "National", "grade": "Choice", "price": 5.12 },
+      { "label": "National / NR", "brand": "National", "frozen": true, "price": 5.49 },
+      { "label": "Sukarne", "brand": "Sukarne", "frozen": true, "price": 4.01 }
+    ]
+  },
+  {
+    "name_es": "Picaña", "name_en": "Beef Culotte", "english_cut": "beef culotte", "icon": "steak",
+    "variants": [
+      { "label": "Clear River 1 pc", "brand": "Clear River", "price": null },
+      { "label": "Clear River", "brand": "Clear River", "frozen": true, "price": 6.83 },
+      { "label": "Choice / Excel", "brand": "Excel", "grade": "Choice", "price": 7.99 }
+    ]
+  },
+  {
+    "name_es": "Solomillo de Res", "name_en": "Beef Tenderloin", "english_cut": "beef tenderloin", "icon": "steak",
+    "variants": [
+      { "label": "Friboi", "brand": "Friboi", "frozen": true, "price": 11.75 }
+    ]
+  },
+  {
+    "name_es": "Arrachera de Res", "name_en": "Inside Skirt", "english_cut": "inside skirt", "icon": "steak",
+    "variants": [
+      { "label": "Select / Excel", "brand": "Excel", "grade": "Select", "price": 7.57 }
+    ]
+  },
+  {
+    "name_es": "Aguayón de Res", "name_en": "Top Butt", "english_cut": "top butt", "icon": "steak",
+    "variants": [
+      { "label": "NR / Excel", "brand": "Excel", "price": 5.49 },
+      { "label": "Sukarne", "brand": "Sukarne", "price": 4.89 },
+      { "label": "Excel NR", "brand": "Excel", "frozen": true, "price": 6.35 },
+      { "label": "Select / Excel", "brand": "Excel", "grade": "Select", "price": 5.69 }
+    ]
+  },
+  {
+    "name_es": "Menudo", "name_en": "Scalded Tripe", "english_cut": "scalded tripe", "icon": "tripe",
+    "variants": [
+      { "label": "Hoskie (caja 25 lb)", "brand": "Hoskie", "price": 2.59 },
+      { "label": "American (caja 60 lb)", "brand": "American", "price": 1.89 },
+      { "label": "Iowa Premium (caja 60 lb)", "brand": "Iowa Premium", "price": 2.19 },
+      { "label": "National (caja 60 lb)", "brand": "National", "price": null },
+      { "label": "FPL (caja 60 lb)", "brand": "FPL", "price": 1.79 },
+      { "label": "IBP (caja 50 lb)", "brand": "IBP", "price": 2.19 }
+    ]
+  },
+  {
+    "name_es": "Librillo", "name_en": "Omasum Tripe", "english_cut": "omasum tripe", "icon": "tripe",
+    "variants": [
+      { "label": "Hoskie", "brand": "Hoskie", "price": 3.49 },
+      { "label": "Dim Sum King", "brand": "Dim Sum King", "price": 3.29 }
+    ]
+  },
+  {
+    "name_es": "Chamorro Delantero", "name_en": "Beef Shank (Fore)", "english_cut": "beef shank bone in fore", "icon": "bone",
+    "variants": [
+      { "label": "5 Star Select Center Cut", "brand": "5 Star", "grade": "Select", "price": null },
+      { "label": "Intergan", "brand": "Intergan", "price": null },
+      { "label": "Sukarne", "brand": "Sukarne", "price": 2.59 },
+      { "label": "American", "brand": "American", "price": null },
+      { "label": "American Angus Choice", "brand": "American", "grade": "Choice Angus", "price": null }
+    ]
+  },
+  {
+    "name_es": "Chamorro Trasero", "name_en": "Beef Shank (Hind)", "english_cut": "beef shank bone in hind", "icon": "bone",
+    "variants": [
+      { "label": "Premium Ranch", "brand": "Premium Ranch", "price": 2.99 },
+      { "label": "FC Beef", "brand": "FC Beef", "price": 2.69 },
+      { "label": "Sukarne", "brand": "Sukarne", "price": 2.69 },
+      { "label": "Black Ribbon", "brand": "Black Ribbon", "price": 2.71 },
+      { "label": "FPL", "brand": "FPL", "price": null },
+      { "label": "American NR", "brand": "American", "price": null }
+    ]
+  },
+  {
+    "name_es": "Pata de Res", "name_en": "Beef Feet", "english_cut": "beef feet", "icon": "feet",
+    "variants": [
+      { "label": "#1 IBP", "brand": "IBP", "price": 1.59 },
+      { "label": "#1 Swift", "brand": "Swift", "price": 1.69 },
+      { "label": "#1 El Aereo", "brand": "El Aereo", "price": 1.64 },
+      { "label": "#1 American", "brand": "American", "price": 1.69 },
+      { "label": "#2 National", "brand": "National", "price": 1.39 },
+      { "label": "Cortada / Sukarne", "brand": "Sukarne", "price": 1.99 }
+    ]
+  },
+  {
+    "name_es": "Cuete de Res", "name_en": "Eye of Round", "english_cut": "eye of round", "icon": "steak",
+    "variants": [
+      { "label": "National Select", "brand": "National", "grade": "Select", "price": 4.89 },
+      { "label": "National NR", "brand": "National", "frozen": true, "price": 4.59 },
+      { "label": "Choice / National", "brand": "National", "grade": "Choice", "price": 4.99 }
+    ]
+  },
+  {
+    "name_es": "Costilla 4 Huesos", "name_en": "Chuck Short Rib (4-bone)", "english_cut": "beef chuck short rib", "icon": "ribs",
+    "variants": [
+      { "label": "American NR", "brand": "American", "frozen": true, "price": null },
+      { "label": "Sukarne", "brand": "Sukarne", "price": 4.59 }
+    ]
+  },
+  {
+    "name_es": "Costilla 3 Huesos", "name_en": "Beef Short Rib (3-bone)", "english_cut": "beef rib short rib", "icon": "ribs",
+    "variants": [
+      { "label": "Choice 86E / Excel", "brand": "Excel", "grade": "Choice", "price": null },
+      { "label": "Select 86E / Excel", "brand": "Excel", "grade": "Select", "price": 7.19 },
+      { "label": "Choice / National", "brand": "National", "grade": "Choice", "price": null },
+      { "label": "Choice / National", "brand": "National", "grade": "Choice", "frozen": true, "price": 7.59 },
+      { "label": "Premium Ranch", "brand": "Premium Ranch", "frozen": true, "price": 4.69 },
+      { "label": "Select / 5 Star", "brand": "5 Star", "grade": "Select", "price": null },
+      { "label": "Choice / 5 Star", "brand": "5 Star", "grade": "Choice", "price": 5.99 },
+      { "label": "Clear River", "brand": "Clear River", "price": null },
+      { "label": "4 Star", "brand": "4 Star", "frozen": true, "price": 4.29 },
+      { "label": "NR / Excel", "brand": "Excel", "frozen": true, "price": 5.99 },
+      { "label": "STX Beef NR", "brand": "STX Beef", "frozen": true, "price": 5.09 },
+      { "label": "STX Beef Select", "brand": "STX Beef", "grade": "Select", "frozen": true, "price": null },
+      { "label": "STX Beef Choice", "brand": "STX Beef", "grade": "Choice", "frozen": true, "price": 5.69 },
+      { "label": "Excel Select 86E", "brand": "Excel", "grade": "Select", "frozen": true, "price": 7.19 }
+    ]
+  },
+  {
+    "name_es": "Panalillo de Res", "name_en": "Beef Honeycomb Tripe", "english_cut": "beef honeycomb", "icon": "tripe",
+    "variants": [
+      { "label": "IBP (caja 10 lb)", "brand": "IBP", "price": 5.09 },
+      { "label": "National (caja 10 lb)", "brand": "National", "price": 6.59 },
+      { "label": "Dim Sum King (caja 30 lb)", "brand": "Dim Sum King", "price": 5.66 },
+      { "label": "Hoskie (caja 25 lb)", "brand": "Hoskie", "price": 5.99 },
+      { "label": "FPL (caja 10 lb)", "brand": "FPL", "price": 4.09 },
+      { "label": "American (caja 10 lb)", "brand": "American", "price": 4.19 }
+    ]
+  },
+  {
+    "name_es": "Hígado de Res", "name_en": "Beef Liver", "english_cut": "beef liver", "icon": "liver",
+    "variants": [
+      { "label": "IBP (S&D)", "brand": "IBP", "price": 1.49 },
+      { "label": "Con piel (skin on) Brush Meat", "brand": "Brush Meat", "price": 0.84 },
+      { "label": "Con piel (skin on) American", "brand": "American", "price": 1.29 }
+    ]
+  },
+  {
+    "name_es": "Cola de Res", "name_en": "Beef Oxtail", "english_cut": "beef oxtail", "icon": "oxtail",
+    "variants": [
+      { "label": "Excel (caja 15 lb)", "brand": "Excel", "price": 6.09 },
+      { "label": "IBP (caja 15 lb)", "brand": "IBP", "price": 5.99 },
+      { "label": "National (caja 15 lb)", "brand": "National", "price": 5.89 },
+      { "label": "American vaca (caja 15 lb)", "brand": "American", "price": 5.99 },
+      { "label": "Cortada / Sukarne", "brand": "Sukarne", "price": 7.49 },
+      { "label": "Cortada / Black Ribbon", "brand": "Black Ribbon", "price": null },
+      { "label": "Cortada / Premium Ranch", "brand": "Premium Ranch", "price": 7.29 }
+    ]
+  },
+  {
+    "name_es": "Lengua de Res", "name_en": "Beef Tongue", "english_cut": "beef tongue", "icon": "tongue",
+    "variants": [
+      { "label": "#1 Negra / FPL", "brand": "FPL", "grade": "Negra", "price": 6.89 },
+      { "label": "#1 Negra / IBP", "brand": "IBP", "grade": "Negra", "price": 7.24 },
+      { "label": "#1 Blanca / FPL", "brand": "FPL", "grade": "Blanca", "price": null },
+      { "label": "#1 Blanca / IBP", "brand": "IBP", "grade": "Blanca", "price": null },
+      { "label": "#1 Blanca / Sukarne", "brand": "Sukarne", "grade": "Blanca", "price": null }
+    ]
+  },
+  {
+    "name_es": "Punta de Lengua de Res", "name_en": "Beef Tongue Tips", "english_cut": "beef tongue tips", "icon": "tongue",
+    "variants": [
+      { "label": "Iowa Premium", "brand": "Iowa Premium", "price": null },
+      { "label": "National", "brand": "National", "price": null },
+      { "label": "Swift", "brand": "Swift", "price": null }
+    ]
+  },
+  {
+    "name_es": "Cecina", "name_en": "Flat Bottom Round", "english_cut": "flat bottom round", "icon": "steak",
+    "variants": [
+      { "label": "Select / National", "brand": "National", "grade": "Select", "price": 4.59 },
+      { "label": "Choice / National", "brand": "National", "grade": "Choice", "price": 4.49 },
+      { "label": "Choice / IBP", "brand": "IBP", "grade": "Choice", "price": 4.59 },
+      { "label": "National NR", "brand": "National", "price": null },
+      { "label": "National Choice Angus", "brand": "National", "grade": "Choice Angus", "price": null }
+    ]
+  },
+  {
+    "name_es": "Suadero de Res", "name_en": "Beef Rose Meat", "english_cut": "beef rose meat", "icon": "steak",
+    "variants": [
+      { "label": "STX", "brand": "STX", "price": 3.89 },
+      { "label": "Sukarne", "brand": "Sukarne", "price": 4.19 }
+    ]
+  },
+  {
+    "name_es": "T-Bone", "name_en": "Short Loin (T-Bone)", "english_cut": "short loin", "icon": "steak",
+    "variants": [
+      { "label": "Sukarne", "brand": "Sukarne", "frozen": true, "price": 5.79 },
+      { "label": "Premium Ranch", "brand": "Premium Ranch", "frozen": true, "price": null }
+    ]
+  },
+  {
+    "name_es": "Ribeye", "name_en": "Ribeye (Lip On)", "english_cut": "beef ribeye lip on", "icon": "steak",
+    "variants": [
+      { "label": "Sukarne", "brand": "Sukarne", "frozen": true, "price": 7.09 },
+      { "label": "Sukarne", "brand": "Sukarne", "price": null },
+      { "label": "Intergram", "brand": "Intergram", "frozen": true, "price": null }
+    ]
+  },
+  {
+    "name_es": "Blade de Res", "name_en": "Chuck Blade", "english_cut": "beef chuck blade", "icon": "steak",
+    "variants": [
+      { "label": "Semi Chuck Blade / National", "brand": "National", "price": 4.29 },
+      { "label": "Premium Ranch", "brand": "Premium Ranch", "frozen": true, "price": null },
+      { "label": "Sukarne", "brand": "Sukarne", "frozen": true, "price": null }
+    ]
+  },
+  {
+    "name_es": "Tripas de Res", "name_en": "Beef Intestines", "english_cut": "beef intestines", "icon": "tripe",
+    "variants": [
+      { "label": "Chica / American (caja 15 lb)", "brand": "American", "price": 1.99 },
+      { "label": "Chica / Swift (caja 30 lb)", "brand": "Swift", "price": 1.79 },
+      { "label": "Chica / Excel (caja 30 lb)", "brand": "Excel", "price": 2.59 },
+      { "label": "Chica / National (caja 30 lb)", "brand": "National", "price": 2.29 },
+      { "label": "Large / National (caja 30 lb)", "brand": "National", "price": 2.29 }
+    ]
+  },
+  {
+    "name_es": "Cachete de Res", "name_en": "Beef Cheek", "english_cut": "beef cheek", "icon": "cheek",
+    "variants": [
+      { "label": "American (caja 60 lb)", "brand": "American", "price": 4.69 },
+      { "label": "IBP (caja 60 lb)", "brand": "IBP", "price": 4.49 },
+      { "label": "FPL (caja 60 lb)", "brand": "FPL", "price": null }
+    ]
+  },
+  {
+    "name_es": "Chuletón de Res", "name_en": "Beef Ribs (107/109)", "english_cut": "beef ribs", "icon": "ribs",
+    "variants": [
+      { "label": "109 / Sukarne", "brand": "Sukarne", "frozen": true, "price": 6.59 },
+      { "label": "107 / Premium Ranch", "brand": "Premium Ranch", "price": null }
+    ]
+  },
+  {
+    "name_es": "Pescuezo de Res", "name_en": "Beef Neckbones", "english_cut": "beef neckbones", "icon": "bone",
+    "variants": [
+      { "label": "FC Beef", "brand": "FC Beef", "price": 3.09 },
+      { "label": "Premium Ranch", "brand": "Premium Ranch", "price": 2.29 },
+      { "label": "Sukarne", "brand": "Sukarne", "price": 2.39 },
+      { "label": "5 Star", "brand": "5 Star", "price": 1.39 }
+    ]
+  },
+  {
+    "name_es": "Cabeza de Res", "name_en": "Beef Head", "english_cut": "beef heads", "icon": "head",
+    "variants": [
+      { "label": "Grande / JWS Chopshop (1 pza)", "brand": "JWS Chopshop", "price": null },
+      { "label": "Grande / JWS Chopshop (2 pza)", "brand": "JWS Chopshop", "price": 2.09 }
+    ]
+  },
+  {
+    "name_es": "Cabeza de Res Ternera", "name_en": "Veal Head", "english_cut": "veal heads", "icon": "head",
+    "unit": "pieza", "unit_label_es": "paquete", "unit_label_en": "pack",
+    "variants": [
+      { "label": "Catelli (paquete 3 pza)", "brand": "Catelli", "price": 154.99 },
+      { "label": "Catelli (paquete 2 pza)", "brand": "Catelli", "price": 102.00 }
+    ]
+  },
+  {
+    "name_es": "Labios de Res", "name_en": "Beef Oxlips", "english_cut": "beef oxlips", "icon": "offal",
+    "variants": [
+      { "label": "Long Praire (caja 30 lb)", "brand": "Long Praire", "price": null },
+      { "label": "American (caja 60 lb)", "brand": "American", "price": 3.09 },
+      { "label": "FPL (caja 60 lb)", "brand": "FPL", "price": null }
+    ]
+  },
+  {
+    "name_es": "Corazón de Res", "name_en": "Beef Heart", "english_cut": "beef hearts", "icon": "offal",
+    "variants": [
+      { "label": "National (caja 60 lb)", "brand": "National", "price": 3.49 }
+    ]
+  },
+  {
+    "name_es": "Riñón de Res", "name_en": "Beef Kidney", "english_cut": "beef kidneys", "icon": "offal",
+    "variants": [
+      { "label": "National", "brand": "National", "price": 1.19 }
+    ]
+  },
+  {
+    "name_es": "Huevas de Toro", "name_en": "Bull Fries", "english_cut": "beef bull fries", "icon": "offal",
+    "variants": [
+      { "label": "American (caja 15 lb)", "brand": "American", "price": null }
+    ]
+  },
+  {
+    "name_es": "Mollejas de Res", "name_en": "Beef Sweetbreads", "english_cut": "beef sweetbreads", "icon": "offal",
+    "variants": [
+      { "label": "National (caja 20 lb)", "brand": "National", "price": 3.98 }
+    ]
+  }
+]

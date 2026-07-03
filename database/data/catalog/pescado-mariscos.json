@@ -1,0 +1,100 @@
+[
+  {
+    "name_es": "Bagre Entero", "name_en": "Whole Catfish", "english_cut": "catfish whole", "icon": "fish",
+    "variants": [
+      { "label": "2/4", "price": 2.15 },
+      { "label": "1/2", "price": 2.15 }
+    ]
+  },
+  {
+    "name_es": "Mojarra Entera", "name_en": "Whole Tilapia", "english_cut": "tilapia whole", "icon": "fish",
+    "variants": [
+      { "label": "350/550", "price": 1.45 },
+      { "label": "550/750", "price": 1.99 },
+      { "label": "750/up", "price": 1.65 }
+    ]
+  },
+  {
+    "name_es": "Filete de Basa", "name_en": "Basa Fillet", "english_cut": "basa fillet", "icon": "fish",
+    "variants": [
+      { "label": "3/5 IQF", "price": 2.19 },
+      { "label": "5/7 IQF", "price": 2.35 },
+      { "label": "7/9 IQF", "price": 2.25 }
+    ]
+  },
+  {
+    "name_es": "Filete de Tilapia", "name_en": "Tilapia Fillet", "english_cut": "tilapia fillet", "icon": "fish",
+    "variants": [
+      { "label": "3/5 IQF", "price": 3.15 },
+      { "label": "3/5 IVP", "price": 3.15 },
+      { "label": "5/7 IQF", "price": 3.26 },
+      { "label": "5/7 IVP", "price": 3.33 },
+      { "label": "7/9 IQF", "price": 3.54 },
+      { "label": "7/9 IVP", "price": 3.29 }
+    ]
+  },
+  {
+    "name_es": "Seafood Mix", "name_en": "Seafood Mix", "english_cut": "seafood mix", "icon": "seafood",
+    "variants": [
+      { "label": "Estándar", "price": 3.49 }
+    ]
+  },
+  {
+    "name_es": "Imitación de Jaiba", "name_en": "Imitation Crab Flake", "english_cut": "imitation crab flake", "icon": "crab",
+    "variants": [
+      { "label": "Oyster Bay", "brand": "Oyster Bay", "price": 2.93 },
+      { "label": "Fortune Wind", "brand": "Fortune Wind", "price": null }
+    ]
+  },
+  {
+    "name_es": "Jaiba Azul", "name_en": "Blue Crab (Whole)", "english_cut": "blue crab", "icon": "crab",
+    "variants": [
+      { "label": "3/5", "price": 5.11 }
+    ]
+  },
+  {
+    "name_es": "Camarón", "name_en": "Shrimp", "english_cut": "shrimp", "icon": "shrimp",
+    "variants": [
+      { "label": "40/50 con cabeza", "price": 3.45 },
+      { "label": "20/30 con cabeza", "price": 4.19 },
+      { "label": "26/30 P&D sin cola", "price": 5.55 },
+      { "label": "30/40 con cabeza", "price": 3.40 },
+      { "label": "36/40 sin cabeza", "price": 4.25 },
+      { "label": "31/40 P&D sin cola", "price": 5.03 },
+      { "label": "31/40 P&D con cola", "price": 4.61 },
+      { "label": "31/40 sin cabeza fácil de pelar", "price": 4.25 },
+      { "label": "51/60 P&D sin cola", "price": 4.75 },
+      { "label": "41/50 precocido sin cola", "price": 5.85 },
+      { "label": "50/60 precocido sin cola", "price": null },
+      { "label": "26/30 sin cabeza", "price": 4.45 },
+      { "label": "21/25 precocido sin cola", "price": 6.78 },
+      { "label": "21/25 precocido con cola", "price": 6.96 },
+      { "label": "26/30 precocido sin cola", "price": 7.23 },
+      { "label": "51/60 precocido", "price": 6.80 },
+      { "label": "41/60 precocido", "price": 6.15 },
+      { "label": "50/60 con cabeza", "price": 3.35 }
+    ]
+  },
+  {
+    "name_es": "Pulpo", "name_en": "Octopus", "english_cut": "octopus", "icon": "octopus",
+    "variants": [
+      { "label": "1/2", "price": 5.96 },
+      { "label": "2/4", "price": 5.96 },
+      { "label": "6/8", "price": null },
+      { "label": "Bebé 16/25 Indian", "brand": "Indian", "price": 3.45 }
+    ]
+  },
+  {
+    "name_es": "Guachinango", "name_en": "Red Snapper", "english_cut": "red snapper", "icon": "fish",
+    "variants": [
+      { "label": "1.5-2", "price": 7.45 },
+      { "label": "2-3", "price": 6.89 }
+    ]
+  },
+  {
+    "name_es": "Golden Pompano", "name_en": "Golden Pompano", "english_cut": "golden pompano", "icon": "fish",
+    "variants": [
+      { "label": "600/800", "price": 3.35 }
+    ]
+  }
+]

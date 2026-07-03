@@ -1,0 +1,100 @@
+[
+  {
+    "name_es": "Nuggets de Pollo", "name_en": "Chicken Nuggets", "english_cut": "chicken nuggets", "icon": "chicken",
+    "variants": [
+      { "label": "Estándar", "price": 1.97 }
+    ]
+  },
+  {
+    "name_es": "Pescuezo de Pollo", "name_en": "Chicken Neck", "english_cut": "chicken neck", "icon": "bone",
+    "variants": [
+      { "label": "Estándar", "price": 0.63 }
+    ]
+  },
+  {
+    "name_es": "Mollejas de Pollo", "name_en": "Chicken Gizzards", "english_cut": "chicken gizzards", "icon": "offal",
+    "variants": [
+      { "label": "Estándar", "price": 0.79 },
+      { "label": "4 Bags", "price": 0.97 }
+    ]
+  },
+  {
+    "name_es": "Corazón de Pollo", "name_en": "Chicken Hearts", "english_cut": "chicken hearts", "icon": "offal",
+    "variants": [
+      { "label": "Estándar", "price": 1.20 }
+    ]
+  },
+  {
+    "name_es": "Hígado de Pollo", "name_en": "Chicken Livers", "english_cut": "chicken livers", "icon": "liver",
+    "variants": [
+      { "label": "Estándar", "price": 0.74 }
+    ]
+  },
+  {
+    "name_es": "Gallina", "name_en": "Hen", "english_cut": "hen", "icon": "whole-chicken",
+    "variants": [
+      { "label": "Tip Top", "brand": "Tip Top", "frozen": true, "price": 1.09 }
+    ]
+  },
+  {
+    "name_es": "Pechuga con Hueso", "name_en": "Chicken Breast (Bone In)", "english_cut": "chicken breast bone in", "icon": "chicken-breast",
+    "variants": [
+      { "label": "Pollo Amarillo", "grade": "Amarillo", "price": 1.38 }
+    ]
+  },
+  {
+    "name_es": "Pechuga sin Hueso", "name_en": "Chicken Breast (Boneless)", "english_cut": "chicken breast boneless", "icon": "chicken-breast",
+    "variants": [
+      { "label": "Pollo Blanco", "grade": "Blanco", "price": null },
+      { "label": "Pollo Blanco", "grade": "Blanco", "frozen": true, "price": null },
+      { "label": "Pollo Amarillo", "grade": "Amarillo", "price": 1.94 }
+    ]
+  },
+  {
+    "name_es": "Hueso de Pechuga", "name_en": "Chicken Bone (Front Half Shells)", "english_cut": "chicken bone front half shells", "icon": "bone",
+    "variants": [
+      { "label": "Estándar", "price": 0.65 }
+    ]
+  },
+  {
+    "name_es": "Alitas de Pollo", "name_en": "Chicken Wings (Cut)", "english_cut": "chicken cut wings", "icon": "chicken-wing",
+    "variants": [
+      { "label": "Amarillas cortadas", "grade": "Amarillo", "price": 1.35 }
+    ]
+  },
+  {
+    "name_es": "Muslo sin Hueso", "name_en": "Chicken Thigh Meat (Boneless)", "english_cut": "chicken thigh meat boneless", "icon": "chicken-leg",
+    "variants": [
+      { "label": "Pollo Amarillo", "grade": "Amarillo", "price": 1.98 },
+      { "label": "Pollo Amarillo", "grade": "Amarillo", "frozen": true, "price": 2.03 }
+    ]
+  },
+  {
+    "name_es": "Pollo Entero", "name_en": "Whole Chicken", "english_cut": "chicken wogs", "icon": "whole-chicken",
+    "variants": [
+      { "label": "3/up / Pilgrim", "brand": "Pilgrim", "price": 1.41 },
+      { "label": "4/up Amarillo", "grade": "Amarillo", "price": 1.36 },
+      { "label": "5/up Amarillo", "grade": "Amarillo", "price": 1.36 }
+    ]
+  },
+  {
+    "name_es": "Pierna y Muslo", "name_en": "Chicken Leg Quarter", "english_cut": "chicken leg 1/4s", "icon": "chicken-leg",
+    "variants": [
+      { "label": "Amarillo", "grade": "Amarillo", "price": 0.87 }
+    ]
+  },
+  {
+    "name_es": "Patas de Pollo", "name_en": "Chicken Paw", "english_cut": "chicken paw", "icon": "chicken-feet",
+    "variants": [
+      { "label": "PECO", "brand": "PECO", "price": 1.69 },
+      { "label": "House of Refor (44.09 lb)", "brand": "House of Refor", "price": null },
+      { "label": "Wayne Farms (44.01 lb)", "brand": "Wayne Farms", "price": 2.54 }
+    ]
+  },
+  {
+    "name_es": "Piernitas", "name_en": "Chicken Drumsticks", "english_cut": "chicken drumsticks", "icon": "chicken-leg",
+    "variants": [
+      { "label": "Amarillo", "grade": "Amarillo", "price": 1.16 }
+    ]
+  }
+]
