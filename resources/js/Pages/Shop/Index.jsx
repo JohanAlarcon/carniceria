@@ -35,7 +35,7 @@ function VariantSheet({ product, approved, categoryColor, onClose }) {
 
     return (
         <div className="fixed inset-0 z-50 flex items-end justify-center bg-black/50 backdrop-blur-sm sm:items-center sm:p-4" onClick={onClose}>
-            <div className="w-full max-w-2xl rounded-t-3xl bg-white p-5 pb-8 shadow-2xl sm:max-w-md sm:rounded-3xl"
+            <div className="max-h-[92dvh] w-full max-w-2xl overflow-y-auto rounded-t-3xl bg-white p-5 pb-[max(2rem,env(safe-area-inset-bottom))] shadow-2xl sm:max-h-[85vh] sm:max-w-md sm:rounded-3xl sm:pb-6"
                 onClick={(e) => e.stopPropagation()}>
                 <div className="mx-auto mb-4 h-1.5 w-12 rounded-full bg-gray-300 sm:hidden" />
                 <div className="mb-4 flex items-center gap-3">

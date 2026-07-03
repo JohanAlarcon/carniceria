@@ -1,4 +1,4 @@
-const CACHE = 'carniceria-v1';
+const CACHE = 'carniceria-v2';
 const ASSETS = ['/manifest.webmanifest', '/icons/pwa-192.png', '/icons/pwa-512.png'];
 
 self.addEventListener('install', (event) => {

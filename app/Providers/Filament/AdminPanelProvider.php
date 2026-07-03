@@ -17,6 +17,7 @@ use Illuminate\Cookie\Middleware\EncryptCookies;
 use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
 use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\StartSession;
+use Illuminate\Support\HtmlString;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
 
 class AdminPanelProvider extends PanelProvider
@@ -29,11 +30,28 @@ class AdminPanelProvider extends PanelProvider
             ->path('admin')
             ->login()
             ->brandName('Mi Carnicería')
+            ->brandLogo(fn (): HtmlString => new HtmlString(view('filament.brand')->render()))
+            ->brandLogoHeight('2.6rem')
+            ->favicon(asset('images/app-icon.svg'))
+            ->font('Poppins')
             ->colors([
-                'primary' => Color::Red,
+                'primary' => Color::hex('#b91c1c'),
+                'gray' => Color::Stone,
+                'danger' => Color::Rose,
+                'success' => Color::Emerald,
+                'warning' => Color::Amber,
+                'info' => Color::Sky,
             ])
             ->sidebarCollapsibleOnDesktop()
             ->databaseNotifications()
+            ->renderHook(
+                PanelsRenderHook::HEAD_END,
+                fn (): string => '<link rel="stylesheet" href="'.asset('css/filament-butcher.css').'?v=1">',
+            )
+            ->renderHook(
+                PanelsRenderHook::AUTH_LOGIN_FORM_BEFORE,
+                fn (): string => view('filament.login-note')->render(),
+            )
             ->renderHook(
                 PanelsRenderHook::BODY_END,
                 fn (): string => view('filament.orders-realtime')->render(),

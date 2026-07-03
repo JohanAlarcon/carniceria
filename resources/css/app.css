@@ -1,3 +1,56 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* ------------------------------------------------------------------ *
+ * Endurecimiento móvil / PWA
+ * Correcciones que sólo se notan en teléfonos reales (no en desktop).
+ * ------------------------------------------------------------------ */
+@layer base {
+    html {
+        /* Evita que iOS/Android inflen el texto en horizontal. */
+        -webkit-text-size-adjust: 100%;
+        text-size-adjust: 100%;
+        /* Scroll suave con inercia en iOS. */
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+        /* Red de seguridad anti-scroll horizontal en móvil.
+         * `clip` (no `hidden`) NO crea contexto de scroll, así que
+         * el header sticky sigue funcionando. */
+        overflow-x: clip;
+    }
+
+    /* iOS Safari hace auto-zoom al enfocar cualquier input cuya
+     * fuente sea < 16px. Forzamos 16px en controles de formulario
+     * en pantallas pequeñas para eliminar ese salto de zoom. */
+    @media (max-width: 640px) {
+        input:not([type='checkbox']):not([type='radio']),
+        select,
+        textarea {
+            font-size: 16px !important;
+        }
+    }
+
+    /* Objetivos táctiles cómodos: los botones/enlaces no deben
+     * medir menos de lo recomendado (≈44px) sin quererlo. */
+    button,
+    [role='button'],
+    a {
+        touch-action: manipulation; /* elimina el retraso de 300ms y el doble-tap-zoom */
+    }
+}
+
+@layer utilities {
+    /* Altura de viewport dinámica: 100dvh donde exista (evita el hueco
+     * de la barra de direcciones de Safari), con respaldo a 100vh. */
+    .min-h-dvh {
+        min-height: 100vh;
+        min-height: 100dvh;
+    }
+    .h-dvh {
+        height: 100vh;
+        height: 100dvh;
+    }
+}

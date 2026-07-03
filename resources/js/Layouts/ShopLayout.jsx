@@ -43,7 +43,7 @@ export default function ShopLayout({ children }) {
     const isActive = (href) => url.startsWith(href);
 
     return (
-        <div className="min-h-screen bg-gray-50 text-gray-900">
+        <div className="min-h-dvh bg-gray-50 text-gray-900">
             <header className="sticky top-0 z-30 border-b border-gray-200 bg-white/90 backdrop-blur pt-[env(safe-area-inset-top)]">
                 <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-2.5">
                     <Link href="/tienda" className="flex items-center gap-2.5">
@@ -52,18 +52,21 @@ export default function ShopLayout({ children }) {
                             {business}
                         </span>
                     </Link>
-                    <div className="flex items-center gap-2">
-                        <button onClick={toggle}
-                            className="rounded-full border border-gray-300 px-3 py-1.5 text-xs font-bold text-gray-600 transition hover:bg-gray-100">
+                    <div className="flex items-center gap-1">
+                        <button onClick={toggle} aria-label="Cambiar idioma"
+                            className="grid h-11 min-w-[2.75rem] place-items-center rounded-full border border-gray-300 px-3 text-xs font-bold text-gray-600 transition hover:bg-gray-100 active:scale-95">
                             {lang === 'es' ? 'EN' : 'ES'}
                         </button>
-                        <Link href="/carrito" className="relative rounded-full p-2 text-gray-700 transition hover:bg-gray-100">
-                            <Icon path={ICONS.cart} />
-                            {count > 0 && (
-                                <span className="absolute -right-0.5 -top-0.5 grid h-5 min-w-[1.25rem] place-items-center rounded-full bg-red-700 px-1 text-[11px] font-bold text-white ring-2 ring-white">
-                                    {count}
-                                </span>
-                            )}
+                        <Link href="/carrito" aria-label={t('cart')}
+                            className="grid h-11 w-11 place-items-center rounded-full text-gray-700 transition hover:bg-gray-100 active:scale-95">
+                            <span className="relative">
+                                <Icon path={ICONS.cart} />
+                                {count > 0 && (
+                                    <span className="absolute -right-2.5 -top-2 grid h-5 min-w-[1.25rem] place-items-center rounded-full bg-red-700 px-1 text-[11px] font-bold text-white ring-2 ring-white">
+                                        {count}
+                                    </span>
+                                )}
+                            </span>
                         </Link>
                     </div>
                 </div>

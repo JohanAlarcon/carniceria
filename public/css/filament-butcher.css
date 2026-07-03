@@ -1,0 +1,288 @@
+/* =====================================================================
+   Mi Carnicería — Tema del panel de administración (Filament v3)
+   Paleta cálida de carnicería: rojo carne, papel kraft, brasa y hueso.
+   Cargado vía renderHook (HEAD_END). No requiere build.
+   ===================================================================== */
+
+@import url('https://fonts.bunny.net/css?family=bitter:600,700,800');
+
+:root {
+    --butcher-red: #b91c1c;
+    --butcher-red-600: #a51818;
+    --butcher-red-700: #7f1414;
+    --butcher-ember: #e0512f;
+    --butcher-cream: #faf6f0;
+    --butcher-paper: #f2e9dc;
+    --butcher-paper-line: #e7dbc9;
+    --butcher-ink: #2a211d;
+    --butcher-shadow: 0 1px 2px rgba(65, 33, 20, .06), 0 8px 24px -12px rgba(65, 33, 20, .18);
+}
+
+/* ---------- Fondo general cálido (papel de carnicería) ---------- */
+.fi-body {
+    background-color: var(--butcher-cream);
+    background-image:
+        radial-gradient(rgba(122, 60, 30, .04) 1px, transparent 1px);
+    background-size: 22px 22px;
+}
+.dark .fi-body {
+    background-color: #17120f;
+    background-image:
+        radial-gradient(rgba(255, 190, 150, .03) 1px, transparent 1px);
+    background-size: 22px 22px;
+}
+
+/* ============================ MARCA ============================ */
+.fi-logo {
+    overflow: hidden;
+}
+.butcher-brand {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    line-height: 1;
+    white-space: nowrap;
+}
+.butcher-brand-badge {
+    display: inline-grid;
+    place-items: center;
+    width: 2.35rem;
+    height: 2.35rem;
+    flex: 0 0 auto;
+    color: #fff;
+    border-radius: .7rem;
+    background: linear-gradient(150deg, #d12525 0%, var(--butcher-red) 55%, var(--butcher-red-700) 100%);
+    box-shadow: 0 4px 12px -3px rgba(139, 20, 20, .55), inset 0 1px 0 rgba(255, 255, 255, .25);
+}
+.butcher-brand-badge svg { width: 1.5rem; height: 1.5rem; }
+.butcher-brand-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.butcher-brand-top {
+    font-size: .62rem;
+    font-weight: 700;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--butcher-red);
+}
+.dark .butcher-brand-top { color: #f4a68a; }
+.butcher-brand-name {
+    font-family: 'Bitter', ui-serif, Georgia, serif;
+    font-weight: 800;
+    font-size: 1.28rem;
+    letter-spacing: -.01em;
+    color: var(--butcher-ink);
+    margin-top: 1px;
+}
+.dark .butcher-brand-name { color: #f6ede4; }
+
+/* ============================ SIDEBAR ============================ */
+.fi-sidebar,
+.fi-sidebar .fi-sidebar-nav {
+    background-color: #fffdfb;
+}
+.fi-sidebar {
+    border-right: 1px solid var(--butcher-paper-line);
+    box-shadow: 1px 0 0 rgba(255, 255, 255, .6) inset;
+}
+.dark .fi-sidebar,
+.dark .fi-sidebar .fi-sidebar-nav {
+    background-color: #1e1712;
+    border-right-color: #372b23;
+}
+.fi-sidebar-header {
+    background-color: transparent;
+    box-shadow: none;
+    border-bottom: 1px solid var(--butcher-paper-line);
+    /* Cinta superior tipo toldo de carnicería */
+    border-top: 3px solid var(--butcher-red);
+}
+.dark .fi-sidebar-header { border-bottom-color: #372b23; }
+
+/* Etiquetas de grupo: mayúsculas, tracking */
+.fi-sidebar-group-label {
+    text-transform: uppercase;
+    letter-spacing: .09em;
+    font-size: .68rem !important;
+    font-weight: 700;
+    color: #9a8778;
+}
+.dark .fi-sidebar-group-label { color: #a08a76; }
+
+/* Ítems de navegación */
+.fi-sidebar-item-button {
+    border-radius: .6rem;
+    font-weight: 500;
+    transition: background-color .15s ease, color .15s ease, transform .12s ease;
+}
+.fi-sidebar-item-button:hover {
+    background-color: rgba(185, 28, 28, .07);
+}
+.dark .fi-sidebar-item-button:hover {
+    background-color: rgba(224, 81, 47, .12);
+}
+/* Ítem activo: barra roja + fondo suave */
+.fi-sidebar-item-active .fi-sidebar-item-button {
+    position: relative;
+    background: linear-gradient(90deg, rgba(185, 28, 28, .14), rgba(185, 28, 28, .04));
+    color: var(--butcher-red-700);
+    font-weight: 700;
+}
+.dark .fi-sidebar-item-active .fi-sidebar-item-button {
+    background: linear-gradient(90deg, rgba(224, 81, 47, .22), rgba(224, 81, 47, .05));
+    color: #ffb59b;
+}
+.fi-sidebar-item-active .fi-sidebar-item-button::before {
+    content: '';
+    position: absolute;
+    left: -.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 1.35rem;
+    width: 4px;
+    border-radius: 0 4px 4px 0;
+    background: var(--butcher-red);
+}
+.dark .fi-sidebar-item-active .fi-sidebar-item-button::before { background: var(--butcher-ember); }
+.fi-sidebar-item-active .fi-sidebar-item-icon { color: var(--butcher-red); }
+.dark .fi-sidebar-item-active .fi-sidebar-item-icon { color: var(--butcher-ember); }
+
+/* ============================ TOPBAR ============================ */
+.fi-topbar > nav {
+    background-color: rgba(255, 253, 251, .82);
+    backdrop-filter: saturate(140%) blur(8px);
+    border-bottom: 1px solid var(--butcher-paper-line);
+    box-shadow: none;
+}
+.dark .fi-topbar > nav {
+    background-color: rgba(30, 23, 18, .82);
+    border-bottom-color: #372b23;
+}
+
+/* ======================= SECCIONES / TARJETAS ======================= */
+.fi-section,
+.fi-wi-stats-overview-stat,
+.fi-wi-chart,
+.fi-ta-ctn {
+    border-radius: 1rem !important;
+    border-color: var(--butcher-paper-line);
+    box-shadow: var(--butcher-shadow);
+}
+.dark .fi-section,
+.dark .fi-wi-stats-overview-stat,
+.dark .fi-wi-chart,
+.dark .fi-ta-ctn {
+    border-color: #372b23;
+}
+.fi-section-header-heading {
+    font-family: 'Bitter', ui-serif, Georgia, serif;
+    font-weight: 700;
+    letter-spacing: -.01em;
+}
+
+/* ===================== TARJETAS DE ESTADÍSTICAS ===================== */
+.fi-wi-stats-overview-stat {
+    position: relative;
+    overflow: hidden;
+    transition: transform .16s ease, box-shadow .16s ease;
+    background-color: #fff;
+}
+.dark .fi-wi-stats-overview-stat { background-color: #211a15; }
+.fi-wi-stats-overview-stat:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px -14px rgba(65, 33, 20, .35);
+}
+/* Cinta de color a la izquierda de cada tarjeta */
+.fi-wi-stats-overview-stat::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 4px;
+    background: var(--butcher-red);
+    opacity: .9;
+}
+.fi-wi-stats-overview-stat:nth-child(2)::before { background: #16a34a; }
+.fi-wi-stats-overview-stat:nth-child(3)::before { background: var(--butcher-ember); }
+.fi-wi-stats-overview-stat:nth-child(4)::before { background: #d97706; }
+.fi-wi-stats-overview-stat-value {
+    font-family: 'Bitter', ui-serif, Georgia, serif;
+    font-weight: 800;
+    letter-spacing: -.02em;
+}
+
+/* ============================ BOTONES ============================ */
+.fi-btn.fi-color-primary {
+    background: linear-gradient(180deg, #cf2626, var(--butcher-red) 60%, var(--butcher-red-600));
+    box-shadow: 0 2px 6px -1px rgba(139, 20, 20, .4), inset 0 1px 0 rgba(255, 255, 255, .18);
+    border: 0;
+}
+.fi-btn.fi-color-primary:hover {
+    background: linear-gradient(180deg, #d93030, var(--butcher-red-600) 60%, var(--butcher-red-700));
+}
+
+/* ============================ TABLAS ============================ */
+.fi-ta-header-cell {
+    background-color: var(--butcher-paper);
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    font-size: .7rem;
+    color: #7a6656;
+}
+.dark .fi-ta-header-cell {
+    background-color: #241c16;
+    color: #b39c88;
+}
+.fi-ta-row:hover {
+    background-color: rgba(185, 28, 28, .035);
+}
+.dark .fi-ta-row:hover {
+    background-color: rgba(224, 81, 47, .06);
+}
+
+/* ============================ BADGES ============================ */
+.fi-badge { font-weight: 600; }
+
+/* ===================== LOGIN (simple layout) ===================== */
+.fi-simple-layout {
+    background:
+        linear-gradient(140deg, rgba(122, 20, 20, .92), rgba(60, 12, 12, .95)),
+        repeating-linear-gradient(45deg, #7f1414 0 24px, #8f1a1a 24px 48px);
+    background-blend-mode: multiply;
+}
+.dark .fi-simple-layout {
+    background:
+        linear-gradient(140deg, rgba(60, 12, 12, .96), rgba(20, 8, 6, .98)),
+        repeating-linear-gradient(45deg, #3a0d0d 0 24px, #491111 24px 48px);
+}
+.fi-simple-main {
+    border-radius: 1.25rem !important;
+    border: 1px solid rgba(255, 255, 255, .12);
+    box-shadow: 0 30px 60px -20px rgba(0, 0, 0, .5);
+}
+.fi-simple-header-heading {
+    font-family: 'Bitter', ui-serif, Georgia, serif;
+    font-weight: 800;
+}
+/* Nota de bienvenida del login (inyectada por renderHook) */
+.butcher-login-note {
+    text-align: center;
+    margin-bottom: 1.25rem;
+}
+.butcher-login-note .butcher-brand {
+    justify-content: center;
+    margin-bottom: .5rem;
+}
+.butcher-login-note p {
+    font-size: .875rem;
+    color: #7a6656;
+}
+.dark .butcher-login-note p { color: #b39c88; }
+
+/* ===================== SCROLLBAR ===================== */
+.fi-sidebar-nav::-webkit-scrollbar { width: 8px; }
+.fi-sidebar-nav::-webkit-scrollbar-thumb {
+    background: rgba(185, 28, 28, .25);
+    border-radius: 8px;
+}

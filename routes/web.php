@@ -30,4 +30,16 @@ Route::get('/facturas/{order}', [InvoiceController::class, 'show'])
     ->middleware('auth')
     ->name('orders.invoice');
 
+// TEMP-PREVIEW-LOGIN (remover): auto-login de staff solo en local para previsualizar el panel.
+if (app()->environment('local')) {
+    Route::get('/__preview-admin', function () {
+        $staff = \App\Models\User::where('is_staff', true)->first();
+        if ($staff) {
+            \Illuminate\Support\Facades\Auth::login($staff);
+        }
+
+        return redirect('/admin');
+    });
+}
+
 require __DIR__.'/auth.php';
