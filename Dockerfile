@@ -21,7 +21,10 @@ RUN npm run build
 FROM composer:2 AS vendor
 WORKDIR /app
 
-# Install vendor without running artisan scripts (no app/env yet)
+# Install vendor without running artisan scripts (no app/env yet).
+# --ignore-platform-reqs: the slim composer image lacks ext-intl/gd, but the
+# final runtime image (stage 3) installs every required extension, so the
+# platform gate here is safe to skip.
 COPY composer.json composer.lock ./
 RUN composer install \
         --no-dev \
@@ -29,6 +32,7 @@ RUN composer install \
         --prefer-dist \
         --no-interaction \
         --no-progress \
+        --ignore-platform-reqs \
         --optimize-autoloader
 
 # Bring in the full source and regenerate an optimized, authoritative autoloader
