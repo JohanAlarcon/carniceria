@@ -145,9 +145,9 @@ export default function ShopIndex({ categories, products, approved }) {
                     className="w-full rounded-xl border-gray-300 bg-white py-2.5 pl-10 shadow-sm focus:border-red-500 focus:ring-red-500" />
             </div>
 
-            <div className="-mx-4 mb-5 flex snap-x gap-2 overflow-x-auto px-4 pb-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+            <div className="mb-5 flex flex-wrap gap-2">
                 <button onClick={() => setCat(null)}
-                    className={`snap-start whitespace-nowrap rounded-full px-4 py-2 text-sm font-semibold transition ${
+                    className={`whitespace-nowrap rounded-full px-4 py-2 text-sm font-semibold transition ${
                         cat === null ? 'bg-red-700 text-white shadow-sm' : 'border border-gray-300 bg-white text-gray-700 hover:bg-gray-50'
                     }`}>
                     {t('all')}
@@ -155,7 +155,7 @@ export default function ShopIndex({ categories, products, approved }) {
                 {categories.map((c) => (
                     <button key={c.id} onClick={() => setCat(c.id)}
                         style={cat === c.id ? { backgroundColor: c.color || '#b91c1c' } : {}}
-                        className={`flex snap-start items-center gap-1.5 whitespace-nowrap rounded-full px-3.5 py-2 text-sm font-semibold transition ${
+                        className={`flex items-center gap-1.5 whitespace-nowrap rounded-full px-3.5 py-2 text-sm font-semibold transition ${
                             cat === c.id ? 'text-white shadow-sm' : 'border border-gray-300 bg-white text-gray-700 hover:bg-gray-50'
                         }`}>
                         {c.icon && <img src={c.icon} alt="" className="h-6 w-6 object-contain" />}
