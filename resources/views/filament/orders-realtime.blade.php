@@ -1,9 +1,10 @@
 @php
     $reverb = config('broadcasting.connections.reverb', []);
     $reverbKey = $reverb['key'] ?? null;
-    $reverbHost = data_get($reverb, 'options.host', '127.0.0.1');
-    $reverbPort = data_get($reverb, 'options.port', 8080);
-    $reverbScheme = data_get($reverb, 'options.scheme', 'http');
+    // El navegador usa el bloque publico (dominio/wss) con fallback a options.*
+    $reverbHost = data_get($reverb, 'public.host', data_get($reverb, 'options.host', '127.0.0.1'));
+    $reverbPort = data_get($reverb, 'public.port', data_get($reverb, 'options.port', 8080));
+    $reverbScheme = data_get($reverb, 'public.scheme', data_get($reverb, 'options.scheme', 'http'));
 @endphp
 @if ($reverbKey)
 <script>

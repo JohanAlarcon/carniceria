@@ -12,7 +12,7 @@ RUN npm ci
 
 # Copy the sources needed by Vite and build the production bundle
 COPY . .
-RUN npm run build
+RUN NODE_OPTIONS=--max-old-space-size=2048 npm run build
 
 
 ###############################################################################

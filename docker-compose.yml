@@ -1,16 +1,23 @@
-# Carnicería B2B — production stack
-# Web:    http://<server-ip>:8090        (Nginx + PHP-FPM)
-# Admin:  http://<server-ip>:8090/admin   (Filament)
-# Reverb: ws://<server-ip>:8091           (realtime, optional)
+# Carnicería B2B — stack de producción
 #
-# All Laravel configuration is read from the local ".env" file (env_file below),
-# which also feeds ${VAR} interpolation for the db service credentials.
+# Puertos publicados (host): app 8090->80, reverb 8091->8080. La interfaz de
+# publicación es configurable con WEB_BIND / REVERB_BIND (por defecto 0.0.0.0):
+#   - Acceso directo por IP  -> dejar 0.0.0.0 (default).
+#   - Detrás de un reverse proxy (Apache/cPanel) -> poner 127.0.0.1 en el .env,
+#     así el contenedor solo es accesible por el proxy local, nunca desde internet.
+# La base de datos NUNCA se publica (solo vive en la red interna del proyecto).
+
+name: carniceria
 
 services:
   db:
     image: mysql:8.0
     container_name: carniceria_db
     restart: unless-stopped
+    command:
+      - --innodb-buffer-pool-size=256M
+      - --performance-schema=OFF
+      - --max-connections=50
     environment:
       MYSQL_DATABASE: "${DB_DATABASE:-carniceria}"
       MYSQL_USER: "${DB_USERNAME:-carniceria}"
@@ -24,6 +31,10 @@ services:
       timeout: 5s
       retries: 12
       start_period: 30s
+    mem_limit: 640m
+    logging:
+      driver: json-file
+      options: { max-size: "10m", max-file: "3" }
     networks:
       - carniceria
 
@@ -36,16 +47,19 @@ services:
     restart: unless-stopped
     env_file: .env
     environment:
-      # Only this container runs migrations/seed on boot
       RUN_MIGRATIONS: "true"
       RUN_SEED: "${RUN_SEED:-false}"
     depends_on:
       db:
         condition: service_healthy
     ports:
-      - "8090:80"
+      - "${WEB_BIND:-0.0.0.0}:8090:80"
     volumes:
       - storage:/var/www/html/storage
+    mem_limit: 512m
+    logging:
+      driver: json-file
+      options: { max-size: "10m", max-file: "3" }
     networks:
       - carniceria
 
@@ -62,6 +76,10 @@ services:
         condition: service_started
     volumes:
       - storage:/var/www/html/storage
+    mem_limit: 256m
+    logging:
+      driver: json-file
+      options: { max-size: "10m", max-file: "3" }
     networks:
       - carniceria
 
@@ -75,7 +93,11 @@ services:
       app:
         condition: service_started
     ports:
-      - "8091:8080"
+      - "${REVERB_BIND:-0.0.0.0}:8091:8080"
+    mem_limit: 256m
+    logging:
+      driver: json-file
+      options: { max-size: "10m", max-file: "3" }
     networks:
       - carniceria
 
