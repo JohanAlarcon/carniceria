@@ -32,7 +32,8 @@ return [
     |
     */
 
-    'lifetime' => (int) env('SESSION_LIFETIME', 120),
+    // 1 año: la sesión del cliente no expira por inactividad en la PWA.
+    'lifetime' => (int) env('SESSION_LIFETIME', 525600),
 
     'expire_on_close' => env('SESSION_EXPIRE_ON_CLOSE', false),
 

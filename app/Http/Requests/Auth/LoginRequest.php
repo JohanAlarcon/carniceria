@@ -42,7 +42,8 @@ class LoginRequest extends FormRequest
     {
         $this->ensureIsNotRateLimited();
 
-        if (! Auth::attempt($this->only('email', 'password'), $this->boolean('remember'))) {
+        // Sesión persistente: el cliente permanece logueado hasta que cierre sesión manualmente.
+        if (! Auth::attempt($this->only('email', 'password'), remember: true)) {
             RateLimiter::hit($this->throttleKey());
 
             throw ValidationException::withMessages([

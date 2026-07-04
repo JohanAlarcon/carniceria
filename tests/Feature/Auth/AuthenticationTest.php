@@ -51,4 +51,21 @@ class AuthenticationTest extends TestCase
         $this->assertGuest();
         $response->assertRedirect('/');
     }
+
+    public function test_login_sets_a_persistent_remember_cookie(): void
+    {
+        $user = User::factory()->create();
+
+        $response = $this->post('/login', [
+            'email' => $user->email,
+            'password' => 'password',
+        ]);
+
+        $this->assertAuthenticated();
+
+        $hasRemember = collect($response->headers->getCookies())
+            ->contains(fn ($cookie) => str_starts_with($cookie->getName(), 'remember_web_'));
+
+        $this->assertTrue($hasRemember, 'El login debe emitir la cookie remember_web_* para mantener la sesion.');
+    }
 }

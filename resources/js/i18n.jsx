@@ -59,6 +59,7 @@ const translations = {
         credit_over_limit: 'Este pedido supera tu cupo de crédito disponible.',
         credit_not_enabled: 'Tu cuenta no tiene crédito habilitado.',
         payment: 'Pago', paid: 'Pagado', payment_pending: 'Pago pendiente',
+        session_persistent: 'Tu sesión permanecerá activa hasta que cierres sesión.',
     },
     en: {
         shop: 'Shop', my_orders: 'My orders', account: 'Account', cart: 'Cart',
@@ -118,6 +119,7 @@ const translations = {
         credit_over_limit: 'This order exceeds your available credit.',
         credit_not_enabled: 'Your account has no credit enabled.',
         payment: 'Payment', paid: 'Paid', payment_pending: 'Payment pending',
+        session_persistent: "You'll stay signed in until you log out.",
     },
 };
 

@@ -12,7 +12,6 @@ export default function Login({ status, canResetPassword }) {
     const { data, setData, post, processing, errors, reset } = useForm({
         email: '',
         password: '',
-        remember: false,
     });
 
     const submit = (e) => {
@@ -60,24 +59,19 @@ export default function Login({ status, canResetPassword }) {
                     {errors.password && <p className="mt-1 text-sm text-red-600">{errors.password}</p>}
                 </div>
 
-                <div className="flex items-center justify-between pt-1">
-                    <label className="flex items-center gap-2 text-sm text-gray-600">
-                        <input type="checkbox" checked={data.remember}
-                            onChange={(e) => setData('remember', e.target.checked)}
-                            className="rounded border-gray-300 text-red-600 focus:ring-red-500" />
-                        {t('remember_me')}
-                    </label>
-                    {canResetPassword && (
+                {canResetPassword && (
+                    <div className="flex justify-end pt-1">
                         <Link href={route('password.request')} className="text-sm font-medium text-red-700 hover:text-red-800">
                             {t('forgot_password')}
                         </Link>
-                    )}
-                </div>
+                    </div>
+                )}
 
                 <button type="submit" disabled={processing}
                     className="w-full rounded-xl bg-red-700 py-3.5 font-bold text-white transition hover:bg-red-800 active:scale-[0.99] disabled:opacity-50">
                     {t('login')}
                 </button>
+                <p className="text-center text-xs text-gray-400">{t('session_persistent')}</p>
             </form>
 
             <p className="mt-6 text-center text-sm text-gray-500">
