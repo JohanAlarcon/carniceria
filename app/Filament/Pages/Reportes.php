@@ -6,6 +6,8 @@ use App\Filament\Reports\Widgets\ReportStats;
 use App\Filament\Reports\Widgets\SalesByCustomer;
 use App\Filament\Reports\Widgets\SalesOverTimeChart;
 use App\Filament\Reports\Widgets\TopProducts;
+use App\Services\SalesReportExporter;
+use Filament\Actions\Action;
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Form;
@@ -57,6 +59,23 @@ class Reportes extends BaseDashboard
                     ->native(false)
                     ->visible(fn (Get $get): bool => $get('preset') === 'personalizado'),
             ]);
+    }
+
+    protected function getHeaderActions(): array
+    {
+        return [
+            Action::make('exportarPdf')
+                ->label('Exportar PDF')
+                ->icon('heroicon-o-document-arrow-down')
+                ->color('danger')
+                ->action(fn () => app(SalesReportExporter::class)->pdf($this->filters ?? [])),
+
+            Action::make('exportarExcel')
+                ->label('Exportar Excel')
+                ->icon('heroicon-o-table-cells')
+                ->color('success')
+                ->action(fn () => app(SalesReportExporter::class)->excel($this->filters ?? [])),
+        ];
     }
 
     public function getColumns(): int|string|array
