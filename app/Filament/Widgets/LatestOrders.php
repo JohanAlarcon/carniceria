@@ -16,15 +16,6 @@ class LatestOrders extends BaseWidget
 
     protected static ?string $pollingInterval = '30s';
 
-    protected static array $statusColors = [
-        'pendiente' => 'warning',
-        'confirmado' => 'info',
-        'en_preparacion' => 'primary',
-        'en_ruta' => 'primary',
-        'entregado' => 'success',
-        'cancelado' => 'danger',
-    ];
-
     public function table(Table $table): Table
     {
         return $table
@@ -44,8 +35,8 @@ class LatestOrders extends BaseWidget
                 Tables\Columns\TextColumn::make('status')
                     ->label('Estado')
                     ->badge()
-                    ->color(fn (string $state): string => self::$statusColors[$state] ?? 'gray')
-                    ->formatStateUsing(fn (string $state) => OrderResource::$statusOptions[$state] ?? $state),
+                    ->color(fn (Order $record): string => $record->statusColor())
+                    ->formatStateUsing(fn (Order $record): string => $record->statusLabel()),
                 Tables\Columns\TextColumn::make('total')
                     ->label('Total')
                     ->money('USD')

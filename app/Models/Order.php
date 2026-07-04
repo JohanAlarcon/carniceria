@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Support\Sequences;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
@@ -11,9 +12,7 @@ class Order extends Model
     public const STATUSES = [
         'pendiente',
         'confirmado',
-        'en_preparacion',
-        'en_ruta',
-        'entregado',
+        'facturado',
         'cancelado',
     ];
 
@@ -84,10 +83,8 @@ class Order extends Model
         return match ($this->status) {
             'pendiente' => 'Pendiente',
             'confirmado' => 'Confirmado',
-            'en_preparacion' => 'En preparación',
-            'en_ruta' => 'En ruta',
-            'entregado' => 'Entregado',
-            'cancelado' => 'Cancelado',
+            'facturado' => 'Facturado',
+            'cancelado' => 'Anulado',
             default => ucfirst((string) $this->status),
         };
     }
@@ -97,12 +94,61 @@ class Order extends Model
         return match ($this->status) {
             'pendiente' => 'warning',
             'confirmado' => 'info',
-            'en_preparacion' => 'primary',
-            'en_ruta' => 'info',
-            'entregado' => 'success',
+            'facturado' => 'success',
             'cancelado' => 'danger',
             default => 'gray',
         };
+    }
+
+    /** No se puede modificar ni facturar una orden facturada o anulada. */
+    public function isLocked(): bool
+    {
+        return in_array($this->status, ['facturado', 'cancelado'], true);
+    }
+
+    public function canBeConfirmed(): bool
+    {
+        return $this->status === 'pendiente';
+    }
+
+    public function canBeInvoiced(): bool
+    {
+        return $this->status === 'confirmado';
+    }
+
+    public function isInvoiced(): bool
+    {
+        return $this->status === 'facturado';
+    }
+
+    public function canBeCancelled(): bool
+    {
+        return in_array($this->status, ['pendiente', 'confirmado'], true);
+    }
+
+    /** Pendiente -> Confirmado. */
+    public function markConfirmed(): void
+    {
+        $this->update([
+            'status' => 'confirmado',
+            'confirmed_at' => now(),
+        ]);
+    }
+
+    /** Confirmado -> Facturado: asigna folio de factura (una sola vez) y fecha. */
+    public function markInvoiced(): void
+    {
+        $this->update([
+            'status' => 'facturado',
+            'invoice_number' => $this->invoice_number ?: Sequences::nextInvoiceNumber(),
+            'invoiced_at' => $this->invoiced_at ?: now(),
+        ]);
+    }
+
+    /** Pendiente/Confirmado -> Anulado. */
+    public function markCancelled(): void
+    {
+        $this->update(['status' => 'cancelado']);
     }
 
     public function isCredit(): bool

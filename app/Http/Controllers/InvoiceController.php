@@ -14,6 +14,10 @@ class InvoiceController extends Controller
     {
         abort_unless($request->user() && $request->user()->is_staff, 403);
 
+        // Solo se imprime la factura de órdenes ya facturadas (el cambio de estado
+        // ocurre desde la acción "Facturar" del panel, previa confirmación).
+        abort_unless($order->status === 'facturado', 404);
+
         if (! $order->invoice_number) {
             $order->invoice_number = Sequences::nextInvoiceNumber();
             $order->invoiced_at = now();
