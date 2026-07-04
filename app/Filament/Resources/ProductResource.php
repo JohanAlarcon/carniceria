@@ -76,9 +76,16 @@ class ProductResource extends Resource
                         Forms\Components\FileUpload::make('image')
                             ->label('Foto real (opcional)')
                             ->image()
-                            ->imageEditor()
+                            ->disk('public')
                             ->directory('products')
-                            ->visibility('public'),
+                            ->visibility('public')
+                            ->maxSize(4096)
+                            ->acceptedFileTypes(['image/png', 'image/jpeg', 'image/webp'])
+                            ->helperText('PNG, JPG o WEBP. Peso máximo 4 MB.')
+                            ->validationMessages([
+                                'max' => 'La imagen no debe superar los 4 MB.',
+                                'mimetypes' => 'Sube una imagen válida (PNG, JPG o WEBP).',
+                            ]),
                         Forms\Components\Toggle::make('is_published')
                             ->label('Publicado en la tienda')
                             ->default(true),

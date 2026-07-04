@@ -15,7 +15,7 @@ Route::middleware(['auth', RedirectIfStaff::class])->group(function () {
     Route::get('/dashboard', fn () => redirect()->route('shop.index'))->name('dashboard');
 
     Route::get('/carrito', fn () => Inertia::render('Cart'))->name('cart');
-    Route::get('/checkout', fn () => Inertia::render('Checkout'))->name('checkout');
+    Route::get('/checkout', [OrderController::class, 'checkout'])->name('checkout');
 
     Route::post('/pedidos', [OrderController::class, 'store'])->name('orders.store');
     Route::get('/mis-pedidos', [OrderController::class, 'index'])->name('orders.index');

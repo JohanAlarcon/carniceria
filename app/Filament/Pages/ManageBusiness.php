@@ -42,9 +42,16 @@ class ManageBusiness extends Page implements HasForms
                             Forms\Components\FileUpload::make('logo_path')
                                 ->label('Logo')
                                 ->image()
-                                ->imageEditor()
+                                ->disk('public')
                                 ->directory('branding')
-                                ->visibility('public'),
+                                ->visibility('public')
+                                ->maxSize(4096)
+                                ->acceptedFileTypes(['image/png', 'image/jpeg', 'image/webp', 'image/svg+xml'])
+                                ->helperText('Formatos: PNG, JPG, WEBP o SVG. Peso máximo 4 MB.')
+                                ->validationMessages([
+                                    'max' => 'El logo no debe superar los 4 MB.',
+                                    'mimetypes' => 'Sube una imagen válida (PNG, JPG, WEBP o SVG).',
+                                ]),
                             Forms\Components\Grid::make(2)->schema([
                                 Forms\Components\TextInput::make('business_name')->label('Nombre del negocio')->required(),
                                 Forms\Components\TextInput::make('legal_name')->label('Razón social'),
@@ -85,6 +92,16 @@ class ManageBusiness extends Page implements HasForms
                                 Forms\Components\TextInput::make('min_order_amount')->label('Pedido mínimo')->prefix('$')->numeric(),
                                 Forms\Components\TextInput::make('order_next_number')->label('Próximo # pedido')->numeric()->minValue(1),
                             ]),
+                            Forms\Components\Fieldset::make('Ventana de entrega')
+                                ->schema([
+                                    Forms\Components\TimePicker::make('delivery_start_time')->label('Entrega desde')->seconds(false)->default('08:00'),
+                                    Forms\Components\TimePicker::make('delivery_end_time')->label('Entrega hasta')->seconds(false)->default('18:00'),
+                                    Forms\Components\TextInput::make('delivery_min_lead_days')->label('Anticipación mínima (días)')->helperText('0 = mismo día, 1 = a partir de mañana.')->numeric()->minValue(0)->default(1),
+                                ]),
+                            Forms\Components\Fieldset::make('Crédito')
+                                ->schema([
+                                    Forms\Components\TextInput::make('credit_terms_days')->label('Plazo de crédito por defecto (días)')->helperText('Se usa cuando el cliente no tiene un plazo propio.')->numeric()->minValue(1)->default(30),
+                                ]),
                         ]),
                 ])->columnSpanFull(),
             ]);

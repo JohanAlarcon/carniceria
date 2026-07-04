@@ -42,9 +42,9 @@ export default function OrderShow({ order }) {
             <div className="mt-3 rounded-2xl border border-gray-200 bg-white p-4">
                 <h2 className="mb-2 font-bold">{t('delivered_to')}</h2>
                 {addr.map((line, i) => <p key={i} className="text-sm text-gray-700">{line}</p>)}
-                {order.requested_date && (
+                {order.requested_at && (
                     <p className="mt-2 text-sm text-gray-500">
-                        {t('requested_date')}: {new Date(order.requested_date).toLocaleDateString(lang)}
+                        {t('delivery_datetime')}: {new Date(order.requested_at).toLocaleString(lang)}
                     </p>
                 )}
                 {order.delivery_notes && <p className="mt-2 text-sm italic text-gray-500">“{order.delivery_notes}”</p>}
@@ -70,6 +70,24 @@ export default function OrderShow({ order }) {
                     <span>{t('total')}</span>
                     <span>{money(order.total)}</span>
                 </div>
+                <div className="mt-3 flex items-center justify-between border-t border-gray-100 pt-3 text-sm">
+                    <span className="text-gray-500">{t('payment_method')}</span>
+                    <span className="font-semibold text-gray-900">
+                        {order.payment_method === 'credito' ? t('pay_credit') : t('pay_on_delivery')}
+                    </span>
+                </div>
+                {order.payment_method === 'credito' && (
+                    <div className="mt-1 flex items-center justify-between text-sm">
+                        <span className="text-gray-500">
+                            {order.payment_due_date
+                                ? `${t('credit_due')}: ${new Date(order.payment_due_date).toLocaleDateString(lang)}`
+                                : ''}
+                        </span>
+                        <span className={`rounded-full px-2.5 py-0.5 text-xs font-semibold ${order.payment_status === 'pagado' ? BADGE.success : BADGE.warning}`}>
+                            {order.payment_status === 'pagado' ? t('paid') : t('payment_pending')}
+                        </span>
+                    </div>
+                )}
             </div>
             </div>
         </ShopLayout>

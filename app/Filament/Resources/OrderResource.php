@@ -59,11 +59,28 @@ class OrderResource extends Resource
                             ->label('Estado')
                             ->options(self::$statusOptions)
                             ->required(),
-                        Forms\Components\DatePicker::make('requested_date')
-                            ->label('Fecha solicitada'),
+                        Forms\Components\DateTimePicker::make('requested_at')
+                            ->label('Entrega (fecha y hora)')
+                            ->seconds(false),
                         Forms\Components\Textarea::make('internal_notes')
                             ->label('Notas internas')
                             ->columnSpanFull(),
+                    ]),
+                Forms\Components\Section::make('Pago')
+                    ->columns(3)
+                    ->schema([
+                        Forms\Components\Select::make('payment_method')
+                            ->label('Forma de pago')
+                            ->options(['contraentrega' => 'Contraentrega', 'credito' => 'Crédito'])
+                            ->required()
+                            ->live(),
+                        Forms\Components\Select::make('payment_status')
+                            ->label('Estado de pago')
+                            ->options(['pendiente' => 'Pendiente', 'pagado' => 'Pagado'])
+                            ->required(),
+                        Forms\Components\DatePicker::make('payment_due_date')
+                            ->label('Fecha límite de pago')
+                            ->visible(fn (Forms\Get $get) => $get('payment_method') === 'credito'),
                     ]),
                 Forms\Components\Section::make('Entrega')
                     ->columns(2)
@@ -117,9 +134,19 @@ class OrderResource extends Resource
                     ->label('Total')
                     ->money('USD')
                     ->sortable(),
-                Tables\Columns\TextColumn::make('requested_date')
+                Tables\Columns\TextColumn::make('payment_method')
+                    ->label('Pago')
+                    ->badge()
+                    ->color(fn (string $state) => $state === 'credito' ? 'warning' : 'gray')
+                    ->formatStateUsing(fn (string $state) => $state === 'credito' ? 'Crédito' : 'Contraentrega'),
+                Tables\Columns\TextColumn::make('payment_status')
+                    ->label('Estado pago')
+                    ->badge()
+                    ->color(fn (string $state) => $state === 'pagado' ? 'success' : 'warning')
+                    ->formatStateUsing(fn (string $state) => $state === 'pagado' ? 'Pagado' : 'Pendiente'),
+                Tables\Columns\TextColumn::make('requested_at')
                     ->label('Entrega')
-                    ->date()
+                    ->dateTime('d/m/Y H:i')
                     ->sortable(),
                 Tables\Columns\TextColumn::make('placed_at')
                     ->label('Recibido')
@@ -130,9 +157,19 @@ class OrderResource extends Resource
                 Tables\Filters\SelectFilter::make('status')
                     ->label('Estado')
                     ->options(self::$statusOptions),
+                Tables\Filters\SelectFilter::make('payment_method')
+                    ->label('Forma de pago')
+                    ->options(['contraentrega' => 'Contraentrega', 'credito' => 'Crédito']),
             ])
             ->actions([
                 Tables\Actions\ViewAction::make(),
+                Tables\Actions\Action::make('marcar_pagado')
+                    ->label('Marcar pagado')
+                    ->icon('heroicon-o-banknotes')
+                    ->color('success')
+                    ->requiresConfirmation()
+                    ->visible(fn (Order $record) => $record->payment_method === 'credito' && $record->payment_status !== 'pagado')
+                    ->action(fn (Order $record) => $record->update(['payment_status' => 'pagado', 'paid_at' => now()])),
                 Tables\Actions\Action::make('invoice')
                     ->label('Factura')
                     ->icon('heroicon-o-document-text')

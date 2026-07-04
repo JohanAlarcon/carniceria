@@ -31,6 +31,10 @@ class BusinessSetting extends Model
         'free_delivery',
         'default_shipping_fee',
         'min_order_amount',
+        'credit_terms_days',
+        'delivery_start_time',
+        'delivery_end_time',
+        'delivery_min_lead_days',
     ];
 
     protected function casts(): array
@@ -41,6 +45,8 @@ class BusinessSetting extends Model
             'free_delivery' => 'boolean',
             'default_shipping_fee' => 'decimal:2',
             'min_order_amount' => 'decimal:2',
+            'credit_terms_days' => 'integer',
+            'delivery_min_lead_days' => 'integer',
         ];
     }
 

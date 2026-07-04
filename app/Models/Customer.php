@@ -24,6 +24,9 @@ class Customer extends Model
         'tax_exempt',
         'resale_certificate',
         'notes',
+        'credit_enabled',
+        'credit_limit',
+        'credit_terms_days',
     ];
 
     protected function casts(): array
@@ -32,6 +35,9 @@ class Customer extends Model
             'price_adjustment_pct' => 'decimal:2',
             'is_approved' => 'boolean',
             'tax_exempt' => 'boolean',
+            'credit_enabled' => 'boolean',
+            'credit_limit' => 'decimal:2',
+            'credit_terms_days' => 'integer',
         ];
     }
 
@@ -63,5 +69,27 @@ class Customer extends Model
             $this->address_line2,
             trim(collect([$this->city, $this->state, $this->zip])->filter()->implode(', ')),
         ])->filter()->implode("\n");
+    }
+
+    /** Días de plazo de crédito de este cliente (o el valor global por defecto). */
+    public function creditTermsDays(): int
+    {
+        return $this->credit_terms_days ?? (int) BusinessSetting::current()->credit_terms_days;
+    }
+
+    /** Deuda de crédito viva: pedidos a crédito sin pagar y no cancelados. */
+    public function outstandingCredit(): float
+    {
+        return (float) $this->orders()
+            ->where('payment_method', 'credito')
+            ->where('payment_status', 'pendiente')
+            ->where('status', '!=', 'cancelado')
+            ->sum('total');
+    }
+
+    /** Cupo de crédito disponible (nunca negativo). */
+    public function availableCredit(): float
+    {
+        return max(0, (float) $this->credit_limit - $this->outstandingCredit());
     }
 }

@@ -3,12 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Events\OrderCreated;
+use App\Models\BusinessSetting;
 use App\Models\Order;
 use App\Models\ProductVariant;
 use App\Support\Sequences;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Validation\ValidationException;
 use Inertia\Inertia;
 use Inertia\Response;
 
@@ -28,12 +31,34 @@ class OrderController extends Controller
                 'total' => (float) $o->total,
                 'items_count' => $o->items_count,
                 'placed_at' => optional($o->placed_at)->toIso8601String(),
-                'requested_date' => optional($o->requested_date)->toDateString(),
+                'requested_at' => optional($o->requested_at)->toIso8601String(),
+                'payment_method' => $o->payment_method,
+                'payment_status' => $o->payment_status,
+                'payment_due_date' => optional($o->payment_due_date)->toDateString(),
             ])->values()
             : collect();
 
         return Inertia::render('Orders/Index', [
             'orders' => $orders,
+        ]);
+    }
+
+    public function checkout(Request $request): Response
+    {
+        $customer = $request->user()->customer;
+        $settings = BusinessSetting::current();
+
+        return Inertia::render('Checkout', [
+            'credit' => [
+                'enabled' => (bool) $customer?->credit_enabled,
+                'available' => $customer ? round($customer->availableCredit(), 2) : 0,
+                'terms_days' => $customer ? $customer->creditTermsDays() : (int) $settings->credit_terms_days,
+            ],
+            'delivery' => [
+                'start_time' => substr((string) $settings->delivery_start_time, 0, 5),
+                'end_time' => substr((string) $settings->delivery_end_time, 0, 5),
+                'min_lead_days' => (int) $settings->delivery_min_lead_days,
+            ],
         ]);
     }
 
@@ -54,7 +79,10 @@ class OrderController extends Controller
                 'shipping_fee' => (float) $order->shipping_fee,
                 'total' => (float) $order->total,
                 'placed_at' => optional($order->placed_at)->toIso8601String(),
-                'requested_date' => optional($order->requested_date)->toDateString(),
+                'requested_at' => optional($order->requested_at)->toIso8601String(),
+                'payment_method' => $order->payment_method,
+                'payment_status' => $order->payment_status,
+                'payment_due_date' => optional($order->payment_due_date)->toDateString(),
                 'delivery_address_line1' => $order->delivery_address_line1,
                 'delivery_address_line2' => $order->delivery_address_line2,
                 'delivery_city' => $order->delivery_city,
@@ -78,6 +106,8 @@ class OrderController extends Controller
         $customer = $request->user()->customer;
         abort_unless($customer && $customer->is_approved, 403, 'Tu cuenta aún no está aprobada.');
 
+        $settings = BusinessSetting::current();
+
         $data = $request->validate([
             'items' => 'required|array|min:1',
             'items.*.variant_id' => 'required|integer|exists:product_variants,id',
@@ -90,9 +120,20 @@ class OrderController extends Controller
             'delivery_city' => 'required|string|max:255',
             'delivery_state' => 'nullable|string|max:255',
             'delivery_zip' => 'nullable|string|max:255',
-            'requested_date' => 'nullable|date|after_or_equal:today',
+            'requested_at' => 'required|date',
             'delivery_notes' => 'nullable|string|max:1000',
+            'payment_method' => 'required|in:contraentrega,credito',
         ]);
+
+        $requestedAt = Carbon::parse($data['requested_at']);
+        $this->validateDeliveryWindow($requestedAt, $settings);
+
+        $isCredit = $data['payment_method'] === 'credito';
+        if ($isCredit && ! $customer->credit_enabled) {
+            throw ValidationException::withMessages([
+                'payment_method' => 'Tu cuenta no tiene crédito habilitado.',
+            ]);
+        }
 
         $variants = ProductVariant::with('product')
             ->whereIn('id', collect($data['items'])->pluck('variant_id'))
@@ -102,7 +143,9 @@ class OrderController extends Controller
 
         abort_if($variants->isEmpty(), 422, 'No hay productos disponibles en el pedido.');
 
-        $order = DB::transaction(function () use ($customer, $data, $variants) {
+        $order = DB::transaction(function () use ($customer, $data, $variants, $requestedAt, $isCredit) {
+            $termsDays = $isCredit ? $customer->creditTermsDays() : null;
+
             $order = new Order([
                 'order_number' => Sequences::nextOrderNumber(),
                 'status' => 'pendiente',
@@ -115,8 +158,13 @@ class OrderController extends Controller
                 'delivery_city' => $data['delivery_city'],
                 'delivery_state' => $data['delivery_state'] ?? null,
                 'delivery_zip' => $data['delivery_zip'] ?? null,
-                'requested_date' => $data['requested_date'] ?? null,
+                'requested_at' => $requestedAt,
+                'requested_date' => $requestedAt->toDateString(),
                 'delivery_notes' => $data['delivery_notes'] ?? null,
+                'payment_method' => $data['payment_method'],
+                'payment_status' => 'pendiente',
+                'credit_terms_days' => $termsDays,
+                'payment_due_date' => $isCredit ? $requestedAt->copy()->startOfDay()->addDays($termsDays)->toDateString() : null,
                 'shipping_fee' => 0,
                 'tax' => 0,
                 'placed_at' => now(),
@@ -148,6 +196,13 @@ class OrderController extends Controller
                 ]);
             }
 
+            // El pedido a crédito no puede superar el cupo disponible del cliente.
+            if ($isCredit && $subtotal > $customer->availableCredit()) {
+                throw ValidationException::withMessages([
+                    'payment_method' => 'Este pedido ($'.number_format($subtotal, 2).') supera tu cupo de crédito disponible ($'.number_format($customer->availableCredit(), 2).').',
+                ]);
+            }
+
             $order->update(['subtotal' => $subtotal, 'total' => $subtotal]);
 
             return $order;
@@ -161,5 +216,25 @@ class OrderController extends Controller
         }
 
         return redirect()->route('orders.show', $order)->with('success', '¡Pedido enviado! El carnicero lo revisará pronto.');
+    }
+
+    /** La entrega debe caer dentro del horario y respetar la anticipación mínima. */
+    private function validateDeliveryWindow(Carbon $requestedAt, BusinessSetting $settings): void
+    {
+        $minDate = now()->startOfDay()->addDays((int) $settings->delivery_min_lead_days);
+        if ($requestedAt->copy()->startOfDay()->lt($minDate)) {
+            throw ValidationException::withMessages([
+                'requested_at' => 'La fecha de entrega debe ser a partir del '.$minDate->format('d/m/Y').'.',
+            ]);
+        }
+
+        $start = substr((string) $settings->delivery_start_time, 0, 5);
+        $end = substr((string) $settings->delivery_end_time, 0, 5);
+        $time = $requestedAt->format('H:i');
+        if ($time < $start || $time > $end) {
+            throw ValidationException::withMessages([
+                'requested_at' => "La hora de entrega debe estar entre $start y $end.",
+            ]);
+        }
     }
 }

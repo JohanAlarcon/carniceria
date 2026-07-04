@@ -105,6 +105,27 @@ class CustomerResource extends Resource
                             ->label('Notas internas')
                             ->columnSpanFull(),
                     ]),
+                Forms\Components\Section::make('Crédito')
+                    ->description('Permite a este cliente pagar sus pedidos a crédito (pago diferido).')
+                    ->columns(2)
+                    ->schema([
+                        Forms\Components\Toggle::make('credit_enabled')
+                            ->label('Crédito habilitado')
+                            ->live()
+                            ->columnSpanFull(),
+                        Forms\Components\TextInput::make('credit_limit')
+                            ->label('Cupo (límite de crédito)')
+                            ->prefix('$')
+                            ->numeric()
+                            ->default(0)
+                            ->visible(fn (Forms\Get $get) => $get('credit_enabled')),
+                        Forms\Components\TextInput::make('credit_terms_days')
+                            ->label('Plazo de pago (días)')
+                            ->helperText('Días para pagar desde la entrega. Vacío = usa el valor global.')
+                            ->numeric()
+                            ->minValue(0)
+                            ->visible(fn (Forms\Get $get) => $get('credit_enabled')),
+                    ]),
             ]);
     }
 
@@ -134,12 +155,21 @@ class CustomerResource extends Resource
                     ->label('Exento')
                     ->boolean()
                     ->toggleable(),
+                Tables\Columns\TextColumn::make('credit_limit')
+                    ->label('Crédito')
+                    ->money('USD')
+                    ->description(fn (Customer $record) => $record->credit_enabled
+                        ? 'Disp: $'.number_format($record->availableCredit(), 2)
+                        : 'Sin crédito')
+                    ->toggleable(),
                 Tables\Columns\ToggleColumn::make('is_approved')
                     ->label('Aprobado'),
             ])
             ->filters([
                 Tables\Filters\TernaryFilter::make('is_approved')
                     ->label('Aprobado'),
+                Tables\Filters\TernaryFilter::make('credit_enabled')
+                    ->label('Con crédito'),
             ])
             ->actions([
                 Tables\Actions\ViewAction::make(),

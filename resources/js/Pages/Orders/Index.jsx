@@ -38,6 +38,11 @@ export default function OrdersIndex({ orders }) {
                                     {o.status_label}
                                 </span>
                             </div>
+                            {o.payment_method === 'credito' && (
+                                <span className={`mt-2 inline-block rounded-full px-2 py-0.5 text-xs font-semibold ${o.payment_status === 'pagado' ? BADGE.success : BADGE.primary}`}>
+                                    {t('pay_credit')}{o.payment_status === 'pagado' ? ` · ${t('paid')}` : ''}
+                                </span>
+                            )}
                             <div className="mt-2 flex items-center justify-between text-sm text-gray-500">
                                 <span>
                                     {o.placed_at ? new Date(o.placed_at).toLocaleDateString(lang) : ''} · {o.items_count} {t('items')}

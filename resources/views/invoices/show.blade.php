@@ -99,9 +99,12 @@
             <td style="width: 45%;">
                 <table class="meta">
                     <tr><td class="k">Invoice Date / Fecha :</td><td class="v">{{ optional($order->invoiced_at ?? $order->placed_at ?? $order->created_at)->format('d M Y') }}</td></tr>
-                    <tr><td class="k">Terms / Términos :</td><td class="v">Due on Receipt</td></tr>
-                    @if ($order->requested_date)
-                    <tr><td class="k">Entrega :</td><td class="v">{{ $order->requested_date->format('d M Y') }}</td></tr>
+                    <tr><td class="k">Pago / Terms :</td><td class="v">{{ $order->payment_method === 'credito' ? 'Crédito' : 'Contraentrega' }}</td></tr>
+                    @if ($order->payment_method === 'credito' && $order->payment_due_date)
+                    <tr><td class="k">Vence / Due :</td><td class="v">{{ $order->payment_due_date->format('d M Y') }}</td></tr>
+                    @endif
+                    @if ($order->requested_at)
+                    <tr><td class="k">Entrega :</td><td class="v">{{ $order->requested_at->format('d M Y H:i') }}</td></tr>
                     @endif
                     <tr><td class="k">Pedido :</td><td class="v">{{ $order->order_number }}</td></tr>
                 </table>

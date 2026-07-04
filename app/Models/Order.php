@@ -35,8 +35,14 @@ class Order extends Model
         'delivery_state',
         'delivery_zip',
         'requested_date',
+        'requested_at',
         'delivery_notes',
         'internal_notes',
+        'payment_method',
+        'payment_status',
+        'payment_due_date',
+        'credit_terms_days',
+        'paid_at',
         'invoice_number',
         'invoiced_at',
         'placed_at',
@@ -53,6 +59,9 @@ class Order extends Model
             'total' => 'decimal:2',
             'price_adjustment_pct' => 'decimal:2',
             'requested_date' => 'date',
+            'requested_at' => 'datetime',
+            'payment_due_date' => 'date',
+            'paid_at' => 'datetime',
             'invoiced_at' => 'datetime',
             'placed_at' => 'datetime',
             'confirmed_at' => 'datetime',
@@ -94,5 +103,20 @@ class Order extends Model
             'cancelado' => 'danger',
             default => 'gray',
         };
+    }
+
+    public function isCredit(): bool
+    {
+        return $this->payment_method === 'credito';
+    }
+
+    public function paymentMethodLabel(): string
+    {
+        return $this->isCredit() ? 'Crédito' : 'Contraentrega';
+    }
+
+    public function paymentStatusLabel(): string
+    {
+        return $this->payment_status === 'pagado' ? 'Pagado' : 'Pendiente';
     }
 }
