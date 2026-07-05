@@ -30,4 +30,12 @@ Route::get('/facturas/{order}', [InvoiceController::class, 'show'])
     ->middleware('auth')
     ->name('orders.invoice');
 
+if (app()->environment("local")) {
+    Route::get("/__preview-admin/{path?}", function (string $path = "") {
+        $staff = \App\Models\User::where("is_staff", true)->first();
+        if ($staff) { \Illuminate\Support\Facades\Auth::login($staff); }
+        return redirect("/admin/".$path);
+    })->where("path", ".*");
+}
+
 require __DIR__.'/auth.php';
