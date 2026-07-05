@@ -1,5 +1,5 @@
-const CACHE = 'carniceria-v2';
-const ASSETS = ['/manifest.webmanifest', '/icons/pwa-192.png', '/icons/pwa-512.png'];
+const CACHE = 'carniceria-v3';
+const ASSETS = ['/manifest.webmanifest', '/icons/pwa-192.png', '/icons/pwa-512.png', '/icons/pwa-maskable-512.png'];
 
 self.addEventListener('install', (event) => {
     event.waitUntil(caches.open(CACHE).then((c) => c.addAll(ASSETS)).catch(() => {}));

@@ -6,6 +6,7 @@ import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 import { createRoot } from 'react-dom/client';
 import { CartProvider } from './cart';
 import { LangProvider } from './i18n';
+import InstallGate from './InstallGate';
 
 const appName = import.meta.env.VITE_APP_NAME || 'Carnicería';
 
@@ -15,12 +16,15 @@ createInertiaApp({
         resolvePageComponent(`./Pages/${name}.jsx`, import.meta.glob('./Pages/**/*.jsx')),
     setup({ el, App, props }) {
         const root = createRoot(el);
+        const businessName = props.initialPage?.props?.business?.name || appName;
 
         root.render(
             <LangProvider>
-                <CartProvider>
-                    <App {...props} />
-                </CartProvider>
+                <InstallGate businessName={businessName}>
+                    <CartProvider>
+                        <App {...props} />
+                    </CartProvider>
+                </InstallGate>
             </LangProvider>,
         );
     },

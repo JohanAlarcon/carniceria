@@ -13,8 +13,16 @@
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
         <meta name="apple-mobile-web-app-title" content="Carnicería">
         <link rel="manifest" href="/manifest.webmanifest">
-        <link rel="apple-touch-icon" href="/icons/pwa-192.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/icons/pwa-192.png">
         <link rel="icon" type="image/png" href="/icons/pwa-192.png">
+
+        <!-- Captura el evento de instalación antes de que React monte, para no perderlo. -->
+        <script>
+            window.addEventListener('beforeinstallprompt', function (e) {
+                e.preventDefault();
+                window.__installPrompt = e;
+            });
+        </script>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
