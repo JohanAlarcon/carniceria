@@ -48,11 +48,10 @@ class AdminPanelProvider extends PanelProvider
                 'warning' => Color::Amber,
                 'info' => Color::Sky,
             ])
-            ->sidebarCollapsibleOnDesktop()
             ->databaseNotifications()
             ->renderHook(
                 PanelsRenderHook::HEAD_END,
-                fn (): string => '<link rel="stylesheet" href="'.asset('css/filament-butcher.css').'?v=1">',
+                fn (): string => view('filament.head')->render(),
             )
             ->renderHook(
                 PanelsRenderHook::AUTH_LOGIN_FORM_BEFORE,
@@ -61,6 +60,10 @@ class AdminPanelProvider extends PanelProvider
             ->renderHook(
                 PanelsRenderHook::BODY_END,
                 fn (): string => view('filament.orders-realtime')->render(),
+            )
+            ->renderHook(
+                PanelsRenderHook::BODY_END,
+                fn (): string => view('filament.pwa')->render(),
             )
             ->navigationGroups([
                 'Pedidos',
