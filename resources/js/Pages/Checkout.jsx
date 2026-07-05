@@ -35,7 +35,7 @@ export default function Checkout() {
         delivery_address_line1: customer.address_line1 || '',
         delivery_address_line2: customer.address_line2 || '',
         delivery_city: customer.city || '',
-        delivery_state: customer.state || 'NY',
+        delivery_state: customer.state || '',
         delivery_zip: customer.zip || '',
         delivery_phone: customer.phone || '',
         requested_date: '',

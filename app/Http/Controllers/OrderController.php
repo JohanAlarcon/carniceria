@@ -205,6 +205,16 @@ class OrderController extends Controller
 
             $order->update(['subtotal' => $subtotal, 'total' => $subtotal]);
 
+            // Guarda la dirección usada como la última dirección de entrega del cliente
+            // (refleja exactamente lo enviado, igual que el snapshot del pedido).
+            $customer->update([
+                'address_line1' => $data['delivery_address_line1'],
+                'address_line2' => $data['delivery_address_line2'] ?? null,
+                'city' => $data['delivery_city'],
+                'state' => $data['delivery_state'] ?? null,
+                'zip' => $data['delivery_zip'] ?? null,
+            ]);
+
             return $order;
         });
 

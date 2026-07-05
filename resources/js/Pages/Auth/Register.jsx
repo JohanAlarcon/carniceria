@@ -11,6 +11,11 @@ export default function Register() {
         business_name: '',
         name: '',
         phone: '',
+        address_line1: '',
+        address_line2: '',
+        city: '',
+        state: '',
+        zip: '',
         email: '',
         password: '',
         password_confirmation: '',
@@ -47,6 +52,16 @@ export default function Register() {
                 {field('business_name', t('business_name'), { required: true, autoFocus: true })}
                 {field('name', t('contact_name'), { required: true, autoComplete: 'name' })}
                 {field('phone', t('phone'), { autoComplete: 'tel' })}
+
+                <p className="pt-2 text-sm font-bold text-gray-700">{t('delivery_address')}</p>
+                {field('address_line1', t('address'), { required: true, autoComplete: 'address-line1' })}
+                {field('address_line2', t('address2'), { autoComplete: 'address-line2' })}
+                {field('city', t('city'), { required: true, autoComplete: 'address-level2' })}
+                <div className="grid grid-cols-2 gap-3">
+                    {field('state', t('state'), { autoComplete: 'address-level1' })}
+                    {field('zip', t('zip'), { autoComplete: 'postal-code' })}
+                </div>
+
                 {field('email', t('email'), { type: 'email', required: true, autoComplete: 'username' })}
                 {field('password', t('password'), { type: 'password', required: true, autoComplete: 'new-password' })}
                 {field('password_confirmation', t('confirm_password'), { type: 'password', required: true, autoComplete: 'new-password' })}
