@@ -101,6 +101,29 @@ services:
     networks:
       - carniceria
 
+  # Administrador web de la BD. OPCIONAL: solo arranca con --profile dbadmin.
+  # Siempre en loopback; se publica al exterior vía reverse proxy con Basic Auth.
+  phpmyadmin:
+    image: phpmyadmin:5.2
+    container_name: carniceria_pma
+    restart: unless-stopped
+    profiles: ["dbadmin"]
+    environment:
+      PMA_HOST: db
+      PMA_ABSOLUTE_URI: "${PMA_ABSOLUTE_URI:-}"
+      UPLOAD_LIMIT: 256M
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "127.0.0.1:8092:80"
+    mem_limit: 256m
+    logging:
+      driver: json-file
+      options: { max-size: "10m", max-file: "3" }
+    networks:
+      - carniceria
+
 volumes:
   dbdata:
   storage:
