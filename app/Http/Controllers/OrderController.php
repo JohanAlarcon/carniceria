@@ -47,6 +47,7 @@ class OrderController extends Controller
     {
         $customer = $request->user()->customer;
         $settings = BusinessSetting::current();
+        $earliest = $settings->earliestDeliveryAt();
 
         return Inertia::render('Checkout', [
             'credit' => [
@@ -57,7 +58,9 @@ class OrderController extends Controller
             'delivery' => [
                 'start_time' => substr((string) $settings->delivery_start_time, 0, 5),
                 'end_time' => substr((string) $settings->delivery_end_time, 0, 5),
-                'min_lead_days' => (int) $settings->delivery_min_lead_days,
+                // Fecha/hora mínima de entrega ya resuelta (días u horas de anticipación).
+                'earliest_date' => $earliest->toDateString(),
+                'earliest_time' => $earliest->format('H:i'),
             ],
         ]);
     }
@@ -231,10 +234,14 @@ class OrderController extends Controller
     /** La entrega debe caer dentro del horario y respetar la anticipación mínima. */
     private function validateDeliveryWindow(Carbon $requestedAt, BusinessSetting $settings): void
     {
-        $minDate = now()->startOfDay()->addDays((int) $settings->delivery_min_lead_days);
-        if ($requestedAt->copy()->startOfDay()->lt($minDate)) {
+        $earliest = $settings->earliestDeliveryAt();
+        if ($requestedAt->lt($earliest)) {
+            $when = $settings->delivery_min_lead_unit === 'hours'
+                ? $earliest->format('d/m/Y H:i')
+                : $earliest->format('d/m/Y');
+
             throw ValidationException::withMessages([
-                'requested_at' => 'La fecha de entrega debe ser a partir del '.$minDate->format('d/m/Y').'.',
+                'requested_at' => 'La entrega debe ser a partir del '.$when.'.',
             ]);
         }
 

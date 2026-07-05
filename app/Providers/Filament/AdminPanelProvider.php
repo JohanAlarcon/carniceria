@@ -2,6 +2,10 @@
 
 namespace App\Providers\Filament;
 
+use App\Filament\Reports\Widgets\ReportStats;
+use App\Filament\Reports\Widgets\SalesByCustomer;
+use App\Filament\Reports\Widgets\SalesOverTimeChart;
+use App\Filament\Reports\Widgets\TopProducts;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
@@ -28,6 +32,9 @@ class AdminPanelProvider extends PanelProvider
             ->id('admin')
             ->path('admin')
             ->login()
+            // Página "Perfil" (menú del avatar) para que el admin cambie su
+            // nombre, correo y contraseña. isSimple: false = dentro del panel.
+            ->profile(isSimple: false)
             ->brandName('Mi Carnicería')
             ->brandLogo(fn (): HtmlString => new HtmlString(view('filament.brand')->render()))
             ->brandLogoHeight('2.6rem')
@@ -70,6 +77,15 @@ class AdminPanelProvider extends PanelProvider
             ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\\Filament\\Widgets')
             ->widgets([
                 Widgets\AccountWidget::class,
+            ])
+            // Los widgets de Reportes viven fuera de las carpetas auto-descubiertas
+            // (para no aparecer en el Escritorio), así que hay que registrarlos como
+            // componentes Livewire; sin esto, sus actualizaciones fallan con 419.
+            ->livewireComponents([
+                ReportStats::class,
+                SalesOverTimeChart::class,
+                TopProducts::class,
+                SalesByCustomer::class,
             ])
             ->middleware([
                 EncryptCookies::class,

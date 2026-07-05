@@ -96,7 +96,16 @@ class ManageBusiness extends Page implements HasForms
                                 ->schema([
                                     Forms\Components\TimePicker::make('delivery_start_time')->label('Entrega desde')->seconds(false)->default('08:00'),
                                     Forms\Components\TimePicker::make('delivery_end_time')->label('Entrega hasta')->seconds(false)->default('18:00'),
-                                    Forms\Components\TextInput::make('delivery_min_lead_days')->label('Anticipación mínima (días)')->helperText('0 = mismo día, 1 = a partir de mañana.')->numeric()->minValue(0)->default(1),
+                                    Forms\Components\TextInput::make('delivery_min_lead_days')
+                                        ->label('Anticipación mínima')
+                                        ->helperText('Cuánto antes debe hacerse el pedido. Ej.: 1 día = a partir de mañana; 4 horas = 4 h antes de la entrega.')
+                                        ->numeric()->minValue(0)->default(1),
+                                    Forms\Components\Select::make('delivery_min_lead_unit')
+                                        ->label('Unidad de anticipación')
+                                        ->options(['days' => 'Días', 'hours' => 'Horas'])
+                                        ->default('days')
+                                        ->selectablePlaceholder(false)
+                                        ->native(false),
                                 ]),
                             Forms\Components\Fieldset::make('Crédito')
                                 ->schema([

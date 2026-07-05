@@ -7,12 +7,6 @@ import ShopLayout from '@/Layouts/ShopLayout';
 
 const pad = (n) => String(n).padStart(2, '0');
 
-function minDeliveryDate(leadDays) {
-    const d = new Date();
-    d.setDate(d.getDate() + (leadDays || 0));
-    return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
-}
-
 function timeSlots(start, end) {
     const [sh, sm] = start.split(':').map(Number);
     const [eh, em] = end.split(':').map(Number);
@@ -29,7 +23,7 @@ export default function Checkout() {
     const page = usePage().props;
     const customer = page.auth?.customer || {};
     const credit = page.credit || { enabled: false, available: 0, terms_days: 30 };
-    const delivery = page.delivery || { start_time: '08:00', end_time: '18:00', min_lead_days: 1 };
+    const delivery = page.delivery || { start_time: '08:00', end_time: '18:00', earliest_date: '', earliest_time: '00:00' };
 
     const [form, setForm] = useState({
         delivery_address_line1: customer.address_line1 || '',
@@ -47,6 +41,23 @@ export default function Checkout() {
     const [errors, setErrors] = useState({});
 
     const set = (k) => (e) => setForm((f) => ({ ...f, [k]: e.target.value }));
+
+    // Horas disponibles del día elegido. En el día más temprano, solo horas
+    // posteriores a la anticipación mínima (para días esto no restringe nada).
+    const slotsForDate = (date) => {
+        const all = timeSlots(delivery.start_time, delivery.end_time);
+        return date && date === delivery.earliest_date ? all.filter((s) => s >= delivery.earliest_time) : all;
+    };
+
+    // Al cambiar la fecha, limpia la hora si ya no es válida para ese día.
+    const onDateChange = (e) => {
+        const date = e.target.value;
+        setForm((f) => ({
+            ...f,
+            requested_date: date,
+            requested_time: slotsForDate(date).includes(f.requested_time) ? f.requested_time : '',
+        }));
+    };
 
     const isCredit = form.payment_method === 'credito';
     const overLimit = isCredit && subtotal > credit.available;
@@ -160,8 +171,8 @@ export default function Checkout() {
                         <div className="grid grid-cols-2 gap-3">
                             <div>
                                 <label className="text-sm font-medium text-gray-700">{t('date')}</label>
-                                <input type="date" value={form.requested_date} onChange={set('requested_date')}
-                                    min={minDeliveryDate(delivery.min_lead_days)} required
+                                <input type="date" value={form.requested_date} onChange={onDateChange}
+                                    min={delivery.earliest_date} required
                                     className="mt-1 w-full rounded-xl border-gray-300 shadow-sm focus:border-red-500 focus:ring-red-500" />
                             </div>
                             <div>
@@ -169,7 +180,7 @@ export default function Checkout() {
                                 <select value={form.requested_time} onChange={set('requested_time')} required
                                     className="mt-1 w-full rounded-xl border-gray-300 shadow-sm focus:border-red-500 focus:ring-red-500">
                                     <option value="">{t('select_time')}</option>
-                                    {timeSlots(delivery.start_time, delivery.end_time).map((s) => (
+                                    {slotsForDate(form.requested_date).map((s) => (
                                         <option key={s} value={s}>{s}</option>
                                     ))}
                                 </select>
